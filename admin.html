@@ -1,0 +1,824 @@
+
+
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="httpgo">
+    
+    <title>Admin only! Save ours polymers!!!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/style/jquery.jscrollpane.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.formstyler/1.7.8/jquery.formstyler.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
+    <!-- Fav and touch icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css" type="text/css" media="screen">
+    
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+    <!-- forms rendering & validation -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" async></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js" async></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js" async></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js" ></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+    <!--[if lt IE 10]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js" defer></script>
+    <![endif]-->
+    <script src="https://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/latest/all/gauge.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js" defer></script>
+    <script  src="https://cdn.jsdelivr.net/jquery.formstyler/1.7.8/jquery.formstyler.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/jquery.suggestions/16.8/css/suggestions.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/jquery.suggestions/16.8/js/jquery.suggestions.min.js" defer></script>
+    
+<style>
+body {
+    color: rgb(10, 28, 59);
+}
+.content-wrap {
+    width: 100%;
+}
+.content-sep {
+    width: 5%;
+}
+.sidebar-section {
+    width: 15%;
+    display: table-cell;
+}
+.row-fluid {
+    width: 100%;
+    display: table-row;
+}
+.content-section {
+    width: 80%;
+    display: table-cell;
+}
+header {
+    position: sticky;
+}
+.top-mnu-list {
+    margin-top: 5px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+ display: block;
+ transition-duration: 0.5s;
+ float: left;
+}
+
+li a {
+  color: white;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+ul li ul.dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  display: none;
+}
+
+ul li:hover > ul.dropdown,
+ul li:focus-within > ul.dropdown,
+ul li ul.dropdown:hover {
+  visibility: visible;
+  opacity: 1;
+  margin: 0;
+  display: block;
+}
+
+ul li ul.dropdown li {
+  clear: both;
+  width: 100%;
+}
+input[type=text] {
+    padding: 8px;
+    border: 1px solid #c2c7d1;
+    border-radius: 3px;
+    transition: all .3s ease;
+    margin-top: 5px;
+    width: 80%;
+    color: #0a1c3b;
+}
+input[type=file] {
+    display: inline;
+}
+</style>
+
+    
+    <script>
+  /*!
+  * Buttons helper for fancyBox
+  * version: 1.0.5 (Mon, 15 Oct 2012)
+  * @requires fancyBox v2.0 or later
+  *
+  * Usage:
+  *     $(".fancybox").fancybox({
+  *         helpers : {
+  *             buttons: {
+  *                 position : 'top'
+  *             }
+  *         }
+  *     });
+  *
+  */
+ ;(function ($) {
+ 	//Shortcut for fancyBox object
+ 	var F = $.fancybox;
+
+ 	//Add helper object
+ 	F.helpers.buttons = {
+ 		defaults : {
+ 			skipSingle : false, // disables if gallery contains single image
+ 			position   : 'top', // 'top' or 'bottom'
+ 			tpl        : '<div id="fancybox-buttons"><ul><li><a class="btnPrev" title="Previous" href="javascript:;"></a></li><li><a class="btnPlay" title="Start slideshow" href="javascript:;"></a></li><li><a class="btnNext" title="Next" href="javascript:;"></a></li><li><a class="btnToggle" title="Toggle size" href="javascript:;"></a></li><li><a class="btnClose" title="Close" href="javascript:;"></a></li></ul></div>'
+ 		},
+
+ 		list : null,
+ 		buttons: null,
+
+ 		beforeLoad: function (opts, obj) {
+ 			//Remove self if gallery do not have at least two items
+
+ 			if (opts.skipSingle && obj.group.length < 2) {
+ 				obj.helpers.buttons = false;
+ 				obj.closeBtn = true;
+
+ 				return;
+ 			}
+
+ 			//Increase top margin to give space for buttons
+ 			obj.margin[ opts.position === 'bottom' ? 2 : 0 ] += 30;
+ 		},
+
+ 		onPlayStart: function () {
+ 			if (this.buttons) {
+ 				this.buttons.play.attr('title', 'Pause slideshow').addClass('btnPlayOn');
+ 			}
+ 		},
+
+ 		onPlayEnd: function () {
+ 			if (this.buttons) {
+ 				this.buttons.play.attr('title', 'Start slideshow').removeClass('btnPlayOn');
+ 			}
+ 		},
+
+ 		afterShow: function (opts, obj) {
+ 			var buttons = this.buttons;
+
+ 			if (!buttons) {
+ 				this.list = $(opts.tpl).addClass(opts.position).appendTo('body');
+
+ 				buttons = {
+ 					prev   : this.list.find('.btnPrev').click( F.prev ),
+ 					next   : this.list.find('.btnNext').click( F.next ),
+ 					play   : this.list.find('.btnPlay').click( F.play ),
+ 					toggle : this.list.find('.btnToggle').click( F.toggle ),
+ 					close  : this.list.find('.btnClose').click( F.close )
+ 				}
+ 			}
+
+ 			//Prev
+ 			if (obj.index > 0 || obj.loop) {
+ 				buttons.prev.removeClass('btnDisabled');
+ 			} else {
+ 				buttons.prev.addClass('btnDisabled');
+ 			}
+
+ 			//Next / Play
+ 			if (obj.loop || obj.index < obj.group.length - 1) {
+ 				buttons.next.removeClass('btnDisabled');
+ 				buttons.play.removeClass('btnDisabled');
+
+ 			} else {
+ 				buttons.next.addClass('btnDisabled');
+ 				buttons.play.addClass('btnDisabled');
+ 			}
+
+ 			this.buttons = buttons;
+
+ 			this.onUpdate(opts, obj);
+ 		},
+
+ 		onUpdate: function (opts, obj) {
+ 			var toggle;
+
+ 			if (!this.buttons) {
+ 				return;
+ 			}
+
+ 			toggle = this.buttons.toggle.removeClass('btnDisabled btnToggleOn');
+
+ 			//Size toggle button
+ 			if (obj.canShrink) {
+ 				toggle.addClass('btnToggleOn');
+
+ 			} else if (!obj.canExpand) {
+ 				toggle.addClass('btnDisabled');
+ 			}
+ 		},
+
+ 		beforeClose: function () {
+ 			if (this.list) {
+ 				this.list.remove();
+ 			}
+
+ 			this.list    = null;
+ 			this.buttons = null;
+ 		}
+ 	};
+
+ }(jQuery));
+
+    </script>
+
+
+</head>
+
+
+<body>
+<style>
+body {
+    color: rgb(10, 28, 59);
+}
+.content-wrap {
+    width: 100%;
+    height: 99%;
+}
+.content-sep {
+    width: 2%;
+}
+.sidebar-section {
+    width: 10%;
+    display: flex;
+}
+.row-fluid {
+    width: 100%;
+    display: flex;
+}
+.content-section {
+    width: 87%;
+    display: flex;
+    height: 98%;
+}
+
+
+input[type=text][name^=lang] {
+    width: 50px;
+}
+input[type=text] {
+    padding: 8px;
+    border: 1px solid #c2c7d1;
+    border-radius: 3px;
+    transition: all .3s ease;
+    margin-top: 5px;
+    width: 98%;
+    color: #0a1c3b;
+}
+textarea {
+    padding: 8px;
+    border: 1px solid #c2c7d1;
+    border-radius: 3px;
+    transition: all .3s ease;
+    margin-top: 5px;
+    width: 98%;
+    height: 120px;
+    color: #0a1c3b;
+}
+button[type=search] {
+    float: left;
+    width: 10%;
+    padding: 11px;
+    background: #233351;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 8px;
+    border-left: none;
+    cursor: pointer;
+}
+input[type=search] {
+    -webkit-appearance: textfield;
+    padding: 11px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    border: 1px solid grey;
+    border-right: none;
+}
+input[readonly] {
+ border: none;
+ text-align: right;
+}
+input[type=file] {
+    float: left;
+}
+i.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+w3.css:2*, *:before, *:after {
+    box-sizing: inherit;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+.auth {
+    display:none;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+<script>
+var user = ''
+var userStruct
+var urlAfterLogin = ''
+
+function getUser() {
+    user = localStorage.getItem("USER")
+    if (user > '') {
+        userStruct = JSON.parse(user)
+        document.getElementById('bLogin').textContent = userStruct.name + "(" + userStruct.lang +")";
+        token =  userStruct.token
+        lang  =  userStruct.lang
+        $('.auth').removeClass("auth");
+    }
+
+    return ''
+}
+
+var token = '';
+var lang  = 'ua'
+var isProcess = false;
+
+function setClickAll() {
+ if (isProcess) {
+   return;
+ }
+
+  isProcess = true;
+
+      console.log('ready click events!')
+      $('form:not([onsubmit])').on("onsubmit", function () {return saveForm(this); });
+      $( 'a[href!="#"]:not([rel]):not(onclick)').each( function () {
+        var url = this.href
+        this.rel = 'setClickAll';
+        isSearch = (this.target=="search");
+
+        $(this).click( function() {
+            $.ajax({
+                url: url,
+                data: {
+                        "lang": lang,
+                        "html": true
+                },
+              beforeSend: function (xhr) {
+                  xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+              },
+              success: function (data, status, xhr) {
+                 var disp = xhr.getResponseHeader('Content-Disposition');
+                 var typeCnt = xhr.getResponseHeader('Content-Type');
+                 if (disp && disp.search('attachment') != -1) {
+
+                    //var blob = new Blob([data], {type: typeCnt});
+                    //var URL = window.URL || window.webkitURL;
+                    data = "<img src='" + url + "'/>";
+                 } else if (typeCnt.startsWith("application/json") ) {
+                    if (isSearch) {
+                        showObject(data)
+                    } else {
+                        $('#content').html(JSON.stringify(data) )
+                    }
+                    return;
+                 }
+                 $('#content').html(data);
+              },
+              error: function (xhr, status, error) {
+                  if (xhr.status == 401) {
+                    urlAfterLogin = url;
+                    $('#bLogin').trigger("click");
+                   return;
+                  }
+
+                  alert( "Code : " + xhr.status + " error :"+ error);
+                  console.log(error);
+              }
+             });
+             return false;
+       })
+
+      })
+  isProcess = false;
+}
+
+$(function()   {
+    if (user == '') {
+      getUser();
+    }
+      console.log('ready function events!')
+
+    setClickAll();
+    $('#content').on('DOMSubtreeModified', setClickAll );
+
+        $("#inpS:not([rel])").on("blur", function(){
+
+          if (event.relatedTarget && event.relatedTarget.className == "suggestions-constraints") {
+                    return;
+            }
+            console.log(event);
+            $('select.suggestions-constraints').hide();
+        }).on('keyup',function(e){
+        var x = event.which || event.keyCode;
+            if (x == 40) {
+                $("#inpS").unbind("blur");
+                $('select.suggestions-constraints').focus();
+                $('select.suggestions-constraints option:first').selected();
+                return;
+            }
+
+             if ($("#inpS").val().length < 2) {
+                return true;
+             }
+
+             $.ajax({
+                 url: "/api/v1/search/list",
+                 data: {
+                         "lang": lang,
+                         "value": $("#inpS").val(),
+                         "count": 10,
+                         "html": true
+                 },
+               beforeSend: function (xhr) {
+                   xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+               },
+               success: function (data, status) {
+                 $('select.suggestions-constraints').html(data).show().on('keyup', function(e) {
+                                                     var x = event.which || event.keyCode;
+                                                     if (x == 32) {
+                                                             $("#inpS").val( $('select.suggestions-constraints option:selected').text() );
+                                                             $('select.suggestions-constraints').hide();
+                                                             $('button[type="search"]').click();
+                                                             return false;
+                                                      }
+                                               });
+                 $('select.suggestions-constraints option').on('mouseup', function(e) {
+                    $("#inpS").val( $(this).text() );
+                    $('select.suggestions-constraints').hide();
+                   $('button[type="search"]').click();
+                    return true;
+                 });
+               },
+               error: function (xhr, status, error) {
+                   alert( "Code : " + xhr.status + " error :"+ error);
+                   console.log(error);
+               }
+              });
+        }).attr('rel', true);
+
+}) // $(document).ready
+
+function saveForm(thisForm, successFunction, errorFunction) {
+    if (!thisForm.noValidate && !confirm('Do you sure to send form?')) {
+        return false
+    }
+    // TODO: create element form for output form result
+    var $out = $('output', thisForm),
+        $loading = $('.loading', thisForm),
+        $progress = $('.progress', thisForm);
+
+    $(thisForm).ajaxSubmit({
+        beforeSubmit: function(a,f,o) {
+            o.dataType = "json";
+
+             //удаляем пустые поля
+             var isNewRecord = $('input[name=id]').length == 0;
+
+             for( var i = a.length -1; i >= 0; --i){
+                 if (a[i].readOnly
+                  || ( (a[i].value === '') && (isNewRecord || a[i].type === 'select-one' || a[i].type === 'file' ))
+                    || (a[i].value.length === 0) ) {
+                     t = a.splice(i,1);
+                     console.log(t);
+                 }
+             }
+
+           $("input[type=checkbox][checked]:not(:checked)", f).each(function() {
+               a.push({ name: this.name, value: 0, type: this.type, required: this.required });
+           });
+            a.push({ name: "is_get_form_actions", value: true, type: "boolean" });
+console.log(a);
+           $out.html('Начинаю отправку...');
+            $progress.show();
+            $loading.show();
+        },
+       beforeSend: function (xhr) {
+           xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+       },
+       uploadProgress: function(event, position, total, percentComplete) {
+            $out.html( 'Progress - ' + percentComplete + '%' );
+            $progress.val( percentComplete );
+        },
+        success: function(data, status) {
+            $out.html('Успешно изменили запись.');
+            // TODO: добавить загрузку скрипта, если функция определена, но не подключена!
+            if (successFunction !== undefined) {
+                successFunction(data, thisForm);
+            } else {
+                afterSaveAnyForm(data);
+            }
+            // $.fancybox.close();
+        },
+        error: function(error, status) {
+            if (errorFunction !== undefined) {
+                errorFunction(error, thisForm);
+            } else {
+                $out.html( error.responseText );
+                alert(error.responseText);
+            }
+        },
+        complete: function(data, status) {
+            $progress.hide();
+            $loading.hide();
+            console.log(status);
+            console.log(data);
+        }
+    });
+
+    return false;
+}
+// стандартная обработка формы типа AnyForm после успшного сохранения результата
+function afterSaveAnyForm(data) {
+
+    if (data.content_url !== undefined) {
+        loadContent(data.content_url);
+    } else if (data.formActions !== undefined) {
+        loadContent( data.formActions[0].url );
+    } else if (data.error !== undefined) {
+        alert(data.error);
+    } else {
+        console.log(data);
+    }
+
+    if (data.message !== undefined) {
+        alert(data.message);
+    }
+}
+// собственно, нужен для того, чтобы после авторизации отобразит в заголовке нечто
+ function afterLogin(data, thisForm) {
+    if (!data)
+      return false;
+
+    if (data.id_roles != 1) {
+      alert("only admin access!")
+      return
+    }
+
+     token = data.token;
+     lang = data.lang;
+     localStorage.setItem("USER",  JSON.stringify(data) );
+
+   $('#bLogin').text(data.name + "(" + lang +")");
+    $('.auth').removeClass("auth");
+
+   if (urlAfterLogin == '') {
+    if (data.formActions !== undefined) {
+     urlAfterLogin = data.formActions[0].url;
+    } else {
+     urlAfterLogin = "/user/profile";
+    }
+   }
+
+   loadContent(urlAfterLogin)
+}
+// run request & show content
+function loadContent(url) {
+
+     $.ajax({
+            url: url,
+            data: {
+                    "lang": lang,
+                    "html": true
+            },
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+            },
+            success: function (data, status) {
+              $('#content').html(data);
+            },
+            error: function (xhr, status, error) {
+                 if (xhr.status == 401) {
+                    urlAfterLogin = url;
+                    $('#bLogin').trigger("click");
+                   return;
+                  }
+
+                alert( "Code : " + xhr.status + " error :"+ error);
+                console.log(error);
+            }
+       });
+}
+
+function showObject(data, thisForm) {
+    if (!data) {
+      alert('no results!')
+      return false;
+    }
+
+    $('#content').html( '' );
+
+    for (x in data) {
+        $('#content').append('<div>');
+        div = $('#content').children(':last').attr('id', data[x].id)
+        div.append('<div>');
+        titleDiv = div.children(':last')
+        titleDiv.append('<h3> Group: <a href="/api/v1/search/?name=' + data[x].title + '" target="search">' + data[x].title + '</a></h3>');
+        if (data[x].abbr > "") {
+            titleDiv.append('<h4>' + data[x].abbr + '</h4>');
+        }
+
+        if (data[x].id_article > "") {
+            titleDiv.append('<h4><a href="article/' + data[x].id_article + '" target="search">' + data[x].id_article + '</a></h4>');
+        }
+
+        for (y in data[x].company_names ) {
+            titleDiv.append('<span>' + data[x].company_names[y] + '</span>');
+        }
+        
+        for (y in data[x].list ) {
+          div.append('<a href="' + data[x].list[y].document_url + '" rel="true" target="_blank">PDF</a>')
+          brand = data[x].list[y].brand
+          if (brand !== undefined) {
+            div.append('<div>' + brand + '<a href="/api/v1/search/analog/' + brand + '" target="search"> Search analog</a></div>')
+          }
+
+           idPolymers = data[x].list[y].id_polymers
+          if (data[x].list[y].has_additives !== false) {
+            div.append('<div><a href="/api/v1/search/additives/?id=' + idPolymers + '" target="search"> Search additives</a></div>')
+          }
+
+          if (data[x].list[y].has_fillers !== false) {
+            div.append('<div><a href="/api/v1/search/fillers/?id=' + idPolymers + '" target="search"> Search fillers</a></div>')
+          }
+
+          div.append('<div>' + data[x].list[y].company_name+ '</div>')
+          div.append('<table>');
+            div.append('<thr><thd> Values </thd><thd> Qty </thd> </thr>')
+
+            for (z in data[x].list[y].characteristics) {
+              div.append('<tr><td>'+z+'</td><td></td><td>'+data[x].list[y].characteristics[z]+'</td></tr>');
+            }
+
+           for (z in data[x].list[y].files) {
+              div.append('<p><a href="'+data[x].list[y].files[z].url+'" rel="true" target="_blank">'+data[x].list[y].files[z].title+'</a></p>');
+           }
+
+           notes = data[x].list[y].description
+           if (notes  > "") {
+                div.append('<div>' + notes + '</div>')
+           }
+        }
+    }
+}
+</script>
+
+        
+<header class="main-header">
+<div class="topline">
+    <nav class="topline-navbar">
+        <ul class=top-mnu-list><li class=top-mnu-item><a href="/api/v1/table/dictionary/browse" title="">Translators</a></li><li class=top-mnu-item><a href="#" title="">New</a><ul class=dropdown><li class=><a href="/api/v1/table/additives/form" title="get form for insert/update data into additives">Additives</a></li><li class=><a href="/api/v1/table/amounts/form" title="get form for insert/update data into amounts">Amounts</a></li><li class=><a href="/api/v1/table/articles/form" title="get form for insert/update data into articles">Articles</a></li><li class=><a href="/api/v1/table/brands/form" title="get form for insert/update data into brands">Brands</a></li><li class=><a href="/api/v1/table/content_filler/form" title="get form for insert/update data into content_filler">Content_filler</a></li><li class=><a href="/api/v1/table/cured/form" title="get form for insert/update data into cured">Cured</a></li><li class=><a href="/api/v1/table/cured_accelerator/form" title="get form for insert/update data into cured_accelerator">Cured_accelerator</a></li><li class=><a href="/api/v1/table/dictionary/form" title="get form for insert/update data into dictionary">Dictionary</a></li><li class=><a href="/api/v1/table/events/form" title="get form for insert/update data into events">Events</a></li><li class=><a href="/api/v1/table/filler_for_polymers/form" title="get form for insert/update data into filler_for_polymers">Filler_for_polymers</a></li><li class=><a href="/api/v1/table/fillers/form" title="get form for insert/update data into fillers">Fillers</a></li><li class=><a href="/api/v1/table/firma/form" title="get form for insert/update data into firma">Firma</a></li><li class=><a href="/api/v1/table/form_blocks/form" title="get form for insert/update data into form_blocks">Form_blocks</a></li><li class=><a href="/api/v1/table/form_fields/form" title="get form for insert/update data into form_fields">Form_fields</a></li><li class=><a href="/api/v1/table/forms/form" title="get form for insert/update data into forms">Forms</a></li><li class=><a href="/api/v1/table/homepages/form" title="get form for insert/update data into homepages">Homepages</a></li><li class=><a href="/api/v1/table/items/form" title="get form for insert/update data into items">Items</a></li><li class=><a href="/api/v1/table/languages/form" title="get form for insert/update data into languages">Languages</a></li><li class=><a href="/api/v1/table/management/form" title="get form for insert/update data into management">Management</a></li><li class=><a href="/api/v1/table/manufactures/form" title="get form for insert/update data into manufactures">Manufactures</a></li><li class=><a href="/api/v1/table/patterns_list/form" title="get form for insert/update data into patterns_list">Patterns_list</a></li><li class=><a href="/api/v1/table/photos/form" title="get form for insert/update data into photos">Photos</a></li><li class=><a href="/api/v1/table/polymers/form" title="get form for insert/update data into polymers">Polymers</a></li><li class=><a href="/api/v1/table/prepreg_type/form" title="get form for insert/update data into prepreg_type">Prepreg_type</a></li><li class=><a href="/api/v1/table/productions/form" title="get form for insert/update data into productions">Productions</a></li><li class=><a href="/api/v1/table/reinforcing/form" title="get form for insert/update data into reinforcing">Reinforcing</a></li><li class=><a href="/api/v1/table/roles/form" title="get form for insert/update data into roles">Roles</a></li><li class=><a href="/api/v1/table/type_additives/form" title="get form for insert/update data into type_additives">Type_additives</a></li><li class=><a href="/api/v1/table/type_material/form" title="get form for insert/update data into type_material">Type_material</a></li><li class=><a href="/api/v1/table/type_of_fibre_filler/form" title="get form for insert/update data into type_of_fibre_filler">Type_of_fibre_filler</a></li><li class=><a href="/api/v1/table/type_of_filler/form" title="get form for insert/update data into type_of_filler">Type_of_filler</a></li><li class=><a href="/api/v1/table/type_polymer/form" title="get form for insert/update data into type_polymer">Type_polymer</a></li><li class=><a href="/api/v1/table/users/form" title="get form for insert/update data into users">Users</a></li><li class=><a href="/api/v1/table/warehouses/form" title="get form for insert/update data into warehouses">Warehouses</a></li><li class=><a href="/api/v1/table/warehouses_summary/form" title="get form for insert/update data into warehouses_summary">Warehouses_summary</a></li></ul></li><li class=top-mnu-item><a href="#" title="">View</a><ul class=dropdown><li class=><a href="/api/v1/table/additives/view?counter=100" title="view data of table additives">Additives</a></li><li class=><a href="/api/v1/table/amounts/view?counter=100" title="view data of table amounts">Amounts</a></li><li class=><a href="/api/v1/table/articles/view?counter=100" title="view data of table articles">Articles</a></li><li class=><a href="/api/v1/table/brands/view?counter=100" title="view data of table brands">Brands</a></li><li class=><a href="/api/v1/table/content_filler/view?counter=100" title="view data of table content_filler">Content_filler</a></li><li class=><a href="/api/v1/table/cured/view?counter=100" title="view data of table cured">Cured</a></li><li class=><a href="/api/v1/table/cured_accelerator/view?counter=100" title="view data of table cured_accelerator">Cured_accelerator</a></li><li class=><a href="/api/v1/table/dictionary/view?counter=100" title="view data of table dictionary">Dictionary</a></li><li class=><a href="/api/v1/table/events/view?counter=100" title="view data of table events">Events</a></li><li class=><a href="/api/v1/table/filler_for_polymers/view?counter=100" title="view data of table filler_for_polymers">Filler_for_polymers</a></li><li class=><a href="/api/v1/table/fillers/view?counter=100" title="view data of table fillers">Fillers</a></li><li class=><a href="/api/v1/table/firma/view?counter=100" title="view data of table firma">Firma</a></li><li class=><a href="/api/v1/table/form_blocks/view?counter=100" title="view data of table form_blocks">Form_blocks</a></li><li class=><a href="/api/v1/table/form_fields/view?counter=100" title="view data of table form_fields">Form_fields</a></li><li class=><a href="/api/v1/table/forms/view?counter=100" title="view data of table forms">Forms</a></li><li class=><a href="/api/v1/table/homepages/view?counter=100" title="view data of table homepages">Homepages</a></li><li class=><a href="/api/v1/table/items/view?counter=100" title="view data of table items">Items</a></li><li class=><a href="/api/v1/table/languages/view?counter=100" title="view data of table languages">Languages</a></li><li class=><a href="/api/v1/table/management/view?counter=100" title="view data of table management">Management</a></li><li class=><a href="/api/v1/table/manufactures/view?counter=100" title="view data of table manufactures">Manufactures</a></li><li class=><a href="/api/v1/table/patterns_list/view?counter=100" title="view data of table patterns_list">Patterns_list</a></li><li class=><a href="/api/v1/table/photos/view?counter=100" title="view data of table photos">Photos</a></li><li class=><a href="/api/v1/table/polymers/view?counter=100" title="view data of table polymers">Polymers</a></li><li class=><a href="/api/v1/table/prepreg_type/view?counter=100" title="view data of table prepreg_type">Prepreg_type</a></li><li class=><a href="/api/v1/table/productions/view?counter=100" title="view data of table productions">Productions</a></li><li class=><a href="/api/v1/table/reinforcing/view?counter=100" title="view data of table reinforcing">Reinforcing</a></li><li class=><a href="/api/v1/table/roles/view?counter=100" title="view data of table roles">Roles</a></li><li class=><a href="/api/v1/table/type_additives/view?counter=100" title="view data of table type_additives">Type_additives</a></li><li class=><a href="/api/v1/table/type_material/view?counter=100" title="view data of table type_material">Type_material</a></li><li class=><a href="/api/v1/table/type_of_fibre_filler/view?counter=100" title="view data of table type_of_fibre_filler">Type_of_fibre_filler</a></li><li class=><a href="/api/v1/table/type_of_filler/view?counter=100" title="view data of table type_of_filler">Type_of_filler</a></li><li class=><a href="/api/v1/table/type_polymer/view?counter=100" title="view data of table type_polymer">Type_polymer</a></li><li class=><a href="/api/v1/table/users/view?counter=100" title="view data of table users">Users</a></li><li class=><a href="/api/v1/table/warehouses/view?counter=100" title="view data of table warehouses">Warehouses</a></li><li class=><a href="/api/v1/table/warehouses_summary/view?counter=100" title="view data of table warehouses_summary">Warehouses_summary</a></li></ul></li><li class=top-mnu-item><a href="#" title="">Browse</a><ul class=dropdown><li class=><a href="/api/v1/table/additives/browse?counter=100" title="show & edit data of table additives">Additives</a></li><li class=><a href="/api/v1/table/amounts/browse?counter=100" title="show & edit data of table amounts">Amounts</a></li><li class=><a href="/api/v1/table/articles/browse?counter=100" title="show & edit data of table articles">Articles</a></li><li class=><a href="/api/v1/table/brands/browse?counter=100" title="show & edit data of table brands">Brands</a></li><li class=><a href="/api/v1/table/content_filler/browse?counter=100" title="show & edit data of table content_filler">Content_filler</a></li><li class=><a href="/api/v1/table/cured/browse?counter=100" title="show & edit data of table cured">Cured</a></li><li class=><a href="/api/v1/table/cured_accelerator/browse?counter=100" title="show & edit data of table cured_accelerator">Cured_accelerator</a></li><li class=><a href="/api/v1/table/dictionary/browse?counter=100" title="show & edit data of table dictionary">Dictionary</a></li><li class=><a href="/api/v1/table/events/browse?counter=100" title="show & edit data of table events">Events</a></li><li class=><a href="/api/v1/table/filler_for_polymers/browse?counter=100" title="show & edit data of table filler_for_polymers">Filler_for_polymers</a></li><li class=><a href="/api/v1/table/fillers/browse?counter=100" title="show & edit data of table fillers">Fillers</a></li><li class=><a href="/api/v1/table/firma/browse?counter=100" title="show & edit data of table firma">Firma</a></li><li class=><a href="/api/v1/table/form_blocks/browse?counter=100" title="show & edit data of table form_blocks">Form_blocks</a></li><li class=><a href="/api/v1/table/form_fields/browse?counter=100" title="show & edit data of table form_fields">Form_fields</a></li><li class=><a href="/api/v1/table/forms/browse?counter=100" title="show & edit data of table forms">Forms</a></li><li class=><a href="/api/v1/table/homepages/browse?counter=100" title="show & edit data of table homepages">Homepages</a></li><li class=><a href="/api/v1/table/items/browse?counter=100" title="show & edit data of table items">Items</a></li><li class=><a href="/api/v1/table/languages/browse?counter=100" title="show & edit data of table languages">Languages</a></li><li class=><a href="/api/v1/table/management/browse?counter=100" title="show & edit data of table management">Management</a></li><li class=><a href="/api/v1/table/manufactures/browse?counter=100" title="show & edit data of table manufactures">Manufactures</a></li><li class=><a href="/api/v1/table/patterns_list/browse?counter=100" title="show & edit data of table patterns_list">Patterns_list</a></li><li class=><a href="/api/v1/table/photos/browse?counter=100" title="show & edit data of table photos">Photos</a></li><li class=><a href="/api/v1/table/polymers/browse?counter=100" title="show & edit data of table polymers">Polymers</a></li><li class=><a href="/api/v1/table/prepreg_type/browse?counter=100" title="show & edit data of table prepreg_type">Prepreg_type</a></li><li class=><a href="/api/v1/table/productions/browse?counter=100" title="show & edit data of table productions">Productions</a></li><li class=><a href="/api/v1/table/reinforcing/browse?counter=100" title="show & edit data of table reinforcing">Reinforcing</a></li><li class=><a href="/api/v1/table/roles/browse?counter=100" title="show & edit data of table roles">Roles</a></li><li class=><a href="/api/v1/table/type_additives/browse?counter=100" title="show & edit data of table type_additives">Type_additives</a></li><li class=><a href="/api/v1/table/type_material/browse?counter=100" title="show & edit data of table type_material">Type_material</a></li><li class=><a href="/api/v1/table/type_of_fibre_filler/browse?counter=100" title="show & edit data of table type_of_fibre_filler">Type_of_fibre_filler</a></li><li class=><a href="/api/v1/table/type_of_filler/browse?counter=100" title="show & edit data of table type_of_filler">Type_of_filler</a></li><li class=><a href="/api/v1/table/type_polymer/browse?counter=100" title="show & edit data of table type_polymer">Type_polymer</a></li><li class=><a href="/api/v1/table/users/browse?counter=100" title="show & edit data of table users">Users</a></li><li class=><a href="/api/v1/table/warehouses/browse?counter=100" title="show & edit data of table warehouses">Warehouses</a></li><li class=><a href="/api/v1/table/warehouses_summary/browse?counter=100" title="show & edit data of table warehouses_summary">Warehouses_summary</a></li></ul></li><li class=top-mnu-item><a href="#" title="">Custom forms</a><ul class=dropdown><li class=><a href="/api/v1/table/forms/" title="show row of table according to IDforms"></a></li><li class=><a href="/api/v1/table/forms/data" title="from  table 'forms' data">Data</a></li><li class=><a href="/api/v1/table/forms/fillers_adv" title="Exhausting information for all types of dispersed, reinforcing, and other types of fillers">Fillers_adv</a></li><li class=><a href="/api/v1/table/forms/form_editor" title="form_editor">Form_editor</a></li><li class=><a href="/api/v1/table/forms/items" title="type_of_material">Items</a></li><li class=><a href="/api/v1/table/forms/report" title="struct table 'forms' data">Report</a></li><li class=><a href="/api/v1/table/forms/signIn" title="Enter your email & password for continue work">SignIn</a></li><li class=><a href="/api/v1/table/firma/invite?id=1" title="route.Desc">Invite</a></li></ul></li></ul>
+    </nav>
+    <div class="topline-btns">
+        <a href="/user/signout/" id="bLogOut" onclick="return logOut(this);">
+            <span class="glyphicon-log-out"> </span>
+        </a>
+        <a href="#" id="burger" class="brg-mnu"></a>
+        <a id="bLogin" href="/show/forms/?name=signin" class="navbar-link btn-login" title="откроется в модальном окне" >Авторизоваться
+        <span class="glyphicon-info-sign"> </span></a>
+    </div>
+</div>
+</header>
+
+    <div class="content-wrap">
+        <div class="row-fluid">
+         
+    <h2 class="font_2" style="font-size:26px; line-height:1.2em;"><span style="font-style:italic;"><span style="font-size:26px;">
+    <span style="font-family:times new roman,times,serif;"><span style="color:#292929;">Пошук</span></span></span></span>
+     </h2>
+   <form id="fSearch" action="/api/v1/search/" method="GET" target="#content" novalidate
+   onsubmit="$('select.suggestions-constraints').hide(); return saveForm(this, showObject, function(error, status) { $('#content').html(error.responseText); } );" style="width:1100px">
+        <div class="w3-clear">
+         <input type="hidden" name="html" value="true"/>
+         <input type="hidden" name="counter" value="5"/>
+         <input id="inpS" name="name" type="search" placeholder="Введіть початкові літери" required
+            autocapitalize="none" autocorrect="off" autocomplete="off">
+         <div class="suggestions-wrapper">
+            <span class="suggestions-addon" data-addon-type="spinner" style="left: -97px; top: 1px; height: 42px; width: 42px;"></span>
+         <select name="id" size=10 class="suggestions-constraints" style="left: -399.109375px; top: 50px;"></select>
+         <div class="suggestions-suggestions" style="position: absolute; display: none; left: -311.109375px; top: 43px; width: 256.109375px;">
+         </div>
+         </div>
+         <button type="search"><i class="fa fa-search"></i></button>
+       </div>
+        <output></output>
+        <progress value='0' max='100' hidden > </progress>
+    </form>
+       <form id="fSearchAnalog" action="/api/v1/search/analog/" method="GET" target="#content" novalidate
+         onsubmit="return saveForm(this, showObject, function(error, status) { $('#content').html(error.responseText); } );" style="width:1100px">
+    <input name="name" type="search" placeholder="Введіть літери for analog" required autocomplete="off">
+         <button type="search"><i class="fa fa-search"></i></button>
+   </form>
+
+
+       </div>
+        <div id="container-fluid">
+            <div class="row-fluid">
+                <div class="sidebar-section">
+                    <div id="catalog_pane"  class=" sidebar-nav ">
+                          
+<h2>Kабінет:</h2>
+<div id="catalog_pane">
+ 	<ul class=nav><li class=nav-item><a href="/user/profile/" title="">Profile</a></li></ul>
+</div>
+
+                    </div>
+                </div>
+                <div class="content-sep"> </div>
+                <div class="content-section" >
+                    <div id="content" rel="" style="overflow-x: scroll;width:100%;">
+                    <span>  </span>
+
+<h5 class="font_5"><span style="font-family:times new roman,times,serif;">
+<a href="/api/v1/download/polymers/" target="_blank" rel="true"> Save polymers </a></span>
+</h5>
+
+        <div class="row-fluid">
+        <style>
+        .hiddenFileInput > input{
+          height: 100%;
+          width: 100;
+          opacity: 0;
+          cursor: pointer;
+        }
+        .hiddenFileInput{
+          border: 1px solid #ccc;
+          width: 100px;
+          height: 100px;
+          display: inline-block;
+          overflow: hidden;
+          cursor: pointer;
+
+          /*for the background, optional*/
+          background: center center no-repeat;
+          background-size: 75% 75%;
+          background-image:  url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjUxMnB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9Ii01MyAxIDUxMSA1MTEuOTk5MDYiIHdpZHRoPSI1MTJweCI+CjxnIGlkPSJzdXJmYWNlMSI+CjxwYXRoIGQ9Ik0gMjc2LjQxMDE1NiAzLjk1NzAzMSBDIDI3NC4wNjI1IDEuNDg0Mzc1IDI3MC44NDM3NSAwIDI2Ny41MDc4MTIgMCBMIDY3Ljc3NzM0NCAwIEMgMzAuOTIxODc1IDAgMC41IDMwLjMwMDc4MSAwLjUgNjcuMTUyMzQ0IEwgMC41IDQ0NC44NDM3NSBDIDAuNSA0ODEuNjk5MjE5IDMwLjkyMTg3NSA1MTIgNjcuNzc3MzQ0IDUxMiBMIDMzOC44NjMyODEgNTEyIEMgMzc1LjcxODc1IDUxMiA0MDYuMTQwNjI1IDQ4MS42OTkyMTkgNDA2LjE0MDYyNSA0NDQuODQzNzUgTCA0MDYuMTQwNjI1IDE0NC45NDE0MDYgQyA0MDYuMTQwNjI1IDE0MS43MjY1NjIgNDA0LjY1NjI1IDEzOC42MzY3MTkgNDAyLjU1NDY4OCAxMzYuMjg1MTU2IFogTSAyNzkuOTk2MDk0IDQzLjY1NjI1IEwgMzY0LjQ2NDg0NCAxMzIuMzI4MTI1IEwgMzA5LjU1NDY4OCAxMzIuMzI4MTI1IEMgMjkzLjIzMDQ2OSAxMzIuMzI4MTI1IDI3OS45OTYwOTQgMTE5LjIxODc1IDI3OS45OTYwOTQgMTAyLjg5NDUzMSBaIE0gMzM4Ljg2MzI4MSA0ODcuMjY1NjI1IEwgNjcuNzc3MzQ0IDQ4Ny4yNjU2MjUgQyA0NC42NTIzNDQgNDg3LjI2NTYyNSAyNS4yMzQzNzUgNDY4LjA5NzY1NiAyNS4yMzQzNzUgNDQ0Ljg0Mzc1IEwgMjUuMjM0Mzc1IDY3LjE1MjM0NCBDIDI1LjIzNDM3NSA0NC4wMjczNDQgNDQuNTI3MzQ0IDI0LjczNDM3NSA2Ny43NzczNDQgMjQuNzM0Mzc1IEwgMjU1LjI2MTcxOSAyNC43MzQzNzUgTCAyNTUuMjYxNzE5IDEwMi44OTQ1MzEgQyAyNTUuMjYxNzE5IDEzMi45NDUzMTIgMjc5LjUwMzkwNiAxNTcuMDYyNSAzMDkuNTU0Njg4IDE1Ny4wNjI1IEwgMzgxLjQwNjI1IDE1Ny4wNjI1IEwgMzgxLjQwNjI1IDQ0NC44NDM3NSBDIDM4MS40MDYyNSA0NjguMDk3NjU2IDM2Mi4xMTMyODEgNDg3LjI2NTYyNSAzMzguODYzMjgxIDQ4Ny4yNjU2MjUgWiBNIDMzOC44NjMyODEgNDg3LjI2NTYyNSAiIHN0eWxlPSIgZmlsbC1ydWxlOm5vbnplcm87ZmlsbC1vcGFjaXR5OjE7IiBzdHJva2U9IiMwMDAwMDAiIGZpbGw9IiMwMDAwMDAiLz4KPHBhdGggZD0iTSAzMDUuMTAxNTYyIDQwMS45MzM1OTQgTCAxMDEuNTM5MDYyIDQwMS45MzM1OTQgQyA5NC43MzgyODEgNDAxLjkzMzU5NCA4OS4xNzE4NzUgNDA3LjQ5NjA5NCA4OS4xNzE4NzUgNDE0LjMwMDc4MSBDIDg5LjE3MTg3NSA0MjEuMTAxNTYyIDk0LjczODI4MSA0MjYuNjY3OTY5IDEwMS41MzkwNjIgNDI2LjY2Nzk2OSBMIDMwNS4yMjY1NjIgNDI2LjY2Nzk2OSBDIDMxMi4wMjczNDQgNDI2LjY2Nzk2OSAzMTcuNTkzNzUgNDIxLjEwMTU2MiAzMTcuNTkzNzUgNDE0LjMwMDc4MSBDIDMxNy41OTM3NSA0MDcuNDk2MDk0IDMxMi4wMjczNDQgNDAxLjkzMzU5NCAzMDUuMTAxNTYyIDQwMS45MzM1OTQgWiBNIDMwNS4xMDE1NjIgNDAxLjkzMzU5NCAiIHN0eWxlPSIgZmlsbC1ydWxlOm5vbnplcm87ZmlsbC1vcGFjaXR5OjE7IiBzdHJva2U9IiMwMDAwMDAiIGZpbGw9IiMwMDAwMDAiLz4KPHBhdGggZD0iTSAxNDAgMjY4Ljg2MzI4MSBMIDE5MC45NTMxMjUgMjE0LjA3NDIxOSBMIDE5MC45NTMxMjUgMzQ5LjEyNSBDIDE5MC45NTMxMjUgMzU1LjkyNTc4MSAxOTYuNTE5NTMxIDM2MS40OTIxODggMjAzLjMyMDMxMiAzNjEuNDkyMTg4IEMgMjEwLjEyNSAzNjEuNDkyMTg4IDIxNS42ODc1IDM1NS45MjU3ODEgMjE1LjY4NzUgMzQ5LjEyNSBMIDIxNS42ODc1IDIxNC4wNzQyMTkgTCAyNjYuNjQwNjI1IDI2OC44NjMyODEgQyAyNjkuMTEzMjgxIDI3MS40NTcwMzEgMjcyLjMzMjAzMSAyNzIuODIwMzEyIDI3NS42Njc5NjkgMjcyLjgyMDMxMiBDIDI3OC42MzY3MTkgMjcyLjgyMDMxMiAyODEuNzMwNDY5IDI3MS43MDcwMzEgMjg0LjA3ODEyNSAyNjkuNDgwNDY5IEMgMjg5LjAyNzM0NCAyNjQuNzgxMjUgMjg5LjM5ODQzOCAyNTYuOTg4MjgxIDI4NC42OTkyMTkgMjUyLjA0Mjk2OSBMIDIxMi4yMjY1NjIgMTc0LjI1MzkwNiBDIDIwOS44NzUgMTcxLjc4MTI1IDIwNi42NjAxNTYgMTcwLjI5Njg3NSAyMDMuMTk5MjE5IDE3MC4yOTY4NzUgQyAxOTkuNzM0Mzc1IDE3MC4yOTY4NzUgMTk2LjUxOTUzMSAxNzEuNzgxMjUgMTk0LjE3MTg3NSAxNzQuMjUzOTA2IEwgMTIxLjY5OTIxOSAyNTIuMDQyOTY5IEMgMTE3IDI1Ni45ODgyODEgMTE3LjM3MTA5NCAyNjQuOTAyMzQ0IDEyMi4zMTY0MDYgMjY5LjQ4MDQ2OSBDIDEyNy41MTE3MTkgMjc0LjE3OTY4OCAxMzUuMzAwNzgxIDI3My44MDg1OTQgMTQwIDI2OC44NjMyODEgWiBNIDE0MCAyNjguODYzMjgxICIgc3R5bGU9IiBmaWxsLXJ1bGU6bm9uemVybztmaWxsLW9wYWNpdHk6MTsiIHN0cm9rZT0iIzAwMDAwMCIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+Cjwvc3ZnPgo=)
+        }
+        </style>
+        <form action="/forms/put" method="POST" target="window" enctype="multipart/form-data"
+                       onsubmit="$(this).ajaxSubmit({success: function(data, status) {$('#content').html(data)}}); return false;">
+                        <span class="hiddenFileInput">  <input name="form" type="file" required> </span>
+                        <button>Завантажити</button>
+                        </form>
+        </div>
+</div>
+</div>
+
+</body>
+</html>
