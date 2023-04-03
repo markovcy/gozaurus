@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pm-db.css" type="text/css" media="screen">
+</head>
+<body theme="polymer">
+        
+    <script>
+    var user = '';
+    var userStruct;
+    var urlAfterLogin = '';
+    
+    function fancyOpen(data) {
+          $.fancybox.open({
+                'autoScale': true,
+                'transitionIn': 'elastic',
+                'transitionOut': 'elastic',
+                'speedIn': 500,
+                'speedOut': 300,
+                'type':'html',
+                'autoDimensions': true,
+                'centerOnScroll': true,
+                'content' : data
+             })
+    }
+    
+    
+    function getUser() {
+        user = localStorage.getItem("USER");
+        if (user > '') {
+            userStruct = JSON.parse(user);
+            saveUser(userStruct);
+        }
+    }
+    
+    function saveUser(userStruct) {
+        var userSuffix = userStruct.lang ? `(${userStruct.lang})`: '';
+            console.log(userStruct);
+            lang  =  userStruct.lang;
+            document.getElementById('bLogin').textContent = userStruct.name + userSuffix;
+            token =  userStruct.token || userStruct.access_token || userStruct.bearer_token || userStruct.auth_token;
+    
+         $('#bLogin').text(userStruct.name + userSuffix);
+         $('.auth').removeClass("auth");
+    
+    
+         if (urlAfterLogin === '') {
+             if (userStruct.formActions !== undefined) {
+              urlAfterLogin = userStruct.formActions[0].url;
+             } else {
+              urlAfterLogin = "/user/profile";
+             }
+         } else if (urlAfterLogin.onsubmit !== undefined ) {
+             urlAfterLogin.onsubmit();
+             urlAfterLogin = "";
+             return;
+         }
+    
+         if (urlAfterLogin > '') {
+             loadContent(urlAfterLogin);
+         }
+    }
+    
+    var token = '';
+    var lang  = 'ua'
+    var isProcess = false;
+    
+    function setClickAll() {
+     if (isProcess) {
+       return;
+     }
+    
+      isProcess = true;
+    
+          console.log(event);
+          // add onSubmit event instead default behaviourism form
+          $('form:not([onsubmit])').on("submit", function () { return saveForm(this); });
+           // add click event instead default - response will show on div.#content
+         $( 'a[href!="#"]:not([rel]):not(onclick):not([target=_blank])').each( function () {
+            var url = replMacros(this.href)
+            var target = this.target
+            this.rel = 'setClickAll';
+            isSearch = (this.target=="search");
+    
+            $(this).click( 
+    function() {
+         var $out = $('#content');
+           $.ajax({
+                url: url,
+                 data: {
+                         "lang": lang,
+                         "html": true
+                 },
+                processData: false,
+                contentType: false,
+              beforeSend: function (xhr) {
+                  xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+                  xhr.setRequestHeader('Content-Language', lang);
+              },
+              success: function (data, status, xhr) {
+                  switch (xhr.status) {
+                  case 204: {
+                    alert("no content!"+status)
+                    return
+                  }
+                  case 206: {
+                    OverHijack($out, data);
+                    return
+                  }
+                  }
+    
+                 var disp = xhr.getResponseHeader('Content-Disposition');
+                 var typeCnt = xhr.getResponseHeader('Content-Type');
+                 if (disp && disp.search('attachment') != -1) {
+    
+                    //var blob = new Blob([data], {type: typeCnt});
+                    //var URL = window.URL || window.webkitURL;
+                    data = "<img src='" + url + "'/>";
+                } else if (typeCnt.startsWith("text/css") ) {
+                    var id = xhr.getResponseHeader('Section-Name');
+                    LoadStyles(id, data)
+                    return;
+                } else if (typeCnt.startsWith("application/json") ) {
+                    if (isSearch) {
+                        showObject(data)
+                    } else {
+                        $('#content').html(JSON.stringify(data) )
+                    }
+                    return;
+                }
+                if (target !== "_modal") {
+                    PutContent(data, url);
+                } else {
+                    fancyOpen(data);
+                }
+              },
+              error: function (xhr, status, error) {
+                  if (xhr.status == 401) {
+                    urlAfterLogin = url;
+                    $('#bLogin').trigger("click");
+                   return;
+                  }
+    
+                  alert( "Code : " + xhr.status + ", "+ error + ": "+ xhr.responseText);
+                  console.log(xhr);
+              }
+             });
+             return false;
+    }
+     )
+    
+          })
+      isProcess = false;
+    }
+    function replMacros(url) {
+        return url.replace(/{page}/, Math.round((window.innerHeight-60) / 22))
+    }
+    function LoadStyles(id, styles) {
+            let $head = $('head > style#' + id);
+           if ( $head.length == 0 ) {
+                $head = $('head').append('<style type="text/css" id="' + id + '">' + styles + '</style>');
+            } else {
+                $head.html( styles );
+            }
+    }
+    
+    var go_history=1;
+    // Эта функция отрабатывает при перемещении по истории просмотром (кнопки вперед-назад в браузере)
+    function MyPopState(event) {
+        if ( (go_history == 0) || (event.state == null) )
+            return true;
+        console.log(event);
+            document.title = event.title;
+        $('#content').html(event.state.data);
+    }
+    // смена адресной строки с предотвращением перезагрузки Содержимого
+    function SetDocumentHash( str_path, data ) {
+    let root_page ="/";
+    let default_page = "index.html";
+    var title = $(data).filter('title').text();
+    
+        str_path = GetShortURL( str_path )
+    
+    if (title === "") {
+        title = str_path;
+    }
+        console.log(`setHash ${title}`)
+        var  origin   = document.location.origin + ( str_path[0] == '/' ? '' : "/" )
+                + ( ( str_path != root_page ) && (str_path != default_page) ? str_path : '' );
+        document.title = title;
+        window.history.pushState( {'url':str_path, 'data':data}, document.title, origin );
+    }
+    function GetShortURL(str_path) {
+        if (str_path > "" ) {
+            console.log(str_path)
+            if (str_path.startsWith(document.location.origin)) {
+                return str_path.slice( document.location.origin.length + 1);
+            }
+            return str_path
+        }
+    
+        return '/';
+    }
+    
+    
+    $(function()   {
+        if (!window.onpopstate) {
+            window.onpopstate = MyPopState;
+        }
+    
+        window.addEventListener("beforeunload",  function (evt) {
+                  var evt = evt || window.event;
+    
+    //			  evt.returnValue = "Do you want to do it?";
+    
+                  if (evt) {
+                    var y = evt.pageY || evt.clientY;
+                    if ( y === undefined) {
+                        console.log(evt)
+                    }
+                    console.log( `beforeunload ${document.location} pageY:${y}`);
+                    evt.preventDefault();
+                    if (y < 0) {
+                        return evt.returnValue = "Do you want to close this page?"
+                    }
+    
+                    if (document.location.pathname > "/") {
+                        url = document.location
+                        document.location.href = document.location.origin;
+    //					loadContent(url.toString());
+    //					url.pathname = "/";
+                        console.log(`reload ${url}`)
+                        evt.target.URL = url.origin;
+                        evt.srcElement.URL = evt.target.URL;
+                        console.log(evt)
+                    }
+                }
+                return false
+            })
+    
+    
+        console.log('$(document).ready function events!')
+    
+        setClickAll();
+        if (user == '') {
+          getUser();
+        }
+        $('#content').on('DOMSubtreeModified', setClickAll );
+    
+            $("#inpS:not([rel])").on("blur", function(){
+    
+              if (event.relatedTarget && event.relatedTarget.className == "suggestions-constraints") {
+                        return;
+                }
+                console.log(event);
+                $('select.suggestions-constraints').hide();
+            }).on('keyup',function(e){
+            var x = event.which || event.keyCode;
+                if (x == 40) {
+                    $("#inpS").unbind("blur");
+                    $('select.suggestions-constraints').focus();
+                    $('select.suggestions-constraints option:first').selected();
+                    return;
+                }
+    
+                 if ($("#inpS").val().length < 2) {
+                    return true;
+                 }
+    
+                 $.ajax({
+                     url: "/api/v1/search/list",
+                     data: {
+                             "lang": lang,
+                             "value": $("#inpS").val(),
+                             "count": 10,
+                             "html": true
+                     },
+                   beforeSend: function (xhr) {
+                       xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+                   },
+                   success: function (data, status) {
+                     $('select.suggestions-constraints').html(data).show().on('keyup', function(e) {
+                                                         var x = event.which || event.keyCode;
+                                                         if (x == 32) {
+                                                                 $("#inpS").val( $('select.suggestions-constraints option:selected').text() );
+                                                                 $('select.suggestions-constraints').hide();
+                                                                 $('button[type="search"]').click();
+                                                                 return false;
+                                                          }
+                                                   });
+                     $('select.suggestions-constraints option').on('mouseup', function(e) {
+                        $("#inpS").val( $(this).text() );
+                        $('select.suggestions-constraints').hide();
+                        $('button[type="search"]').click();
+                        return true;
+                     });
+                   },
+                   error: function (xhr, status, error) {
+                       alert( "Code : " + xhr.status + " error :"+ error);
+                       console.log(error);
+                   }
+                  });
+            }).attr('rel', true);
+    
+    }) // $(document).ready
+    
+    // handling response AnyForm & render result according to structures of data
+    function afterSaveAnyForm(data, status) {
+    
+        if (data.content_url !== undefined) {
+            loadContent(data.content_url);
+        } else if (data.formActions !== undefined) {
+            loadContent( data.formActions[0].url );
+        } else if (data.error !== undefined) {
+            alert(data.error);
+        } else {
+            console.log(data);
+        }
+    
+        if (data.message !== undefined) {
+            alert(data.message);
+        }
+    }
+    // handling response login form, save users data & render some properties
+     function afterLogin(userStruct, thisForm) {
+        if (!userStruct) {
+            alert("Need users data!")
+            return false;
+        }
+    
+        localStorage.setItem("USER",  JSON.stringify(userStruct) );
+        saveUser(userStruct);
+        return true;
+    }
+    // run request & show content
+    function loadContent(url) {
+    
+         $.ajax({
+                url: url,
+                data: {
+                        "lang": lang,
+                        "html": true
+                },
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+                },
+                success: function (data, status) {
+                    PutContent(data, url);
+                },
+                error: function (xhr, status, error) {
+                     switch (xhr.status) {
+                     case 401:
+                        urlAfterLogin = url;
+                        $('#bLogin').trigger("click");
+                        return;
+                     case 0:
+                        console.log(xhr);
+                     }
+    
+                    alert( "Code : " + xhr.status + " error :"+ error);
+                    console.log(`${url} ${status} ${error}`);
+                }
+           });
+    }
+    
+    function PutContent(data, url) {
+        $('#content').html(data);
+        SetDocumentHash(url, data);
+        $('#catalog_pane .sidebar').remove();
+        $('#content .sidebar').appendTo('#catalog_pane');
+    }
+    
+    
+    function LoadJScript(url, asyncS, cacheS, successFunc, completeFunc) {
+        $.ajax({
+            type: "GET",
+            async: asyncS,
+            cache: cacheS,
+            url: url,
+            global: false,
+            dataType: "script",
+            success: successFunc,
+            complete: completeFunc,
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                if (errorThrown !== undefined)
+                    alert('Неудачная загрузка скрипта "' + url + '"! (' + textStatus + '). Перегрузите страницу!');
+                    console.log(errorThrown);
+            }
+        });
+    }
+    function showObject(data, thisForm) {
+        if (!data) {
+          alert('no results!')
+          return false;
+        }
+    
+        $('#content').html( '' );
+    
+        for (x in data) {
+            $('#content').append('<div>');
+            div = $('#content').children(':last').attr('id', data[x].id)
+            div.append('<div>');
+            titleDiv = div.children(':last')
+            titleDiv.append('<h3> Group: <a href="/api/v1/search/?name=' + data[x].title + '" target="search">' + data[x].title + '</a></h3>');
+            if (data[x].abbr > "") {
+                titleDiv.append('<h4>' + data[x].abbr + '</h4>');
+            }
+    
+            if (data[x].id_article > "") {
+                titleDiv.append('<h4><a href="article/' + data[x].id_article + '" target="search">' + data[x].id_article + '</a></h4>');
+            }
+    
+            for (y in data[x].company_names ) {
+                titleDiv.append('<span>' + data[x].company_names[y] + '</span>');
+            }
+            
+            for (y in data[x].list ) {
+              div.append('<a href="' + data[x].list[y].document_url + '" rel="true" target="_blank">PDF</a>')
+              brand = data[x].list[y].brand
+              if (brand !== undefined) {
+                div.append('<div>' + brand + '<a href="/api/v1/search/analog/' + brand + '" target="search"> Search analog</a></div>')
+              }
+    
+               idPolymers = data[x].list[y].id_polymers
+              if (data[x].list[y].has_additives !== false) {
+                div.append('<div><a href="/api/v1/search/additives/?id=' + idPolymers + '" target="search"> Search additives</a></div>')
+              }
+    
+              if (data[x].list[y].has_fillers !== false) {
+                div.append('<div><a href="/api/v1/search/fillers/?id=' + idPolymers + '" target="search"> Search fillers</a></div>')
+              }
+    
+              div.append('<div>' + data[x].list[y].company_name+ '</div>')
+              div.append('<table>');
+                div.append('<thr><thd> Values </thd><thd> Qty </thd> </thr>')
+    
+                for (z in data[x].list[y].characteristics) {
+                  div.append('<tr><td>'+z+'</td><td></td><td>'+data[x].list[y].characteristics[z]+'</td></tr>');
+                }
+    
+               for (z in data[x].list[y].files) {
+                  div.append('<p><a href="'+data[x].list[y].files[z].url+'" rel="true" target="_blank">'+data[x].list[y].files[z].title+'</a></p>');
+               }
+    
+               notes = data[x].list[y].description
+               if (notes  > "") {
+                    div.append('<div>' + notes + '</div>')
+               }
+            }
+        }
+    }
+    </script>
+    
+            
+    <header class="main-header">
+    <div class="topline">
+        <nav class="topline-navbar">
+            
+     <ul class="top-mnu-list"><li class="top-mnu-item"><a href="#" title="">API Rest Docs</a>
+        
+     <ul class="dropdown"><li class=""><a href="/swagger.io" title="" target="_blank">Swagger</a></li><li class=""><a href="/src/" title="" rel="setClickAll">Source of project</a></li><li class=""><a href="/apis?json" title="" rel="setClickAll">API routers json</a></li><li class=""><a href="/apis?diagram" title="" rel="setClickAll">API routers diagram</a></li><li class=""><a href="/diagram/db" title="" rel="setClickAll">DB diagram</a></li></ul> 
+    
+    </li><li class="top-mnu-item"><a href="/#" title="" rel="setClickAll">Tables</a>
+        
+     <ul class="dropdown"><li class=""><a href="/table/amounts/browse" title="Amount of production on warehouses, tonnes" rel="setClickAll">amounts</a></li><li class=""><a href="/table/articles/browse" title="" rel="setClickAll">articles</a></li><li class=""><a href="/table/brands/browse" title="" rel="setClickAll">brands</a></li><li class=""><a href="/table/content_filler/browse" title="Конфігурація наповнювача/Filler configuration" rel="setClickAll">content_filler</a></li><li class=""><a href="/table/dictionary/browse" title="word translate" rel="setClickAll">dictionary</a></li><li class=""><a href="/table/events/browse" title="Form for the events" rel="setClickAll">events</a></li><li class=""><a href="/table/firma/browse" title="Your Company information" rel="setClickAll">firma</a></li><li class=""><a href="/table/form_blocks/browse" title="part of form setting" rel="setClickAll">form_blocks</a></li><li class=""><a href="/table/form_fields/browse" title="fields of form" rel="setClickAll">form_fields</a></li><li class=""><a href="/table/forms/browse" title="settings for forms generate" rel="setClickAll">forms</a></li><li class=""><a href="/table/homepages/browse" title="list of available URL homepages" rel="setClickAll">homepages</a></li><li class=""><a href="/table/items/browse" title="Product characteristics" rel="setClickAll">items</a></li><li class=""><a href="/table/languages/browse" title="" rel="setClickAll">languages</a></li><li class=""><a href="/table/management/browse" title="List of grants" rel="setClickAll">management</a></li><li class=""><a href="/table/patterns_list/browse" title="List of pattern which help us to show edit of fields" rel="setClickAll">patterns_list</a></li><li class=""><a href="/table/photos/browse" title="Store of all photo" rel="setClickAll">photos</a></li><li class=""><a href="/table/polymers/browse" title="Polymers database" rel="setClickAll">polymers</a></li><li class=""><a href="/table/prepreg_type/browse" title="Prepreg type" rel="setClickAll">prepreg_type</a></li><li class=""><a href="/table/reinforcing/browse" title="Reinforcing fiber configuration" rel="setClickAll">reinforcing</a></li><li class=""><a href="/table/roles/browse" title="List of privilege of users" rel="setClickAll">roles</a></li><li class=""><a href="/table/type_additives/browse" title="Types of additives" rel="setClickAll">type_additives</a></li><li class=""><a href="/table/type_material/browse" title="type of materials according to polymer DB" rel="setClickAll">type_material</a></li><li class=""><a href="/table/type_of_filler/browse" title="Type of filler" rel="setClickAll">type_of_filler</a></li><li class=""><a href="/table/type_polymer/browse" title="Тип полімеру" rel="setClickAll">type_polymer</a></li><li class=""><a href="/table/users/browse" title="Users profile data" rel="setClickAll">users</a></li><li class=""><a href="/table/warehouses/browse" title="list of Warehouses" rel="setClickAll">warehouses</a></li></ul> 
+    
+    </li><li class="top-mnu-item"><a href="/#" title="" rel="setClickAll">Reports</a>
+        
+     <ul class="dropdown"><li class=""><a href="/table/additives/view" title="Exhausting information for all types of additives" rel="setClickAll">additives</a></li><li class=""><a href="/table/cured/view" title="Використовують затверджувач" rel="setClickAll">cured</a></li><li class=""><a href="/table/cured_accelerator/view" title="Прискорювач реакції полімерізації" rel="setClickAll">cured_accelerator</a></li><li class=""><a href="/table/filler_for_polymers/view" title="" rel="setClickAll">filler_for_polymers</a></li><li class=""><a href="/table/fillers/view" title="Exhausting information for all types of dispersed, reinforcing, and other types of fillers" rel="setClickAll">fillers</a></li><li class=""><a href="/table/manufactures/view" title="LIst of manufacturer from products" rel="setClickAll">manufactures</a></li><li class=""><a href="/table/productions/view" title="" rel="setClickAll">productions</a></li><li class=""><a href="/table/type_of_fibre_filler/view" title="Тип волокнистого наповнювача" rel="setClickAll">type_of_fibre_filler</a></li><li class=""><a href="/table/warehouses_summary/view" title="summary production on warehouses" rel="setClickAll">warehouses_summary</a></li></ul> 
+    
+    </li><li class="top-mnu-item"><a href="/table/polymers/browse" title="" rel="setClickAll">Polymers</a></li><li class="top-mnu-item"><a href="/table/fillers/browse" title="" rel="setClickAll">Fillers</a></li><li class="top-mnu-item"><a href="/table/additives/browse" title="" rel="setClickAll">Additives</a></li><li class="top-mnu-item"><a href="/table/manufactures/browse" title="" rel="setClickAll">Manufactures</a></li><li class="top-mnu-item"><a href="/table/dealers/browse" title="" rel="setClickAll">Dealers</a></li><li class="top-mnu-item"><a href="/table/consumers/browse" title="" rel="setClickAll">Consumers</a></li><li class="top-mnu-item"><a href="/forms/custom" title="" rel="setClickAll">Custom forms</a></li><li class="top-mnu-item"><a href="/show/forms/items" title="" rel="setClickAll">Add production</a></li></ul> 
+    
+        </nav>
+        <div class="topline-btns">
+            <a href="/user/signout/" id="bLogOut" onclick="return logOut(this);" rel="setClickAll">
+                <span class="glyphicon-log-out"> </span>
+            </a>
+            <a href="#" id="burger" class="brg-mnu"></a>
+            <a id="bLogin" href="/show/forms/signin" class="navbar-link btn-login" title="Open auth form" target="_modal" rel="setClickAll">SignIn
+            <span class="glyphicon-info-sign"> </span></a>
+        </div>
+    </div>
+    </header>
+    
+    <div class="content-wrap">
+    <div id="container-fluid">
+        <div class="row-fluid">
+            <div class="sidebar-section">
+                <div id="catalog_pane" class="well sidebar-nav">
+                    
+     <ul class="left-mnu-list"></ul> 
+    
+                </div>
+            </div>
+            <div class="content-section">
+                <div id="content" rel=""><form id="items_form" name="items" role="form" class="form-horizontal" target="content" action="/table/items/put" method="POST" enctype="multipart/form-data" oninput="d = document.querySelector('button.hidden', this); if (d) {d.className = 'main-btn'};" onchange="d = document.querySelector('button.hidden', this); if (d) {d.className = 'main-btn'};" onsubmit="return saveForm(this, afterSaveAnyForm);" novalidate="" caption="items"><figcaption>type_of_material</figcaption><figure id="block1" style="display:none"><figcaption>Common Information</figcaption><p>Default block for forms</p><div id="divField0" class="input-wrap"><label class="input-label">     <input type="text" src="/search/list" data="id_polymers-sel" autocapitalize="none" autocorrect="off" autocomplete="off" onkeyup="inputSearchKeyUp(this,event);"> <span data-placeholder="Name of the polymer"></span> <div class="suggestions-wrapper" style="width:100%"> <span class="suggestions-addon" data-addon-type="spinner" style="left: -97px; top: 1px; height: 42px; width: 80%;"></span> <select size="10" name="id_polymers" required="true" class="suggestions-constraints suggestions-select-hide id_polymers-sel" style="width:98%"> </select> <div class="suggestions-suggestions" style="position: absolute; display: none; left: -311.109375px; top: 43px; width: 256.109375px;"> </div> </div>     <h6 class="errorLabel"></h6></label></div><div id="divField1" class="input-wrap"><label class="input-label">     <input type="text" name="manufacturer" required="true" value="Esterion"> <span class="label-text" data-placeholder="Product manufacturer"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField2" class="input-wrap"><label class="input-label">     <input type="text" name="marka" required="true"> <span data-placeholder="Commercial product name"></span>     <h6 class="errorLabel"></h6></label></div><div class="form-actions"><button class="button" type="custom" onclick="m = (document.getElementsByName('id_type_material')[0].value === '3' ? 12 : 14); return Next(this, m);">Next</button></div></figure><figure id="block11"><figcaption>The product main characteristics</figcaption><p>What polymer does the product belong to, if it is not in the list, contact the site administration</p><div id="divField1" class="input-wrap"><label class="input-label">     Type of material of polymer<select name="id_type_material" required="true" pattern="^-?\d+$" onkeyup="return validatePattern(this);" data-show-blocks="{&quot;6&quot;:[&quot;1&quot;],&quot;7&quot;:[&quot;11&quot;],&quot;8&quot;:[&quot;11&quot;],&quot;1&quot;:[&quot;1&quot;],&quot;2&quot;:[&quot;1&quot;],&quot;3&quot;:[&quot;1&quot;],&quot;4&quot;:[&quot;1&quot;]}" onchange="ShowBlocks(this);">   <option value="8">Additives</option>  <option value="7">Fillers</option>  <option value="4">Thermoplastic composite materials</option>  <option value="2">Thermoplastic elastomer</option>  <option value="1">Thermoplastic polymer</option>  <option value="5">Thermoset polymer</option>  <option value="3">Thermoset polymer prepreg</option>  <option value="6">Thermoset resin</option>  </select>     <h6 class="errorLabel"></h6></label></div></figure><figure id="block4" style="display:none"><figcaption>Information</figcaption><div id="divField0" class="input-wrap"><label class="input-label">     Name of the polymer<select name="id_filler_for_polymers" required="true" pattern="^-?\d+$" onkeyup="return validatePattern(this);">   <option value="375">Fibres from phenolic resins</option>  <option value="90">Fluoroalkoxyphosphazene polymers</option>  <option value="298">Groundnut protein fibre</option>  <option value="10">High impact acrylonitrile butadiene styrene copolymer </option>  <option value="647">High strength, standard modulus carbon fibers</option>  <option value="369">Modacrylic fibres</option>  <option value="670">Phenolic resin Spheres</option>  <option value="539">Polyalanine fibre</option>  <option value="289">Polybutylene terephthalate Fibres</option>  <option value="516">Polyethylene fibres</option>  <option value="586">Polypropylene fibers</option>  <option value="629">Polyvinyl alcohol/polyvinyl chloride fibre blend</option>  </select>     <h6 class="errorLabel"></h6></label></div><div id="divField1" class="input-wrap"><label class="input-label">     <input type="text" name="marka" required="true"> <span data-placeholder="Commercial product name"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField2" class="input-wrap"><label class="input-label">     <input type="text" name="manufacturer" required="true"> <span data-placeholder="Manufacturer of filler"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField3" class="input-wrap"><label class="input-label">     <input type="text" name="volume_on_stock" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="The approximate volume on stock, tons "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField4" class="input-wrap"><label class="input-label">     Type filler<select name="id_type_of_filler" required="true" pattern="^-?\d+$" onkeyup="return validatePattern(this);">   <option value="2">Disperse filler</option>  <option value="1">Fibrous filler</option>  <option value="3">Other fillers</option>  </select>     <h6 class="errorLabel"></h6></label></div></figure><figure id="block12" style="display:none"><figcaption>Prepeg</figcaption><p>Prepeg</p><div id="divField0" class="input-wrap"><label class="input-label">     id_prepreg_type<select name="id_prepreg_type" required="true" pattern="^-?\d+$" onkeyup="return validatePattern(this);" data-show-blocks="{&quot;6&quot;:[&quot;18&quot;],&quot;1&quot;:[&quot;18&quot;],&quot;2&quot;:[&quot;18&quot;],&quot;3&quot;:[&quot;18&quot;],&quot;4&quot;:[&quot;18&quot;],&quot;5&quot;:[&quot;18&quot;]}" onchange="ShowBlocks(this);">   <option value="6">BMC</option>  <option value="1">Continuous fibres</option>  <option value="2">Cutted fibres</option>  <option value="4">Other</option>  <option value="5" selected="">SMC</option>  <option value="3">Short fibres</option>  </select>     <h6 class="errorLabel"></h6></label></div></figure><figure id="block13" style="display:none"><figcaption>Prepeg main charact</figcaption><p>Prepeg</p><div id="divField0" class="input-wrap"><label class="input-label">     <input type="number" name="density" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);" value=""> <span class="label-text" data-placeholder="Density, kg/m^3 "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField1" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_modulus" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);" value="12/25"> <span class="label-text" data-placeholder="Tensile modulus, GPa "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField2" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_strength_break" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Tensile Strength at Break, MPa "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField3" class="input-wrap"><label class="input-label">     <input type="text" name="flexural_strength" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);" value="95/740"> <span class="label-text" data-placeholder="Flexural strength, MPa "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField4" class="input-wrap"><label class="input-label">     <input type="text" name="flexural_modulus" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);" value="11/28"> <span class="label-text" data-placeholder="Flexural modulus, GPa "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField5" class="input-wrap"><label class="input-label">     <input type="text" name="elongation_break" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Elongation at break, % "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField6" class="input-wrap"><label class="input-label">     <input type="text" name="flammability" required="true" value="V-0"> <span class="label-text" data-placeholder="Flammability, Class"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField7" class="input-wrap"><label class="input-label">     <input type="text" name="charpy_impact_strength" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);" value="40/370"> <span class="label-text" data-placeholder="Charpy impact strength, kJ/m^2 "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField8" class="input-wrap"><label class="input-label">     <input type="text" name="shrinkage" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);" value="0,2 / -0,05"> <span class="label-text" data-placeholder="Shrinkage, % "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField9" class="input-wrap"><label class="input-label">     <input type="text" name="water_absorption" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);" value="< 0,5"> <span class="label-text" data-placeholder="Water absorption, % "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div></figure><figure id="block14" style="display:none"><figcaption>The product main characteristics</figcaption><p>What polymer does the product belong to, if it is not in the list, contact the site administration</p><div id="divField1" class="input-wrap"><label class="input-label">     Density test standard<select name="density_iso" required="true">   <option value="ASTM D-1505">ASTM D-1505</option>  <option value="ISO 1183" selected="">ISO 1183</option>  </select>     <h6 class="errorLabel"></h6></label></div><div id="divField2" class="input-wrap"><label class="input-label">     <input type="number" name="density" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Density, kg/m^3 "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField4" class="input-wrap"><label class="input-label">     MFR test standard<select name="mfr_iso" required="true">   <option value="ASTM D-1238">ASTM D-1238</option>  <option value="ISO 1133" selected="">ISO 1133</option>  </select>     <h6 class="errorLabel"></h6></label></div><div id="divField5" class="input-wrap"><label class="input-label">     <input type="text" name="mfr" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="MFR, g/10 min "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField7" class="input-wrap"><label class="input-label">     Tensile modulus, ISO<select name="tensile_modulus_iso" required="true">   <option value="ASTM D-790">ASTM D-790</option>  <option value="ISO 527-2" selected="">ISO 527-2</option>  </select>     <h6 class="errorLabel"></h6></label></div><div id="divField8" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_modulus" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Tensile modulus, GPa "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField10" class="input-wrap"><label class="input-label">     Tensile Strength at Break, ISO<select name="tensile_strength_break_iso" required="true">   <option value="ASTM D-638">ASTM D-638</option>  <option value="ISO 527-2" selected="">ISO 527-2</option>  </select>     <h6 class="errorLabel"></h6></label></div><div id="divField11" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_strength_break" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Tensile Strength at Break, MPa "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField13" class="input-wrap"><label class="input-label">     Elongation at break, ISO<select name="elongation_break_iso" required="true">   <option value="ASTM D-638">ASTM D-638</option>  <option value="ISO 527-2" selected="">ISO 527-2</option>  </select>     <h6 class="errorLabel"></h6></label></div><div id="divField14" class="input-wrap"><label class="input-label">     <input type="text" name="elongation_break" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Elongation at break, % "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField16" class="input-wrap"><label class="input-label">     <input type="text" name="charpy_impact_strength" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Charpy impact strength, kJ/m^2 "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField17" class="input-wrap"><label class="input-label">     <input type="text" name="charpy_notched_impact_strength" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Charpy notched impact strength, kJ/m^2 "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField18" class="input-wrap"><label class="input-label">     <input type="text" name="melting_temperature" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Melting temperature,°C "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField19" class="input-wrap"><label class="input-label">     <input type="text" name="flammability" required="true" value="V-0"> <span class="label-text" data-placeholder="Flammability, Class"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField20" class="input-wrap"><label class="input-label">     <input type="text" name="surface_resistivity" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Surface resistivity, Ohm "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div class="form-actions"><button class="button" type="prev" onclick="return Next(this, 13);">Previous</button><button class="button" type="custom" onclick="return Next(this, 18);">Next</button></div></figure><figure id="block15" style="display:none"><figcaption>Thermoplastic_elastomer</figcaption><p>Thermoplastic_elastomer</p><div id="divField0" class="input-wrap"><label class="input-label">     <input type="text" name="hardness" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Hardness, Shore-A "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField1" class="input-wrap"><label class="input-label">     <input type="text" name="hardness_iso" required="true" value=""> <span class="label-text" data-placeholder="Hardness, Shore-A, ISO "></span>     <h6 class="errorLabel"></h6></label></div><div id="divField2" class="input-wrap"><label class="input-label">     <input type="number" name="density" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);" value=""> <span class="label-text" data-placeholder="Density, kg/m^3 "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField3" class="input-wrap"><label class="input-label">     <input type="text" name="density_iso" required="true" value=""> <span class="label-text" data-placeholder="density_iso"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField4" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_strength_break" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Tensile Strength at Break, MPa "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField5" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_strength_break_iso" required="true" value=""> <span class="label-text" data-placeholder="Tensile Strength at Break, ISO"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField6" class="input-wrap"><label class="input-label">     <input type="text" name="elongation_break" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Elongation at break, % "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField7" class="input-wrap"><label class="input-label">     <input type="text" name="elongation_break_iso" required="true" value=""> <span class="label-text" data-placeholder="Elongation at break, ISO"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField8" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_modulus100" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Modulus of elasticity at 100%, MPa "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField9" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_modulus100_iso" required="true" value=""> <span class="label-text" data-placeholder="Modulus of elasticity at 100%, ISO"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField10" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_modulus300" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Modulus of elasticity at 300%, MPa "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField11" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_modulus300_iso" required="true" value=""> <span class="label-text" data-placeholder="Modulus of elasticity at 300%, ISO"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField12" class="input-wrap"><label class="input-label">     <input type="text" name="tear_resistance" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Tear Resistance, N/mm "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField13" class="input-wrap"><label class="input-label">     <input type="text" name="tear_resistance_iso" required="true" value=""> <span class="label-text" data-placeholder="tear_resistance_iso"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField14" class="input-wrap"><label class="input-label">     <input type="text" name="compression_set23" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Compression Set at 23 С, % "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField15" class="input-wrap"><label class="input-label">     <input type="text" name="compression_set23_iso" required="true" value=""> <span class="label-text" data-placeholder="compression_set23_iso"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField16" class="input-wrap"><label class="input-label">     <input type="text" name="compression_set70" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Compression Set at 70 С, % "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField17" class="input-wrap"><label class="input-label">     <input type="text" name="compression_set70_iso" required="true" value=""> <span class="label-text" data-placeholder="compression_set70_iso"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField18" class="input-wrap"><label class="input-label">     <input type="text" name="ozone_resistance" required="true" value=""> <span class="label-text" data-placeholder="Ozone Resistance"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField19" class="input-wrap"><label class="input-label">     <input type="text" name="ozone_resistance_iso" required="true" value=""> <span class="label-text" data-placeholder="ozone_resistance_iso"></span>     <h6 class="errorLabel"></h6></label></div></figure><figure id="block16" style="display:none"><figcaption>Thermoplastic_composite_materials</figcaption><p>Thermoplastic_composite_materials</p><div id="divField0" class="input-wrap"><label class="input-label">     <input type="text" name="content_reinforcement" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Content reinforcement/filler, wt. % "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField1" class="input-wrap"><label class="input-label">     <input type="text" name="content_reinforcement_iso" required="true" value=""> <span class="label-text" data-placeholder="content_reinforcement_iso"></span>     <h6 class="errorLabel"></h6></label></div></figure><figure id="block17" style="display:none"><figcaption>Thermoset_resin</figcaption><p>Thermoset_resin</p><div id="divField0" class="input-wrap"><label class="input-label">     <input type="number" name="density" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);" value=""> <span class="label-text" data-placeholder="Density, kg/m^3 "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField1" class="input-wrap"><label class="input-label">     <input type="text" name="density_iso" required="true" value=""> <span class="label-text" data-placeholder="density_iso"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField2" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_modulus" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);" value="12/25"> <span class="label-text" data-placeholder="Tensile modulus, GPa "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField3" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_modulus_iso" required="true" value="ISO 527-4"> <span class="label-text" data-placeholder="Tensile modulus, ISO"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField4" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_strength_break" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Tensile Strength at Break, MPa "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField5" class="input-wrap"><label class="input-label">     <input type="text" name="tensile_strength_iso" required="true" value="ISO 527-4"> <span class="label-text" data-placeholder="Tensile Strength, ISO"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField6" class="input-wrap"><label class="input-label">     <input type="text" name="flexural_strength" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);" value="95/740"> <span class="label-text" data-placeholder="Flexural strength, MPa "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField7" class="input-wrap"><label class="input-label">     <input type="text" name="flexural_strength_iso" required="true" value="ISO 14125"> <span class="label-text" data-placeholder="Flexural strength, ISO"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField8" class="input-wrap"><label class="input-label">     <input type="text" name="flexural_modulus" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);" value="11/28"> <span class="label-text" data-placeholder="Flexural modulus, GPa "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField9" class="input-wrap"><label class="input-label">     <input type="text" name="flexural_modulus_iso" required="true" value="ISO 14125"> <span class="label-text" data-placeholder="Flexural modulus, ISO"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField10" class="input-wrap"><label class="input-label">     <input type="text" name="elongation_break" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="Elongation at break, % "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField11" class="input-wrap"><label class="input-label">     <textarea name="using_sectors" required="true">Автобудівництво, Будівництво промислових об'єктів</textarea> <span class="label-text" data-placeholder="Areas of application"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField12" class="input-wrap"><label class="input-label">     <input type="text" name="flammability" required="true" value="V-0"> <span class="label-text" data-placeholder="Flammability, Class"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField13" class="input-wrap"><label class="input-label">     <textarea name="using_sectors" required="true">Автобудівництво, Будівництво промислових об'єктів</textarea> <span class="label-text" data-placeholder="Areas of application"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField14" class="input-wrap"><label class="input-label">     <input type="text" name="charpy_impact_strength" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);" value="40/370"> <span class="label-text" data-placeholder="Charpy impact strength, kJ/m^2 "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField15" class="input-wrap"><label class="input-label">     <textarea name="using_sectors" required="true">Автобудівництво, Будівництво промислових об'єктів</textarea> <span class="label-text" data-placeholder="Areas of application"></span>     <h6 class="errorLabel"></h6></label></div></figure><figure id="block18" style="display:none"><figcaption>Filler configuration</figcaption><p>content_filler</p><div id="divField0" class="input-wrap"><label class="input-label">     Filler configuration<select name="id_content_filler" required="true" pattern="^-?\d+$" onkeyup="return validatePattern(this);" data-show-blocks="{&quot;2&quot;:[&quot;20&quot;,&quot;21&quot;,&quot;-1&quot;],&quot;1&quot;:[&quot;19&quot;,&quot;21&quot;,&quot;-1&quot;]}" onchange="ShowBlocks(this);">   <option value="1">Disperse filler</option>  <option value="2">Fibrous filler</option>  <option value="null" selected="" disabled="">Required select one of</option>  </select>     <h6 class="errorLabel"></h6></label></div><div class="form-actions"><button class="button" type="prev" onclick="return Next(this, 13);">Previous</button><button class="button" type="custom" onclick="m = (document.getElementsByName('id_type_material')[0].value === 3 ? 12 : 14); return Next(this, m);">Next</button></div></figure><figure id="block19" style="display:none"><figcaption>nature_of_filler</figcaption><p>nature_of_filler</p><div id="divField0" class="input-wrap"><label class="input-label">     <input type="text" name="nature_of_filler" required="true" value="Glass Fibers"> <span class="label-text" data-placeholder="Nature of filler"></span>     <h6 class="errorLabel"></h6></label></div></figure><figure id="block20" style="display:none"><figcaption>fibre_filler</figcaption><p>fibre_filler</p><div id="divField0" class="input-wrap"><label class="input-label">     Reinforcing fiber configuration<select name="id_reinforcing" required="true" pattern="^-?\d+$" onkeyup="return validatePattern(this);">   <option value="2" selected="">Chopped fibers</option>  <option value="1">Chopped short fibers</option>  <option value="3">Continuous fibers</option>  <option value="4">Other</option>  </select>     <h6 class="errorLabel"></h6></label></div><div id="divField1" class="input-wrap"><label class="input-label">     <input type="text" name="type_of_fibre_filler" required="true" value=""> <span class="label-text" data-placeholder="Type of fibre filler"></span>     <h6 class="errorLabel"></h6></label></div></figure><figure id="block21" style="display:none"><figcaption>Additional information</figcaption><p>(may be use Markdown format)</p><div id="divField0" class="input-wrap"><label class="input-label">     <textarea name="methods_recycling" required="true">Пряме пресування</textarea> <span class="label-text" data-placeholder="Recycling methods"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField1" class="input-wrap"><label class="input-label">     <textarea name="using_sectors" required="true">Автобудівництво, Будівництво промислових об'єктів</textarea> <span class="label-text" data-placeholder="Areas of application"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField2" class="input-wrap"><label class="input-label">     <textarea name="notes" required="true">Високоміцний матеріал з анізотропією механічних властивостей. Найбільша міцність спостерігається вздовж орієнтації армуючого наповнювача. Продукт являє собою препег, що армований скляним волокном та наповнений мінеральними дисперсними наповнювачами. Під дією відкритого полум’я не плавиться, не спричиняє падіння крапель та не утворює великої кількості диму. У своєму складі не містить галогенів, важких металів та будь-яких сполук з переліку REACH SVHC.
+    </textarea> <span class="label-text" data-placeholder="Notes"></span>     <h6 class="errorLabel"></h6></label></div></figure><figure id="block22" style="display:none"><figcaption>Additives</figcaption><div id="divField0" class="input-wrap"><label class="input-label">     <input type="text" src="/search/list" data="id_polymers-sel" autocapitalize="none" autocorrect="off" autocomplete="off" onkeyup="inputSearchKeyUp(this,event);"> <span data-placeholder="Name of the polymer"></span> <div class="suggestions-wrapper" style="width:100%"> <span class="suggestions-addon" data-addon-type="spinner" style="left: -97px; top: 1px; height: 42px; width: 80%;"></span> <select size="10" name="id_polymers" required="true" class="suggestions-constraints suggestions-select-hide id_polymers-sel" style="width:98%"> </select> <div class="suggestions-suggestions" style="position: absolute; display: none; left: -311.109375px; top: 43px; width: 256.109375px;"> </div> </div>     <h6 class="errorLabel"></h6></label></div><div id="divField1" class="input-wrap"><label class="input-label">     id_firma<select name="id_firma" required="true" pattern="^-?\d+$" onkeyup="return validatePattern(this);">   <option value="1">A.C.T. Україна</option>  <option value="6">Test 1</option>  <option value="13">test Ruslan</option>  <option value="15">test Ruslan2</option>  <option value="2">Альфа-Пласт</option>  <option value="19">СПД Овчинник</option>  <option value="7">Тест 13</option>  <option value="10">Тест 13/13</option>  <option value="14">Тест 13/13/15</option>  <option value="18">Тест 13/58</option>  <option value="12">Тест 14</option>  <option value="17">Тест 16</option>  </select>     <h6 class="errorLabel"></h6></label></div><div id="divField2" class="input-wrap"><label class="input-label">     <input type="text" name="marka" required="true"> <span data-placeholder="Commercial product name"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField3" class="input-wrap"><label class="input-label">     <input type="text" name="manufacturer" required="true"> <span data-placeholder="Manufacturer of additive"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField4" class="input-wrap"><label class="input-label">     <input type="text" name="volume_on_stock" required="true" pattern="^[<>.^\d\\\/]+$" onkeyup="return validatePattern(this);"> <span data-placeholder="The approximate volume on stock, tons "></span>     <h6 class="errorLabel">only float number more than zero</h6></label></div><div id="divField5" class="input-wrap"><label class="input-label">     Type of additives<select name="id_type_additives" required="true" pattern="^-?\d+$" onkeyup="return validatePattern(this);">   <option value="20">Adhesion promouter</option>  <option value="10">Antifog</option>  <option value="17">Antifriction additive</option>  <option value="8">Antioxidant</option>  <option value="9">Antislip</option>  <option value="12">Colourant</option>  <option value="15">Cross-linking agent</option>  <option value="5">Flame retardant</option>  <option value="16">Friction additive</option>  <option value="4">Lubricant</option>  <option value="18">Nucleator</option>  <option value="3">Plasticizer</option>  <option value="7">The Impact elasticity modificator</option>  <option value="2">The accelerator of a polymerization reaction</option>  <option value="1">The curing agent</option>  <option value="14">The foaming systems</option>  <option value="13">The optical converter</option>  <option value="19">The other modification additives</option>  <option value="11">The technological additives</option>  <option value="6">UV stabilizer</option>  </select>     <h6 class="errorLabel"></h6></label></div><div id="divField6" class="input-wrap"><label class="input-label">     <textarea name="description" required="true"></textarea> <span data-placeholder="Product description"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField7" class="input-wrap"><label class="input-label">     <textarea name="product_role" required="true"></textarea> <span data-placeholder="Product role"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField8" class="input-wrap"><label class="input-label">     <textarea name="methods_recycling" required="true"></textarea> <span data-placeholder="Processing parameters"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField9" class="input-wrap"><label class="input-label">     <textarea name="notes" required="true"></textarea> <span data-placeholder="Remarks"></span>     <h6 class="errorLabel"></h6></label></div><div id="divField10" class="input-wrap"><label class="input-label">     technical data sheet<span class="hiddenInput" style="background-image: url('<nil>');"> <input name="tds" required="true" type="file" accept="image"> </span>     <h6 class="errorLabel"></h6></label></div><div id="divField11" class="input-wrap"><label class="input-label">     material safety data sheet<span class="hiddenInput" style="background-image: url('<nil>');"> <input name="msds" required="true" type="file" accept="image"> </span>     <h6 class="errorLabel"></h6></label></div><div id="divField12" class="input-wrap"><label class="input-label">     presentation<span class="hiddenInput" style="background-image: url('<nil>');"> <input name="presentation" required="true" type="file" accept="image"> </span>     <h6 class="errorLabel"></h6></label></div></figure><figure id="block-1" style="display:none"><figcaption>Apply changes</figcaption><div class="form-actions"><button class="button" type="submit">Update</button><button class="button" type="reset">Reset changes</button></div></figure><output></output><progress value="0" max="100" hidden=""> </progress></form> 
+    <script>
+    function inputSearchKeyUp(thisElem, event){
+    
+            var x = event.which || event.keyCode;
+            var elem = $(thisElem)
+            var thisClass = 'select.suggestions-select-show.'+thisElem.attributes.data.value
+            var thisClassH = 'select.suggestions-select-hide.'+thisElem.attributes.data.value
+    
+            if (x == 40) {
+                elem.unbind("blur");
+                $(thisClass).focus();
+                $(thisClass + ' option:first').selected();
+    
+               return;
+            }
+    
+             elem.on("blur", function(){
+    
+                   if (event.relatedTarget && event.relatedTarget.className == "suggestions-select-show") {
+                             return;
+                   }
+    
+                     console.log(event);
+                     $(thisClass).removeClass('suggestions-select-show').addClass('suggestions-select-hide');
+                 })
+    
+             if (elem.val().length < 2) {
+                return true;
+             }
+    
+             $.ajax({
+                 url: thisElem.src,
+                 data: {
+                         "lang": lang,
+                         "value": thisElem.value,
+                         "count": 10,
+                         "html": true
+                 },
+               beforeSend: function (xhr) {
+                   xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+               },
+               success: function (data, status) {
+                 $(thisClassH).html(data).removeClass('suggestions-select-hide').addClass('suggestions-select-show')
+                 .on('keyup', function(event) {
+                             var x = event.which || event.keyCode;
+                             if (x == 32) {
+                                     thisElem.value = $(thisClass + ' option:selected').text();
+                                     $(thisClass).removeClass('suggestions-select-show').addClass('suggestions-select-hide');
+    
+                                     return false;
+                              }
+                       });
+                 $(thisClass + ' option').on('mouseup', function(e) {
+                    thisElem.value = $(this).text();
+                     $(thisClass).removeClass('suggestions-select-show').addClass('suggestions-select-hide');
+    
+                    return true;
+                 });
+    
+               },
+               error: function (xhr, status, error) {
+                   alert( "Code : " + xhr.status + " error :"+ error);
+                   console.log(error);
+               }
+              });
+    }
+    
+    function ShowBlocks(thisElem){
+        d=$(thisElem).data('show-blocks');
+        $(thisElem).parents('form').children('figure').hide();
+        d[$('option:selected', thisElem).val()].every(function (e) {$('#block'+ e).show(); return true;})
+    }
+    
+    function Next(elem, id) {
+        block = $(elem).parents('figure');
+        if (!validateFields(block[0]))
+            return false;
+    
+        block.hide();
+        newBlock = $('#block'+id).show()[0];
+        newBlock.scrollIntoView();
+        fields = $('input, select', newBlock)
+        if (fields.length > 0) {
+            fields[0].focus();
+        }
+        return false;
+    }
+    
+    $(function()   {
+        textInputs = $('textarea');
+        if (textInputs.length > 0) {
+            if (tinymce === undefined) {
+                LoadJScript("https://cdn.tiny.cloud/1/2os6bponsl87x9zsso916jquzsi298ckurhmnf7fp9scvpgt/tinymce/6/tinymce.min.js", false, true)
+            }
+    
+            textInputs.focus(
+                function (event) {
+                    let name = event.target.name;
+                    tinymce.init({
+                      target: event.target,
+                      menubar: false,
+                      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount    ',
+                      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck | align lineheight | numlist bullist indent outdent  | removeformat',
+                      mergetags_list: [
+                        { value: "name", title: name },
+                        { value: 'placeholder', title: name },
+                      ],
+                      setup: (editor) => {
+                          editor.on('input', (e) => {
+                           console.log(e);
+                           $('#items_form button.hidden').removeClass('hidden').addClass('main-btn');
+                          });
+    
+                          editor.on('focusout', (e) => {
+                           $('textarea[name="' + name +'"]').text( editor.getContent({ format: 'text' }) );
+                          });
+                        }
+                    });
+            });
+        }
+    });
+    </script>
+    </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+        
+    <footer class="main-footer">
+            <div class="footer-inner-wrap">
+                    <div class="footer-social">
+                        <!-- Facebook -->
+                        <i class="fab fa-facebook-f"></i>
+    
+                        <!-- Twitter -->
+                        <i class="fab fa-twitter"></i>
+    
+                        <!-- Google -->
+                        <i class="fab fa-google"></i>
+    
+                        <!-- Instagram -->
+                        <i class="fab fa-instagram"></i>
+    
+                        <!-- Linkedin -->
+                        <i class="fab fa-linkedin-in"></i>
+    
+                        <!-- Pinterest -->
+                        <i class="fab fa-pinterest"></i>
+    
+                        <!-- Vkontakte -->
+                        <i class="fab fa-vk"></i>
+    
+                        <!-- Stack overflow -->
+                        <i class="fab fa-stack-overflow"></i>
+    
+                        <!-- Youtube -->
+                        <i class="fab fa-youtube"></i>
+    
+                        <!-- Slack -->
+                        <i class="fab fa-slack-hash"></i>
+    
+                        <!-- Github -->
+                        <i class="fab fa-github"></i>
+    
+                        <!-- Dribbble -->
+                        <i class="fab fa-dribbble"></i>
+    
+                        <!-- Reddit -->
+                        <i class="fab fa-reddit-alien"></i>
+    
+                        <!-- Whatsapp -->
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                <div class="footer-block">
+                    <div class="footer-mnu">
+                    
+     <ul class="main-list"></ul> 
+    
+                    </div>
+                </div>
+           </div>
+        </footer>
+        
+    
+    
+    
+    </body>
+</html>

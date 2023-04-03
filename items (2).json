@@ -1,0 +1,1954 @@
+{
+  "title": "items",
+  "action": "/table/items/put",
+  "description": "type_of_material",
+  "method": "POST",
+  "hideBlock": {
+    "data": {
+      "id_content_filler": {
+        "1": [
+          "19",
+          "13"
+        ],
+        "2": [
+          "20",
+          "23",
+          "13"
+        ]
+
+      },
+      "id_type_of_filler": {
+        "1": [
+          "26",
+          "35"
+        ],
+        "2": [
+          "24",
+          "35"
+        ],
+        "3": [
+          "24",
+          "25",
+          "35"
+        ]
+
+      },
+      "id_prepreg_type": {
+          "1": [
+            "18"
+          ],
+          "2": [
+            "18"
+          ],
+          "3": [
+            "18"
+          ],
+          "4": [
+            "18"
+          ],
+          "5": [
+            "18"
+          ],
+          "6": [
+            "18"
+          ]
+      },
+      "id_type_material": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "1"
+        ],
+        "3": [
+          "1"
+        ],
+        "4": [
+          "1"
+        ],
+        "6": [
+          "1"
+        ],
+        "7": [
+          "4"
+        ],
+        "8": [
+          "34"
+        ]
+      }
+    },
+    "defaultBlocks": [
+      "11"
+    ]
+  },
+  "blocks": [
+    {
+      "id": 1,
+      "title": "Common Information",
+      "description": "Default block for forms",
+      "columns": [
+        {
+          "name": "id_polymers",
+          "required": true,
+          "suggestions":  "/search/list",
+          "defaultInputValue": "Unsaturated polyester resin compounds",
+          "type": "select",
+          "title": "Name of the polymer"
+        },
+        {
+          "name": "manufacturer",
+          "required": true,
+          "type": "text",
+          "value": "Esterion",
+          "title": "Product manufacturer"
+        },
+        {
+          "name": "marka",
+          "required": false,
+          "type": "text",
+          "title": "Commercial product name"
+        }
+      ],
+      "buttons": [
+        {
+          "title": "Next",
+          "type": "custom",
+          "disabled": "onkey",
+          "OnClick": "m = (document.getElementsByName('id_type_material')[0].value === '3' ? 12 : 14); return Next(this, m);"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "The product main characteristics",
+      "description": "What polymer does the product belong to, if it is not in the list, contact the site administration",
+      "columns": [
+        {
+          "name": "id",
+          "required": false,
+          "pattern": "^-?\\d+$",
+          "type": "hidden",
+          "title": "id",
+          "readOnly": true,
+          "hidden": true
+        },
+        {
+          "name": "id_type_material",
+          "required": true,
+          "pattern": "^-?\\d+$",
+          "type": "select",
+          "data": [
+            {
+              "title": "Additives",
+              "label": "Additives",
+              "value": "8"
+            },
+            {
+              "title": "Fillers",
+              "label": "Fillers",
+              "value": "7"
+            },
+            {
+              "title": "Thermoplastic composite materials",
+              "label": "Thermoplastic composite materials",
+              "value": "4"
+            },
+            {
+              "title": "Thermoplastic elastomer",
+              "label": "Thermoplastic elastomer",
+              "value": "2"
+            },
+            {
+              "title": "Thermoplastic polymer",
+              "label": "Thermoplastic polymer",
+              "value": "1"
+            },
+            {
+              "title": "Thermoset polymer",
+              "label": "Thermoset polymer",
+              "value": "5"
+            },
+            {
+              "title": "Thermoset polymer prepreg",
+              "label": "Thermoset polymer prepreg",
+              "value": "3"
+            },
+            {
+              "title": "Thermoset resin",
+              "label": "Thermoset resin",
+              "value": "6"
+            }
+          ],
+          "title": "Type of material of polymer"
+        }
+      ],
+      "buttons": [
+        {
+          "groups": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Information",
+      "description": "",
+      "columns": [
+        {
+          "name": "id_filler_for_polymers",
+          "required": false,
+          "pattern": "^-?\\d+$",
+          "type": "select",
+          "data": [
+            {
+              "title": "Fibres from phenolic resins",
+              "label": "Fibres from phenolic resins",
+              "value": "375"
+            },
+            {
+              "title": "Fluoroalkoxyphosphazene polymers",
+              "label": "Fluoroalkoxyphosphazene polymers",
+              "value": "90"
+            },
+            {
+              "title": "Groundnut protein fibre",
+              "label": "Groundnut protein fibre",
+              "value": "298"
+            },
+            {
+              "title": "High impact acrylonitrile butadiene styrene copolymer ",
+              "label": "High impact acrylonitrile butadiene styrene copolymer ",
+              "value": "10"
+            },
+            {
+              "title": "High strength, standard modulus carbon fibers",
+              "label": "High strength, standard modulus carbon fibers",
+              "value": "647"
+            },
+            {
+              "title": "Modacrylic fibres",
+              "label": "Modacrylic fibres",
+              "value": "369"
+            },
+            {
+              "title": "Phenolic resin Spheres",
+              "label": "Phenolic resin Spheres",
+              "value": "670"
+            },
+            {
+              "title": "Polyalanine fibre",
+              "label": "Polyalanine fibre",
+              "value": "539"
+            },
+            {
+              "title": "Polybutylene terephthalate Fibres",
+              "label": "Polybutylene terephthalate Fibres",
+              "value": "289"
+            },
+            {
+              "title": "Polyethylene fibres",
+              "label": "Polyethylene fibres",
+              "value": "516"
+            },
+            {
+              "title": "Polypropylene fibers",
+              "label": "Polypropylene fibers",
+              "value": "586"
+            },
+            {
+              "title": "Polyvinyl alcohol/polyvinyl chloride fibre blend",
+              "label": "Polyvinyl alcohol/polyvinyl chloride fibre blend",
+              "value": "629"
+            }
+          ],
+          "title": "Name of the polymer"
+        },
+        {
+          "name": "marka",
+          "required": false,
+          "type": "text",
+          "title": "Commercial product name"
+        },
+        {
+          "name": "manufacturer",
+          "required": false,
+          "type": "text",
+          "title": "Manufacturer of filler"
+        },
+        {
+          "name": "volume_on_stock",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "The approximate volume on stock, tons "
+        },
+        {
+          "name": "id_type_of_filler",
+          "required": false,
+          "pattern": "^-?\\d+$",
+          "type": "select",
+          "data": [
+            {
+              "title": "Disperse filler",
+              "label": "Disperse filler",
+              "value": "2"
+            },
+            {
+              "title": "Fibrous filler",
+              "label": "Fibrous filler",
+              "value": "1"
+            },
+            {
+              "title": "Other fillers",
+              "label": "Other fillers",
+              "value": "3"
+            }
+          ],
+          "title": "Type filler"
+        }
+      ],
+      "buttons": [
+        {
+          "groups": []
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Prepeg",
+      "description": "Prepeg",
+      "columns": [
+        {
+          "name": "id_prepreg_type",
+          "required": false,
+          "pattern": "^-?\\d+$",
+          "type": "select",
+          "value": "5",
+          "data": [
+            {
+              "title": "BMC",
+              "label": "BMC",
+              "value": "6"
+            },
+            {
+              "title": "Continuous fibres",
+              "label": "Continuous fibres",
+              "value": "1"
+            },
+            {
+              "title": "Cutted fibres",
+              "label": "Cutted fibres",
+              "value": "2"
+            },
+            {
+              "title": "Other",
+              "label": "Other",
+              "value": "4"
+            },
+            {
+              "title": "SMC",
+              "label": "SMC",
+              "value": "5"
+            },
+            {
+              "title": "Short fibres",
+              "label": "Short fibres",
+              "value": "3"
+            }
+          ],
+          "title": "id_prepreg_type"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Prepeg main charact",
+      "description": "Prepeg",
+      "columns": [
+        {
+          "name": "density",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "number",
+          "value": 1700,
+          "title": "Density, kg/m^3 "
+        },
+        {
+          "name": "tensile_modulus",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "value": "12/25",
+          "title": "Tensile modulus, GPa "
+        },
+        {
+          "name": "tensile_strength_break",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Tensile Strength at Break, MPa "
+        },
+        {
+          "name": "flexural_strength",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "value": "95/740",
+          "title": "Flexural strength, MPa "
+        },
+        {
+          "name": "flexural_modulus",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "value": "11/28",
+          "title": "Flexural modulus, GPa "
+        },
+        {
+          "name": "elongation_break",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Elongation at break, % "
+        },
+        {
+          "name": "flammability",
+          "required": false,
+          "type": "text",
+          "value": "V-0",
+          "title": "Flammability, Class"
+        },
+        {
+          "name": "charpy_impact_strength",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "value": "40/370",
+          "title": "Charpy impact strength, kJ/m^2 "
+        },
+        {
+          "name": "shrinkage",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "value": "0,2 / -0,05",
+          "title": "Shrinkage, % "
+        },
+        {
+          "name": "water_absorption",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "value": "< 0,5",
+          "title": "Water absorption, % "
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "The product main characteristics",
+      "description": "What polymer does the product belong to, if it is not in the list, contact the site administration",
+      "columns": [
+        {
+          "name": "",
+          "readOnly": true,
+          "title": "Density",
+          "type": "hidden"
+        },
+        {
+          "name": "density_iso",
+          "required": false,
+          "type": "select",
+          "value": "ISO 1183",
+          "title": "Density test standard",
+          "data": [
+            {
+              "title": "ISO 1183",
+              "label": "ISO 1183",
+              "value": "ISO 1183"
+            },
+            {
+              "title": "ASTM D-1505",
+              "label": "ASTM D-1505",
+              "value": "ASTM D-1505"
+            }
+          ]
+        },
+        {
+          "name": "density",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "number",
+          "title": "Density, kg/m^3 "
+        },
+        {
+          "name": "",
+          "readOnly": true,
+          "title": "MFR",
+          "type": "hidden"
+        },
+        {
+          "name": "mfr_iso",
+          "required": false,
+          "type": "select",
+          "value": "ISO 1133",
+          "title": "MFR test standard",
+          "data": [
+            {
+              "title": "ISO 1133",
+              "label": "ISO 1133",
+              "value": "ISO 1133"
+            },
+            {
+              "title": "ASTM D-1238",
+              "label": "ASTM D-1238",
+              "value": "ASTM D-1238"
+            }
+          ]
+        },
+        {
+          "name": "mfr",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "MFR, g/10 min "
+        },
+        {
+          "name": "",
+          "readOnly": true,
+          "title": "Tensile modulus",
+          "type": "hidden"
+        },
+        {
+          "name": "tensile_modulus_iso",
+          "required": false,
+          "type": "select",
+          "value": "ISO 527-2",
+          "title": "Tensile modulus, ISO",
+          "data": [
+            {
+              "title": "ISO 527-2",
+              "label": "ISO 527-2",
+              "value": "ISO 527-2"
+            },
+            {
+              "title": "ASTM D-790",
+              "label": "ASTM D-790",
+              "value": "ASTM D-790"
+            }
+          ]
+        },
+        {
+          "name": "tensile_modulus",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Tensile modulus, GPa "
+        },
+        {
+          "name": "",
+          "readOnly": true,
+          "title": "Tensile strength at Break",
+          "type": "hidden"
+        },
+        {
+          "name": "tensile_strength_break_iso",
+          "required": false,
+          "type": "select",
+          "value": "ISO 527-2",
+          "title": "Tensile Strength at Break, ISO",
+          "data": [
+            {
+              "title": "ISO 527-2",
+              "label": "ISO 527-2",
+              "value": "ISO 527-2"
+            },
+            {
+              "title": "ASTM D-638",
+              "label": "ASTM D-638",
+              "value": "ASTM D-638"
+            }
+          ]
+        },
+        {
+          "name": "tensile_strength_break",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Tensile Strength at Break, MPa "
+        },
+        {
+          "name": "",
+          "readOnly": true,
+          "title": "Elongation at break",
+          "type": "hidden"
+        },
+        {
+          "name": "elongation_break_iso",
+          "required": false,
+          "type": "text",
+          "value": "ISO 527-2",
+          "title": "Elongation at break, ISO",
+          "data": [
+            {
+              "title": "ISO 527-2",
+              "label": "ISO 527-2",
+              "value": "ISO 527-2"
+            },
+            {
+              "title": "ASTM D-638",
+              "label": "ASTM D-638",
+              "value": "ASTM D-638"
+            }
+          ]
+        },
+        {
+          "name": "elongation_break",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Elongation at break, % "
+        },
+        {
+          "name": "",
+          "readOnly": true,
+          "title": "",
+          "type": "textarea"
+        },
+        {
+          "name": "charpy_impact_strength",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Charpy impact strength, kJ/m^2 "
+        },
+        {
+          "name": "charpy_notched_impact_strength",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Charpy notched impact strength, kJ/m^2 "
+        },
+        {
+          "name": "melting_temperature",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Melting temperature,°C "
+        },
+        {
+          "name": "flammability",
+          "required": false,
+          "type": "text",
+          "value": "V-0",
+          "title": "Flammability, Class"
+        },
+        {
+          "name": "surface_resistivity",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Surface resistivity, Ohm "
+        }
+      ],
+      "buttons": [
+        {
+          "title": "Previous",
+          "type": "prev",
+          "disabled": "onkey",
+          "OnClick": "return Next(this, 13);"
+        },
+        {
+          "title": "Next",
+          "type": "custom",
+          "disabled": "onkey",
+          "OnClick": "return Next(this, 18);"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Thermoplastic_elastomer",
+      "description": "Thermoplastic_elastomer",
+      "columns": [
+        {
+          "name": "hardness",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Hardness, Shore-A "
+        },
+        {
+          "name": "hardness_iso",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "Hardness, Shore-A, ISO "
+        },
+        {
+          "name": "density",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "number",
+          "value": 1700,
+          "title": "Density, kg/m^3 "
+        },
+        {
+          "name": "density_iso",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "density_iso"
+        },
+        {
+          "name": "tensile_strength_break",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Tensile Strength at Break, MPa "
+        },
+        {
+          "name": "tensile_strength_break_iso",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "Tensile Strength at Break, ISO"
+        },
+        {
+          "name": "elongation_break",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Elongation at break, % "
+        },
+        {
+          "name": "elongation_break_iso",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "Elongation at break, ISO"
+        },
+        {
+          "name": "tensile_modulus100",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Modulus of elasticity at 100%, MPa "
+        },
+        {
+          "name": "tensile_modulus100_iso",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "Modulus of elasticity at 100%, ISO"
+        },
+        {
+          "name": "tensile_modulus300",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Modulus of elasticity at 300%, MPa "
+        },
+        {
+          "name": "tensile_modulus300_iso",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "Modulus of elasticity at 300%, ISO"
+        },
+        {
+          "name": "tear_resistance",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Tear Resistance, N/mm "
+        },
+        {
+          "name": "tear_resistance_iso",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "tear_resistance_iso"
+        },
+        {
+          "name": "compression_set23",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Compression Set at 23 С, % "
+        },
+        {
+          "name": "compression_set23_iso",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "compression_set23_iso"
+        },
+        {
+          "name": "compression_set70",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Compression Set at 70 С, % "
+        },
+        {
+          "name": "compression_set70_iso",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "compression_set70_iso"
+        },
+        {
+          "name": "ozone_resistance",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "Ozone Resistance"
+        },
+        {
+          "name": "ozone_resistance_iso",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "ozone_resistance_iso"
+        }
+      ],
+      "buttons": [
+        {
+          "groups": []
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Thermoplastic_composite_materials",
+      "description": "Thermoplastic_composite_materials",
+      "columns": [
+        {
+          "name": "content_reinforcement",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Content reinforcement/filler, wt. % "
+        },
+        {
+          "name": "content_reinforcement_iso",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "content_reinforcement_iso"
+        }
+      ],
+      "buttons": [
+        {
+          "groups": []
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Thermoset_resin",
+      "description": "Thermoset_resin",
+      "columns": [
+        {
+          "name": "density",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "number",
+          "value": 1700,
+          "title": "Density, kg/m^3 "
+        },
+        {
+          "name": "density_iso",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "density_iso"
+        },
+        {
+          "name": "tensile_modulus",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "value": "12/25",
+          "title": "Tensile modulus, GPa "
+        },
+        {
+          "name": "tensile_modulus_iso",
+          "required": false,
+          "type": "text",
+          "value": "ISO 527-4",
+          "title": "Tensile modulus, ISO"
+        },
+        {
+          "name": "tensile_strength_break",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Tensile Strength at Break, MPa "
+        },
+        {
+          "name": "tensile_strength_iso",
+          "required": false,
+          "type": "text",
+          "value": "ISO 527-4",
+          "title": "Tensile Strength, ISO"
+        },
+        {
+          "name": "flexural_strength",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "value": "95/740",
+          "title": "Flexural strength, MPa "
+        },
+        {
+          "name": "flexural_strength_iso",
+          "required": false,
+          "type": "text",
+          "value": "ISO 14125",
+          "title": "Flexural strength, ISO"
+        },
+        {
+          "name": "flexural_modulus",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "value": "11/28",
+          "title": "Flexural modulus, GPa "
+        },
+        {
+          "name": "flexural_modulus_iso",
+          "required": false,
+          "type": "text",
+          "value": "ISO 14125",
+          "title": "Flexural modulus, ISO"
+        },
+        {
+          "name": "elongation_break",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Elongation at break, % "
+        },
+        {
+          "name": "using_sectors",
+          "required": false,
+          "type": "textarea",
+          "value": "Автобудівництво, Будівництво промислових об'єктів",
+          "title": "Areas of application"
+        },
+        {
+          "name": "flammability",
+          "required": false,
+          "type": "text",
+          "value": "V-0",
+          "title": "Flammability, Class"
+        },
+        {
+          "name": "using_sectors",
+          "required": false,
+          "type": "textarea",
+          "value": "Автобудівництво, Будівництво промислових об'єктів",
+          "title": "Areas of application"
+        },
+        {
+          "name": "charpy_impact_strength",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "value": "40/370",
+          "title": "Charpy impact strength, kJ/m^2 "
+        },
+        {
+          "name": "using_sectors",
+          "required": false,
+          "type": "textarea",
+          "value": "Автобудівництво, Будівництво промислових об'єктів",
+          "title": "Areas of application"
+        }
+      ],
+      "buttons": [
+        {
+          "groups": []
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Filler configuration",
+      "description": "content_filler",
+      "columns": [
+        {
+          "name": "id_content_filler",
+          "required": false,
+          "pattern": "^-?\\d+$",
+          "type": "select",
+          "data": [
+            {
+              "title": "Required select one of",
+              "label": "Required select one of",
+              "value": "null",
+              "selected": true,
+              "disabled": true
+            },
+            {
+              "title": "Disperse filler",
+              "label": "Disperse filler",
+              "value": "1"
+            },
+            {
+              "title": "Fibrous filler",
+              "label": "Fibrous filler",
+              "value": "2"
+            }
+          ],
+          "title": "Filler configuration"
+        }
+      ],
+      "buttons": [
+        {
+          "title": "Previous",
+          "type": "prev",
+          "disabled": "onkey",
+          "OnClick": "return Next(this, 13);"
+        },
+        {
+          "title": "Next",
+          "type": "custom",
+          "disabled": "onkey",
+          "OnClick": "m = (document.getElementsByName('id_type_material')[0].value === 3 ? 12 : 14); return Next(this, m);"
+        }
+      ]
+
+    },
+    {
+      "id": 19,
+      "title": "nature_of_filler",
+      "description": "nature_of_filler",
+      "columns": [
+        {
+          "name": "nature_of_filler",
+          "required": false,
+          "type": "text",
+          "value": "Glass Fibers",
+          "title": "Nature of filler"
+        }
+      ],
+      "buttons": [
+        {
+          "groups": []
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "fibre_filler",
+      "description": "fibre_filler",
+      "columns": [
+        {
+          "name": "id_reinforcing",
+          "required": false,
+          "pattern": "^-?\\d+$",
+          "type": "select",
+          "value": "2",
+          "data": [
+            {
+              "title": "Chopped fibers",
+              "label": "Chopped fibers",
+              "value": "2"
+            },
+            {
+              "title": "Chopped short fibers",
+              "label": "Chopped short fibers",
+              "value": "1"
+            },
+            {
+              "title": "Continuous fibers",
+              "label": "Continuous fibers",
+              "value": "3"
+            },
+            {
+              "title": "Other",
+              "label": "Other",
+              "value": "4"
+            }
+          ],
+          "title": "Reinforcing fiber configuration"
+        },
+        {
+          "name": "type_of_fibre_filler",
+          "required": false,
+          "type": "text",
+          "value": "",
+          "title": "Type of fibre filler"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Additional information",
+      "description": "(may be use Markdown format)",
+      "columns": [
+        {
+          "name": "methods_recycling",
+          "required": false,
+          "type": "textarea",
+          "value": "Пряме пресування",
+          "title": "Recycling methods"
+        },
+        {
+          "name": "using_sectors",
+          "required": false,
+          "type": "textarea",
+          "value": "Автобудівництво, Будівництво промислових об'єктів",
+          "title": "Areas of application"
+        },
+        {
+          "name": "notes",
+          "required": false,
+          "type": "textarea",
+          "value": "Високоміцний матеріал з анізотропією механічних властивостей. Найбільша міцність спостерігається вздовж орієнтації армуючого наповнювача. Продукт являє собою препег, що армований скляним волокном та наповнений мінеральними дисперсними наповнювачами. Під дією відкритого полум’я не плавиться, не спричиняє падіння крапель та не утворює великої кількості диму. У своєму складі не містить галогенів, важких металів та будь-яких сполук з переліку REACH SVHC.\n",
+          "title": "Notes"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Additives",
+      "description": "",
+      "columns": [
+        {
+          "name": "id_polymers",
+          "required": false,
+          "suggestions": "/search/list",
+          "type": "select",
+          "title": "Name of the polymer"
+        },
+        {
+          "name": "id_firma",
+          "required": false,
+          "pattern": "^-?\\d+$",
+          "type": "select",
+          "data": [
+            {
+              "title": "A.C.T. Україна",
+              "label": "A.C.T. Україна",
+              "value": "1"
+            },
+            {
+              "title": "Test 1",
+              "label": "Test 1",
+              "value": "6"
+            },
+            {
+              "title": "test Ruslan",
+              "label": "test Ruslan",
+              "value": "13"
+            },
+            {
+              "title": "test Ruslan2",
+              "label": "test Ruslan2",
+              "value": "15"
+            },
+            {
+              "title": "Альфа-Пласт",
+              "label": "Альфа-Пласт",
+              "value": "2"
+            },
+            {
+              "title": "СПД Овчинник",
+              "label": "СПД Овчинник",
+              "value": "19"
+            },
+            {
+              "title": "Тест 13",
+              "label": "Тест 13",
+              "value": "7"
+            },
+            {
+              "title": "Тест 13/13",
+              "label": "Тест 13/13",
+              "value": "10"
+            },
+            {
+              "title": "Тест 13/13/15",
+              "label": "Тест 13/13/15",
+              "value": "14"
+            },
+            {
+              "title": "Тест 13/58",
+              "label": "Тест 13/58",
+              "value": "18"
+            },
+            {
+              "title": "Тест 14",
+              "label": "Тест 14",
+              "value": "12"
+            },
+            {
+              "title": "Тест 16",
+              "label": "Тест 16",
+              "value": "17"
+            }
+          ],
+          "title": "id_firma"
+        },
+        {
+          "name": "marka",
+          "required": false,
+          "type": "text",
+          "title": "Commercial product name"
+        },
+        {
+          "name": "manufacturer",
+          "required": false,
+          "type": "text",
+          "title": "Manufacturer of additive"
+        },
+        {
+          "name": "volume_on_stock",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "The approximate volume on stock, tons "
+        },
+        {
+          "name": "id_type_additives",
+          "required": false,
+          "pattern": "^-?\\d+$",
+          "type": "select",
+          "data": [
+            {
+              "title": "The curing agent",
+              "label": "The curing agent",
+              "value": "1"
+            },
+            {
+              "title": "Antioxidant",
+              "label": "Antioxidant",
+              "value": "8"
+            },
+            {
+              "title": "Antislip",
+              "label": "Antislip",
+              "value": "9"
+            },
+            {
+              "title": "Flame retardant",
+              "label": "Flame retardant",
+              "value": "5"
+            },
+            {
+              "title": "Lubricant",
+              "label": "Lubricant",
+              "value": "4"
+            },
+            {
+              "title": "Nucleator",
+              "label": "Nucleator",
+              "value": "18"
+            },
+            {
+              "title": "The Impact elasticity modificator",
+              "label": "The Impact elasticity modificator",
+              "value": "7"
+            },
+            {
+              "title": "The accelerator of a polymerization reaction",
+              "label": "The accelerator of a polymerization reaction",
+              "value": "2"
+            },
+            {
+              "title": "UV stabilizer",
+              "label": "UV stabilizer",
+              "value": "6"
+            }
+          ],
+          "title": "Type of additives"
+        },
+        {
+          "name": "product_role",
+          "required": false,
+          "type": "textarea",
+          "title": "Product role"
+        },
+        {
+          "name": "methods_recycling",
+          "required": false,
+          "type": "textarea",
+          "title": "Processing parameters"
+        },
+        {
+          "name": "notes",
+          "required": false,
+          "type": "textarea",
+          "title": "Remarks"
+        },
+        {
+          "name": "tds",
+          "required": false,
+          "type": "file",
+          "title": "technical data sheet"
+        },
+        {
+          "name": "msds",
+          "required": false,
+          "type": "file",
+          "title": "material safety data sheet"
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "type": "file",
+          "title": "presentation"
+        }
+      ],
+      "buttons": [
+        {
+          "groups": []
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "type_fibrous_filler",
+      "description": "type_fibrous_filler",
+      "columns": [
+        {
+          "name": "type_fibrous_filler",
+          "required": false,
+          "type": "text",
+          "value": "type_fibrous_filler",
+          "title": "type_fibrous_filler"
+        }
+      ],
+      "buttons": [
+        {
+          "groups": []
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Disperse filler",
+      "description": "Disperse filler",
+      "columns": [
+        {
+          "name": "nature_of_filler",
+          "required": false,
+          "type": "text",
+          "value": "Glass Fibers",
+          "title": "density_iso"
+        },
+        {
+          "name": "purity_of_filler",
+          "required": false,
+          "pattern": "purity",
+          "type": "text",
+          "value": "purity_of_filler",
+          "title": "purity_of_filler"
+        },
+        {
+          "name": "dispersion",
+          "required": false,
+          "type": "text",
+          "value": "dispersion",
+          "title": "dispersion"
+        },
+        {
+          "name": "density",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "number",
+          "value": 1700,
+          "title": "Density, kg/m^3 "
+        },
+        {
+          "name": "moisture_contents",
+          "required": false,
+          "pattern": "moisture_contents",
+          "type": "text",
+          "title": "moisture_contents"
+        }
+      ],
+      "buttons": [
+        {
+          "groups": []
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Other filler",
+      "description": "Other filler",
+      "columns": [
+        {
+          "name": "filler_configuration_test_standard",
+          "required": false,
+          "type": "text",
+          "value": "filler_configuration_test_standard",
+          "title": "filler_configuration_test_standard"
+        },
+        {
+          "name": "filler_configuration_value",
+          "required": false,
+          "pattern": "purity",
+          "type": "text",
+          "value": "filler_configuration_value",
+          "title": "filler_configuration_value"
+        }
+      ],
+      "buttons": [
+        {
+          "groups": []
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "The product main characteristics",
+      "description": "What polymer does the product belong to, if it is not in the list, contact the site administration",
+      "columns": [
+        {
+          "name": "",
+          "readOnly": true,
+          "title": "Density",
+          "type": "hidden"
+        },
+        {
+          "name": "density_iso",
+          "required": false,
+          "type": "select",
+          "value": "ISO 1183",
+          "title": "Density test standard",
+          "data": [
+            {
+              "title": "ISO 1183",
+              "label": "ISO 1183",
+              "value": "ISO 1183"
+            },
+            {
+              "title": "ASTM D-1505",
+              "label": "ASTM D-1505",
+              "value": "ASTM D-1505"
+            }
+          ]
+        },
+        {
+          "name": "density",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "number",
+          "title": "Density, kg/m^3 "
+        },
+        {
+          "name": "",
+          "readOnly": true,
+          "title": "MFR",
+          "type": "hidden"
+        },
+        {
+          "name": "mfr_iso",
+          "required": false,
+          "type": "select",
+          "value": "ISO 1133",
+          "title": "MFR test standard",
+          "data": [
+            {
+              "title": "ISO 1133",
+              "label": "ISO 1133",
+              "value": "ISO 1133"
+            },
+            {
+              "title": "ASTM D-1238",
+              "label": "ASTM D-1238",
+              "value": "ASTM D-1238"
+            }
+          ]
+        },
+        {
+          "name": "mfr",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "MFR, g/10 min "
+        },
+        {
+          "name": "",
+          "readOnly": true,
+          "title": "Tensile modulus",
+          "type": "hidden"
+        },
+        {
+          "name": "tensile_modulus_iso",
+          "required": false,
+          "type": "select",
+          "value": "ISO 527-2",
+          "title": "Tensile modulus, ISO",
+          "data": [
+            {
+              "title": "ISO 527-2",
+              "label": "ISO 527-2",
+              "value": "ISO 527-2"
+            },
+            {
+              "title": "ASTM D-790",
+              "label": "ASTM D-790",
+              "value": "ASTM D-790"
+            }
+          ]
+        },
+        {
+          "name": "tensile_modulus",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Tensile modulus, GPa "
+        },
+        {
+          "name": "",
+          "readOnly": true,
+          "title": "Tensile strength at Break",
+          "type": "hidden"
+        },
+        {
+          "name": "tensile_strength_break_iso",
+          "required": false,
+          "type": "select",
+          "value": "ISO 527-2",
+          "title": "Tensile Strength at Break, ISO",
+          "data": [
+            {
+              "title": "ISO 527-2",
+              "label": "ISO 527-2",
+              "value": "ISO 527-2"
+            },
+            {
+              "title": "ASTM D-638",
+              "label": "ASTM D-638",
+              "value": "ASTM D-638"
+            }
+          ]
+        },
+        {
+          "name": "tensile_strength_break",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Tensile Strength at Break, MPa "
+        },
+        {
+          "name": "",
+          "readOnly": true,
+          "title": "Elongation at break",
+          "type": "hidden"
+        },
+        {
+          "name": "elongation_break_iso",
+          "required": false,
+          "type": "text",
+          "value": "ISO 527-2",
+          "title": "Elongation at break, ISO",
+          "data": [
+            {
+              "title": "ISO 527-2",
+              "label": "ISO 527-2",
+              "value": "ISO 527-2"
+            },
+            {
+              "title": "ASTM D-638",
+              "label": "ASTM D-638",
+              "value": "ASTM D-638"
+            }
+          ]
+        },
+        {
+          "name": "elongation_break",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Elongation at break, % "
+        },
+        {
+          "name": "",
+          "readOnly": true,
+          "title": "",
+          "type": "textarea"
+        },
+        {
+          "name": "charpy_impact_strength",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Charpy impact strength, kJ/m^2 "
+        },
+        {
+          "name": "charpy_notched_impact_strength",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Charpy notched impact strength, kJ/m^2 "
+        },
+        {
+          "name": "melting_temperature",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Melting temperature,°C "
+        },
+        {
+          "name": "flammability",
+          "required": false,
+          "type": "text",
+          "value": "V-0",
+          "title": "Flammability, Class"
+        },
+        {
+          "name": "surface_resistivity",
+          "required": false,
+          "error": {
+            "pattern": "only float number more than zero",
+            "message": "only float number more than zero"
+          },
+          "pattern": "floatPos",
+          "type": "text",
+          "title": "Surface resistivity, Ohm "
+        }
+      ],
+      "buttons": [
+        {
+          "title": "Previous",
+          "type": "prev",
+          "disabled": "onkey",
+          "OnClick": "return Next(this, 13);"
+        },
+        {
+          "title": "Next",
+          "type": "custom",
+          "disabled": "onkey",
+          "OnClick": "return Next(this, 18);"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "title": "Common Information",
+      "description": "Default block for forms",
+      "columns": [
+        {
+          "name": "id_polymers",
+          "required": true,
+          "suggestions":  "/search/list",
+          "defaultInputValue": "Unsaturated polyester resin compounds",
+          "type": "select",
+          "title": "Name of the polymer"
+        },
+        {
+          "name": "manufacturer",
+          "required": true,
+          "type": "text",
+          "value": "Esterion",
+          "title": "Product manufacturer"
+        },
+        {
+          "name": "marka",
+          "required": false,
+          "type": "text",
+          "title": "Commercial product name"
+        }
+      ],
+      "buttons": [
+        {
+          "title": "Next",
+          "type": "custom",
+          "disabled": "onkey",
+          "OnClick": "return Next(this, 22);"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "title": "Fillers",
+      "description": "",
+      "columns": [
+        {
+          "name": "product_role",
+          "required": false,
+          "type": "textarea",
+          "title": "Product role"
+        },
+        {
+          "name": "methods_recycling",
+          "required": false,
+          "type": "textarea",
+          "title": "Processing parameters"
+        },
+        {
+          "name": "notes",
+          "required": false,
+          "type": "textarea",
+          "title": "Remarks"
+        },
+        {
+          "name": "tds",
+          "required": false,
+          "type": "file",
+          "title": "technical data sheet"
+        },
+        {
+          "name": "msds",
+          "required": false,
+          "type": "file",
+          "title": "material safety data sheet"
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "type": "file",
+          "title": "presentation"
+        }
+      ],
+      "buttons": [
+        {
+          "groups": []
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "title": "Common Information",
+      "description": "Default block for forms",
+      "columns": [
+        {
+          "name": "id_polymers",
+          "required": true,
+          "suggestions":  "/search/list",
+          "defaultInputValue": "Unsaturated polyester resin compounds",
+          "type": "select",
+          "title": "Name of the polymer"
+        },
+        {
+          "name": "manufacturer",
+          "required": true,
+          "type": "text",
+          "value": "Esterion",
+          "title": "Product manufacturer"
+        },
+        {
+          "name": "marka",
+          "required": false,
+          "type": "text",
+          "title": "Commercial product name"
+        }
+      ],
+      "buttons": [
+        {
+          "title": "Next",
+          "type": "custom",
+          "disabled": "onkey",
+          "OnClick": "return Next(this, 22);"
+        }
+      ]
+    },
+    {
+      "id": -1,
+      "title": "Apply changes",
+      "description": "",
+      "columns": [],
+      "buttons": [
+            {
+              "title": "Update",
+              "type": "submit"
+            },
+            {
+              "title": "Reset changes",
+              "type": "reset"
+            }
+      ]
+    }
+  ]
+}
