@@ -1,3 +1,4 @@
+
 body {
     min-width: 100vw;
     min-height: 100vh;
@@ -8,23 +9,23 @@ body {
     overflow-x: hidden;
     background-color: #f6f7f8;
 }
-form {
+ body[theme=polymer] form {
     color: #c2c7d1;
     background-color: #fefefe;
 }
 
-figure label  {
+ body[theme=polymer] figure label  {
     position: relative;
 
 }
 
-label, input, button, select, textarea {
+ body[theme=polymer] label, input, button, select, textarea {
     font-size: 14px;
     font-weight: normal;
     line-height: 30px;
 }
 
-form figcaption {
+ body[theme=polymer] form figcaption {
     line-height: 36px;
     font-size: 32px;
     font-weight: 500;
@@ -36,9 +37,7 @@ form figcaption {
     font-weight: 500;
     line-height: 29px;
     letter-spacing: 0em;
-    text-align: left;
     height: 29px;
-    width: 163px;
     left: 603px;
     top: 256px;
     border-radius: nullpx;
@@ -47,7 +46,7 @@ form figcaption {
 
 
 }
-figure figcaption {
+ body[theme=polymer] figure figcaption {
     line-height: 22px;
     font-size: 18px;
     font-weight: 400;
@@ -57,7 +56,7 @@ figure figcaption {
     background-color: #fefefe;
 
 }
-figure label > select {
+ body[theme=polymer] figure label > select {
     align-content: flex-end;
     text-align: center;
     float: inline-end;
@@ -67,10 +66,11 @@ figure label > select {
     width: 40px;
     height: 30px;
     top: -10px;
+    left: 300px;
     border: 1px solid #C2C7D1;
     border-radius: 4px;
 }
-figure label > input[type="text"], figure label > select {
+ body[theme=polymer] figure label > input[type="text"], figure label > select {
     padding-right: 20px;
     color: #0a1c3b;
     background-color: #fefefe;
@@ -79,31 +79,37 @@ figure label > input[type="text"], figure label > select {
     overflow: hidden;
     white-space: nowrap;
     position: absolute;
-    width: 40px;
-    height: 20px;
-    top: -10px;
+    display: block;
+    width: inherit;
+    top: 5px;
+    left: 0;
+/*pointer-events:none;*/
+    align-content: flex-end;
+    /*text-align: center;*/
+    /*float: inline-end;*/
+    padding: 0;
     background: #FFFFFF;
-    box-shadow: 0px 4px 16px rgba(0, 55, 132, 0.25);
+    
     border-radius: 8px;
 }
-figure label > textarea {
+ body[theme=polymer] figure label > textarea {
     width: 100%;
     float: inline-end;
 }
 
-figure label > input[type="text"]::placeholder {
+ body[theme=polymer] figure label > input[type="text"]::placeholder {
     color: #c2c7d1;
 }
-figure button[type=prev] {
+ body[theme=polymer] figure button[type=prev] {
     border-color: #ffa30c;
     background: #ffa30c;
     --box-shadow-color: #ffa30c;
 }
-figure .form-actions {
+ body[theme=polymer] figure .form-actions {
     justify-content: flex-end;
     display: flex;
 }
-figure button {
+ body[theme=polymer] figure button {
     height: 40px;
     padding: 8px 12px;
     color: #fff;
@@ -124,34 +130,34 @@ figure button {
     transition: all .3s ease-in-out;
     margin: 0 8px;
 }
-#catalog_pane {
+ body[theme=polymer] #catalog_pane {
     height: 99%;
     vertical-align: top;
     padding-left: 1px;
     padding-right: 5px;
     padding-top: 3px;
 }
-.content-wrap {
+ body[theme=polymer] .content-wrap {
     width: 100%;
 }
-.content-sep {
+ body[theme=polymer] .content-sep {
     width: 5%;
 }
-.sidebar-section {
+ body[theme=polymer] .sidebar-section {
     width: 15%;
     display: table-cell;
  /* padding-left: 15px; */
     padding-top: 3px;
 }
-.row-fluid {
+ body[theme=polymer] .row-fluid {
     width: 100%;
     display: flex;
 }
-.content-section {
+ body[theme=polymer] .content-section {
     width: 80%;
     display: table-cell;
 }
-header {
+ body[theme=polymer] header {
     position: sticky;
     top: 0;
     width: 100%;
@@ -162,16 +168,185 @@ header {
     z-index: 9;
     align-items: center;
 }
-header .topline .topline-navbar{
+ body[theme=polymer] header .topline .topline-navbar{
     display: inline-flex;
     align-items: center;
 }
-header .topline {
+ body[theme=polymer] header .topline {
      -webkit-align-items: center;
     align-items: center;
     -webkit-flex-direction: row;
     flex-direction: row;
     -webkit-justify-content: space-between;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+ body[theme=polymer] header .topline-btns {
+    display: inline-block;
+    width: auto;
+    right: 0;
+    padding: 4px 8px;
+    border: 0;
+    position: absolute;
+    min-width: auto;
+    color: white;
+}
+ body[theme=polymer] header nav {
+    display: inline-flex;
+    align-items: start;
+    height: 100%;
+}
+ body[theme=polymer] .top-mnu-list {
+    margin-top: 5px;
+}
+ body[theme=polymer] li.top-mnu-item a {
+    color: white;
+    margin: 0 10px;
+    height: 100%;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: color .3s ease-in-out;
+}
+ body[theme=polymer] .left-mnu-list {
+    margin-left: 5px;
+    display:grid;
+    background-color: transparent;
+}
+ body[theme=polymer] li.left-mnu-item a {
+    color: white;
+}
+ body[theme=polymer] ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+ body[theme=polymer] li {
+    display: block;
+    transition-duration: 0.5s;
+    float: left;
+}
+
+ body[theme=polymer] li a {
+    color: black;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+}
+
+ body[theme=polymer] li a:hover {
+    color: white;
+    background-color: #111111;
+}
+
+ body[theme=polymer] li:hover {
+    cursor: pointer;
+}
+
+ body[theme=polymer] ul li ul.dropdown {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    display: none;
+    background: #0a1c3b;
+
+}
+
+ body[theme=polymer] ul li:hover > ul.dropdown, ul li:focus-within > ul.dropdown, ul li > ul.dropdown:hover {
+    visibility: visible;
+    opacity: 1;
+    margin: 0;
+    display: block;
+}
+ body[theme=polymer] ul li:hover {
+    border-bottom: 1px solid #f6f7f8;
+}
+
+ body[theme=polymer] ul li > ul.dropdown li {
+    clear: both;
+    width: 100%;
+}
+ body[theme=polymer] input[type=text] {
+   padding: 8px;
+   border: 1px solid #c2c7d1;
+   border-radius: 3px;
+   transition: all .3s ease;
+   margin-top: 5px;
+   width: 80%;
+   color: #0a1c3b;
+}
+ body[theme=polymer] input[type=file] {
+    display: inline;
+}
+ body[theme=polymer] label > input {
+    align-content: flex-end;
+    text-align: center;
+    float: end;
+    width: 40%;
+    min-width: 200px;
+}
+ body[theme=polymer] figure {
+    left: 1px;
+}
+ body[theme=polymer] .fancybox-content{
+    overflow: initial;
+}
+ body[theme=polymer] #Users_profile_data_form figure label > input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+ body[theme=polymer] #Users_profile_data_form body > form {
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    color: rgb(10, 28, 59);
+}
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #f6f7f8;
+    box-shadow: 0 0 6px -3px #f6f7f8;
+    box-sizing: border-box;
+    z-index: 9;
+    align-items: center;
+}
+header .topline {
+    -webkit-flex-direction: row;
+    -webkit-align-items: center;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
     height: 100%;
     width: 100%;
@@ -196,12 +371,42 @@ header nav {
     margin-top: 5px;
 }
 li.top-mnu-item a {
-    color: white;
     margin: 0 10px;
     height: 100%;
     padding: 4px 8px;
     border-radius: 8px;
     transition: color .3s ease-in-out;
+}
+
+#catalog_pane {
+    height: 97%;
+    vertical-align: top;
+    padding-left: 1px;
+    padding-right: 5%;
+    padding-top: 3%;
+}
+.content-wrap {
+    width: 100%;
+    height: 90%;
+}
+
+#content {
+    overflow: scroll;
+    height: 99%;
+}
+.sidebar-section {
+    width: 15%;
+    display: table-cell;
+/* padding-left: 15px;*/
+        padding-top: 3px;
+}
+.row-fluid {
+    width: 100%;
+    display: flex;
+}
+.content-section {
+    width: 85%;
+    display: table-cell;
 }
 .left-mnu-list {
     margin-left: 5px;
@@ -209,79 +414,287 @@ li.top-mnu-item a {
     background-color: transparent;
 }
 li.left-mnu-item a {
-    color: white;
+    color: black;
 }
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
 }
 
 li {
-    display: block;
-    transition-duration: 0.5s;
-    float: left;
+ display: block;
+ transition-duration: 0.5s;
+ float: left;
 }
 
 li a {
-    color: black;
-    text-align: center;
-    padding: 5px;
-    text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
 }
 
 li a:hover {
-    color: white;
-    background-color: #111111;
+  background-color: #111111;
 }
 
 li:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 ul li ul.dropdown {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    transition: all 0.5s ease;
-    margin-top: 1rem;
-    display: none;
-    background: #0a1c3b;
-
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  display: none;
 }
 
-ul li:hover > ul.dropdown, ul li:focus-within > ul.dropdown, ul li > ul.dropdown:hover {
-    visibility: visible;
-    opacity: 1;
-    margin: 0;
-    display: block;
-}
-ul li:hover {
-    border-bottom: 1px solid #f6f7f8;
+ul li:hover > ul.dropdown,
+/*ul li:focus-within > ul.dropdown,*/
+ul li ul.dropdown:hover {
+  visibility: visible;
+  opacity: 1;
+  margin: 0;
+  display: block;
 }
 
-ul li > ul.dropdown li {
-    clear: both;
-    width: 100%;
+ul li ul.dropdown li {
+  clear: both;
+  width: 100%;
 }
+
+form.form-horizontal {
+    width: max-content;
+}
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 600px;
+    margin: revert;
+/*width: max-content;*/
+}
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
 input[type=text] {
-   padding: 8px;
-   border: 1px solid #c2c7d1;
-   border-radius: 3px;
-   transition: all .3s ease;
-   margin-top: 5px;
-   width: 80%;
-   color: #0a1c3b;
+    padding: 8px;
+    border: 1px solid #c2c7d1;
+    border-radius: 3px;
+    transition: all .3s ease;
+    margin-top: 5px;
+    width: 80%;
+    color: #0a1c3b;
 }
 input[type=file] {
     display: inline;
 }
-label > input {
+.input-wrap {
+    width: 100%;
+    position: relative;
+    min-height:45px;
+	min-width: fit-content;
+/*border-bottom: 2px solid #adadad;
+margin-bottom:37px;*/
+}
+.input-wrap .suggestions-constraints {
+	z-index: 100;
+}
+.input-wrap > label.input-label {
+	/*position: absolute;*/
+    width: 98%;
+    /*padding: 1%;*/
+    align-content: center;
+    margin-top: 10px;
+}
+label > span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    pointer-events:none;
+}
+/*label > input:not([value]):focus + span::before, label > textarea:focus + span::before, label > input[value] + span::before  {
+    width:100%
+}
+label > input[type="checkbox"]:focus + span::before {
+	width: 10px;
+}
+label > input:not([value]):focus + span::after, label > textarea:focus + span::after, label > input[value] + span::after {
+    top:-19px
+}*/
+label > input:not([value]) + span::after {
+  top: 1px;
+  left:0
+}
+
+.input-wrap > label > input:not([value]) + span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    -moz-transition: all .4s;
+    transition: all .4s;
+    background: #db1563;
+    background: -webkit-linear-gradient(45deg, #d5007d, #e53935);
+    background: -o-linear-gradient(45deg, #d5007d, #e53935);
+    background: -moz-linear-gradient(45deg, #d5007d, #e53935);
+    background:linear-gradient(45deg, #d5007d, #e53935)
+}
+.input-wrap > label > span::after {
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    -moz-transition: all .4s;
+    transition:all .4s
+}
+label > textarea {
+    width: inherit;
+    /*float: inline-end;*/
+    position: relative;
+    top: 20px;
+    height: 15px;
+    left: 1px;
+}
+figure label > select {
+    position: relative;
     align-content: flex-end;
-    text-align: center;
-    float: end;
-    width: 40%;
-    min-width: 200px;
+    /*text-align: center;*/
+    /*float: inline-end;*/
+    width: inherit;
+}
+figure label > input[type="checkbox"] {
+	position: relative;
+	right: 15px;
+}
+figure label > input {
+    position: absolute;
+    display: block;
+    width: inherit;
+    top: 25px;
+    left: 0;
+/*pointer-events:none;*/
+    align-content: flex-end;
+    /*text-align: center;*/
+    /*float: inline-end;*/
+    padding: 0;
+}
+.input-label input {
+    position: absolute;
+    outline: none;
+    height: 20px;
+    padding: 0;
+    width: inherit;
+    top: 20px;
+
+}
+.input-label ul {
+	outline: none;
+	border: none;
+}
+li.form-field{
+    position: relative;
+    margin: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px 0;
+    box-sizing: border-box;
+    width: fit-content;
+}
+ul.form-field{
+    position: relative;
+    overflow: overlay;
+    list-style: none;
+    background-color: transparent;
+    width: 98%;
+}
+.errorLabel {
+    display: none;
+    color:red;
+}
+.removeField {
+    position: absolute;
+    top: 4px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ffa30c;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+
+form  .hiddenInput > input[type=file] {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+form  span.hiddenInput:hover{
+    position: fixed;
+    top: 1%;
+    right: 1%;
+    width: 25%;
+    max-height: 75%;
+}
+form#fSearch input[type=search]{
+	align-items: center;
+	vertical-align: middle;
+	width: 70%;
+}
+form#fSearch {
+	width: 100%;
+	margin: 0;
+	align-items: center;
+	vertical-align: middle;
+}
+form span.hiddenInput {
+    position: relative;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 100%;
+    min-height: 50px;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    /*for the background, optional*/
+    background: center center no-repeat scroll;
+    background-size: 75% 75%;
+    background-image:  url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjUxMnB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9Ii01MyAxIDUxMSA1MTEuOTk5MDYiIHdpZHRoPSI1MTJweCI+CjxnIGlkPSJzdXJmYWNlMSI+CjxwYXRoIGQ9Ik0gMjc2LjQxMDE1NiAzLjk1NzAzMSBDIDI3NC4wNjI1IDEuNDg0Mzc1IDI3MC44NDM3NSAwIDI2Ny41MDc4MTIgMCBMIDY3Ljc3NzM0NCAwIEMgMzAuOTIxODc1IDAgMC41IDMwLjMwMDc4MSAwLjUgNjcuMTUyMzQ0IEwgMC41IDQ0NC44NDM3NSBDIDAuNSA0ODEuNjk5MjE5IDMwLjkyMTg3NSA1MTIgNjcuNzc3MzQ0IDUxMiBMIDMzOC44NjMyODEgNTEyIEMgMzc1LjcxODc1IDUxMiA0MDYuMTQwNjI1IDQ4MS42OTkyMTkgNDA2LjE0MDYyNSA0NDQuODQzNzUgTCA0MDYuMTQwNjI1IDE0NC45NDE0MDYgQyA0MDYuMTQwNjI1IDE0MS43MjY1NjIgNDA0LjY1NjI1IDEzOC42MzY3MTkgNDAyLjU1NDY4OCAxMzYuMjg1MTU2IFogTSAyNzkuOTk2MDk0IDQzLjY1NjI1IEwgMzY0LjQ2NDg0NCAxMzIuMzI4MTI1IEwgMzA5LjU1NDY4OCAxMzIuMzI4MTI1IEMgMjkzLjIzMDQ2OSAxMzIuMzI4MTI1IDI3OS45OTYwOTQgMTE5LjIxODc1IDI3OS45OTYwOTQgMTAyLjg5NDUzMSBaIE0gMzM4Ljg2MzI4MSA0ODcuMjY1NjI1IEwgNjcuNzc3MzQ0IDQ4Ny4yNjU2MjUgQyA0NC42NTIzNDQgNDg3LjI2NTYyNSAyNS4yMzQzNzUgNDY4LjA5NzY1NiAyNS4yMzQzNzUgNDQ0Ljg0Mzc1IEwgMjUuMjM0Mzc1IDY3LjE1MjM0NCBDIDI1LjIzNDM3NSA0NC4wMjczNDQgNDQuNTI3MzQ0IDI0LjczNDM3NSA2Ny43NzczNDQgMjQuNzM0Mzc1IEwgMjU1LjI2MTcxOSAyNC43MzQzNzUgTCAyNTUuMjYxNzE5IDEwMi44OTQ1MzEgQyAyNTUuMjYxNzE5IDEzMi45NDUzMTIgMjc5LjUwMzkwNiAxNTcuMDYyNSAzMDkuNTU0Njg4IDE1Ny4wNjI1IEwgMzgxLjQwNjI1IDE1Ny4wNjI1IEwgMzgxLjQwNjI1IDQ0NC44NDM3NSBDIDM4MS40MDYyNSA0NjguMDk3NjU2IDM2Mi4xMTMyODEgNDg3LjI2NTYyNSAzMzguODYzMjgxIDQ4Ny4yNjU2MjUgWiBNIDMzOC44NjMyODEgNDg3LjI2NTYyNSAiIHN0eWxlPSIgZmlsbC1ydWxlOm5vbnplcm87ZmlsbC1vcGFjaXR5OjE7IiBzdHJva2U9IiMwMDAwMDAiIGZpbGw9IiMwMDAwMDAiLz4KPHBhdGggZD0iTSAzMDUuMTAxNTYyIDQwMS45MzM1OTQgTCAxMDEuNTM5MDYyIDQwMS45MzM1OTQgQyA5NC43MzgyODEgNDAxLjkzMzU5NCA4OS4xNzE4NzUgNDA3LjQ5NjA5NCA4OS4xNzE4NzUgNDE0LjMwMDc4MSBDIDg5LjE3MTg3NSA0MjEuMTAxNTYyIDk0LjczODI4MSA0MjYuNjY3OTY5IDEwMS41MzkwNjIgNDI2LjY2Nzk2OSBMIDMwNS4yMjY1NjIgNDI2LjY2Nzk2OSBDIDMxMi4wMjczNDQgNDI2LjY2Nzk2OSAzMTcuNTkzNzUgNDIxLjEwMTU2MiAzMTcuNTkzNzUgNDE0LjMwMDc4MSBDIDMxNy41OTM3NSA0MDcuNDk2MDk0IDMxMi4wMjczNDQgNDAxLjkzMzU5NCAzMDUuMTAxNTYyIDQwMS45MzM1OTQgWiBNIDMwNS4xMDE1NjIgNDAxLjkzMzU5NCAiIHN0eWxlPSIgZmlsbC1ydWxlOm5vbnplcm87ZmlsbC1vcGFjaXR5OjE7IiBzdHJva2U9IiMwMDAwMDAiIGZpbGw9IiMwMDAwMDAiLz4KPHBhdGggZD0iTSAxNDAgMjY4Ljg2MzI4MSBMIDE5MC45NTMxMjUgMjE0LjA3NDIxOSBMIDE5MC45NTMxMjUgMzQ5LjEyNSBDIDE5MC45NTMxMjUgMzU1LjkyNTc4MSAxOTYuNTE5NTMxIDM2MS40OTIxODggMjAzLjMyMDMxMiAzNjEuNDkyMTg4IEMgMjEwLjEyNSAzNjEuNDkyMTg4IDIxNS42ODc1IDM1NS45MjU3ODEgMjE1LjY4NzUgMzQ5LjEyNSBMIDIxNS42ODc1IDIxNC4wNzQyMTkgTCAyNjYuNjQwNjI1IDI2OC44NjMyODEgQyAyNjkuMTEzMjgxIDI3MS40NTcwMzEgMjcyLjMzMjAzMSAyNzIuODIwMzEyIDI3NS42Njc5NjkgMjcyLjgyMDMxMiBDIDI3OC42MzY3MTkgMjcyLjgyMDMxMiAyODEuNzMwNDY5IDI3MS43MDcwMzEgMjg0LjA3ODEyNSAyNjkuNDgwNDY5IEMgMjg5LjAyNzM0NCAyNjQuNzgxMjUgMjg5LjM5ODQzOCAyNTYuOTg4MjgxIDI4NC42OTkyMTkgMjUyLjA0Mjk2OSBMIDIxMi4yMjY1NjIgMTc0LjI1MzkwNiBDIDIwOS44NzUgMTcxLjc4MTI1IDIwNi42NjAxNTYgMTcwLjI5Njg3NSAyMDMuMTk5MjE5IDE3MC4yOTY4NzUgQyAxOTkuNzM0Mzc1IDE3MC4yOTY4NzUgMTk2LjUxOTUzMSAxNzEuNzgxMjUgMTk0LjE3MTg3NSAxNzQuMjUzOTA2IEwgMTIxLjY5OTIxOSAyNTIuMDQyOTY5IEMgMTE3IDI1Ni45ODgyODEgMTE3LjM3MTA5NCAyNjQuOTAyMzQ0IDEyMi4zMTY0MDYgMjY5LjQ4MDQ2OSBDIDEyNy41MTE3MTkgMjc0LjE3OTY4OCAxMzUuMzAwNzgxIDI3My44MDg1OTQgMTQwIDI2OC44NjMyODEgWiBNIDE0MCAyNjguODYzMjgxICIgc3R5bGU9IiBmaWxsLXJ1bGU6bm9uemVybztmaWxsLW9wYWNpdHk6MTsiIHN0cm9rZT0iIzAwMDAwMCIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+Cjwvc3ZnPgo=)
+}
+.suggestions-select-hide {
+  opacity: 0;
+  height: 0.1px !important;
+/*position: absolute;*/
+left: -399.109375px;
+}
+
+.suggestions-select-show {
+  opacity: 1;
+  height: 200px;
+  position: relative;
+  left: 1%;
 }
