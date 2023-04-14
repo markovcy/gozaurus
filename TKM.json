@@ -1,0 +1,294 @@
+{
+    "id": 1,
+    "title": "Вміст наповнювача",
+    "columns": [
+      {
+        "name": "content_reinforcement_iso",
+        "title": "Стандарт випробувань вмісту наповнювача *",
+        "required": true,
+        "type": "select",
+        "value": "ISO 1172",
+        "Placeholder": "Стандарт випробувань вмісту наповнювача...",
+        "data": [
+            {
+              "title": "ISO 1172",
+              "label": "ISO 1172",
+              "value": "ISO 1172"
+            },
+            {
+              "title": "ISO 3451-1",
+              "label": "ISO 3451-1",
+              "value": "ISO 3451-1"
+            }
+          ]
+      },
+      {
+        "name": "content_reinforcement",
+        "title": "мас. % вмісту наповнювача *",
+        "required": true,
+        "min": "1",
+        "max": "95",
+        "type": "number",
+        "Placeholder": "30"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Густина",
+    "columns": [
+      {
+        "name": "density_iso",
+        "title": "Стандарт випробувань густини",
+        "required": false,
+        "type": "select",
+        "value": "ISO 1183",
+        "data": [
+            {
+              "title": "ISO 1183",
+              "label": "ISO 1183",
+              "value": "ISO 1183"
+            },
+            {
+              "title": "ASTM D-1505",
+              "label": "ASTM D-1505",
+              "value": "ASTM D-1505"
+            }
+          ]
+      },
+      {
+        "name": "density",
+        "title": "Густина, кг/м<sup>3</sup>",
+        "required": false,
+        "type": "number",
+        "Placeholder": "1500"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "ПТР",
+    "columns": [
+      {
+        "name": "mfr_iso",
+        "title": "Стандарт випробувань ПТР *",
+        "required": true,
+        "type": "select",
+        "value": "ISO 1133",
+        "data": [
+            {
+              "title": "ISO 1133",
+              "label": "ISO 1133",
+              "value": "ISO 1133"
+            },
+            {
+              "title": "ASTM D-1238",
+              "label": "ASTM D-1238",
+              "value": "ASTM D-1238"
+            }
+          ]
+      },
+      {
+        "name": "mfr",
+        "title": "ПТР, г/10 хв *",
+        "required": true,
+        "min": "0.01",
+        "max": "100",
+        "type": "number",
+        "Placeholder": "25"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Модуль пружності",
+    "columns": [
+      {
+        "name": "tensile_modulus_iso",
+        "title": "Стандарт випробувань модуля пружності",
+        "required": false,
+        "type": "select",
+        "value": "ISO 527-2",
+        "data": [
+            {
+              "title": "ISO 527-2",
+              "label": "ISO 527-2",
+              "value": "ISO 527-2"
+            },
+            {
+              "title": "ASTM D-790",
+              "label": "ASTM D-790",
+              "value": "ASTM D-790"
+            }
+          ]
+      },
+      {
+        "name": "tensile_modulus",
+        "title": "Модуль пружності, ГПа",
+        "required": false,
+        "type": "number",
+        "Placeholder": "1"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Міцність при розриві",
+    "columns": [
+      {
+        "name": "tensile_strength_break_iso",
+        "title": "Стандарт випробувань міцністі при розриві*",
+        "required": true,
+        "type": "select",
+        "value": "ISO 527-2",
+        "data": [
+            {
+                "title": "ISO 527-2",
+                "label": "ISO 527-2",
+                "value": "ISO 527-2"
+              },
+              {
+                "title": "ASTM D-638",
+                "label": "ASTM D-638",
+                "value": "ASTM D-638"
+              }
+          ]
+      },
+      {
+        "name": "tensile_strength_break",
+        "title": "Міцність при розриві, МПа *",
+        "required": true,
+        "type": "number",
+        "Placeholder": "55"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Відносне видовження при розриві",
+    "columns": [
+      {
+        "name": "elongation_break_iso",
+        "title": "Стандарт випробувань відносного видовження при розриві *",
+        "required": true,
+        "type": "select",
+        "value": "ISO 527-2",
+        "data": [
+            {
+                "title": "ISO 527-2",
+                "label": "ISO 527-2",
+                "value": "ISO 527-2"
+              },
+              {
+                "title": "ASTM D-638",
+                "label": "ASTM D-638",
+                "value": "ASTM D-638"
+              }
+          ]
+      },
+      {
+        "name": "elongation_break",
+        "title": "% відносного видовження при розриві *",
+        "required": true,
+        "min": "0",
+        "max": "10000",
+        "type": "number",
+        "Placeholder": "66"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Ударна в`язкість за Шарпі",
+    "columns": [
+      {
+        "name": "charpy_impact_strength",
+        "title": "Ударна в`язкість за Шарпі, кДж/м2 (ISO 179-1)",
+        "required": false,
+        "type": "text",
+        "Placeholder": "90"
+
+      },
+      {
+        "name": "charpy_notched_impact_strength",
+        "title": "Ударна в`язкість за Шарпі з надрізом кДж/м2 (ISO 179-1)",
+        "required": false,
+        "type": "text",
+        "Placeholder": "90"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Теплостійкість за Віка",
+    "columns": [
+      {
+        "name": "vicat",
+        "title": "Теплостійкість за Віка, °C (ISO 306)",
+        "required": false,
+        "type": "text",
+        "Placeholder": "90"
+
+      },
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Температура плавлення",
+    "columns": [
+      {
+        "name": "melting_temperature_iso",
+        "title": "Стандарт випробувань, температури плавлення *",
+        "required": true,
+        "type": "select",
+        "value": "ISO 11357-1",
+        "data": [
+            {
+                "title": "ISO 11357-1",
+                "label": "ISO 11357-1",
+                "value": "ISO 11357-1"
+              },
+              {
+                "title": "ISO 11357-3",
+                "label": "ISO 11357-3",
+                "value": "ISO 11357-3"
+              }
+          ]
+      },
+      {
+        "name": "melting_temperature",
+        "title": "Температура плавлення, °C *",
+        "required": true,
+        "type": "number",
+        "Placeholder": "55"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Вогнестійкість",
+    "columns": [
+      {
+        "name": "flammability",
+        "title": "Вогнестійкість, Клас (UL 94)",
+        "required": false,
+        "type": "text",
+        "Placeholder": "HB"
+
+      },
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Поверхневий опір",
+    "columns": [
+      {
+        "name": "surface_resistivity",
+        "title": "Поверхневий опір, Ом (IEC 60093)",
+        "required": false,
+        "type": "text",
+        "Placeholder": "1^16"
+
+      },
+    ]
+  },

@@ -1,0 +1,251 @@
+{
+  "id": 1,
+  "title": "Хімічна природа дисперсного наповнювача",
+  "columns": [
+    {
+      "name": "chemical_nature_iso",
+      "title": "Стандарт випробувань хімічного природного дисперсного наповнювача..., *",
+      "required": true,
+      "type": "text",
+      "Placeholder": "Стандарт випробувань хімічного природного дисперсного наповнювача..."
+    },
+    {
+      "name": "chemical_nature",
+      "title": "Значення хімічної природи дисперсного наповнювача, *",
+      "required": true,
+      "type": "text",
+      "Placeholder": "Сажа, Каолін"
+    }
+  ]
+},
+{
+  "id": 2,
+  "title": "Чистота дисперсного наповнювача",
+  "columns": [
+    {
+      "name": "purity_of_disperse_filler_iso",
+      "title": "Стандарт випробувань чистоти дисперсного наповнювача",
+      "required": false,
+      "type": "text",
+      "Placeholder": "Стандарт випробувань чистоти дисперсного наповнювача..."
+    },
+    {
+      "name": "purity_of_disperse_filler",
+      "title": "% чистоти дисперсного наповнювача",
+      "required": false,
+      "min": "0",
+      "max": "100",
+      "type": "number",
+      "Placeholder": "0...100"
+    }
+  ]
+},
+{
+  "id": 3,
+  "title": "Дисперсність",
+  "columns": [
+    {
+      "name": "dispersity_iso",
+      "title": "Стандарт випробувань чистоти дисперсного наповнювача",
+      "required": false,
+      "type": "text",
+      "Placeholder": "Стандарт випробувань дисперсністі..."
+    },
+    {
+      "name": "dispersity",
+      "title": "Дисперсність, мкм",
+      "required": false,
+      "type": "number",
+      "Placeholder": "1"
+    }
+  ]
+},
+{
+    "id": 4,
+    "title": "Густина",
+    "columns": [
+      {
+        "name": "density_iso",
+        "title": "Стандарт випробувань густини",
+        "required": false,
+        "type": "text",
+        "Placeholder": "Стандарт випробувань густини..."
+      },
+      {
+        "name": "density",
+        "title": "Густина, кг/м<sup>3</sup>",
+        "required": false,
+        "type": "number",
+        "Placeholder": "1500"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Вміст вологи",
+    "columns": [
+      {
+        "name": "moisture_content_iso",
+        "title": "Стандарт випробувань вмісти вологи",
+        "required": false,
+        "type": "text",
+        "Placeholder": "Стандарт випробувань вмісти вологи..."
+      },
+      {
+        "name": "moisture_content",
+        "title": "% вмісту вологи, *",
+        "required": true,
+        "min": 0,
+        "max": 30,
+        "type": "number",
+        "Placeholder": "10"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Конфігурація наповнювача",
+    "columns": [
+      {
+        "name": "content_filler_iso",
+        "title": "Стандарт випробувань конфігурації наповнювача...",
+        "required": false,
+        "type": "text",
+        "Placeholder": "Стандарт випробувань конфігурації наповнювача..."
+      },
+      {
+        "name": "content_filler",
+        "title": "Мікросфера, *",
+        "required": true,
+        "type": "text",
+        "Placeholder": "Мікросфера"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Лінійна густина",
+    "columns": [
+      {
+        "name": "linear_density_iso",
+        "title": "Стандарт випробуван, лінійної густини *",
+        "required": true,
+        "type": "text",
+        "Placeholder": "Заповнюються самостійно"
+      },
+      {
+        "name": "linear_density",
+        "title": "Лінійна густина, текс *",
+        "required": true,
+        "type": "text",
+        "Placeholder": "100"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Довжина волокон",
+    "columns": [
+      {
+        "name": "length_of_fibres_iso",
+        "title": "Стандарт випробувань довжини волокон *",
+        "required": true,
+        "type": "text",
+        "Placeholder": "Стандарт випробувань довжини волокон..."
+      },
+      {
+        "name": "length_of_fibres",
+        "title": "Довжина волокон, мм *",
+        "required": true,
+        "type": "text",
+        "Placeholder": "діапазон довжин або неперевне"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Діаметр елементарних ниток",
+    "columns": [
+      {
+        "name": "filament_diameter_iso",
+        "title": "Стандарт випробувань діаметру елементарних ниток",
+        "required": false,
+        "type": "text",
+        "Placeholder": "Стандарт випробувань діаметру елементарних ниток..."
+      },
+      {
+        "name": "filament_diameter",
+        "title": "Діаметр елементарних ниток, мкм",
+        "required": false,
+        "min": "1e-10",
+        "max": "3000",
+        "type": "number",
+        "Placeholder": "1"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Міцність при розтягу",
+    "columns": [
+      {
+        "name": "tensile_strength_iso",
+        "title": "Стандарт випробувань міцністі при розтягу",
+        "required": false,
+        "type": "text",
+        "Placeholder": "Стандарт випробувань міцністі при розтягу...",
+        "value": "DIN 53504"
+      },
+      {
+        "name": "tensile_strength",
+        "title": "Міцність при розтягу, МПа",
+        "required": false,
+        "type": "number",
+        "Placeholder": "15"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Модуль пружності",
+    "columns": [
+      {
+        "name": "tensile_modulus_iso",
+        "title": "Стандарт випробувань модуля пружності",
+        "required": false,
+        "type": "text",
+        "Placeholder": "Заповнюються самостійно",
+        "value": "DIN 53504"
+      },
+      {
+        "name": "tensile_modulus",
+        "title": "Модуль пружності, ГПа",
+        "required": false,
+        "type": "number",
+        "Placeholder": "1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Відносне видовження при розриві",
+    "columns": [
+      {
+        "name": "elongation_break_iso",
+        "title": "Стандарт випробувань відносного видовження при розриві",
+        "required": false,
+        "type": "text",
+        "Placeholder": "Стандарт випробувань відносного видовження при розриві...",
+        "value": "DIN 53504"
+      },
+      {
+        "name": "elongation_break",
+        "title": "% відносного видовження при розриві",
+        "required": false,
+        "type": "number",
+        "min": "0",
+        "max": "1000",
+        "Placeholder": "55"
+      }
+    ]
+  },
