@@ -9,6 +9,11 @@ body {
     overflow-x: hidden;
     background-color: #f6f7f8;
 }
+form {
+    color: #c2c7d1;
+    background-color: #fefefe;
+}
+
  /* body[theme=polymer] form {
     color: #c2c7d1;
     background-color: #fefefe;
@@ -126,14 +131,14 @@ body {
     -webkit-justify-content: center;
     justify-content: center;
     /*color: #0a1c3b;*/
-    font-size: 14px;
+    /* font-size: 14px;
     border-width: 1px;
     border-radius: 8px;
     border-style: solid;
     transition: all .3s ease-in-out;
     margin: 0 8px;
-}
- body[theme=polymer] #catalog_pane {
+} */
+ /* body[theme=polymer] #catalog_pane {
     height: 99%;
     vertical-align: top;
     padding-left: 1px;
@@ -151,7 +156,7 @@ body {
     display: table-cell;
  /* padding-left: 15px; */
     padding-top: 3px;
-}
+/* }
  body[theme=polymer] .row-fluid {
     width: 100%;
     display: flex;
@@ -306,23 +311,6 @@ body {
  body[theme=polymer] #Users_profile_data_form body > form {
     color: black;
 } */
-
-
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
