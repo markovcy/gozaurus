@@ -26,8 +26,7 @@ header {
     box-sizing: border-box;
     z-index: 9;
     align-items: center;
-    /* background: #0a1c3b; */
-    background: white;
+    background: #0a1c3b;
 }
 header .topline {
     -webkit-flex-direction: row;
