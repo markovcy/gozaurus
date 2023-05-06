@@ -35,7 +35,7 @@
             ]
     
           },
-          "id_filler_configuration":{
+          "id_content_filler":{
             "1":[
               "0", "1", "2", "3", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "-3", "-2", "-1"
             ],
@@ -125,7 +125,7 @@
               
               "title": "Filler configuration",
               "columns": [{
-                "name": "id_filler_configuration",
+                "name": "id_content_filler",
                 "required": true,
                 "value": "0",
                 "type": "select",
@@ -508,12 +508,11 @@
                     "required": true,
 
                     "type": "text",
-                    "pattern": "floatPos",
                     "value": "Esterion",
                     "title": "Manufacturer company name or dealer name"
                   },
                   {
-                    "name": "commercial_name",
+                    "name": "marka",
                     
                     "type": "text",
                     "title": "Commercial product name"
