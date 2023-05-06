@@ -26,6 +26,12 @@ if (id_type_material === 1) {
     console.log("Additives")
 } else if (id_type_material === 3) {
     console.log("Thermoplastic elastomer")
+    if (id_type_of_filler === 1) {
+        console.log("Thermoplastic composite materials => Disperse filler")
+        parse_disperse_filler(resp)
+    } else if (id_type_of_filler === 2) {
+        console.log("Thermoplastic composite materials => Fibrous filler")
+    }
 } else if (id_type_material === 4) {
     console.log("Fillers")
     if (id_type_of_filler === 1) {
