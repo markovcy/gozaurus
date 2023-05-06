@@ -1222,14 +1222,14 @@
               "title": "Filler configuration",
               "columns": [
                 {
-                  "name": "filler_configuration_iso",
+                  "name": "content_filler_iso",
                   "title": "Filler configuration tests standard",
                   
                   "pattern": "floatPos",
                   "type": "text"
                 },
                 {
-                  "name": "filler_configuration",
+                  "name": "content_filler",
                   "title": "Filler configuration",
                   "required": true,
                   "pattern": "floatPos",

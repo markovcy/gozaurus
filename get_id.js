@@ -52,4 +52,5 @@ function parse_disperse_filler(resp) {
     document.getElementsByName("dispersity_iso")[0].placeholder = resp[0].dispersity_iso
     document.getElementsByName("chemical_nature")[1].placeholder = resp[0].chemical_nature
     document.getElementsByName("chemical_nature_iso")[0].placeholder = resp[0].chemical_nature_iso
+    document.getElementsByName("marka")[0].placeholder = resp[0].marka
 }
