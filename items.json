@@ -1,10 +1,10 @@
 {
-    "title": "items",
-    "action": "/table/items/put",
-    "description": "type_of_material",
-    "method": "POST",
-    "hideBlock": {
-    "data": {
+  "title": "items",
+  "action": "/table/items/put",
+  "description": "type_of_material",
+  "method": "POST",
+  "hideBlock": {
+  "data": {
         "id_type_material": {
             "1": [
               "0", "1", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "-3", "-2", "-1"
@@ -23,7 +23,7 @@
             ]
             
           },
-          "id_type_filler": {
+          "id_type_of_filler": {
             "1": [
               "0", "1", "32", "33","34", "35", "36", "43", "-3", "-2", "-1"
             ],
@@ -103,9 +103,6 @@
               {
                 "name": "id_polymers",
                 "required": true,
-                "error": {
-                  "message": "Field is required"
-                },
                 "suggestions":  "/search/list",
                 "type": "select",
                 "title": "Name of the polymer"
@@ -113,15 +110,12 @@
               {
                 "name": "manufacturer",
                 "required": true,
-                "error": {
-                  "message": "Field is required"
-                },
                 "type": "text",
                 "value": "Esterion",
                 "title": "Product manufacturer"
               },
               {
-                "name": "commercial_name",
+                "name": "marka",
                 
                 "type": "text",
                 "title": "Commercial product name"
@@ -166,9 +160,6 @@
                   "name": "chemical_nature",
                   "title": "Chemical nature of disperse filler",
                   "required": true,
-                  "error": {
-                    "message": "Field is required"
-                  },
                   "pattern": "floatPos",
                   "type": "text"
                 }
@@ -221,9 +212,6 @@
                   "name": "nature_of_filler",
                   "title": "Nature of filler",
                   "required": true,
-                  "error": {
-                    "message": "Field is required"
-                  },
                   "pattern": "floatPos",
                   "type": "text"
                 }
@@ -255,10 +243,7 @@
                       "name": "content_reinforcement",
                     "title": "Content reinforcement/filler, wt. %",
                     "required": true,
-                    "error": {
-                      "pattern": "only float number more than zero",
-                      "message": "Value can't be less than 1"
-                    },
+                    
                     "min": 1,
                     "max": 95,
                     "type": "number"
@@ -289,10 +274,7 @@
                   {
                     "name": "density",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",
-                      "message": "Value can't be less than 400"
-                    },
+                    
                     "min": 400,
                     "max": 3500,  
                     "type": "number", 
@@ -325,10 +307,7 @@
                   {
                     "name": "mfr",
                     "required": true,
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
+                    
                     "min":  0,
                     "type": "number", 
                     "title": "MFR, g/10 min "
@@ -359,10 +338,7 @@
                   {
                     "name": "tensile_modulus",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
+                    
                     "min":  0,
                     "type": "number", 
                     "title": "Tensile modulus, GPa "
@@ -394,9 +370,7 @@
                   {
                     "name": "tensile_strength_break",
                     "required": true,
-                    "error": {
-                      "pattern": "only float number more than zero",  "message": "Value can't be less than 0"
-                    },
+                    
                     "min":  0,
                     "type": "number", 
                     "title": "Tensile Strength at Break, MPa "
@@ -427,10 +401,7 @@
                   {
                     "name": "elongation_break",
                     "required": true,
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
+                    
                     "min":  0,
                     "type": "number", 
                     "title": "Elongation at break, % "
@@ -441,10 +412,7 @@
                     "columns": [{
                     "name": "charpy_impact_strength",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
+                    
                     "min":  0,
                     "type": "number", 
                     "title": "Charpy impact strength, kJ/m^2 (ISO 179-1)"
@@ -452,10 +420,7 @@
                   {
                     "name": "charpy_notched_impact_strength",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
+                    
                     "min":  0,
                     "type": "number", 
                     "title": "Charpy notched impact strength, kJ/m^2 (ISO 179-1)"
@@ -466,10 +431,7 @@
                     "columns": [{
                     "name": "vick_heat_resistance",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
+                    
                     "min":  0,
                     "type": "number", 
                     "title": "Vick heat resistance, °C (ISO 306) "
@@ -499,10 +461,7 @@
                   {
                     "name": "melting_temperature",
                     "required": true,
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
+                    
                     "min":  0,
                     "type": "number", 
                     "title": "Melting temperature,°C "
@@ -525,10 +484,7 @@
                     {
                     "name": "surface_resistivity",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
+                    
                     "min":  0,
                     "type": "number", 
                     "title": "Surface resistivity, Ohm (IEC 60093)"
@@ -543,9 +499,6 @@
                   {
                     "name": "polymer_name",
                     "required": true,
-                    "error": {
-                      "message": "Field is required"
-                    },
                     "suggestions":  "/search/list",
                     "type": "select",
                     "title": "Name of the polymer to use additive with"
@@ -553,9 +506,7 @@
                   {
                     "name": "manufacturer_company_dealer",
                     "required": true,
-                    "error": {
-                      "message": "Field is required"
-                    },
+
                     "type": "text",
                     "pattern": "floatPos",
                     "value": "Esterion",
@@ -570,9 +521,6 @@
                   {
                     "name": "manufacturer",
                     "required": true,
-                    "error": {
-                      "message": "Field is required"
-                    },
                     "type": "text",
                     "pattern": "floatPos",
                     "title": "Manufacturer name"
@@ -687,10 +635,7 @@
                   {
                     "name": "hardness",
                     "required": true,
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
+                    
                     "min": 0,
                     "type": "number",
                     "title": "Hardness"                  
@@ -736,10 +681,7 @@
                   {
                     "name": "tensile_strength",
                     "required": true,
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
+                    
                     "min":  0,
                     "type": "number", 
                     "title": "Tensile Strength, MPa "
@@ -770,10 +712,7 @@
                   {
                     "name": "relative_elongation_at_break",
                     "required": true,
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
+                    
                     "min":  0,
                     "max": 100,
                     "type": "number", 
@@ -806,10 +745,6 @@
                   {
                     "name": "elasticity_modulus_100",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
                     "min":  0,
                     "type": "number", 
                     "title": "Modulus of elasticity at 100% deformation, MPa"
@@ -840,10 +775,6 @@
                   {
                     "name": "elasticity_modulus_300",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
                     "min":  0,
                     "type": "number", 
                     "title": "Modulus of elasticity at 300% deformation, MPa"
@@ -874,10 +805,6 @@
                   {
                     "name": "tear_resistance",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
                     "min":  0,
                     "type": "number", 
                     "title": "Tear Resistance, N/mm"
@@ -908,14 +835,10 @@
                   {
                     "name": "compression_set_23",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
                     "min":  0,
                     "max": 100,
                     "type": "number", 
-                    "title": "% of of compression set at 23 °C"
+                    "title": "% of compression set at 23 °C"
                   }]},
                   { 
                     "id": 27,
@@ -943,14 +866,10 @@
                   {
                     "name": "compression_set_70",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
                     "min":  0,
                     "max": 100,
                     "type": "number", 
-                    "title": "% of of compression set at 70 °C"
+                    "title": "% of compression set at 70 °C"
                   }]},
                   { 
                     "id": 28,
@@ -978,14 +897,10 @@
                   {
                     "name": "compression_set_100",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
                     "min":  0,
                     "max": 100,
                     "type": "number", 
-                    "title": "% of of compression set at 100 °C"
+                    "title": "% of compression set at 100 °C"
                   }]},
                   { 
                     "id": 29,
@@ -1013,10 +928,6 @@
                   {
                     "name": "abrasive_wear_and_tear",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
                     "min":  0,
                     "type": "number", 
                     "title": "Abrasive wear and tear, mm^3"
@@ -1028,10 +939,6 @@
                   {
                     "name": "ozone_resistance",
                     
-                    "error": {
-                      "pattern": "only float number more than zero",  
-                      "message": "Value can't be less than 0"
-                    },
                     "min":  0,
                     "type": "number", 
                     "title": "Ozone Resistance (ASTM D-518)"
@@ -1051,7 +958,7 @@
                   "title": "Select the type of Filler",
                   "columns": [
                     {
-                      "name": "id_type_filler",
+                      "name": "id_type_of_filler",
                       "title": "Type of Filler",
                       "required": true,
                       "value": "0",
@@ -1089,9 +996,6 @@
                 "name": "chemical_nature_iso",
                 "title": "Chemical nature of disperse filler tests standard",
                 "required": true,
-                "error": {
-                  "message": "Field is required"
-                },
                 "pattern": "floatPos",
                 "type": "text"
                 
@@ -1100,10 +1004,7 @@
                 "name": "chemical_nature",
                 "title": "The chemical nature of disperse filler",
                 "required": true,
-                "error": {
-                  "message": "Field is required"
-                },
-                "pattern": "floatPos",
+                 "pattern": "floatPos",
                 "type": "text"
               }
             ]
@@ -1123,10 +1024,6 @@
                 "name": "purity_of_disperse_filler",
                 "title": "% purity of disperse filler",
                 
-                "error": {
-                  "pattern": "only float number more than zero",  
-                  "message": "Value can't be less than 0"
-                },
                 "min":  0,
                 "max": 100,
                 "type": "number"
@@ -1148,10 +1045,6 @@
                 "name": "dispersity",
                 "title": "Dispersity, μm",
                 
-                "error": {
-                  "pattern": "only float number more than zero",  
-                  "message": "Value can't be less than 0"
-                },
                 "type": "number",
                 "min":  0
               }
@@ -1172,10 +1065,6 @@
                   "name": "density",
                   "title": "Density, kg/m^3",
                   
-                  "error": {
-                    "pattern": "only float number more than zero",  
-                    "message": "Value can't be less than 0"
-                  },
                   "min":  0,
                   "type": "number"
                 }
@@ -1190,9 +1079,6 @@
                   "name": "linear_density_iso",
                   "title": "Linear Density tests standard",
                   "required": true,
-                  "error": {
-                    "message": "Field is required"
-                  },
                   "type": "text"
                 },
                 {
@@ -1200,10 +1086,7 @@
                   "title": "Linear Density",
                   "required": true,
                   "type": "number",
-                  "error": {
-                    "pattern": "only float number more than zero",  
-                    "message": "Value can't be less than 0"
-                  },
+                  
                   "min":  0
                 }
               ]
@@ -1216,9 +1099,6 @@
                   "name": "length_of_fibres_iso",
                   "title": "Lenghth of fibres tests standard",
                   "required": true,
-                  "error": {
-                    "message": "Field is required"
-                  },
                   "pattern": "floatPos",
                   "type": "text"
                 },
@@ -1226,10 +1106,7 @@
                   "name": "length_of_fibres",
                   "title": "Length of fibres, mm",
                   "required": true,
-                  "error": {
-                    "pattern": "only float number more than zero",  
-                    "message": "Value can't be less than 0"
-                  },
+                  
                   "type": "number",
                   "min":  0
                 }
@@ -1250,9 +1127,6 @@
                   "name": "filament_diameter",
                   "title": "Filament diameter, mkm",
                   
-                  "error": {
-                    "message": "Value can't be less than 1e-10"
-                  },
                   "min": 1e-10,
                   "max": 3000,
                   "type": "number"
@@ -1275,10 +1149,6 @@
                   "name": "tensile_strength",
                   "title": "Tensile Strength, MPa",
                   
-                  "error": {
-                    "pattern": "only float number more than zero",  
-                    "message": "Value can't be less than 0"
-                  },
                   "type": "number",
                   "min":  0
                 }
@@ -1299,10 +1169,6 @@
                   "name": "tensile_modulus",
                   "title": "Tensile modulus, GPa",
                   
-                  "error": {
-                    "pattern": "only float number more than zero",  
-                    "message": "Value can't be less than 0"
-                  },
                   "type": "number",
                   "min":  0
                 }
@@ -1323,10 +1189,6 @@
                   "name": "elongation_break",
                   "title": "Elongation at break, % ",
                   
-                  "error": {
-                    "pattern": "only float number more than zero",  
-                    "message": "Value can't be less than 0"
-                  },
                   "type": "number",
                   "min":  0,
                   "max": 1000
@@ -1348,10 +1210,7 @@
                   "name": "moisture_content",
                   "title": "Moisture content, %",
                   "required": true,
-                  "error": {
-                    "pattern": "only float number more than zero",  
-                    "message": "Value can't be less than 0"
-                  },
+                  
                   "min": 0,
                   "max": 30,
                   "type": "number"
@@ -1373,9 +1232,6 @@
                   "name": "filler_configuration",
                   "title": "Filler configuration",
                   "required": true,
-                  "error": {
-                    "message": "Field is required"
-                  },
                   "pattern": "floatPos",
                   "type": "text"
                 }
@@ -1388,18 +1244,12 @@
                   {
                     "name": "processing_methods*",
                     "required": true,
-                    "error": {
-                      "message": "Field is required"
-                    },
                     "type": "textarea",
                     "title": "Processing methods"
                   },
                   {
                     "name": "fields_of_application",
                     "required": true,
-                    "error": {
-                      "message": "Field is required"
-                    },
                     "type": "textarea",
                     "title": "Fields of application"
                   },
