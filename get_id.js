@@ -28,7 +28,7 @@ if (id_type_material === 1) {
     console.log("Thermoplastic elastomer")
     if (id_type_of_filler === 1) {
         console.log("Thermoplastic composite materials => Disperse filler")
-        parse_disperse_filler(resp)
+        parse_TKM_disperse_filler(resp)
     } else if (id_type_of_filler === 2) {
         console.log("Thermoplastic composite materials => Fibrous filler")
     }
@@ -101,4 +101,37 @@ function parse_other_filler(resp) {
     document.getElementsByName("marka")[0].placeholder = resp[0].marka
     document.getElementsByName("content_filler")[0].placeholder = resp[0].content_filler
     document.getElementsByName("content_filler_iso")[0].placeholder = resp[0].content_filler_iso
+}
+
+function parse_TKM_disperse_filler(resp) {
+    console.log("TKM_disperse_filler")
+    document.getElementsByName("marka")[0].placeholder = resp[0].marka
+    document.getElementsByName("chemical_nature")[0].placeholder = resp[0].chemical_nature
+    document.getElementsByName("content_reinforcement")[0].placeholder = resp[0].content_reinforcement
+    document.getElementsByName("content_reinforcement_iso")[0].value = resp[0].content_reinforcement_iso
+    document.getElementsByName("density")[0].placeholder = resp[0].density
+    document.getElementsByName("density_iso")[0].value = resp[0].density_iso
+    document.getElementsByName("mfr")[0].placeholder = resp[0].mfr
+    document.getElementsByName("mfr_iso")[0].value = resp[0].mfr_iso
+    document.getElementsByName("tensile_modulus")[0].placeholder = resp[0].tensile_strength
+    document.getElementsByName("tensile_modulus_iso")[0].value = resp[0].tensile_strength_iso
+    document.getElementsByName("tensile_strength_break")[0].placeholder = resp[0].tensile_strength_break
+    document.getElementsByName("tensile_strength_break_iso")[0].value = resp[0].tensile_strength_break_iso
+
+
+    document.getElementsByName("linear_density")[0].placeholder = resp[0].linear_density
+    document.getElementsByName("linear_density_iso")[0].placeholder = resp[0].linear_density_iso
+    document.getElementsByName("length_of_fibres_iso")[0].placeholder = resp[0].length_of_fibres_iso
+    document.getElementsByName("length_of_fibres")[0].placeholder = resp[0].length_of_fibres
+    document.getElementsByName("filament_diameter")[0].placeholder = resp[0].length_of_fibres
+    document.getElementsByName("filament_diameter_iso")[0].placeholder = resp[0].length_of_fibres_iso
+    document.getElementsByName("tensile_strength")[1].placeholder = resp[0].tensile_strength
+    document.getElementsByName("tensile_strength_iso")[1].placeholder = resp[0].tensile_strength_iso
+    document.getElementsByName("elongation_break")[0].placeholder = resp[0].elongation_break
+    document.getElementsByName("elongation_break_iso")[0].value = resp[0].elongation_break_iso
+    document.getElementsByName("charpy_impact_strength")[0].placeholder = resp[0].charpy_impact_strength
+    document.getElementsByName("charpy_notched_impact_strength")[0].placeholder = resp[0].charpy_notched_impact_strength
+
+    document.getElementsByName("moisture_content_iso")[0].placeholder = resp[0].moisture_content_iso
+    document.getElementsByName("moisture_content")[0].placeholder = resp[0].moisture_content
 }

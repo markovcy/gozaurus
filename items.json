@@ -497,7 +497,7 @@
                 "description": "Which polymer to use additive with",
                 "columns": [
                   {
-                    "name": "polymer_name",
+                    "name": "id_polymers",
                     "required": true,
                     "suggestions":  "/search/list",
                     "type": "select",
