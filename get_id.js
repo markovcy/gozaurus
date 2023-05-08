@@ -14,6 +14,7 @@ let response = await fetch(Url, {
 if (response.ok) {
     resp = await response.json()
 }
+resp = resp[0]
 
 // let resp = response.json()
 console.log(resp)
@@ -45,6 +46,47 @@ if (id_type_material === 1) {
 } else if (id_type_material === 5) {
     console.log("Thermoplastic composite materials")
 }
+
+let elements = document.querySelectorAll("label > input")
+
+elements.forEach(function(item, i, elements) {
+    document.getElementsByName("'" + elements + "'").placeholder = resp[0].elements
+});
+
+let numbers = Array.from(elements);
+
+let elem = numbers.map(item => item.name)
+
+console.log(elem)
+
+let filler_dispers = ["id_polymers", "marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso"]
+
+filler_dispers.forEach(function(item, i, filler_dispers) {
+    let placeholder = filler_dispers[item]
+    console.log(placeholder)
+    make_placeholder(item, placeholder)
+});
+
+
+function make_placeholder (name, placeholder) {
+    console.log(name)
+    if (document.querySelectorAll("[name=" + name + "]")[1]) {
+        document.querySelectorAll("[name=" + name + "]")[1].placeholder = (resp[name])
+    } else {
+        document.querySelectorAll("[name=" + name + "]")[0].placeholder = (resp[name])
+    }
+    console.log(resp[name])
+    let selector = document.querySelectorAll("[name=" + name + "]")
+    console.log(selector)
+}
+
+name.forEach(function(item, i, name) {
+    console.log(item)
+    console.log(resp.item)
+    document.getElementsByName(item)[0].value = resp.item
+});
+
+
 
 function parse_disperse_filler(resp) {
     console.log(resp[0].density_iso)
@@ -131,6 +173,8 @@ function parse_TKM_disperse_filler(resp) {
     document.getElementsByName("elongation_break_iso")[0].value = resp[0].elongation_break_iso
     document.getElementsByName("charpy_impact_strength")[0].placeholder = resp[0].charpy_impact_strength
     document.getElementsByName("charpy_notched_impact_strength")[0].placeholder = resp[0].charpy_notched_impact_strength
+
+    document.getElementsByName("melting_temperature")[0].placeholder = resp[0].melting_temperature
 
     document.getElementsByName("moisture_content_iso")[0].placeholder = resp[0].moisture_content_iso
     document.getElementsByName("moisture_content")[0].placeholder = resp[0].moisture_content
