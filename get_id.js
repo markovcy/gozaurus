@@ -60,6 +60,7 @@ let elem = numbers.map(item => item.name)
 console.log(elem)
 
 let filler_dispers = ["id_polymers", "marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso"]
+let placeholder_filler_dispers = filler_dispers.map(item => resp["item"])
 
 filler_dispers.forEach(function(item, i, filler_dispers) {
     let placeholder = filler_dispers[item]
@@ -67,19 +68,67 @@ filler_dispers.forEach(function(item, i, filler_dispers) {
     make_placeholder(item, placeholder)
 });
 
+filler_dispers.forEach(function(item, i, placeholder_filler_dispers) {
+    let placeholder = filler_dispers[item]
+    console.log(item)
+    console.log(placeholder_filler_dispers)
+    make(item, placeholder_filler_dispers)
+});
+
 
 function make_placeholder (name, placeholder) {
     console.log(name)
-    if (document.querySelectorAll("[name=" + name + "]")[1]) {
-        document.querySelectorAll("[name=" + name + "]")[1].placeholder = (resp[name])
-    } else {
-        document.querySelectorAll("[name=" + name + "]")[0].placeholder = (resp[name])
-    }
-    console.log(resp[name])
+    console.log("Видимость 0" + document.getElementsByName(name)[0].parentNode.parentNode.parentNode.style.display)
+    console.log("Видимость 1" + document.getElementsByName(name)[1].parentNode.parentNode.parentNode.style.display)
+    console.log("Видимость 2" + document.getElementsByName(name)[2].parentNode.parentNode.parentNode.style.display)
     let selector = document.querySelectorAll("[name=" + name + "]")
     console.log(selector)
+    if (selector[1]) {
+        selector[1].placeholder = placeholder
+    } else {
+        selector[0].placeholder = placeholder
+    }
 }
 
+function make_placeholder (name, placeholder) {
+    console.log(name)
+    
+    let visability0 = document.getElementsByName(name)[0].parentNode.parentNode.parentNode.style.display
+    let visability1
+    let visability2
+    if (document.getElementsByName(name)[1].parentNode.parentNode.parentNode.style.display) {
+        visability1 = document.getElementsByName(name)[1].parentNode.parentNode.parentNode.style.display
+    }
+    if (document.getElementsByName(name)[2].parentNode.parentNode.parentNode.style.display) {
+        visability2 = document.getElementsByName(name)[2].parentNode.parentNode.parentNode.style.display
+    }
+    console.log(visability0)
+    console.log(visability1)
+    console.log(visability2)
+    let selector = document.querySelectorAll("[name=" + name + "]")
+    console.log(selector)
+    if (selector[1]) {
+        selector[1].placeholder = placeholder
+    } else {
+        selector[0].placeholder = placeholder
+    }
+}
+
+
+function make(name, placeholder) {
+    if($(`input[name=${name}]`).is(":visible")){
+        console.log(name + " Абзац виден.");
+        $(`input[name=${name}]`) = placeholder
+    } else{
+        console.log(name +" Абзац НЕ виден.");
+    }
+    let selector = $(`input[name=${name}]`)
+    console.log(selector)
+    // selector.placeholder = placeholder
+    // console.log(selector)
+}
+
+.log(document.getElementsByName("density")[0].parentNode.parentNode.parentNode.style.display)
 name.forEach(function(item, i, name) {
     console.log(item)
     console.log(resp.item)
