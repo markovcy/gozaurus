@@ -3,7 +3,7 @@ let token1 = local["token"]
 let r
 let resp
 
-let Url = "http://164.68.125.44:40895/table/items/get?limit=1&lang=1&id=2"
+let Url = "http://164.68.125.44:42799/table/items/get?limit=1&lang=1&id=2"
 
 let response = await fetch(Url, {
     headers: {
@@ -18,8 +18,8 @@ resp = resp[0]
 
 // let resp = response.json()
 console.log(resp)
-let id_type_material = resp[0].id_type_material
-let id_type_of_filler = resp[0].id_type_of_filler
+let id_type_material = resp.id_type_material
+let id_type_of_filler = resp.id_type_of_filler
 console.log(id_type_material)
 if (id_type_material === 1) {
     console.log("Thermoplastic polymer")
@@ -47,26 +47,9 @@ if (id_type_material === 1) {
     console.log("Thermoplastic composite materials")
 }
 
-let elements = document.querySelectorAll("label > input")
-
-elements.forEach(function(item, i, elements) {
-    document.getElementsByName("'" + elements + "'").placeholder = resp[0].elements
-});
-
-let numbers = Array.from(elements);
-
-let elem = numbers.map(item => item.name)
-
-console.log(elem)
 
 let filler_dispers = ["id_polymers", "marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso"]
 let placeholder_filler_dispers = filler_dispers.map(item => resp["item"])
-
-filler_dispers.forEach(function(item, i, filler_dispers) {
-    let placeholder = filler_dispers[item]
-    console.log(placeholder)
-    make_placeholder(item, placeholder)
-});
 
 filler_dispers.forEach(function(item, i, placeholder_filler_dispers) {
     let placeholder = filler_dispers[item]
@@ -75,66 +58,16 @@ filler_dispers.forEach(function(item, i, placeholder_filler_dispers) {
     make(item, placeholder_filler_dispers)
 });
 
-
-function make_placeholder (name, placeholder) {
-    console.log(name)
-    console.log("Видимость 0" + document.getElementsByName(name)[0].parentNode.parentNode.parentNode.style.display)
-    console.log("Видимость 1" + document.getElementsByName(name)[1].parentNode.parentNode.parentNode.style.display)
-    console.log("Видимость 2" + document.getElementsByName(name)[2].parentNode.parentNode.parentNode.style.display)
-    let selector = document.querySelectorAll("[name=" + name + "]")
-    console.log(selector)
-    if (selector[1]) {
-        selector[1].placeholder = placeholder
-    } else {
-        selector[0].placeholder = placeholder
-    }
-}
-
-function make_placeholder (name, placeholder) {
-    console.log(name)
-    
-    let visability0 = document.getElementsByName(name)[0].parentNode.parentNode.parentNode.style.display
-    let visability1
-    let visability2
-    if (document.getElementsByName(name)[1].parentNode.parentNode.parentNode.style.display) {
-        visability1 = document.getElementsByName(name)[1].parentNode.parentNode.parentNode.style.display
-    }
-    if (document.getElementsByName(name)[2].parentNode.parentNode.parentNode.style.display) {
-        visability2 = document.getElementsByName(name)[2].parentNode.parentNode.parentNode.style.display
-    }
-    console.log(visability0)
-    console.log(visability1)
-    console.log(visability2)
-    let selector = document.querySelectorAll("[name=" + name + "]")
-    console.log(selector)
-    if (selector[1]) {
-        selector[1].placeholder = placeholder
-    } else {
-        selector[0].placeholder = placeholder
-    }
-}
-
-
 function make(name, placeholder) {
-    if($(`input[name=${name}]`).is(":visible")){
-        console.log(name + " Абзац виден.");
-        $(`input[name=${name}]`) = placeholder
-    } else{
-        console.log(name +" Абзац НЕ виден.");
-    }
     let selector = $(`input[name=${name}]`)
     console.log(selector)
-    // selector.placeholder = placeholder
-    // console.log(selector)
+    if($(`input[name=${name}]`).is(":visible")){
+        console.log(name + " виден.");
+        selector.placeholder = placeholder
+    } else{
+        console.log(name +"  НЕ виден.");
+    } 
 }
-
-.log(document.getElementsByName("density")[0].parentNode.parentNode.parentNode.style.display)
-name.forEach(function(item, i, name) {
-    console.log(item)
-    console.log(resp.item)
-    document.getElementsByName(item)[0].value = resp.item
-});
-
 
 
 function parse_disperse_filler(resp) {
