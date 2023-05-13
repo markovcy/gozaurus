@@ -1,8 +1,22 @@
-function showObject(data, thisForm) {
-    if (!data) {
-        alert('no results!')
-        return false;
+let local = JSON.parse(localStorage.USER);
+let token1 = local["token"]
+let r
+let resp
+
+let Url = "http://164.68.125.44:34351/search/list/?lang=en&value=pm&count=10&html=true"
+
+let response = await fetch(Url, {
+    headers: {
+        Authorization: "Bearer " + token1
     }
+  });
+
+if (response.ok) {
+    resp = await response.text()
+}
+
+let pars = resp.split('</option>')
+
 
     let divContent = $('#content');
     divContent.html('');
@@ -12,7 +26,7 @@ function showObject(data, thisForm) {
         div = divContent.children(':last').attr('id', data[x].id)
         div.append('<div>');
         titleDiv = div.children(':last')
-        titleDiv.append('<h3> Group: <a href="/api/v1/search/?name=' + data[x].title + '" target="search">' + data[x].title + '</a></h3>');
+        titleDiv.append(data[x]);
         if (data[x].abbr > "") {
             titleDiv.append('<h4> Search as ' + data[x].abbr + '</h4>');
         }

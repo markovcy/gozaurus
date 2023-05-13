@@ -19,7 +19,7 @@ resp = resp[0]
 // let resp = response.json()
 console.log(resp)
 let id_type_material = resp.id_type_material
-let id_type_of_filler = resp.id_type_of_filler
+let id_type_of_filler
 console.log(id_type_material)
 if (id_type_material === 1) {
     console.log("Thermoplastic polymer")
@@ -35,6 +35,7 @@ if (id_type_material === 1) {
     }
 } else if (id_type_material === 4) {
     console.log("Fillers")
+    id_type_of_filler = resp.id_type_of_filler
     if (id_type_of_filler === 1) {
         console.log("Disperse filler")
         parse_disperse_filler(resp)
@@ -48,44 +49,27 @@ if (id_type_material === 1) {
 }
 
 
-let filler_dispers = ["id_polymers", "marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso"]
-let placeholder_filler_dispers = filler_dispers.map(item => resp["item"])
+let filler_dispers = ["id_type_of_filler", "marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso", "moisture_content", "moisture_content_iso", "density", "density_iso"]
 
-filler_dispers.forEach(function(item, i, placeholder_filler_dispers) {
-    let placeholder = filler_dispers[item]
-    console.log(item)
-    console.log(placeholder_filler_dispers)
-    make(item, placeholder_filler_dispers)
+
+filler_dispers.forEach(function(item, i) {
+    let placeholder = resp[item]
+    console.log(placeholder)
+    fill_filler_dispers(item, placeholder)
 });
 
-function make(name, placeholder) {
-    let selector = $(`input[name=${name}]`)
+
+
+function fill_filler_dispers(name, placeholder) {
+    let selector = $(`input[name=${name}]:visible`)
     console.log(selector)
-    if($(`input[name=${name}]`).is(":visible")){
-        console.log(name + " виден.");
-        selector.placeholder = placeholder
-    } else{
-        console.log(name +"  НЕ виден.");
-    } 
+    console.log(name)
+    console.log(placeholder)
+    selector[0].placeholder = placeholder
 }
 
 
-function parse_disperse_filler(resp) {
-    console.log(resp[0].density_iso)
-    document.getElementsByName("density_iso")[1].placeholder = resp[0].density_iso
-    document.getElementsByName("density")[1].placeholder = resp[0].density
-    document.getElementsByName("moisture_content_iso")[0].placeholder = resp[0].moisture_content_iso
-    document.getElementsByName("moisture_content")[0].placeholder = resp[0].moisture_content
-    document.getElementsByName("purity_of_disperse_filler")[0].placeholder = resp[0].purity_of_disperse_filler
-    document.getElementsByName("purity_of_disperse_filler_iso")[0].placeholder = resp[0].purity_of_disperse_filler_iso
-    document.getElementsByName("dispersity")[0].placeholder = resp[0].dispersity
-    document.getElementsByName("dispersity_iso")[0].placeholder = resp[0].dispersity_iso
-    document.getElementsByName("chemical_nature")[1].placeholder = resp[0].chemical_nature
-    document.getElementsByName("chemical_nature_iso")[0].placeholder = resp[0].chemical_nature_iso
-    document.getElementsByName("marka")[0].placeholder = resp[0].marka
-    document.getElementsByName("chemical_nature_iso")[0].placeholder = resp[0].chemical_nature_iso
-    document.getElementsByName("marka")[0].placeholder = resp[0].marka
-}
+
 
 function parse_fibrous_filler(resp) {
     console.log("Fibrous filler")
