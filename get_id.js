@@ -1,104 +1,164 @@
-
-let r
-let resp
-
-let Url = "http://164.68.125.44:34351/table/items/get?limit=1&lang=1&id=2"
-let local = JSON.parse(localStorage.USER);
-let token1 = local["token"]
-
-let response = await fetch(Url, {
-    headers: {
-        Authorization: "Bearer " + token1
+async function getEP_write_placeholders (id) {
+    let resp
+    let port = window.location.origin
+    let Url = `${port}/table/items/get?limit=1&lang=1&id=${id}`
+    let local = JSON.parse(localStorage.USER);
+    let token1 = local["token"]
+    let response = await fetch(Url, {
+        headers: {
+            Authorization: "Bearer " + token1
+        }
+    });
+    if (response.status === 200) {
+        resp = await response.json()
     }
-  });
+    resp = resp[0]
+    console.log(resp)
+    let id_type_material = resp.id_type_material
+    let id_type_of_filler
+    switch (id_type_material) {
+        case 1: {
+            console.log("Thermoplastic polymer")
+            parse_termoplastic_polymer(resp)
+        }
+        case 2: {
+            console.log("Additives")
+            parse_additive(resp)
+        }
+        case 3: {
+            console.log("Thermoplastic elastomer")
+            parse_termoplastic_elastomer(resp)
+        }
+        case 4:{
+            id_type_of_filler = resp.id_type_of_filler
+            switch (id_type_of_filler) {
+                case 1: {
+                    console.log("Disperse filler")
+                    parse_disperse_filler(resp)
+                }
+                case 2: {
+                    console.log("Fibrous filler")
+                    parse_fibrous_filler (resp)
+                }
+                case 3: {
+                    console.log("Other filler")
+                    parse_other_filler(resp)
+                }
+            }
+        }
+        case 5: {
+            id_type_of_filler = resp.id_type_of_filler
+            switch (id_type_of_filler) {
+                case 1: {
+                    console.log("Thermoplastic composite materials => Disperse filler")
+                    parse_TKM_disperse_filler(resp)
+                }
+                case 2: {
+                    console.log("Thermoplastic composite materials => Fibrous filler")
+                    parse_TKM_fibrous_filler(resp)
+                }
 
-if (response.ok) {
-    resp = await response.json()
+        }
+    }
+    }
 }
-resp = resp[0]
-
-// let resp = response.json()
-console.log(resp)
-let id_type_material = resp.id_type_material
-let id_type_of_filler
-console.log(id_type_material)
-
-let filler_dispers = ["marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso", "moisture_content", "moisture_content_iso", "density", "density_iso"]
-
-let filler_fibrous = ["marka", "manufacturer", "density", "density_iso", "linear_density_iso", "linear_density", "length_of_fibres_iso", "length_of_fibres", "filament_diameter", "filament_diameter_iso", "tensile_strength_iso", "tensile_strength", "tensile_modulus", "tensile_modulus", "elongation_break", "elongation_break_iso", "moisture_content", "moisture_content_iso"]
-
-let filler_other = ["marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso", "moisture_content", "moisture_content_iso", "density", "density_iso", "content_filler_iso", "content_filler"]
-
-let TKM_disperse_filler = ["marka", "chemical_nature", "content_reinforcement_iso", "content_reinforcement", "density_iso", "density", "mfr_iso", "mfr", "tensile_modulus_iso", "tensile_modulus", "tensile_strength_break_iso", "tensile_strength_break", "linear_density_iso", "linear_density", "length_of_fibres_iso", "length_of_fibres", "filament_diameter_iso", "filament_diameter", "tensile_strength_iso", "tensile_strength", "elongation_break_iso", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "melting_temperature", "moisture_content_iso", "moisture_content"]
-
-if (id_type_material === 1) {
-    console.log("Thermoplastic polymer")
-} else if (id_type_material === 2) {
-    console.log("Additives")
-} else if (id_type_material === 3) {
-    console.log("Thermoplastic elastomer")
-    if (id_type_of_filler === 1) {
-        console.log("Thermoplastic composite materials => Disperse filler")
-        parse_TKM_disperse_filler(resp, TKM_disperse_filler)
-    } else if (id_type_of_filler === 2) {
-        console.log("Thermoplastic composite materials => Fibrous filler")
-    }
-} else if (id_type_material === 4) {
-    console.log("Fillers")
-    id_type_of_filler = resp.id_type_of_filler
-    if (id_type_of_filler === 1) {
-        console.log("Disperse filler")
-        parse_disperse_filler(resp, filler_dispers)
-    } else if (id_type_of_filler === 2) {
-        console.log("Fibrous filler")
-        parse_fibrous_filler (resp, filler_fibrous)
-    } else if (id_type_of_filler === 3) {
-        console.log("Other filler")
-        parse_other_filler(resp, filler_other)
-    }
-} else if (id_type_material === 5) {
-    console.log("Thermoplastic composite materials")
-}
 
 
-
-function fill_form(name, placeholder) {
+function put_placeholder(name, placeholder) {
     let selector = $(`input[name=${name}]:visible`)
-    selector[0].placeholder = placeholder
+    if (selector[0] !== undefined) {
+        if (selector[0].placeholder !== undefined) {
+            console.log(placeholder)
+            selector[0].placeholder = placeholder
+        } else {
+            selector[0].value = placeholder
+            console.log("select " + placeholder)
+        }
+    } else {
+        console.log(name + "undefined")
+        $(`[name=${name}]`).val(placeholder)
+    }
 }
 
-function parse_disperse_filler (resp, filler_dispers) {
+function parse_disperse_filler (resp) {
+    let filler_dispers = ["marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso", "moisture_content", "moisture_content_iso", "density", "density_iso"]
     filler_dispers.forEach(function(item, i) {
-        let placeholder = resp[item]
-        console.log(placeholder)
-        fill_form(item, placeholder)
+        // let placeholder = resp[item]
+        // console.log(item)
+        // console.log(placeholder)
+        put_placeholder(item, resp[item])
     });
 }
 
-function parse_fibrous_filler (resp, filler_fibrous) {
+function parse_fibrous_filler (resp) {
+    let filler_fibrous = ["marka", "manufacturer", "density", "density_iso", "linear_density_iso", "linear_density", "length_of_fibres_iso", "length_of_fibres", "filament_diameter", "filament_diameter_iso", "tensile_strength_iso", "tensile_strength", "tensile_modulus", "tensile_modulus", "elongation_break", "elongation_break_iso", "moisture_content", "moisture_content_iso"]
     filler_fibrous.forEach(function(item, i) {
         let placeholder = resp[item]
+        console.log(item)
         console.log(placeholder)
-        fill_form(item, placeholder)
+        put_placeholder(item, resp[item])
     });
 }
 
-function parse_other_filler (resp, filler_other) {
+function parse_other_filler (resp) {
+    let filler_other = ["marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso", "moisture_content", "moisture_content_iso", "density", "density_iso", "content_filler_iso", "content_filler"]
     filler_other.forEach(function(item, i) {
         let placeholder = resp[item]
+        console.log(item)
         console.log(placeholder)
-        fill_form(item, placeholder)
+        put_placeholder(item, resp[item])
     });
 }
 
-function parse_TKM_disperse_filler (resp, TKM_disperse_filler) {
+function parse_TKM_disperse_filler (resp) {
+    let TKM_disperse_filler = ["surface_resistivity", "marka", "chemical_nature", "content_reinforcement_iso", "content_reinforcement", "density_iso", "density", "mfr_iso", "mfr", "tensile_modulus_iso", "tensile_modulus", "tensile_strength_break_iso", "tensile_strength_break", "elongation_break_iso", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "melting_temperature"]
     TKM_disperse_filler.forEach(function(item, i) {
         let placeholder = resp[item]
+        console.log(item)
         console.log(placeholder)
-        fill_form(item, placeholder)
+        put_placeholder(item, resp[item])
     });
 }
 
+function parse_TKM_fibrous_filler (resp) {
+    let TKM_fibrous_filler = [ "marka", "reinforcing_fiber_configuration", "nature_of_filler", "content_reinforcement_iso", "content_reinforcement", "density_iso", "density", "mfr_iso", "mfr", "tensile_modulus_iso", "tensile_modulus", "tensile_strength_break_iso", "tensile_strength_break", "filament_diameter_iso", "filament_diameter", "elongation_break_iso", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "melting_temperature", "melting_temperature_iso", "flammability", "surface_resistivity"]
+    TKM_fibrous_filler.forEach(function(item, i) {
+        let placeholder = resp[item]
+        console.log(item)
+        console.log(placeholder)
+        put_placeholder(item, resp[item])
+    });
+}
+
+function parse_termoplastic_polymer (resp) {
+    let termostatic = ["marka", "density_iso", "density", "mfr_iso", "mfr", "tensile_modulus_iso", "tensile_modulus", "tensile_strength_break_iso", "tensile_strength_break", "elongation_break_iso", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vick_heat_resistance", "melting_temperature", "melting_temperature_iso", "flammability", "surface_resistivity"]
+    termostatic.forEach(function(item, i) {
+        let placeholder = resp[item]
+        console.log(item)
+        console.log(placeholder)
+        put_placeholder(item, resp[item])
+    });
+}
+
+function parse_termoplastic_elastomer (resp) {
+    let elastomer = ["marka", "density_iso", "density", "measurement_method", "hardness_iso", "hardness", "mfr", "tensile_strength_iso", "tensile_strength", "relative_elongation_at_break_iso", "relative_elongation_at_break", "elasticity_modulus_100_iso", "elasticity_modulus_100", "elasticity_modulus_300_iso", "elasticity_modulus_300", "tear_resistance_iso", "tear_resistance", "compression_set_23_iso", "compression_set_23", "compression_set_70_iso", "compression_set_70", "compression_set_100_iso", "compression_set_100", "abrasive_wear_and_tear_iso", "abrasive_wear_and_tear", "ozone_resistance", "flammability"]
+    elastomer.forEach(function(item, i) {
+        let placeholder = resp[item]
+        console.log(item)
+        console.log(placeholder)
+        put_placeholder(item, resp[item])
+    });
+}
+
+function parse_additive (resp) {
+    let additive = ["marka", "id_type_additives"]
+    additive.forEach(function(item, i) {
+        let placeholder = resp[item]
+        console.log(item)
+        console.log(placeholder)
+        put_placeholder(item, resp[item])
+    });
+}
 
 
 

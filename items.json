@@ -474,7 +474,6 @@
                     
                     "type": "text",
                     "pattern": "floatPos",
-                    "value": "V-0",
                     "title": "Flammability, Class (UL 94)"
                   }]},
                   { 
