@@ -57,6 +57,13 @@
         "description": "To which polymer does the product belong, if it is not in list, contact the site administration",
         "columns": [
           {
+            "name": "id_polymers",
+            "required": true,
+            "suggestions":  "/search/list",
+            "type": "select",
+            "title": "Name of the polymer"
+          },
+          {
             "name": "id_material",
             "required": true,
             "type": "select",
@@ -102,13 +109,6 @@
               "type": "select",
               "title": "Material brand",
               "data": [
-                {
-                  "name": "id_polymers",
-                  "required": true,
-                  "suggestions":  "/search/list",
-                  "type": "select",
-                  "title": "Name of the polymer"
-                },
                 {
                       "title": "ESTPET-A",
                       "label": "ESTPET-A",
