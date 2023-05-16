@@ -63,8 +63,8 @@ async function getEP_write_placeholders (id) {
             }
         }
         case 5: {
-            id_type_of_filler = resp.id_type_of_filler
-            switch (id_type_of_filler) {
+            id_content_filler = resp.id_content_filler
+            switch (id_content_filler) {
                 case 1: {
                     console.log("Thermoplastic composite materials => Disperse filler")
                     parse_TKM_disperse_filler(resp);

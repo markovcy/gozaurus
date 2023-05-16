@@ -1310,16 +1310,12 @@
                       {
                         "title": "Submit",
                         "type": "submit"
-                      }
-                ]
-              },
-              {
-                "id": -5,
-                "title": "",
-                "buttons": [
+                      },
                       {
-                        "title": "Submit1",
-                        "type": "submit1"
+                        "title": "Get value",
+                        "type": "custom",
+                        "disabled": "onkey",
+                        "OnClick": "getEP_write_placeholders (this);"
                       }
                 ]
               }
