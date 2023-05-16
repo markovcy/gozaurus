@@ -123,7 +123,18 @@
             "min": 0,
             "type": "number",
             "title": "Batch volume, kg"
-          }]
+          },
+          {
+           
+          }],
+          "buttons": [
+            {
+              "title": "Get value",
+              "type": "custom",
+              "disabled": "onkey",
+              "OnClick": "getEP_write_placeholders (this); return false"
+            }
+      ]
         },{
               "id": 2,
               
@@ -1310,12 +1321,6 @@
                       {
                         "title": "Submit",
                         "type": "submit"
-                      },
-                      {
-                        "title": "Get value",
-                        "type": "custom",
-                        "disabled": "onkey",
-                        "OnClick": "getEP_write_placeholders (this);"
                       }
                 ]
               }

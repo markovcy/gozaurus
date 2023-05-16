@@ -116,20 +116,17 @@ function put_value_values(name, placeholder) {
 
 function parse_disperse_filler (resp) {
     let massivofplaceholders = ["marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso", "moisture_content", "moisture_content_iso", "density", "density_iso"]
-    massivofvalue = undefined
-    do_foreach (resp, massivofplaceholders, massivofvalue)
+    do_foreach (resp, massivofplaceholders)
 }
 
 function parse_fibrous_filler (resp) {
     let massivofplaceholders = ["marka", "manufacturer", "density", "density_iso", "linear_density_iso", "linear_density", "length_of_fibres_iso", "length_of_fibres", "filament_diameter", "filament_diameter_iso", "tensile_strength_iso", "tensile_strength", "tensile_modulus", "tensile_modulus", "elongation_break", "elongation_break_iso", "moisture_content", "moisture_content_iso"]
-    massivofvalue = undefined
-    do_foreach (resp, massivofplaceholders, massivofvalue)
+    do_foreach (resp, massivofplaceholders)
 }
 
 function parse_other_filler (resp) {
     let massivofplaceholders = ["marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso", "moisture_content", "moisture_content_iso", "density", "density_iso", "content_filler_iso", "content_filler"]
-    massivofvalue = undefined
-    do_foreach (resp, massivofplaceholders, massivofvalue)
+    do_foreach (resp, massivofplaceholders)
 }
 
 function parse_TKM_disperse_filler (resp) {
