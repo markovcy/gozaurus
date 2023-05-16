@@ -102,12 +102,19 @@
               "type": "select",
               "title": "Material brand",
               "data": [
-                  {
+                {
+                  "name": "id_polymers",
+                  "required": true,
+                  "suggestions":  "/search/list",
+                  "type": "select",
+                  "title": "Name of the polymer"
+                },
+                {
                       "title": "ESTPET-A",
                       "label": "ESTPET-A",
                       "value": "1"
                           
-                  }
+                }
               ]
             },
           {
