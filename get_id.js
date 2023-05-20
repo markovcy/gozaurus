@@ -1,8 +1,19 @@
+const { connectAdvanced } = require("react-redux")
+
 let resp
+let id = document.getElementsByName("id_polymers")[0].value
 async function getEP_write_placeholders (id) {
    
     let host = window.location.origin
-    let Url = `${host}/table/items/get?limit=1&lang=1&id=${id}`
+    let Url
+    console.log(host)
+    if (id > "") {
+        Url = `${host}/table/items/get?limit=1&lang=1&id=${id}`
+        console.log(Url)
+    } else {
+        console.log("id неизвестно")
+    }
+    // let Url = `${host}/table/items/get?limit=1&lang=1&id=${id}`
     let local = JSON.parse(localStorage.USER);
     let token1 = local["token"]
     let response = await fetch(Url, {
