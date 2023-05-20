@@ -101,12 +101,12 @@ function put_value_values(name, placeholder) {
     console.log(name)
     console.log(placeholder)
     let selector = $(`select[name=${name}]:visible`);
-    console.log(selector)
+    console.log(selector[0])
     if (selector !== undefined) {
-        if (selector[0].val() !== undefined) {
+        if (selector !== undefined) {
             console.log(name)
             console.log(placeholder)
-            selector[0].val(placeholder)
+            selector.val(placeholder)
         }
     } else {
         console.log(name + " select undefined")

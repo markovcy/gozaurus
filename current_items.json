@@ -59,9 +59,8 @@
           {
             "name": "id_polymers",
             "required": true,
-            "suggestions":  "/search/list",
-            "type": "select",
-            "title": "Name of the polymer"
+            "type": "number",
+            "title": "id of the polymer"
           },
           {
               "name": "id_brand",
@@ -96,7 +95,7 @@
               "title": "Get value",
               "type": "custom",
               "disabled": "onkey",
-              "OnClick": "getEP_write_placeholders (this); return false"
+              "OnClick": "getEP_write_placeholders (id_polymers); return false"
             }
       ]
         },{
