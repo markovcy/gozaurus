@@ -64,46 +64,6 @@
             "title": "Name of the polymer"
           },
           {
-            "name": "id_material",
-            "required": true,
-            "type": "select",
-            "title": "Name of material",
-            "value": "0",
-            "data": [
-              {
-                "title": "Select the type of polymer...",
-                "label": "Select the type of polymer...",
-                "value": "0",
-                "disabled": true
-              },
-              {
-                "title": "Thermoplastic polymer",
-                "label": "Thermoplastic polymer",
-                "value": "1"
-              },
-              {
-                "title": "Additives",
-                "label": "Additives",
-                "value": "2"
-              },
-              {
-                "title": "Thermoplastic elastomer",
-                "label": "Thermoplastic elastomer",
-                "value": "3"
-              },
-              {
-                "title": "Fillers",
-                "label": "Fillers",
-                "value": "4"
-              },
-              {
-                "title": "Thermoplastic composite materials",
-                "label": "Thermoplastic composite materials",
-                "value": "5"
-              }
-                    ]
-          },
-          {
               "name": "id_brand",
               "required": true,
               "type": "select",
