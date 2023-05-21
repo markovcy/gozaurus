@@ -1,13 +1,16 @@
-const { connectAdvanced } = require("react-redux")
+
 
 let resp
-let id = document.getElementsByName("id_polymers")[0].value
-async function getEP_write_placeholders (id) {
-   
+
+let id
+console.log(id)
+async function getEP_write_placeholders () {
+    let id = document.getElementsByName("id_polymers")[0].value
     let host = window.location.origin
     let Url
-    console.log(host)
+    console.log(id)
     if (id > "") {
+        console.log(id)
         Url = `${host}/table/items/get?limit=1&lang=1&id=${id}`
         console.log(Url)
     } else {
