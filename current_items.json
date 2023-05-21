@@ -57,10 +57,11 @@
         "description": "To which polymer does the product belong, if it is not in list, contact the site administration",
         "columns": [
           {
-            "name": "id_polymers",
+            "name": "id_items",
             "required": true,
-            "type": "number",
-            "title": "id of the polymer"
+            "suggestions":  "/search/list/items",
+            "type": "select",
+            "title": "Name of the etalon"
           },
           {
               "name": "id_brand",
