@@ -96,7 +96,7 @@
               "title": "Get value",
               "type": "custom",
               "disabled": "onkey",
-              "OnClick": "getEP_write_placeholders (id_polymers); return false"
+              "OnClick": "getEP_in_form_PP (); return false"
             }
       ]
         },{
