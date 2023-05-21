@@ -1,8 +1,6 @@
 
 
 let resp
-
-
 async function getEP_write_placeholders (id) {
    
     let host = window.location.origin
@@ -79,28 +77,23 @@ async function getEP_write_placeholders (id) {
                     parse_TKM_fibrous_filler(resp);
                     break;
                 }
-
         }
     }
     }
 }
 
-let id
-console.log(id)
-
 async function getEP_in_form_PP () {
-    let id = document.getElementsByName("id_items")[0].value
+    let id_items = document.getElementsByName("id_items")[0].value
     let host = window.location.origin
     let Url
-    console.log(id)
-    if (id > "") {
-        console.log(id)
-        Url = `${host}/table/items/get?limit=1&lang=1&id=${id}`
+    console.log(id_items)
+    if (id_items > "") {
+        console.log(id_items)
+        Url = `${host}/table/items/get?limit=1&lang=1&id=${id_items}`
         console.log(Url)
     } else {
-        console.log("id неизвестно")
+        console.log("id_items неизвестно")
     }
-    // let Url = `${host}/table/items/get?limit=1&lang=1&id=${id}`
     let local = JSON.parse(localStorage.USER);
     let token1 = local["token"]
     let response = await fetch(Url, {
