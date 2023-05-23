@@ -178,7 +178,9 @@ figure #block1 {
     padding: 5px;
     max-width: 600px;
     margin: revert;
-    height: 210px;
+    border: solid 1px #ddd;
+    padding: 10px;
+    margin: 0 0;
 /*width: max-content;*/
 }
 
@@ -189,29 +191,46 @@ figure #block1 {
     padding: 5px;
     max-width: 600px;
     margin: revert;
-    height: 210px;
+    border: solid 1px #ddd;
+    padding: 10px;
+    margin: 0 0;
 /*width: max-content;*/
 }
 
 #block33 {
-    height: 130px;
+    /* height: 130px; */
 /*width: max-content;*/
+    border: solid 1px #ddd;
+    padding: 10px 15px;
+    margin: 20px 0;
 }
 
 #block5 {
-    height: 90px;
+    /* height: 90px; */
+    border: solid 1px #ddd;
+    padding: 10px 15px;
+    margin: 20px 0;
 }
 
 #block3 {
-    height: 90px;
+    /* height: 90px;  */
+    border: solid 1px #ddd;
+    padding: 10px 15px;
+    margin: 20px 0;
 }
 
 #block15 {
-    height: 90px;
+    /* height: 90px; */
+    border: solid 1px #ddd;
+    padding: 10px 15px;
+    margin: 20px 0;
 }
 
 #block17 {
-    height: 255px;
+    /* height: 255px; */
+    border: solid 1px #ddd;
+    padding: 10px 15px;
+    margin: 20px 0;
 }
 
 figcaption {
