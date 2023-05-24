@@ -164,14 +164,14 @@ figure {
     border: thin #c0c0c0 solid;
     /* display: flex; */
     flex-flow: column;
-    padding: 5px;
+    padding: 15px;
     max-width: 600px;
     margin: revert;
     /* height: ; */
 /*width: max-content;*/
 }
 
-figure #block1 {
+/* figure #block1 {
     border: thin #c0c0c0 solid;
     display: flex;
     flex-flow: column;
@@ -179,58 +179,18 @@ figure #block1 {
     max-width: 600px;
     margin: revert;
     border: solid 1px #ddd;
-    padding: 10px;
-    margin: 0 0;
-/*width: max-content;*/
-}
-
-#block1 {
-    border: thin #c0c0c0 solid;
-    /* display: flex; */
-    flex-flow: column;
-    padding: 5px;
-    max-width: 600px;
+    padding: 15px;
     margin: revert;
-    border: solid 1px #ddd;
-    padding: 10px;
-    margin: 0 0;
 /*width: max-content;*/
-}
+ 
 
-#block33 {
-    /* height: 130px; */
-/*width: max-content;*/
+body figure {
+    display: flex;
+    flex-flow: column;
+    max-width: 600px;
     border: solid 1px #ddd;
-    padding: 10px 15px;
-    margin: 20px 0;
-}
-
-#block5 {
-    /* height: 90px; */
-    border: solid 1px #ddd;
-    padding: 10px 15px;
-    margin: 20px 0;
-}
-
-#block3 {
-    /* height: 90px;  */
-    border: solid 1px #ddd;
-    padding: 10px 15px;
-    margin: 20px 0;
-}
-
-#block15 {
-    /* height: 90px; */
-    border: solid 1px #ddd;
-    padding: 10px 15px;
-    margin: 20px 0;
-}
-
-#block17 {
-    /* height: 255px; */
-    border: solid 1px #ddd;
-    padding: 10px 15px;
-    margin: 20px 0;
+    padding: 15px;
+    margin: revert;
 }
 
 figcaption {
