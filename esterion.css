@@ -198,7 +198,7 @@ figcaption {
     color: #fff;
     font: italic smaller sans-serif;
     padding: 3px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 input[type=text] {
@@ -227,7 +227,7 @@ margin-bottom:37px;*/
 .input-wrap > label.input-label {
 	/*position: absolute;*/
     width: 98%;
-    /*padding: 1%;*/
+    padding: 0%;
     align-content: center;
     margin-top: 10px;
 }
@@ -429,6 +429,9 @@ figure figcaption {
     color: #c2c7d1;
     background-color: #fefefe;
     /* width: max-content; */
+    text-align: left;
+    margin: 0 0 0 -3px;
+    
 }
 figure label > input[type="text"]::placeholder {
     color: #c2c7d1;

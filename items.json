@@ -1,7 +1,7 @@
 {
-  "title": "items",
+  "title": "New Productiontems",
   "action": "/table/items/put",
-  "description": "type_of_material",
+  "description": "New Production / Add new products to your company",
   "method": "POST",
   "hideBlock": {
   "data": {
@@ -55,7 +55,7 @@
             "columns": [
               {
                 "name": "id_type_material",
-                "title": "Type polymer material",
+                "title": "Type of polymer material",
                 "required": true,
                 "value": "0",
                 "type": "select",
