@@ -1,4 +1,6 @@
 
+
+
 body {
     min-width: 100vw;
     min-height: 100vh;
@@ -462,3 +464,10 @@ figure button {
     transition: all .3s ease-in-out;
     margin: 0 8px; */
  }
+
+ @font-face {
+    font-family: "Inter";
+    src: url("../Inter-VariableFont_slnt,wght.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  }
