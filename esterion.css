@@ -300,7 +300,7 @@ figure label > select {
     width: inherit;
     color: #0a1c3b;
     background-color: #fefefe;
-    left: -5px;
+    /* left: -5px; */
 }
 figure label > input[type="checkbox"] {
 	position: relative;
