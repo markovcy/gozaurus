@@ -1,13 +1,10 @@
-
-
-
 body {
     min-width: 100vw;
     min-height: 100vh;
     color: #0a1c3b;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
-    font-family:  Inter,sans-serif;
+    font-family:  Inter;
     overflow-x: hidden;
     background-color: #f6f7f8;
 }
@@ -133,7 +130,7 @@ li a:hover {
 }
 
 li:hover {
-  cursor: pointer;
+  cursor: poInter;
 }
 
 ul li ul.dropdown {
@@ -198,7 +195,7 @@ body figure {
 figcaption {
     background-color: #222;
     color: #fff;
-    font: italic smaller sans-serif;
+    font-style: normal;
     padding: 3px;
     /* text-align: center; */
 }
@@ -232,6 +229,8 @@ margin-bottom:37px;*/
     padding: 0%;
     align-content: center;
     margin-top: 10px;
+    font-size: 13px;
+    font-family: Inter;
 }
 label > span {
     position: absolute;
@@ -240,7 +239,9 @@ label > span {
     height: 0;
     top: 0;
     /* left: 5px; */
-    pointer-events:none;
+    poInter-events:none;
+    color: #768194;
+    font-size: 13px;
 }
 /*label > input:not([value]):focus + span::before, label > textarea:focus + span::before, label > input[value] + span::before  {
     width:100%
@@ -293,6 +294,7 @@ label > textarea {
     top: 10px;
     height: 20px;
     left: 1px;
+    font-size: 13px;
 }
 figure label > select {
     position: relative;
@@ -303,18 +305,26 @@ figure label > select {
     color: #0a1c3b;
     background-color: #fefefe;
     /* left: -5px; */
+    font-size: 12px;
 }
 figure label > input[type="checkbox"] {
 	position: relative;
 	right: 15px;
+    font-size: 12px;
 }
+
+figure p {
+    font-size: 13px;
+    font-family: Inter;
+}
+
 figure label > input {
     position: absolute;
     display: block;
     width: inherit;
     top: 18px;
     left: 0;
-/*pointer-events:none;*/
+/*poInter-events:none;*/
     align-content: flex-end;
     /*text-align: center;*/
     /*float: inline-end;*/
@@ -371,7 +381,7 @@ form  .hiddenInput > input[type=file] {
     width: 100%;
     height: 100%;
     opacity: 0;
-    cursor: pointer;
+    cursor: poInter;
 }
 form  span.hiddenInput:hover{
     position: fixed;
@@ -399,7 +409,7 @@ form span.hiddenInput {
     min-height: 50px;
     display: inline-block;
     overflow: hidden;
-    cursor: pointer;
+    cursor: poInter;
     /*for the background, optional*/
     background: center center no-repeat scroll;
     background-size: 75% 75%;
@@ -424,16 +434,17 @@ form figcaption {
 }
 figure figcaption {
     /* line-height: 22px;
-    font-size: 18px;
     font-weight: 400;
     padding-top: 8px;
     padding-bottom: 8px; */
-    color: #c2c7d1;
+    color: black;
     background-color: #fefefe;
     /* width: max-content; */
     text-align: left;
     margin: 0 0 0 -3px;
-    
+    font-size: 18px;
+    font-style: normal;
+    font-family: Inter;
 }
 figure label > input[type="text"]::placeholder {
     color: #c2c7d1;
@@ -449,25 +460,14 @@ figure button {
     color: #fff;
     border-color: #093b9a;
     background: #093b9a;
-    /* position: relative;
-    display: -webkit-inline-flex;
-    display: inline-flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center; */
-    /*color: #0a1c3b;*/
-    /* font-size: 14px;
-    border-width: 1px;
-    border-radius: 8px;
-    border-style: solid;
-    transition: all .3s ease-in-out;
-    margin: 0 8px; */
  }
 
  @font-face {
     font-family: "Inter";
-    src: url("../Inter-VariableFont_slnt,wght.ttf") format("truetype"); 
+    src: url("https://fonts.googleapis.com/css2?family=Inter&display=swap") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
   }
+
+   /* Результаты поиска */
+   
