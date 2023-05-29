@@ -430,7 +430,7 @@ figure button {
 
    /* Результаты поиска */
 
-   /* .container {
+   .container {
     width: 100%;
     display: flex;
     overflow: auto;
@@ -624,16 +624,7 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
   }
-  .button {
-    top: 0px;
-    left: 396px;
-    width: 202px;
-    height: 36px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
+   
   .text10 {
     top: 8px;
     left: 16px;
@@ -2940,5 +2931,5 @@ figure button {
     font-stretch: normal;
     text-decoration: none;
   }
-   */
+   
    
