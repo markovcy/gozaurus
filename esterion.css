@@ -430,7 +430,7 @@ figure button {
 
    /* Результаты поиска */
 
-   .container {
+   /* .container {
     width: 100%;
     display: flex;
     overflow: auto;
@@ -2940,5 +2940,5 @@ figure button {
     font-stretch: normal;
     text-decoration: none;
   }
-  
+   */
    
