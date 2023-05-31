@@ -74,3 +74,42 @@ let pars = resp.split('</option>')
         }
     }
 }
+
+
+
+function showResult(data) {
+    for (x in data) {
+        divContent.append(        `<div class="step0-resultsfields${x}">
+                <div class="step0-resultfield1">
+                  <div class="btn0">
+                    <span class="step0-text16">
+                      <span>Show all products</span>
+                    </span>
+                    <div class="step0-expandmore1">
+                    </div>
+                  </div>
+                  <div class="step0-links">
+                    <div class="step0-linkonartcl">
+                      <div class="step0-btnreadartcl">
+                        <div class="step0-icnlink">
+                        </div>
+                        <span class="step0-text18"><span>Read an article</span></span>
+                      </div>
+                    </div>
+                    <div class="step0-additiveslist">
+                      <div class="step0-btnreadartcl1">
+                        <div class="step0-icnlink1">
+                        </div>
+                        <span class="step0-text20">
+                          <span>Open additives list</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="step0-text22"><span>${data[x].company_names}</span></span>
+                  <span class="step0-text24">
+                    <span>${data[x].title}</span>
+                  </span>
+                </div>
+              </div>`)}
+}

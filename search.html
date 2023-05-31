@@ -8,83 +8,66 @@
     <link rel="stylesheet" href="search.css" type="text/css" media="screen">
 </head>
 <body>
+    <div id="id">
 
-<div>
-        <div class="step0-resultsection">
-          <div class="step0-resultsfields">
-            <div class="step0-resultfield1">
-              <div class="btn0">
-                <span class="step0-text16">
-                  <span>Show all products</span>
-                </span>
-                <div class="step0-expandmore1">
-                </div>
-              </div>
-              <div class="step0-links">
-                <div class="step0-linkonartcl">
-                  <div class="step0-btnreadartcl">
-                    <div class="step0-icnlink">
-                    </div>
-                    <span class="step0-text18"><span>Read an article</span></span>
-                  </div>
-                </div>
-                <div class="step0-additiveslist">
-                  <div class="step0-btnreadartcl1">
-                    <div class="step0-icnlink1">
-                    </div>
-                    <span class="step0-text20">
-                      <span>Open additives list</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <span class="step0-text22"><span>Menzolit</span></span>
-              <span class="step0-text24">
-                <span>Unsaturated vinyl compounds</span>
+    </div>
+    <!-- <div class="content">
+      <div class="resultsection">
+            <div class="btn">
+              <span class="button_text">
+                <span>Show all products</span>
               </span>
+              <div class="step0-expandmore1">
+              </div>
             </div>
-          </div>
-          <div class="step0-resultsfields1">
-            <div class="step0-resultfield11">
-              <div class="btn1">
-                <span class="step0-text26">
-                  <span>Show all products</span>
-                </span>
-                <div class="step0-expandmore2">
+            <div class="links">
+              <div class="linkonartcl">
+                <div class="btnreadartcl">
+                  <div class="step0-icnlink">
+                  </div>
+                  <span class="article"><span>Read an article</span></span>
                 </div>
               </div>
-              <div class="step0-linkonartcl1">
-                <div class="step0-btnreadartcl2">
-                  <div class="step0-icnlink2">
+              <div class="additiveslist">
+                <div class="btnreadartcl1">
+                  <div class="step0-icnlink1">
                   </div>
-                  <span class="step0-text28"><span>Read an article</span></span>
-                </div>
-              </div>
-              <div class="step0-additiveslist1">
-                <div class="step0-btnreadartcl3">
-                  <div class="step0-icnlink3">
-                  </div>
-                  <span class="step0-text30">
+                  <span class="step0-text20">
                     <span>Open additives list</span>
                   </span>
                 </div>
               </div>
-              <span class="step0-text32"><span>Menzolit</span></span>
-              <span class="step0-text34">
-                <span>Unsaturated resin compounds</span>
-              </span>
             </div>
-          </div>
-          <span class="step0-text36">
-            <span>2 polymers were found</span>
-          </span>
-        </div>
-        <div class="step0-searchthroughnavigation">
-          <div class="step0-icnhome">
-          </div>
-          <div class="step0-icnarrow1">
-          </div>
-        </div>  
+            <span class="name_polymer"><span>Menzolit</span></span>
+            <span class="name_firm">
+              <span>Unsaturated vinyl compounds</span>
+            </span>
+      </div>  
+    </div> -->
+
+        
     </body>
+    <script>
+      let divcontent = document.getElementsByClassName("content")
+      divcontent.append("div")
+
+      function create(data) {
+        // let data 
+        let len = data
+        let i = 0
+        let div = document.getElementById("id")
+        let div_add = '<div class="resultsection"><div class="btn"><span class="button_text"><span>Show all products</span></span><div class="step0-expandmore1"></div></div><div class="links"><div class="linkonartcl"><div class="btnreadartcl"><div class="step0-icnlink"></div><span class="article"><span>Read an article</span></span></div></div><div class="additiveslist"><div class="btnreadartcl1"><div class="step0-icnlink1"></div><span class="step0-text20"><span>Open additives list</span></span></div></div></div><span class="name_polymer"><span>Menzolit</span></span><span class="name_firm"><span>Unsaturated vinyl compounds</span></span></div>'
+      
+        while (i < len) {
+          console.log(i)
+          div.insertAdjacentHTML("beforeend", div_add)
+          i++
+        }
+      }
+      
+
+      
+
+    </script>
     
 </html>
