@@ -210,7 +210,8 @@ input[type=file] {
     align-content: center;
     margin-top: 10px;
     font-size: 13px;
-    font-family: Roboto;
+    font-family: Inter, sans-serif ;
+    color: #768194;
 }
 label > span {
     position: absolute;
@@ -273,7 +274,7 @@ figure label > select {
     color: #7E889B;
     background-color: #fefefe;
     font-size: 12px;
-    font-family: Roboto;
+    font-family: Inter, sans-serif;
     text-align: left;
 }
 figure label > input[type="checkbox"] {
@@ -284,7 +285,7 @@ figure label > input[type="checkbox"] {
 
 figure p {
     font-size: 13px;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     color: #768194;
 }
 
@@ -394,10 +395,10 @@ left: -399.109375px;
   left: 1%;
 }
 form figcaption {
-    color: #c2c7d1;
+    color: black;
     background-color: #fefefe;
     font-style: normal;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 32px;
 }
 figure figcaption {
@@ -407,7 +408,7 @@ figure figcaption {
     margin: 0 0 0 -3px;
     font-size: 18px;
     font-style: normal;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
 }
 figure label > input[type="text"]::placeholder {
     color: #c2c7d1;
