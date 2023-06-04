@@ -109,6 +109,7 @@
                 "required": true,
                 "value": "0",
                 "type": "select",
+                "onchange": "getEP_in_form_PP ();",
                 "data": [
                 
                   {
@@ -951,6 +952,7 @@
                       "required": true,
                       "value": "0",
                       "type": "select",
+                      "onchange": "getEP_in_form_PP ();",
                       "data": [{
                         "title": "Choose type of filler",
                         "label": "Choose type of filler",
