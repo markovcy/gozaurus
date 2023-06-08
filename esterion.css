@@ -1,3 +1,11 @@
+/*maryna 04/06/23*/
+/*oleg 08/06/23*/
+
+span.label-text {
+  position: absolute;
+  top: 18px;
+}
+
 body {
     min-width: 100vw;
     min-height: 100vh;
@@ -433,6 +441,10 @@ figure button {
 
    /* Результаты поиска */
 
+   .hidden {
+    display: none;
+  }
+
    .container {
     width: 100%;
     display: flex;
@@ -441,380 +453,35 @@ figure button {
     align-items: center;
     flex-direction: column;
   }
-  .step0 {
-    width: 100%;
-    height: 3820px;
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    flex-shrink: 0;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  .header {
-    top: 0px;
-    left: 0px;
-    width: 1440px;
-    height: 70px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    background-color: rgba(10, 28, 59, 1);
-  }
-  .button1 {
-    top: 27px;
-    left: 236px;
-    width: 100px;
-    height: 15.999999046325684px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .text {
-    left: -1px;
-    color: rgba(255, 255, 255, 1);
-    width: 100px;
-    height: auto;
-    position: absolute;
-    text-align: center;
-    line-height: 24px;
-  }
-  .button2 {
-    top: 26px;
-    left: 343px;
-    width: 100px;
-    height: 15.999999046325684px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .text02 {
-    top: 0.9998779296875px;
-    left: 12px;
-    color: rgba(255, 255, 255, 1);
-    width: 100px;
-    height: auto;
-    position: absolute;
-    text-align: left;
-    line-height: 24px;
-  }
-  .button3 {
-    top: 27px;
-    left: 455px;
-    width: 124px;
-    height: 16px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .text04 {
-    left: -1px;
-    color: rgba(255, 255, 255, 1);
-    width: 100px;
-    height: auto;
-    position: absolute;
-    text-align: center;
-    line-height: 24px;
-  }
-  .button4 {
-    top: 27px;
-    left: 567px;
-    width: 100px;
-    height: 15.999999046325684px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .text06 {
-    left: -1px;
-    color: rgba(255, 255, 255, 1);
-    width: 100px;
-    height: auto;
-    position: absolute;
-    text-align: center;
-    line-height: 24px;
-  }
-  .button5 {
-    top: 27px;
-    left: 667px;
-    width: 100px;
-    height: 15.999999046325684px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .text08 {
-    left: -1px;
-    color: rgba(255, 255, 255, 1);
-    width: 100px;
-    height: auto;
-    position: absolute;
-    text-align: center;
-    line-height: 24px;
-  }
-  .entrywhite1 {
-    top: 20px;
-    left: 1287px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .group {
-    top: -0.11000317335128784px;
-    left: -0.10996744781732559px;
-    width: 30.220001220703125px;
-    height: 30.219999313354492px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .vector {
-    top: 0px;
-    left: 0px;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-  }
-  .group1 {
-    top: 4.830003261566162px;
-    left: 9.08997917175293px;
-    width: 23.43999671936035px;
-    height: 20.419998168945312px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .vector01 {
-    top: 0px;
-    left: 0px;
-    width: 23px;
-    height: 20px;
-    position: absolute;
-  }
-  .searchsection {
-    top: 126px;
-    left: 199px;
-    width: 1042px;
-    height: 195px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  .advancedsearch {
-    top: 135px;
-    left: 24px;
-    width: 994px;
-    height: 36px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .text10 {
-    top: 8px;
-    left: 16px;
-    color: rgba(9, 59, 154, 1);
-    width: 138px;
-    height: auto;
-    position: absolute;
-    font-size: 18px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Roboto;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .expandmore {
-    top: 7px;
-    left: 162px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .shape {
-    top: 8.5999755859375px;
-    left: 6px;
-    width: 12px;
-    height: 7px;
-    opacity: 0.54;
-    position: absolute;
-  }
-  .line {
-    top: 18px;
-    left: 0px;
-    width: 396px;
-    height: 1px;
-    position: absolute;
-  }
-  .line1 {
-    top: 18px;
-    left: 598px;
-    width: 396px;
-    height: 1px;
-    position: absolute;
-  }
-  .simplesearch {
-    top: 74px;
-    left: 24px;
-    width: 994px;
-    height: 40px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .text12 {
-    top: 13px;
-    left: 19px;
-    color: rgba(10, 28, 59, 1);
-    width: 245px;
-    height: auto;
-    position: absolute;
-    font-size: 18px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Roboto;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .close {
-    top: 8px;
-    left: 902px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .shape1 {
-    top: 5px;
-    left: 5px;
-    width: 14px;
-    height: 14px;
-    opacity: 0.54;
-    position: absolute;
-  }
-  .searchbutton {
-    top: 0px;
-    left: 938px;
-    width: 56px;
-    height: 40px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    background-color: rgba(0, 55, 132, 1);
-  }
-  .search {
-    top: 32px;
-    left: 16px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .shape2 {
-    top: -2.5px;
-    left: 3.400099992752075px;
-    width: 17px;
-    height: 17px;
-    opacity: 0.54;
-    position: absolute;
-  }
-  .text14 {
-    top: 24px;
-    left: 23px;
-    color: rgba(0, 0, 0, 1);
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Semi Bold;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
+
   .resultsection {
     top: 361px;
     left: 221px;
     width: 999px;
     height: 3459px;
-    display: flex;
-    position: absolute;
+    /*display: flex;*/
+    /*position: absolute;*/
     align-items: flex-start;
     flex-shrink: 1;
     background-color: rgba(255, 255, 255, 1);
   }
-  .divider {
-    top: 3438px;
-    left: 3px;
-    width: 993px;
-    height: 1px;
-    position: absolute;
-  }
+ 
   .resultsfields0 {
     top: 95px;
     left: 28px;
     width: 943px;
     height: 204px;
     display: flex;
-    position: absolute;
+    position: relative;
     align-items: flex-start;
     flex-shrink: 1;
     border-radius: 5px;
     border: 1px solid #eff0f3;
     border-left-width: 8px;
     box-sizing: border-box;
+    margin-bottom: 20px;
   }
-  .resultfield0 {
-    top: 0px;
-    left: 0px;
-    width: 943px;
-    height: 204px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  .badge {
-    top: 0px;
-    left: 0px;
-    width: 8px;
-    height: 204px;
-    position: absolute;
-    border-radius: 8px 0 0 8px;
-  }
+  
   .btn0 {
     top: 144px;
     left: 650px;
@@ -832,6 +499,18 @@ figure button {
     background: white;
     border-radius: 8px;
   }
+
+  .btn0:hover {
+    /* Styles for when the cursor is on the button */
+    background-color: #ECF5FD; /* Change to desired hover background color */
+  }
+  
+  .btn0:active {
+    /* Styles for when the button is clicked */
+    box-shadow: 0 0 8px 2px #76BDF6; /* Change to desired shadow color and properties */
+  }
+
+
   .all_prod0 {
     top: 11px;
     left: 12px;
@@ -842,10 +521,27 @@ figure button {
     font-size: 16px;
     font-style: Regular;
     text-align: center;
-    font-family: Roboto;
+    font-family: Inter, sans-serif;
     font-weight: 400;
     line-height: normal;
     font-stretch: normal;
+    text-decoration: none;
+  }
+
+  .button_all_prod {
+    width: 221px;
+    height: auto;
+    background: white;
+    border: 1px solid #093B9A;
+    border-radius: 8px;
+    color: rgba(9, 59, 154, 1);
+    font-size: 16px;
+    font-style: regular;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-align: center;
     text-decoration: none;
   }
   .expandmore0 {
@@ -858,13 +554,7 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
   }
-  .vector02 {
-    top: 27.56020736694336px;
-    left: 11.43975830078125px;
-    width: 16px;
-    height: 9px;
-    position: absolute;
-  }
+  
   .links {
     top: 86px;
     left: 24px;
@@ -875,7 +565,7 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
   }
-  .linkonartcl {
+  .linkonartcl0 {
     top: 0px;
     left: 0px;
     width: 118px;
@@ -885,16 +575,7 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
   }
-  .btn_read_artcl_00 {
-    top: 0px;
-    left: 0px;
-    width: 118px;
-    height: 17px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
+  
   .icnlink0 {
     top: 0px;
     left: 102px;
@@ -905,13 +586,7 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
   }
-  .union {
-    top: 2.332033634185791px;
-    left: 2.3320412635803223px;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-  }
+  
   .read_art0 {
     color: rgba(1, 120, 254, 1);
     height: auto;
@@ -919,7 +594,7 @@ figure button {
     font-size: 14px;
     font-style: Regular;
     text-align: left;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-weight: 400;
     line-height: 17px;
     font-stretch: normal;
@@ -935,7 +610,30 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
   }
+
+  .btn_read_artcl_00 {
+    top: 0px;
+    left: 0px;
+    width: 118px;
+    height: 17px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+
   .btn_read_artcl_01 {
+    top: 0px;
+    left: 0px;
+    width: 142px;
+    height: 17px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+
+  .btn_read_artcl_02 {
     top: 0px;
     left: 0px;
     width: 142px;
@@ -955,13 +653,18 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
   }
-  .union1 {
-    top: 2.332033634185791px;
-    left: 2.3320412635803223px;
-    width: 12px;
-    height: 12px;
+
+  .icnlink2 {
+    top: 0px;
+    left: 126px;
+    width: 16px;
+    height: 16px;
+    display: flex;
     position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
   }
+  
   .open_add_list0 {
     color: rgba(1, 120, 254, 1);
     height: auto;
@@ -969,7 +672,21 @@ figure button {
     font-size: 14px;
     font-style: Regular;
     text-align: left;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 17px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+
+  .open_fill_list0 {
+    color: rgba(1, 120, 254, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter, sans-serif;
     font-weight: 400;
     line-height: 17px;
     font-stretch: normal;
@@ -979,13 +696,12 @@ figure button {
     top: 50px;
     left: 24px;
     color: rgba(12, 167, 111, 1);
-    width: 74px;
     height: auto;
     position: absolute;
     font-size: 18px;
     font-style: Regular;
     text-align: left;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-weight: 400;
     line-height: normal;
     font-stretch: normal;
@@ -1000,97 +716,16 @@ figure button {
     font-size: 18px;
     font-style: Semi Bold;
     text-align: left;
-    font-family: Inter;
-    font-weight: 700;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
   }
-  .resultsfields1 {
-    top: 323px;
-    left: 28px;
-    width: 943px;
-    height: 204px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    border-radius: 5px;
-    border: 1px solid #eff0f3;
-    border-left-width: 8px;
-    box-sizing: border-box;
-  }
-  .resultfield1 {
-    top: 0px;
+ 
+  .fillerslist0 {
+    top: 50px;
     left: 0px;
-    width: 943px;
-    height: 204px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  .badge1 {
-    top: 0px;
-    left: 0px;
-    width: 8px;
-    height: 204px;
-    position: absolute;
-    border-radius: 8px 0 0 8px;
-  }
-  .btn1 {
-    top: 144px;
-    left: 650px;
-    width: 269px;
-    height: 40px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;box-sizing: border-box;  
-    border: 1px solid #093B9A;
-    border-radius: 8px;
-    height: 40px;
-    width: 269px;
-    background: white;
-    border-radius: 8px;
-  }
-  .all_prod1 {
-    top: 11px;
-    left: 12px;
-    color: rgba(9, 59, 154, 1);
-    width: 221px;
-    height: auto;
-    position: absolute;
-    font-size: 16px;
-    font-style: Regular;
-    text-align: center;
-    font-family: Roboto;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .expandmore1 {
-    top: 0px;
-    left: 237px;
-    width: 32px;
-    height: 40px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .vector03 {
-    top: 27.56020736694336px;
-    left: 11.43975830078125px;
-    width: 16px;
-    height: 9px;
-    position: absolute;
-  }
-  .linkonartcl1 {
-    top: 86px;
-    left: 24px;
     width: 118px;
     height: 17px;
     display: flex;
@@ -1108,46 +743,8 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
   }
-  .icnlink2 {
-    top: 0px;
-    left: 102px;
-    width: 16px;
-    height: 16px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .union2 {
-    top: 2.332033634185791px;
-    left: 2.3320412635803223px;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-  }
-  .read_art1 {
-    color: rgba(1, 120, 254, 1);
-    height: auto;
-    position: absolute;
-    font-size: 14px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 400;
-    line-height: 17px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .additiveslist1 {
-    top: 111px;
-    left: 24px;
-    width: 142px;
-    height: 17px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
+  
+
   .btn_read_artcl_11 {
     top: 0px;
     left: 0px;
@@ -1158,98 +755,7 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
   }
-  .icnlink3 {
-    top: 0px;
-    left: 126px;
-    width: 16px;
-    height: 16px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .union3 {
-    top: 2.332033634185791px;
-    left: 2.3320412635803223px;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-  }
-  .open_add_list1 {
-    color: rgba(1, 120, 254, 1);
-    height: auto;
-    position: absolute;
-    font-size: 14px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 400;
-    line-height: 17px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .manufacturer1 {
-    top: 50px;
-    left: 24px;
-    color: rgba(12, 167, 111, 1);
-    width: 74px;
-    height: auto;
-    position: absolute;
-    font-size: 18px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .polymer_group1 {
-    top: 20px;
-    left: 24px;
-    color: rgba(0, 0, 0, 1);
-    height: auto;
-    position: absolute;
-    font-size: 18px;
-    font-style: Semi Bold;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .divider1 {
-    top: 66px;
-    left: 2px;
-    width: 993px;
-    height: 1px;
-    position: absolute;
-  }
-  .res_amount {
-    top: 24px;
-    left: 2px;
-    color: rgba(0, 0, 0, 1);
-    width: 490px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Semi Bold;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .scroll {
-    top: 95px;
-    left: 989px;
-    width: 8px;
-    height: 180px;
-    position: absolute;
-    border-radius: 8px;
-  }
+  
   .searchthroughnavigation {
     top: 337px;
     left: 221px;
@@ -1270,13 +776,7 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
   }
-  .vector8 {
-    top: 4px;
-    left: 3px;
-    width: 18px;
-    height: 16px;
-    position: absolute;
-  }
+
   .icnarrow1 {
     top: 0px;
     left: 32px;
@@ -1287,804 +787,10 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
   }
-  .vector04 {
-    top: 19.99993896484375px;
-    left: 7px;
-    width: 16px;
-    height: 9px;
-    position: absolute;
-  }
-  .text38 {
-    top: 3px;
-    left: 64px;
-    color: rgba(9, 59, 154, 1);
-    height: auto;
-    position: absolute;
-    font-size: 16px;
-    font-style: Regular;
-    text-align: center;
-    font-family: Roboto;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .step01 {
-    width: 100%;
-    height: 3820px;
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    flex-shrink: 0;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  .header1 {
-    top: 0px;
-    left: 0px;
-    width: 1440px;
-    height: 70px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    background-color: rgba(10, 28, 59, 1);
-  }
-  .button11 {
-    top: 27px;
-    left: 236px;
-    width: 100px;
-    height: 15.999999046325684px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .text40 {
-    left: -1px;
-    color: rgba(255, 255, 255, 1);
-    width: 100px;
-    height: auto;
-    position: absolute;
-    text-align: center;
-    line-height: 24px;
-  }
-  .button21 {
-    top: 26px;
-    left: 343px;
-    width: 100px;
-    height: 15.999999046325684px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .text42 {
-    top: 0.9998779296875px;
-    left: 12px;
-    color: rgba(255, 255, 255, 1);
-    width: 100px;
-    height: auto;
-    position: absolute;
-    text-align: left;
-    line-height: 24px;
-  }
-  .button31 {
-    top: 27px;
-    left: 455px;
-    width: 124px;
-    height: 16px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .text44 {
-    left: -1px;
-    color: rgba(255, 255, 255, 1);
-    width: 100px;
-    height: auto;
-    position: absolute;
-    text-align: center;
-    line-height: 24px;
-  }
-  .button41 {
-    top: 27px;
-    left: 567px;
-    width: 100px;
-    height: 15.999999046325684px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .text46 {
-    left: -1px;
-    color: rgba(255, 255, 255, 1);
-    width: 100px;
-    height: auto;
-    position: absolute;
-    text-align: center;
-    line-height: 24px;
-  }
-  .button51 {
-    top: 27px;
-    left: 667px;
-    width: 100px;
-    height: 15.999999046325684px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .text48 {
-    left: -1px;
-    color: rgba(255, 255, 255, 1);
-    width: 100px;
-    height: auto;
-    position: absolute;
-    text-align: center;
-    line-height: 24px;
-  }
-  .entrywhite11 {
-    top: 20px;
-    left: 1287px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .group2 {
-    top: -0.11000317335128784px;
-    left: -0.10996744781732559px;
-    width: 30.220001220703125px;
-    height: 30.219999313354492px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .vector05 {
-    top: 0px;
-    left: 0px;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-  }
-  .group3 {
-    top: 4.830003261566162px;
-    left: 9.08997917175293px;
-    width: 23.43999671936035px;
-    height: 20.419998168945312px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .vector06 {
-    top: 0px;
-    left: 0px;
-    width: 23px;
-    height: 20px;
-    position: absolute;
-  }
-  .searchsection1 {
-    top: 126px;
-    left: 199px;
-    width: 1042px;
-    height: 195px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  .advancedsearch1 {
-    top: 135px;
-    left: 24px;
-    width: 994px;
-    height: 36px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .button1 {
-    top: 0px;
-    left: 396px;
-    width: 202px;
-    height: 36px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .text50 {
-    top: 8px;
-    left: 16px;
-    color: rgba(9, 59, 154, 1);
-    width: 138px;
-    height: auto;
-    position: absolute;
-    font-size: 18px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Roboto;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .expandmore3 {
-    top: 7px;
-    left: 162px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .shape3 {
-    top: 8.5999755859375px;
-    left: 6px;
-    width: 12px;
-    height: 7px;
-    opacity: 0.54;
-    position: absolute;
-  }
-  .line2 {
-    top: 18px;
-    left: 0px;
-    width: 396px;
-    height: 1px;
-    position: absolute;
-  }
-  .line3 {
-    top: 18px;
-    left: 598px;
-    width: 396px;
-    height: 1px;
-    position: absolute;
-  }
-  .simplesearch1 {
-    top: 74px;
-    left: 24px;
-    width: 994px;
-    height: 40px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .text52 {
-    top: 13px;
-    left: 19px;
-    color: rgba(10, 28, 59, 1);
-    width: 245px;
-    height: auto;
-    position: absolute;
-    font-size: 18px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Roboto;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .close1 {
-    top: 8px;
-    left: 902px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .shape4 {
-    top: 5px;
-    left: 5px;
-    width: 14px;
-    height: 14px;
-    opacity: 0.54;
-    position: absolute;
-  }
-  .searchbutton1 {
-    top: 0px;
-    left: 938px;
-    width: 56px;
-    height: 40px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    background-color: rgba(0, 55, 132, 1);
-  }
-  .search1 {
-    top: 32px;
-    left: 16px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .shape5 {
-    top: -2.5px;
-    left: 3.400099992752075px;
-    width: 17px;
-    height: 17px;
-    opacity: 0.54;
-    position: absolute;
-  }
-  .text54 {
-    top: 24px;
-    left: 23px;
-    color: rgba(0, 0, 0, 1);
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Semi Bold;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .resultsection1 {
-    top: 361px;
-    left: 221px;
-    width: 999px;
-    height: 3459px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  .divider2 {
-    top: 3438px;
-    left: 3px;
-    width: 993px;
-    height: 1px;
-    position: absolute;
-  }
-  .resultsfields2 {
-    top: 95px;
-    left: 28px;
-    width: 943px;
-    height: 204px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .resultfield12 {
-    top: 0px;
-    left: 0px;
-    width: 943px;
-    height: 204px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  .badge2 {
-    top: 0px;
-    left: 0px;
-    width: 8px;
-    height: 204px;
-    position: absolute;
-    border-radius: 8px 0 0 8px;
-  }
-  .btn2 {
-    top: 144px;
-    left: 650px;
-    width: 269px;
-    height: 40px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .text56 {
-    top: 11px;
-    left: 12px;
-    color: rgba(9, 59, 154, 1);
-    width: 221px;
-    height: auto;
-    position: absolute;
-    font-size: 16px;
-    font-style: Regular;
-    text-align: center;
-    font-family: Roboto;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .expandmore4 {
-    top: 0px;
-    left: 237px;
-    width: 32px;
-    height: 40px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .vector07 {
-    top: 27.56020736694336px;
-    left: 11.43975830078125px;
-    width: 16px;
-    height: 9px;
-    position: absolute;
-  }
-  .links1 {
-    top: 86px;
-    left: 24px;
-    width: 142px;
-    height: 42px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .linkonartcl2 {
-    top: 0px;
-    left: 0px;
-    width: 118px;
-    height: 17px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .btnreadartcl4 {
-    top: 0px;
-    left: 0px;
-    width: 118px;
-    height: 17px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .icnlink4 {
-    top: 0px;
-    left: 102px;
-    width: 16px;
-    height: 16px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .union4 {
-    top: 2.332033634185791px;
-    left: 2.3320412635803223px;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-  }
-  .text58 {
-    color: rgba(1, 120, 254, 1);
-    height: auto;
-    position: absolute;
-    font-size: 14px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 400;
-    line-height: 17px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .additiveslist2 {
-    top: 25px;
-    left: 0px;
-    width: 142px;
-    height: 17px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .btnreadartcl5 {
-    top: 0px;
-    left: 0px;
-    width: 142px;
-    height: 17px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .icnlink5 {
-    top: 0px;
-    left: 126px;
-    width: 16px;
-    height: 16px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .union5 {
-    top: 2.332033634185791px;
-    left: 2.3320412635803223px;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-  }
-  .text60 {
-    color: rgba(1, 120, 254, 1);
-    height: auto;
-    position: absolute;
-    font-size: 14px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 400;
-    line-height: 17px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .text62 {
-    top: 50px;
-    left: 24px;
-    color: rgba(12, 167, 111, 1);
-    width: 74px;
-    height: auto;
-    position: absolute;
-    font-size: 18px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .text64 {
-    top: 20px;
-    left: 24px;
-    color: rgba(0, 0, 0, 1);
-    height: auto;
-    position: absolute;
-    font-size: 18px;
-    font-style: Semi Bold;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .resultsfields3 {
-    top: 323px;
-    left: 28px;
-    width: 943px;
-    height: 204px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .resultfield13 {
-    top: 0px;
-    left: 0px;
-    width: 943px;
-    height: 204px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  .badge3 {
-    top: 0px;
-    left: 0px;
-    width: 8px;
-    height: 204px;
-    position: absolute;
-    border-radius: 8px 0 0 8px;
-  }
-  .btn3 {
-    top: 144px;
-    left: 650px;
-    width: 269px;
-    height: 40px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .text66 {
-    top: 11px;
-    left: 12px;
-    color: rgba(9, 59, 154, 1);
-    width: 221px;
-    height: auto;
-    position: absolute;
-    font-size: 16px;
-    font-style: Regular;
-    text-align: center;
-    font-family: Roboto;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .expandmore5 {
-    top: 0px;
-    left: 237px;
-    width: 32px;
-    height: 40px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .vector08 {
-    top: 27.56020736694336px;
-    left: 11.43975830078125px;
-    width: 16px;
-    height: 9px;
-    position: absolute;
-  }
-  .linkonartcl3 {
-    top: 86px;
-    left: 24px;
-    width: 118px;
-    height: 17px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .btnreadartcl6 {
-    top: 0px;
-    left: 0px;
-    width: 118px;
-    height: 17px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .icnlink6 {
-    top: 0px;
-    left: 102px;
-    width: 16px;
-    height: 16px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .union6 {
-    top: 2.332033634185791px;
-    left: 2.3320412635803223px;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-  }
-  .text68 {
-    color: rgba(1, 120, 254, 1);
-    height: auto;
-    position: absolute;
-    font-size: 14px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 400;
-    line-height: 17px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .additiveslist3 {
-    top: 111px;
-    left: 24px;
-    width: 142px;
-    height: 17px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .btnreadartcl7 {
-    top: 0px;
-    left: 0px;
-    width: 142px;
-    height: 17px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .icnlink7 {
-    top: 0px;
-    left: 126px;
-    width: 16px;
-    height: 16px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .union7 {
-    top: 2.332033634185791px;
-    left: 2.3320412635803223px;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-  }
-  .text70 {
-    color: rgba(1, 120, 254, 1);
-    height: auto;
-    position: absolute;
-    font-size: 14px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 400;
-    line-height: 17px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .text72 {
-    top: 50px;
-    left: 24px;
-    color: rgba(12, 167, 111, 1);
-    width: 74px;
-    height: auto;
-    position: absolute;
-    font-size: 18px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .text74 {
-    top: 20px;
-    left: 24px;
-    color: rgba(0, 0, 0, 1);
-    height: auto;
-    position: absolute;
-    font-size: 18px;
-    font-style: Semi Bold;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  .divider3 {
-    top: 66px;
-    left: 2px;
-    width: 993px;
-    height: 1px;
-    position: absolute;
-  }
-  .text76 {
-    top: 24px;
-    left: 2px;
+  
+  .res_amount {
+    top: 150px;
+    left: 260px;
     color: rgba(0, 0, 0, 1);
     width: 490px;
     height: auto;
@@ -2092,80 +798,25 @@ figure button {
     font-size: 24px;
     font-style: Semi Bold;
     text-align: left;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-weight: 700;
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
   }
-  .scroll1 {
-    top: 95px;
-    left: 989px;
-    width: 8px;
-    height: 180px;
-    position: absolute;
-    border-radius: 8px;
-  }
-  .searchthroughnavigation1 {
-    top: 337px;
-    left: 221px;
-    width: 742px;
-    height: 24px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .icnhome1 {
-    top: 0px;
-    left: 0px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .vector81 {
-    top: 4px;
-    left: 3px;
-    width: 18px;
-    height: 16px;
-    position: absolute;
-  }
-  .icnarrow11 {
-    top: 0px;
-    left: 32px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .vector09 {
-    top: 19.99993896484375px;
-    left: 7px;
-    width: 16px;
-    height: 9px;
-    position: absolute;
-  }
-  .text78 {
-    top: 3px;
-    left: 64px;
-    color: rgba(9, 59, 154, 1);
-    height: auto;
-    position: absolute;
-    font-size: 16px;
-    font-style: Regular;
-    text-align: center;
-    font-family: Roboto;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
+
+  .italic_bold_search_res {
+      font-weight: 700;
+      font-style: italic;
   }
 
+  .res_abbr {
+    margin-left: 8px;
+    color: #4f5b75;
+    font-weight: 400;
+  }
+
+  
 
 
   :root {
@@ -2935,4 +1586,134 @@ figure button {
     text-decoration: none;
   }
    
+
+#block0 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block1 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
    
+#block2 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+
+#block3 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block4 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+
+#block5 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block6 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block7 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+
+#block9 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block11 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block12 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block15 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block18 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block19 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block20 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block21 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block22 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block32 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block33 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block37 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
+#block38 label.input-label::before {
+    content: "*";
+    color: red;
+    left: -5px;
+    position: relative;
+}
