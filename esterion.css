@@ -1,6 +1,6 @@
-/*maryna 04/06/23*/
-/*oleg 08/06/23*/
 
+/*oleg 08/06/23*/
+/*maryna 08/06/23  4am*/
 span.label-text {
   position: absolute;
   top: 18px;
@@ -396,11 +396,13 @@ form span.hiddenInput {
 left: -399.109375px;
 }
 
-.suggestions-select-show {
+suggestions-select-show {
   opacity: 1;
   height: 200px;
   position: relative;
-  left: 1%;
+  left: 0px;
+  top: 25px;
+  width: 100%;
 }
 form figcaption {
     color: black;
@@ -816,7 +818,462 @@ figure button {
     font-weight: 400;
   }
 
+  /*Styles for all products*/
+
+  .container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .resultsection_prod {
+    width: 999px;
+    height: 3459px;
+    left: 230px; 
+    /*display: flex;*/
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .resultfield_prod {
+    top: 91px;
+    left: 26px;
+    width: 943px;
+    height: 291px;
+    display: flex;
+      position: relative;
+      align-items: flex-start;
+      flex-shrink: 1;
+      border-radius: 5px;
+      border: 1px solid #eff0f3;
+      border-left-width: 8px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+  }
   
+  .content_prod {
+    top: 107px;
+    left: 24px;
+    width: 894px;
+    height: 160px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .divider_top_prod {
+    top: 0px;
+    left: 694px;
+    width: 3px;
+    height: 160px;
+    position: absolute;
+  }
+  .linksondocs_prod {
+    top: 60px;
+    left: 718px;
+    width: 156px;
+    height: 96px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .link_tds_prod {
+    top: 0px;
+    left: 0px;
+    width: 142px;
+    height: 24.000024795532227px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .text_tds_prod {
+    top: 2px;
+    left: 32px;
+    color: rgba(1, 120, 254, 1);
+    width: 150px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: underline;
+  }
+  .icndoc_prod {
+    top: 0px;
+    left: 0px;
+    width: 24px;
+    height: 24.000024795532227px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .bound_prod {
+    top: 0.000025466084480285645px;
+    left: 0px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+  }
+  .vector0_prod {
+    top: -4.547473508864641e-13px;
+    left: 2.859375px;
+    width: 18px;
+    height: 24px;
+    position: absolute;
+  }
+  .vector1_prod {
+    top: 12px;
+    left: 7px;
+    width: 10px;
+    height: 1px;
+    position: absolute;
+  }
+  .vector2_prod {
+    top: 15px;
+    left: 7px;
+    width: 10px;
+    height: 1px;
+    position: absolute;
+  }
+  .vector3_prod {
+    top: 18px;
+    left: 7px;
+    width: 10px;
+    height: 1px;
+    position: absolute;
+  }
+  .link_msds_prod {
+    top: 36px;
+    left: 0px;
+    width: 156px;
+    height: 24.000024795532227px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .text_msds_prod {
+    top: 3px;
+    left: 32px;
+    color: rgba(1, 120, 254, 1);
+    width: 150px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: underline;
+  }
+  .icndoc01_prod {
+    top: 0px;
+    left: 0px;
+    width: 24px;
+    height: 24.000024795532227px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .bound01_prod {
+    top: 0.000025466084480285645px;
+    left: 0px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+  }
+  .vector00_prod {
+    top: -4.547473508864641e-13px;
+    left: 2.859375px;
+    width: 18px;
+    height: 24px;
+    position: absolute;
+  }
+  .vector01_prod {
+    top: 12px;
+    left: 7px;
+    width: 10px;
+    height: 1px;
+    position: absolute;
+  }
+  .vector02_prod {
+    top: 15px;
+    left: 7px;
+    width: 10px;
+    height: 1px;
+    position: absolute;
+  }
+  .vector03_prod {
+    top: 18px;
+    left: 7px;
+    width: 10px;
+    height: 1px;
+    position: absolute;
+  }
+  .link_presentation_prod {
+    top: 72px;
+    left: 0px;
+    width: 123px;
+    height: 24px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .text_presentation_prod {
+    top: 2px;
+    left: 32px;
+    color: rgba(1, 120, 254, 1);
+    width: 91px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: underline;
+  }
+  .icnslides_prod {
+    top: 0px;
+    left: 0px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .vector12_prod {
+    top: 0px;
+    left: 2.859375px;
+    width: 18px;
+    height: 24px;
+    position: absolute;
+  }
+  .vector13_prod {
+    top: 10.640625px;
+    left: 7.078125px;
+    width: 10px;
+    height: 8px;
+    position: absolute;
+  }
+  .downloadbtn_prod {
+    top: 0px;
+    left: 718px;
+    width: 176px;
+    height: 40px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(0, 55, 132, 1);
+  }
+  .text_downloadpdf_prod {
+    top: 10px;
+    left: 35px;
+    color: rgba(255, 255, 255, 1);
+    width: 106px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .mechchardropdown_prod {
+    top: 116px;
+    left: 0px;
+    width: 226px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .text_mechchar_prod {
+    top: 1px;
+    color: rgba(0, 55, 132, 1);
+    width: 206px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .expandmore_prod {
+    top: 0px;
+    left: 206px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .shape_prod {
+    top: 5.9998779296875px;
+    left: 4px;
+    width: 12px;
+    height: 7px;
+    opacity: 0.54;
+    position: absolute;
+  }
+  .text_prod {
+    top: 2px;
+    color: rgba(118, 129, 148, 1);
+    width: 669px;
+    height: auto;
+    position: absolute;
+    font-size: 18px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .text_name_prod {
+    top: 24px;
+    left: 24px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 18px;
+    font-style: Semi Bold;
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .gapsolution_prod {
+    top: 66px;
+    left: 24px;
+    width: 296px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .text_analogs_prod {
+    left: 28px;
+    color: rgba(0, 0, 0, 1);
+    width: 160px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .text_open_list_prod {
+    left: 200px;
+    color: rgba(1, 120, 254, 1);
+    width: 96px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: underline;
+  }
+  .icnavalbl_prod {
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .vectr_prod {
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .vector14_prod {
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  .vector15_prod {
+    top: 6.619808197021484px;
+    left: 5.050811767578125px;
+    width: 10px;
+    height: 7px;
+    position: absolute;
+  }
+  
+  .divider_side_prod {
+    top: 66px;
+    left: 160px;
+    width: 993px;
+    height: 1px;
+    position: absolute;
+  }
+  .res_amount_prod {
+    top: 24px;
+    left: 30px;
+    color: rgba(0, 0, 0, 1);
+    width: auto;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Semi Bold;
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+
+
+/*---------------*/  
 
 
   :root {
