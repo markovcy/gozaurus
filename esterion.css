@@ -1,5 +1,5 @@
 
-/*oleg 08/06/23*/
+/*oleg 10/06/23*/
 /*maryna 08/06/23  4am*/
 span.label-text {
   position: absolute;
@@ -400,10 +400,16 @@ suggestions-select-show {
   opacity: 1;
   height: 200px;
   position: relative;
-  left: 0px;
-  top: 25px;
-  width: 100%;
+  left: 1%;
 }
+select.suggestions-constraints.id_polymers-sel.suggestions-select-show {
+  top: 0x;
+  left: 0px;
+  position: relative;
+  width: 100%;
+  top: 25px;
+}
+
 form figcaption {
     color: black;
     background-color: #fefefe;
