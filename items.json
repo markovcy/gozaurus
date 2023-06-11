@@ -812,7 +812,7 @@
                     "title": "Compression Set at 23 °C",
                     "columns": [
                     {
-                    "name": "compression_set_23_iso",
+                    "name": "compression_set23_iso",
                     
                     "type": "select",
                     "value": "ASTM D-395",
@@ -831,7 +831,7 @@
                     ]
                   },
                   {
-                    "name": "compression_set_23",
+                    "name": "compression_set23",
                     
                     "min":  0,
                     "max": 100,
@@ -843,7 +843,7 @@
                     "title": "Compression Set at 70 °C",
                     "columns": [
                     {
-                    "name": "compression_set_70_iso",
+                    "name": "compression_set70_iso",
                     
                     "type": "select",
                     "value": "ASTM D-395",
@@ -862,7 +862,7 @@
                     ]
                   },
                   {
-                    "name": "compression_set_70",
+                    "name": "compression_set70",
                     
                     "min":  0,
                     "max": 100,

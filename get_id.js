@@ -120,7 +120,7 @@ async function getEP_in_form_PP () {
     switch (id_type_material) {
         case 1: {
             // console.log("Thermoplastic polymer")
-            let id = [1, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+            let id = [1, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, -3]
             showHide(id)
             parse_termoplastic_polymer(resp);
             break;
@@ -133,7 +133,7 @@ async function getEP_in_form_PP () {
             break;
         }
         case 3: {
-            let id = [1, 19, 7, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+            let id = [1, 19, 7, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31. -3]
             showHide(id)
             // console.log("Thermoplastic elastomer")
             parse_termoplastic_elastomer(resp);
@@ -143,21 +143,21 @@ async function getEP_in_form_PP () {
             id_type_of_filler = resp.id_type_of_filler
             switch (id_type_of_filler) {
                 case 1: {
-                    let id = [1, 32, 33, 34, 35, 36, 43]
+                    let id = [1, 32, 33, 34, 35, 36, 43, -3]
                     showHide(id)
                     // console.log("Disperse filler")
                     parse_disperse_filler(resp);
                     break;
                 }
                 case 2: {
-                    let id = [1, 32, 36, 37, 38, 39, 40, 41, 42, 43]
+                    let id = [1, 32, 36, 37, 38, 39, 40, 41, 42, 43, -3]
                     showHide(id)
                     // console.log("Fibrous filler")
                     parse_fibrous_filler (resp);
                     break;
                 }
                 case 3: {
-                    let id = [1, 32, 33, 34, 35, 36, 43, 44]
+                    let id = [1, 32, 33, 34, 35, 36, 43, 44, -3]
                     showHide(id)
                     // console.log("Other filler")
                     parse_other_filler(resp);
@@ -169,14 +169,14 @@ async function getEP_in_form_PP () {
             id_content_filler = resp.id_content_filler
             switch (id_content_filler) {
                 case 1: {
-                    let id = [1, 2, 3, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+                    let id = [1, 2, 3, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, -3]
                     showHide(id)
                     console.log("Thermoplastic composite materials => Disperse filler")
                     parse_TKM_disperse_filler(resp);
                     break;
                 }
                 case 2: {
-                    let id = [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+                    let id = [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, -3]
                     showHide(id)
                     // console.log("Thermoplastic composite materials => Fibrous filler")
                     parse_TKM_fibrous_filler(resp);

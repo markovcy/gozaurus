@@ -151,7 +151,7 @@
               
               "title": "Reinforcing fiber configuration",
               "columns": [{
-                "name": "reinforcing_fiber_configuration",
+                "name": "id_reinforcing",
                 "required": true,
                 "value": "0",
                 "type": "select",
@@ -455,7 +455,6 @@
                     "required": true,
                     "type": "text",
                     "pattern": "floatPos",
-                    "value": "V-0",
                     "title": "Flammability, Class (UL 94)"
                   }]},
                   { 
@@ -478,7 +477,7 @@
                 "description": "Which polymer to use additive with",
                 "columns": [
                   {
-                    "name": "polymer_name",
+                    "name": "id_polymers",
                     "required": true,
                     "suggestions":  "/search/list",
                     "type": "select",
@@ -494,10 +493,10 @@
                     "title": "Manufacturer company name or dealer name"
                   },
                   {
-                    "name": "commercial_name",
+                    "name": "marka",
                     
                     "type": "text",
-                    "title": "Commercial product name"
+                    "title": "mar"
                   },
                   {
                     "name": "manufacturer",
@@ -644,7 +643,6 @@
                     "name": "tensile_strength_iso",
                     "required": true,
                     "type": "select",
-                    "value": "DIN 53504",
                     "title": "Standard for tensile strength tests",
                     "data": [
                       {
@@ -675,7 +673,6 @@
                     "name": "relative_elongation_at_break_iso",
                     "required": true,
                     "type": "select",
-                    "value": "DIN 53504",
                     "title": "Standard for tests of relative elongation at break",
                     "data": [
                       {
@@ -798,7 +795,7 @@
                     "title": "Compression Set at 23 °C",
                     "columns": [
                     {
-                    "name": "compression_set_23_iso",
+                    "name": "compression_set23_iso",
                     "required": true,
                     "type": "select",
                     "value": "ASTM D-395",
@@ -817,7 +814,7 @@
                     ]
                   },
                   {
-                    "name": "compression_set_23",
+                    "name": "compression_set23",
                     
                     "required": true,
                     "min":  0,
@@ -830,7 +827,7 @@
                     "title": "Compression Set at 70 °C",
                     "columns": [
                     {
-                    "name": "compression_set_70_iso",
+                    "name": "compression_set70_iso",
                     "required": true,
                     "type": "select",
                     "value": "ASTM D-395",
@@ -849,7 +846,7 @@
                     ]
                   },
                   {
-                    "name": "compression_set_70",
+                    "name": "compression_set70",
                     "required": true,
                     
                     "min":  0,
@@ -1136,8 +1133,7 @@
                   "title": "Standard for tensile strength tests",
                   "required": true,
                   "pattern": "floatPos",
-                  "type": "text",
-                  "value": "DIN 53504"
+                  "type": "text"
                 },
                 {
                   "name": "tensile_strength",
@@ -1157,8 +1153,7 @@
                   "name": "tensile_modulus_iso",
                   "title": "Tensile Modulus tests standard",
                   "required": true,
-                  "type": "text",
-                  "value": "DIN 53504"
+                  "type": "text"
                 },
                 {
                   "name": "tensile_modulus",
