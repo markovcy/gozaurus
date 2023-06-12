@@ -264,13 +264,13 @@ function parse_termoplastic_polymer (resp) {
 }
 
 function parse_termoplastic_elastomer (resp) {
-    let massivofplaceholders = ["marka",  "density", "hardness", "mfr", "tensile_strength", "relative_elongation_at_break", "elasticity_modulus_100", "elasticity_modulus_300", "tear_resistance", "compression_set_23", "compression_set_70", "compression_set_100", "abrasive_wear_and_tear", "ozone_resistance", "flammability"]
+    let massivofplaceholders = ["marka",  "density", "hardness", "mfr", "tensile_strength", "relative_elongation_at_break", "elasticity_modulus_100", "elasticity_modulus_300", "tear_resistance", "compression_set_23", "compression_set_70", "compression_set_100", "abrasive_wear_and_tear", "ozone_resistance", "flammability", "notes"]
     let massivofvalue = ["density_iso", "measurement_method", "hardness_iso", "tensile_strength_iso", "relative_elongation_at_break_iso", "elasticity_modulus_100_iso", "elasticity_modulus_300_iso", "tear_resistance_iso", "compression_set_23_iso", "compression_set_70_iso", "compression_set_100_iso", "abrasive_wear_and_tear_iso"]
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
 
 function parse_additive (resp) {
-    let massivofplaceholders = ["marka"]
+    let massivofplaceholders = ["marka", "notes"]
     let massivofvalue = ["id_type_additives"]
     console.log(massivofplaceholders, massivofvalue)
     do_foreach (resp, massivofplaceholders, massivofvalue)

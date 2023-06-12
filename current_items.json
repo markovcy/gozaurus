@@ -65,7 +65,7 @@
             "onchange": "getEP_in_form_PP ();"
           },
           {
-              "name": "id_brand",
+              "name": "manufacturer",
               "required": true,
               "type": "select",
               "title": "Material brand",
