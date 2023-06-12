@@ -252,8 +252,8 @@ function parse_TKM_disperse_filler (resp) {
 }
 
 function parse_TKM_fibrous_filler (resp) {
-    let massivofplaceholders = [ "marka",  "nature_of_filler",  "content_reinforcement", "density",  "mfr", "tensile_modulus", "tensile_strength_break", "filament_diameter_iso", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "melting_temperature", "flammability", "surface_resistivity"]
-    let massivofvalue = ["reinforcing_fiber_configuration", "content_reinforcement_iso",  "density_iso", "mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso", "melting_temperature_iso"]
+    let massivofplaceholders = [ "marka",  "nature_of_filler",  "content_reinforcement", "density",  "mfr", "tensile_modulus", "tensile_strength_break", "filament_diameter_iso", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "melting_temperature", "flammability", "surface_resistivity"]
+    let massivofvalue = ["id_filler_configuration", "id_reinforcing", "content_reinforcement_iso",  "density_iso", "mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso", "melting_temperature_iso", "notes"] 
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
 
@@ -265,7 +265,7 @@ function parse_termoplastic_polymer (resp) {
 
 function parse_termoplastic_elastomer (resp) {
     let massivofplaceholders = ["marka",  "density", "hardness", "mfr", "tensile_strength", "relative_elongation_at_break", "elasticity_modulus_100", "elasticity_modulus_300", "tear_resistance", "compression_set_23", "compression_set_70", "compression_set_100", "abrasive_wear_and_tear", "ozone_resistance", "flammability", "notes"]
-    let massivofvalue = ["density_iso", "measurement_method", "hardness_iso", "tensile_strength_iso", "relative_elongation_at_break_iso", "elasticity_modulus_100_iso", "elasticity_modulus_300_iso", "tear_resistance_iso", "compression_set_23_iso", "compression_set_70_iso", "compression_set_100_iso", "abrasive_wear_and_tear_iso"]
+    let massivofvalue = [ "density_iso", "measurement_method", "hardness_iso", "tensile_strength_iso", "relative_elongation_at_break_iso", "elasticity_modulus_100_iso", "elasticity_modulus_300_iso", "tear_resistance_iso", "compression_set_23_iso", "compression_set_70_iso", "compression_set_100_iso", "abrasive_wear_and_tear_iso"]
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
 
