@@ -127,7 +127,7 @@ async function getEP_in_form_PP () {
         }
         case 2: {
             // console.log("Additives")
-            id = [17, 18]
+            id = [17, 18, -3]
             showHide(id)
             parse_additive(resp);
             break;
