@@ -253,7 +253,7 @@ function parse_TKM_disperse_filler (resp) {
 
 function parse_TKM_fibrous_filler (resp) {
     let massivofplaceholders = [ "marka",  "nature_of_filler",  "content_reinforcement", "density",  "mfr", "tensile_modulus", "tensile_strength_break", "filament_diameter_iso", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "melting_temperature", "flammability", "surface_resistivity"]
-    let massivofvalue = ["id_filler_configuration", "id_reinforcing", "content_reinforcement_iso",  "density_iso", "mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso", "melting_temperature_iso", "notes"] 
+    let massivofvalue = ["id_content_filler", "id_reinforcing", "content_reinforcement_iso",  "density_iso", "mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso", "melting_temperature_iso", "notes"] 
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
 
