@@ -247,7 +247,7 @@ function parse_other_filler (resp) {
 function parse_TKM_disperse_filler (resp) {
     console.log("parse_TKM_disperse_filler")
     let massivofplaceholders = ["surface_resistivity", "marka", "chemical_nature",  "content_reinforcement",  "density",  "mfr", "tensile_modulus",  "tensile_strength_break", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "melting_temperature"]
-    let massivofvalue = ["content_reinforcement_iso", "density_iso","mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso",  "melting_temperature_iso"]
+    let massivofvalue = ["id_content_filler", "content_reinforcement_iso", "density_iso","mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso",  "melting_temperature_iso"]
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
 
