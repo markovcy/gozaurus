@@ -270,8 +270,8 @@ function parse_termoplastic_elastomer (resp) {
 }
 
 function parse_additive (resp) {
-    let massivofplaceholders = ["marka", "notes"]
-    let massivofvalue = ["id_type_additives"]
+    let massivofplaceholders = ["marka"]
+    let massivofvalue = ["id_type_additives", "notes"]
     console.log(massivofplaceholders, massivofvalue)
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
