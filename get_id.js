@@ -258,7 +258,7 @@ function parse_TKM_fibrous_filler (resp) {
 }
 
 function parse_termoplastic_polymer (resp) {
-    let massivofplaceholders = ["marka", "density", "mfr", "tensile_modulus", "tensile_strength_break", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vick_heat_resistance", "melting_temperature", "flammability", "surface_resistivity"]
+    let massivofplaceholders = ["marka", "density", "mfr", "tensile_modulus", "tensile_strength_break", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "melting_temperature", "flammability", "surface_resistivity"]
     let massivofvalue = ["density_iso", "mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso",  "melting_temperature_iso"]
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
