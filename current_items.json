@@ -36,7 +36,7 @@
             ]
     
           },
-          "id_filler_configuration":{
+          "id_content_filler":{
             "1":[
               "1", "2", "3", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "-3", "-2", "-1"
             ],
@@ -105,7 +105,7 @@
               
               "title": "Filler configuration",
               "columns": [{
-                "name": "id_filler_configuration",
+                "name": "id_content_filler",
                 "required": true,
                 "value": "0",
                 "type": "select",
