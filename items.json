@@ -459,6 +459,12 @@
                     "title": "Elongation at break, ISO",
                     "data": [
                       {
+                        "title": "Выберите",
+                        "label": "Выберите",
+                        "value": "",
+                        "disabled": true
+                      },
+                      {
                         "title": "ISO 527-2",
                         "label": "ISO 527-2",
                         "value": "ISO 527-2"
