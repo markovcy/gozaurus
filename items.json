@@ -265,7 +265,7 @@
                       "title": "Hardness",
                       "columns": [
                         {
-                          "name": "hardness_iso",
+                          "name": "hardness_way",
                           "required": true,
                           "type": "select",
                           "value": "Shore-A",
@@ -685,7 +685,7 @@
                   "title": "PTR",
                   "columns":[
                     {
-                    "name": "ptr",
+                    "name": "mfr",
                     "required": true,
                     "min":  0,
                     "type": "number",
@@ -733,7 +733,7 @@
                     "title": "Relative Elongation at Break",
                     "columns": [
                     {
-                    "name": "relative_elongation_at_break_iso",
+                    "name": "elongation_break_iso",
                     "required": true,
                     "type": "select",
                     "value": "DIN 53504",
@@ -752,7 +752,7 @@
                     ]
                   },
                   {
-                    "name": "relative_elongation_at_break",
+                    "name": "elongation_break",
                     "required": true,
                     "error": {
                       "pattern": "only float number more than zero",  
@@ -1024,7 +1024,7 @@
                     "id": 31,
                     "title": "Flammability",
                     "columns": [{
-                    "name": "flammability_ul94",
+                    "name": "flammability",
                     
                     "type": "text",
                     

@@ -575,7 +575,7 @@
                 "title": "Hardness",
                 "columns": [
                   {
-                    "name": "hardness_iso",
+                    "name": "hardness_way",
                     "required": true,
                     "type": "select",
                     "value": "Shore-A",
@@ -670,7 +670,7 @@
                     "title": "Relative Elongation at Break",
                     "columns": [
                     {
-                    "name": "relative_elongation_at_break_iso",
+                    "name": "elongation_break_iso",
                     "required": true,
                     "type": "select",
                     "title": "Standard for tests of relative elongation at break",
@@ -688,7 +688,7 @@
                     ]
                   },
                   {
-                    "name": "relative_elongation_at_break",
+                    "name": "elongation_break",
                     "required": true,
                     
                     "min":  0,
@@ -933,7 +933,7 @@
                     "id": 31,
                     "title": "Flammability",
                     "columns": [{
-                    "name": "flammability_ul94",
+                    "name": "flammability",
                     "required": true,
                     "type": "text",
                     "pattern": "floatPos",
