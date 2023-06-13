@@ -871,7 +871,7 @@
                     "title": "Compression Set at 23 °C",
                     "columns": [
                     {
-                    "name": "compression_set_23_iso",
+                    "name": "compression_set23_iso",
                     
                     "type": "select",
                     "value": "ASTM D-395",
@@ -890,7 +890,7 @@
                     ]
                   },
                   {
-                    "name": "compression_set_23",
+                    "name": "compression_set23",
                     
                     "error": {
                       "pattern": "only float number more than zero",  
@@ -906,7 +906,7 @@
                     "title": "Compression Set at 70 °C",
                     "columns": [
                     {
-                    "name": "compression_set_70_iso",
+                    "name": "compression_set70_iso",
                     
                     "type": "select",
                     "value": "ASTM D-395",
@@ -925,7 +925,7 @@
                     ]
                   },
                   {
-                    "name": "compression_set_70",
+                    "name": "compression_set70",
                     
                     "error": {
                       "pattern": "only float number more than zero",  
@@ -941,7 +941,7 @@
                     "title": "Compression Set at 100 °C",
                     "columns": [
                     {
-                    "name": "compression_set_100_iso",
+                    "name": "compression_set100_iso",
                     
                     "type": "select",
                     "value": "ASTM D-395",
@@ -960,7 +960,7 @@
                     ]
                   },
                   {
-                    "name": "compression_set_100",
+                    "name": "compression_set100",
                     
                     "error": {
                       "pattern": "only float number more than zero",  

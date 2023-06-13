@@ -859,7 +859,7 @@
                     "title": "Compression Set at 100 °C",
                     "columns": [
                     {
-                    "name": "compression_set_100_iso",
+                    "name": "compression_set100_iso",
                     "required": true,
                     "type": "select",
                     "value": "ASTM D-395",
@@ -878,7 +878,7 @@
                     ]
                   },
                   {
-                    "name": "compression_set_100",
+                    "name": "compression_set100",
                     "required": true,
                     
                     "min":  0,
