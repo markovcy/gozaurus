@@ -422,7 +422,7 @@
                     "name": "tensile_strength_break_iso",
                     "required": true,
                     "type": "select",
-                   
+                    
                     "title": "Tensile Strength at Break, ISO",
                     "data": [
                       {
@@ -455,13 +455,13 @@
                     "name": "elongation_break_iso",
                     "required": true,
                     "type": "select",
-                    
+                    "valie": "0",
                     "title": "Elongation at break, ISO",
                     "data": [
                       {
-                        "title": "Выберите",
-                        "label": "Выберите",
-                        "value": "",
+                        "title": "Choose filler configuration",
+                        "label": "Choose filler configuration",
+                        "value": "0",
                         "disabled": true
                       },
                       {
