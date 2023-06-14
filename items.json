@@ -287,7 +287,7 @@
                           "name": "hardness_iso",
                           "required": true,
                           "type": "select",
-                          "value": "ISO 527-2",
+                        
                           "title": "Hardness test standard",
                           "data": [
                             {
@@ -387,7 +387,7 @@
                     "name": "tensile_modulus_iso",
                     
                     "type": "select",
-                    "value": "ISO 527-2",
+                   
                     "title": "Tensile modulus, ISO",
                     "data": [
                       {
@@ -422,7 +422,7 @@
                     "name": "tensile_strength_break_iso",
                     "required": true,
                     "type": "select",
-                    "value": "ISO 527-2",
+                   
                     "title": "Tensile Strength at Break, ISO",
                     "data": [
                       {
@@ -455,7 +455,7 @@
                     "name": "elongation_break_iso",
                     "required": true,
                     "type": "select",
-                    "value": "ISO 527-2",
+                    
                     "title": "Elongation at break, ISO",
                     "data": [
                       {
@@ -533,7 +533,7 @@
                     "name": "melting_temperature_iso",
                     "required": true,
                     "type": "select",
-                    "value": "ISO 527-2",
+                   
                     "title": "Melting temperature test standard",
                     "data": [
                       {
