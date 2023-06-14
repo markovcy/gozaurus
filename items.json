@@ -452,10 +452,10 @@
                     "title": "Elongation at break",
                     "columns": [
                     {
-                    "name": "elongation_break_iso",
+                    "name": "elongation_break_iso1",
                     "required": true,
                     "type": "select",
-                    "valie": "0",
+                    "value": "0",
                     "title": "Elongation at break, ISO",
                     "data": [
                       {
