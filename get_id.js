@@ -216,6 +216,7 @@ function put_value_values(name, placeholder) {
     console.log(name)
     console.log(placeholder)
     let selector = $(`select[name=${name}]:visible`);
+    console.log(selector)
     console.log(selector[0])
     if (selector !== undefined) {
         if (selector !== undefined) {
