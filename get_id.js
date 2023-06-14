@@ -233,7 +233,7 @@ function parse_disperse_filler (resp) {
     let massivofplaceholders = ["marka", "manufacturer", "chemical_nature",  "purity_of_disperse_filler",  "dispersity",  "moisture_content",  "density"]
     let massivofvalue = ["id_type_of_filler", "chemical_nature_iso","purity_of_disperse_filler_iso", "density_iso", "moisture_content_iso", "mfr_iso", "notes"]
 
-    do_foreach (resp, massivofplaceholders)
+    do_foreach (resp, massivofplaceholders, massivofvalue)
 }
 
 function parse_fibrous_filler (resp) {
