@@ -133,7 +133,7 @@ async function getEP_in_form_PP () {
             break;
         }
         case 3: {
-            let id = [1, 19, 7, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, -3]
+            let id = [1, 7, 8, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, -3]
             showHide(id)
             // console.log("Thermoplastic elastomer")
             parse_termoplastic_elastomer(resp);
