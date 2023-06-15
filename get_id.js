@@ -238,7 +238,7 @@ function parse_disperse_filler (resp) {
 }
 
 function parse_fibrous_filler (resp) {
-    let massivofplaceholders = ["marka", "manufacturer", "density", "density_iso", "linear_density_iso", "linear_density", "length_of_fibres_iso", "length_of_fibres", "filament_diameter", "filament_diameter_iso", "tensile_strength_iso", "tensile_strength", "tensile_modulus", "tensile_modulus", "elongation_break", "elongation_break_iso", "moisture_content", "moisture_content_iso"]
+    let massivofplaceholders = ["marka", "manufacturer", "density", "density_iso", "linear_density_iso", "linear_density", "length_of_fibres_iso", "length_of_fibres", "filament_diameter", "filament_diameter_iso", "tensile_strength_iso", "tensile_strength", "tensile_modulus", "tensile_modulus_iso", "elongation_break", "elongation_break_iso", "moisture_content", "moisture_content_iso"]
 
     do_foreach (resp, massivofplaceholders)
 }

@@ -229,13 +229,67 @@
                     "max": 95,
                     "type": "number"
                     }]},
+                    {
+                      "id": 7,
+                      "title": "Hardness",
+                      "columns": [
+                        {
+                          "name": "hardness_way",
+                          "required": true,
+                          "type": "select",
+                          "value": "Shore-A",
+                          "title": "Hardness measurement method",
+                          "data": [
+                            {
+                              "title": "Shore-A",
+                              "label": "Shore-A",
+                              "value": "Shore-A"
+                            },
+                            {
+                              "title": "Shore-D",
+                              "label": "Shore-D",
+                              "value": "Shore-D"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "hardness_iso",
+                          "required": true,
+                          "type": "select",
+                        
+                          "title": "Hardness test standard",
+                          "data": [
+                            {
+                              "title": "DIN 53505",
+                              "label": "DIN 53505",
+                              "value": "DIN 53505"
+                            },
+                            {
+                              "title": "ASTM D-2240",
+                              "label": "ASTM D-2240",
+                              "value": "ASTM D-2240"
+                            }
+                          ]
+                        }, 
+                        {
+                          "name": "hardness",
+                          "required": true,
+                          "error": {
+                            "pattern": "only float number more than zero",  
+                            "message": "Value can't be less than 0"
+                          },
+                          "min": 0,
+                          "type": "number",
+                          "title": "Hardness"                  
+                          }]
+                        },
               {
-                "id": 7,
+                "id": 8,
                 "title": "Density",
                 "columns": [
                   {
                     "name": "density_iso",
-                    "required": true,
+                    
                     "type": "select",
                     "value": "ISO 1183",
                     "title": "Density test standard",
@@ -254,8 +308,6 @@
                   },
                   {
                     "name": "density",
-                    "required": true,
-                    
                     "min": 400,
                     "max": 3500,  
                     "type": "number", 
@@ -263,7 +315,7 @@
                   }]
                   },
                   { 
-                    "id": 8,
+                    "id": 9,
                     "title": "MFR",
                     "columns": [
                     {
@@ -271,7 +323,7 @@
                     "required": true,
                     "type": "select",
                     "value": "ISO 1133",
-                    "title": "MFR, ISO",
+                    
                     "data": [
                       {
                         "title": "ISO 1133",
@@ -288,20 +340,23 @@
                   {
                     "name": "mfr",
                     "required": true,
-                    
+                    "error": {
+                      "pattern": "only float number more than zero",  
+                      "message": "Value can't be less than 0"
+                    },
                     "min":  0,
                     "type": "number", 
                     "title": "MFR, g/10 min "
                   }]},
                   { 
-                    "id": 9,
+                    "id": 10,
                     "title": "Tensile modulus",
                     "columns": [
                     {
                     "name": "tensile_modulus_iso",
-                    "required": true,
+                    
                     "type": "select",
-                    "value": "ISO 527-2",
+                   
                     "title": "Tensile modulus, ISO",
                     "data": [
                       {
@@ -318,14 +373,17 @@
                   },
                   {
                     "name": "tensile_modulus",
-                    "required": true,
                     
+                    "error": {
+                      "pattern": "only float number more than zero",  
+                      "message": "Value can't be less than 0"
+                    },
                     "min":  0,
                     "type": "number", 
                     "title": "Tensile modulus, GPa "
                   }]},
                   { 
-                    "id": 10,
+                    "id": 11,
                     "title": "Tensile Strength at Break",
                     "columns": [
                       
@@ -333,7 +391,7 @@
                     "name": "tensile_strength_break_iso",
                     "required": true,
                     "type": "select",
-                    "value": "ISO 527-2",
+                    
                     "title": "Tensile Strength at Break, ISO",
                     "data": [
                       {
@@ -351,22 +409,30 @@
                   {
                     "name": "tensile_strength_break",
                     "required": true,
-                    
+                    "error": {
+                      "pattern": "only float number more than zero",  "message": "Value can't be less than 0"
+                    },
                     "min":  0,
                     "type": "number", 
                     "title": "Tensile Strength at Break, MPa "
                   }]},
                   { 
-                    "id": 11,
+                    "id": 12,
                     "title": "Elongation at break",
                     "columns": [
                     {
                     "name": "elongation_break_iso",
                     "required": true,
                     "type": "select",
-                    "value": "ISO 527-2",
+                    "value": "0",
                     "title": "Elongation at break, ISO",
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "0",
+                        "disabled": true
+                      },
                       {
                         "title": "ISO 527-2",
                         "label": "ISO 527-2",
@@ -382,49 +448,61 @@
                   {
                     "name": "elongation_break",
                     "required": true,
-                    
+                    "error": {
+                      "pattern": "only float number more than zero",  
+                      "message": "Value can't be less than 0"
+                    },
                     "min":  0,
                     "type": "number", 
                     "title": "Elongation at break, % "
                   }]},
                   { 
-                    "id": 12,
+                    "id": 13,
                     "title": "Charpy impact strength",
                     "columns": [{
                     "name": "charpy_impact_strength",
-                    "required": true,
                     
+                    "error": {
+                      "pattern": "only float number more than zero",  
+                      "message": "Value can't be less than 0"
+                    },
                     "min":  0,
                     "type": "number", 
                     "title": "Charpy impact strength, kJ/m^2 (ISO 179-1)"
                   },
                   {
                     "name": "charpy_notched_impact_strength",
-                    "required": true,
                     
+                    "error": {
+                      "pattern": "only float number more than zero",  
+                      "message": "Value can't be less than 0"
+                    },
                     "min":  0,
                     "type": "number", 
                     "title": "Charpy notched impact strength, kJ/m^2 (ISO 179-1)"
                   }]},
                   { 
-                    "id": 13,
+                    "id": 14,
                     "title": "Vick heat resistance",
                     "columns": [{
                     "name": "vicat",
-                    "required": true,
                     
+                    "error": {
+                      "pattern": "only float number more than zero",  
+                      "message": "Value can't be less than 0"
+                    },
                     "min":  0,
                     "type": "number", 
                     "title": "Vick heat resistance, °C (ISO 306) "
                   }]},
                   { 
-                    "id": 14,
+                    "id": 15,
                     "title": "Melting temperature test standard",
                     "columns": [{
                     "name": "melting_temperature_iso",
                     "required": true,
                     "type": "select",
-                    "value": "ISO 527-2",
+                   
                     "title": "Melting temperature test standard",
                     "data": [
                       {
@@ -442,29 +520,34 @@
                   {
                     "name": "melting_temperature",
                     "required": true,
-                    
+                    "error": {
+                      "pattern": "only float number more than zero",  
+                      "message": "Value can't be less than 0"
+                    },
                     "min":  0,
                     "type": "number", 
                     "title": "Melting temperature,°C "
                   }]},
                   { 
-                    "id": 15,
+                    "id": 16,
                     "title": "Flammability",
                     "columns": [{
                     "name": "flammability",
-                    "required": true,
+                    
                     "type": "text",
-                    "pattern": "floatPos",
                     "title": "Flammability, Class (UL 94)"
                   }]},
                   { 
-                    "id": 16,
+                    "id": 17,
                     "title": "Surface resistivity",
                     "columns": [
                     {
                     "name": "surface_resistivity",
-                    "required": true,
                     
+                    "error": {
+                      "pattern": "only float number more than zero",  
+                      "message": "Value can't be less than 0"
+                    },
                     "min":  0,
                     "type": "number", 
                     "title": "Surface resistivity, Ohm (IEC 60093)"
@@ -472,13 +555,16 @@
             
               },
               {
-                "id": 17,
+                "id": 18,
                 "title": "Basic Information",
                 "description": "Which polymer to use additive with",
                 "columns": [
                   {
                     "name": "id_polymers",
                     "required": true,
+                    "error": {
+                      "message": "Field is required"
+                    },
                     "suggestions":  "/search/list",
                     "type": "select",
                     "title": "Name of the polymer to use additive with"
@@ -486,9 +572,10 @@
                   {
                     "name": "manufacturer_company_dealer",
                     "required": true,
-
+                    "error": {
+                      "message": "Field is required"
+                    },
                     "type": "text",
-                    "pattern": "floatPos",
                     "value": "Esterion",
                     "title": "Manufacturer company name or dealer name"
                   },
@@ -496,32 +583,29 @@
                     "name": "marka",
                     
                     "type": "text",
-                    "title": "mar"
+                    "title": "Commercial product name"
                   },
                   {
                     "name": "manufacturer",
                     "required": true,
+                    "error": {
+                      "message": "Field is required"
+                    },
                     "type": "text",
-                    "pattern": "floatPos",
+                    
                     "title": "Manufacturer name"
                   }]
                 },
               { 
-                "id": 18,
+                "id": 19,
                 "title": "Type of additives",
                 "columns": [
                 {
                 "name": "id_type_additives",
                 "required": true,
-                "value": "0",
+                "value": "1",
                 "type": "select",
                 "data": [
-                  {
-                    "title": "Choose type of additives...",
-                    "label": "Choose type of additives...",
-                    "value": "0",
-                    "disabled": true
-                  },
                   {
                     "title": "The curing agent",
                     "label": "The curing agent",
@@ -570,57 +654,6 @@
                 ]
                 
               }]},
-              {
-                "id": 19,
-                "title": "Hardness",
-                "columns": [
-                  {
-                    "name": "hardness_way",
-                    "required": true,
-                    "type": "select",
-                    "value": "Shore-A",
-                    "title": "Hardness measurement method",
-                    "data": [
-                      {
-                        "title": "Shore-A",
-                        "label": "Shore-A",
-                        "value": "Shore-A"
-                      },
-                      {
-                        "title": "Shore-D",
-                        "label": "Shore-D",
-                        "value": "Shore-D"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "hardness_iso",
-                    "required": true,
-                    "type": "select",
-                    "value": "ISO 527-2",
-                    "title": "Hardness test standard",
-                    "data": [
-                      {
-                        "title": "DIN 53505",
-                        "label": "DIN 53505",
-                        "value": "DIN 53505"
-                      },
-                      {
-                        "title": "ASTM D-2240",
-                        "label": "ASTM D-2240",
-                        "value": "ASTM D-2240"
-                      }
-                    ]
-                  }, 
-                  {
-                    "name": "hardness",
-                    "required": true,
-                    
-                    "min": 0,
-                    "type": "number",
-                    "title": "Hardness"                  
-                    }]
-                  },
                   { 
                   "id": 20,
                   "title": "MFR",
