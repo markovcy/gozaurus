@@ -688,14 +688,14 @@
               
                   { 
                   "id": 20,
-                  "title": "PTR",
+                  "title": "MFR",
                   "columns":[
                     {
                     "name": "mfr",
                     "required": true,
                     "min":  0,
                     "type": "number",
-                    "title": "PTR g/10 min (ISO 1133)"
+                    "title": "MFR g/10 min (ISO 1133)"
                   }
                 ]
                       
