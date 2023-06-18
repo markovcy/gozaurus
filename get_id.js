@@ -145,7 +145,7 @@ async function getEP_in_form_PP () {
                 case 1: {
                     let id = [1, 32, 33, 34, 35, 36, 43, -3]
                     showHide(id)
-                    // console.log("Disperse filler")
+                    console.log("Disperse filler[1, 32, 33, 34, 35, 36, 43, -3]")
                     parse_disperse_filler(resp);
                     break;
                 }
