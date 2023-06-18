@@ -145,7 +145,7 @@ async function getEP_in_form_PP () {
                 case 1: {
                     let id = [1, 32, 33, 34, 35, 36, 43, -3]
                     showHide(id)
-                    console.log("Disperse filler[1, 32, 33, 34, 35, 36, 43, -3]")
+                    console.log("Disperse filler")
                     parse_disperse_filler(resp);
                     break;
                 }
@@ -231,8 +231,8 @@ function put_value_values(name, placeholder) {
 }
 
 function parse_disperse_filler (resp) {
-    let massivofplaceholders = ["marka", "manufacturer", "chemical_nature",  "purity_of_disperse_filler",  "dispersity",  "moisture_content",  "density"]
-    let massivofvalue = ["id_type_of_filler", "chemical_nature_iso","purity_of_disperse_filler_iso", "density_iso", "moisture_content_iso", "mfr_iso", "notes"]
+    let massivofplaceholders = ["marka", "manufacturer", "chemical_nature_iso", "chemical_nature",  "purity_of_disperse_filler_iso", "purity_of_disperse_filler",  "dispersity_iso", "dispersity",  "moisture_content_iso", "moisture_content",  "density_iso", "density"]
+    let massivofvalue = ["id_type_of_filler", "notes"]
 
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
