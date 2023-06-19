@@ -334,7 +334,7 @@
                     "name": "density_iso",
                     
                     "type": "select",
-                    "value": "ISO 1183",
+                    "value": "",
                     "title": "Density test standard",
                     "data": [
                       {
