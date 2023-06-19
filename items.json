@@ -340,7 +340,7 @@
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "0",
+                        "value": "",
                         "disabled": true
                       },
                       {
