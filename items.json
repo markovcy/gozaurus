@@ -188,6 +188,12 @@
                 "type": "select",
                 "data": [
                           {
+                            "title": "Choose configuration",
+                            "label": "Choose configuration",
+                            "value": "0",
+                            "disabled": true
+                          },
+                          {
                             "title": "Chopped short fibers",
                             "label": "Chopped short fibers",
                             "value": "1"
@@ -236,6 +242,12 @@
                   "type": "select",
                   "value": "ISO 1172",
                   "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "0",
+                        "disabled": true
+                      },
                       {
                         "title": "ISO 1172",
                         "label": "ISO 1172",
@@ -325,6 +337,12 @@
                     "value": "ISO 1183",
                     "title": "Density test standard",
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "0",
+                        "disabled": true
+                      },
                       {
                         "title": "ISO 1183",
                         "label": "ISO 1183",
