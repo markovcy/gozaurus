@@ -280,7 +280,7 @@
                           "name": "hardness_way",
                           "required": true,
                           "type": "select",
-                          "value": "Shore-A",
+                          "value": "",
                           "title": "Hardness measurement method",
                           "data": [
                             {
@@ -652,7 +652,7 @@
                 {
                 "name": "id_type_additives",
                 "required": true,
-                "value": "1",
+                "value": "",
                 "type": "select",
                 "data": [
                   {
