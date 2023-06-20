@@ -83,6 +83,7 @@ async function getEP_write_placeholders (id) {
 }
 
 async function getEP_in_form_PP () {
+    hideblocks()
     let id_items = document.getElementsByName("id_items")[0].value
     let host = window.location.origin
     let Url
@@ -152,14 +153,14 @@ async function getEP_in_form_PP () {
                 case 2: {
                     let id = [1, 32, 36, 37, 38, 39, 40, 41, 42, 43, -3]
                     showHide(id)
-                    // console.log("Fibrous filler")
+                    console.log("Fibrous filler")
                     parse_fibrous_filler (resp);
                     break;
                 }
                 case 3: {
                     let id = [1, 32, 33, 34, 35, 36, 43, 44, -3]
                     showHide(id)
-                    // console.log("Other filler")
+                    console.log("Other filler")
                     parse_other_filler(resp);
                     break;
                 }
@@ -186,6 +187,25 @@ async function getEP_in_form_PP () {
         }
     }
     }
+}
+
+function hideblocks() {
+    // let selector = $(`input[name=${name}]:visible`)
+    // console.log(name)
+    // console.log(placeholder)
+    // if (selector[0] !== undefined) {
+    //     if (selector[0].placeholder !== undefined) {
+    //         console.log(placeholder)
+    //         selector[0].placeholder = ""
+    //     }
+    // } else {
+    //     console.log(name + " placeholder undefined")
+    //     // $(`[name=${name}]`).val(placeholder)
+    // }
+    for (let i = 1; i < 44; i++) { // выведет 0, затем 1, затем 2
+        document.getElementById(`block${i}`).style.display = "none";
+        console.log((`block${i}`));
+      }
 }
 
 function showHide(id) {

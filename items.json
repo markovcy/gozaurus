@@ -240,7 +240,7 @@
                   "title": "Content reinforcement/filler tests standard",
                   "required": true,
                   "type": "select",
-                  "value": "",
+                  "value": "0",
                   "data": [
                       {
                         "title": "Choose standart",
@@ -305,7 +305,7 @@
                           "name": "hardness_iso",
                           "required": true,
                           "type": "select",
-                        
+                          "value": "0",
                           "title": "Hardness test standard",
                           "data": [
                             {
