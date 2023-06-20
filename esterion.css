@@ -848,7 +848,7 @@ figure button {
     top: 91px;
     left: 26px;
     width: 943px;
-    height: 291px;
+    height: 290px;
     display: flex;
       position: relative;
       align-items: flex-start;
@@ -861,7 +861,7 @@ figure button {
   }
   
   .content_prod {
-    top: 107px;
+    top: 70px;
     left: 24px;
     width: 894px;
     height: 160px;
@@ -1089,6 +1089,7 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
     background-color: rgba(0, 55, 132, 1);
+    border-radius: 7px;
   }
   .text_downloadpdf_prod {
     top: 10px;
@@ -1117,7 +1118,7 @@ figure button {
     flex-shrink: 1;
   }
   .text_mechchar_prod {
-    top: 1px;
+    top: 30px;
     color: rgba(0, 55, 132, 1);
     width: 206px;
     height: auto;
@@ -1132,8 +1133,8 @@ figure button {
     text-decoration: none;
   }
   .expandmore_prod {
-    top: 0px;
-    left: 206px;
+    top: 30px;
+    left: 190px;
     width: 20px;
     height: 20px;
     display: flex;
@@ -1150,7 +1151,7 @@ figure button {
     position: absolute;
   }
   .text_prod {
-    top: 2px;
+    top: 0px;
     color: rgba(118, 129, 148, 1);
     width: 669px;
     height: auto;
@@ -1256,7 +1257,7 @@ figure button {
   
   .divider_side_prod {
     top: 66px;
-    left: 160px;
+    left: 30px;
     width: 993px;
     height: 1px;
     position: absolute;
@@ -1276,6 +1277,40 @@ figure button {
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
+  }
+
+  .down_btn_prod{
+    color: white;
+
+  }
+
+  .show-more-less{
+  top: 250px;
+  left: 830px;
+  color: rgba(0, 55, 132, 1);
+  width: 90px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  background: white;
+  border: white;
+  }
+
+  .navigation_search{
+    border: 2px solid;
+    color: rgba(9, 59, 154, 1); 
+    position: absolute;
+width: 742px;
+height: 24px;
+left: 120px;
+top: 102px;
   }
 
 
