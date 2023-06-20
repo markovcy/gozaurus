@@ -83,7 +83,7 @@ async function getEP_write_placeholders (id) {
 }
 
 async function getEP_in_form_PP () {
-    hideblocks()
+    
     let id_items = document.getElementsByName("id_items")[0].value
     let host = window.location.origin
     let Url
