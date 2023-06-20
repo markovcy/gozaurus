@@ -284,6 +284,12 @@
                           "title": "Hardness measurement method",
                           "data": [
                             {
+                              "title": "Choose standart",
+                              "label": "Choose standart",
+                              "value": "",
+                              "disabled": true
+                            },
+                            {
                               "title": "Shore-A",
                               "label": "Shore-A",
                               "value": "Shore-A"
@@ -371,9 +377,15 @@
                     "name": "mfr_iso",
                     "required": true,
                     "type": "select",
-                    "value": "ISO 1133",
+                    "value": "",
                     
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "",
+                        "disabled": true
+                      },
                       {
                         "title": "ISO 1133",
                         "label": "ISO 1133",
@@ -409,6 +421,12 @@
                     "title": "Tensile modulus, ISO",
                     "data": [
                       {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "",
+                        "disabled": true
+                      },
+                      {
                         "title": "ISO 527-2",
                         "label": "ISO 527-2",
                         "value": "ISO 527-2"
@@ -440,9 +458,15 @@
                     "name": "tensile_strength_break_iso",
                     "required": true,
                     "type": "select",
-                    
+                    "value": "",
                     "title": "Tensile Strength at Break, ISO",
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "",
+                        "disabled": true
+                      },
                       {
                         "title": "ISO 527-2",
                         "label": "ISO 527-2",
@@ -473,13 +497,13 @@
                     "name": "elongation_break_iso",
                     "required": true,
                     "type": "select",
-                    "value": "0",
+                    "value": "",
                     "title": "Elongation at break, ISO",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "0",
+                        "value": "",
                         "disabled": true
                       },
                       {
@@ -551,9 +575,15 @@
                     "name": "melting_temperature_iso",
                     "required": true,
                     "type": "select",
-                   
+                    "value": "",
                     "title": "Melting temperature test standard",
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "",
+                        "disabled": true
+                      },
                       {
                         "title": "ISO 11357-1",
                         "label": "ISO 11357-1",
@@ -656,6 +686,12 @@
                 "type": "select",
                 "data": [
                   {
+                    "title": "Choose standart",
+                    "label": "Choose standart",
+                    "value": "",
+                    "disabled": true
+                  },
+                  {
                     "title": "The curing agent",
                     "label": "The curing agent",
                     "value": "1"
@@ -726,9 +762,15 @@
                     "name": "tensile_strength_iso",
                     "required": true,
                     "type": "select",
-                    "value": "DIN 53504",
+                    "value": "",
                     "title": "Standard for tensile strength tests",
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "",
+                        "disabled": true
+                      },
                       {
                         "title": "DIN 53504",
                         "label": "DIN 53504",
@@ -760,9 +802,15 @@
                     "name": "elongation_break_iso",
                     "required": true,
                     "type": "select",
-                    "value": "DIN 53504",
+                    "value": "",
                     "title": "Standard for tests of relative elongation at break",
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "",
+                        "disabled": true
+                      },
                       {
                         "title": "DIN 53504",
                         "label": "DIN 53504",
@@ -796,9 +844,15 @@
                     "name": "tensile_modulus100_iso",
                     
                     "type": "select",
-                    "value": "DIN 53504",
+                    "value": "",
                     "title": "The standard for testing the modulus of elasticity at 100% deformation",
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "",
+                        "disabled": true
+                      },
                       {
                         "title": "DIN 53504",
                         "label": "DIN 53504",
@@ -830,9 +884,15 @@
                     "name": "tensile_modulus300_iso",
                     
                     "type": "select",
-                    "value": "DIN 53504",
+                    "value": "",
                     "title": "The standard for testing the modulus of elasticity at 300% deformation",
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "",
+                        "disabled": true
+                      },
                       {
                         "title": "DIN 53504",
                         "label": "DIN 53504",
@@ -864,9 +924,15 @@
                     "name": "tear_resistance_iso",
                     
                     "type": "select",
-                    "value": "DIN 53515",
+                    "value": "",
                     "title": "Standard for tests of tear resistance",
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "",
+                        "disabled": true
+                      },
                       {
                         "title": "DIN 53515",
                         "label": "DIN 53515",
@@ -898,9 +964,15 @@
                     "name": "compression_set23_iso",
                     
                     "type": "select",
-                    "value": "ASTM D-395",
+                    "value": "",
                     "title": "Standard for tests of compression set at 23 °C",
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "",
+                        "disabled": true
+                      },
                       {
                         "title": "DIN 53504",
                         "label": "DIN 53504",
@@ -933,9 +1005,15 @@
                     "name": "compression_set70_iso",
                     
                     "type": "select",
-                    "value": "ASTM D-395",
+                    "value": "",
                     "title": "Standard for tests of compression set at 70 °C",
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "",
+                        "disabled": true
+                      },
                       {
                         "title": "DIN 53504",
                         "label": "DIN 53504",
@@ -968,9 +1046,15 @@
                     "name": "compression_set100_iso",
                     
                     "type": "select",
-                    "value": "ASTM D-395",
+                    "value": "",
                     "title": "Standard for tests of compression set at 100 °C",
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "",
+                        "disabled": true
+                      },
                       {
                         "title": "DIN 53504",
                         "label": "DIN 53504",
@@ -1003,9 +1087,15 @@
                     "name": "abrasive_wear_and_tear_iso",
                     
                     "type": "select",
-                    "value": "DIN 53516",
+                    "value": "",
                     "title": "Standard for tests of relative elongation at break*",
                     "data": [
+                      {
+                        "title": "Choose standart",
+                        "label": "Choose standart",
+                        "value": "",
+                        "disabled": true
+                      },
                       {
                         "title": "DIN 53516",
                         "label": "DIN 53516",
@@ -1062,12 +1152,12 @@
                       "name": "id_type_of_filler",
                       "title": "Type of Filler",
                       "required": true,
-                      "value": "0",
+                      "value": "",
                       "type": "select",
                       "data": [{
                         "title": "Choose type of filler",
                         "label": "Choose type of filler",
-                        "value": "0",
+                        "value": "",
                         "disabled": true
                       },
                         {
