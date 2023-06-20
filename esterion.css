@@ -2180,3 +2180,8 @@ figure button {
     left: -5px;
     position: relative;
 }
+
+.suggestions-wrapper {
+  position: relative;
+  top: 25px;
+}

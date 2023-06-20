@@ -1,6 +1,5 @@
+"use strict";
 
-
-let resp
 async function getEP_write_placeholders (id) {
    
     let host = window.location.origin
@@ -83,7 +82,8 @@ async function getEP_write_placeholders (id) {
 }
 
 async function getEP_in_form_PP () {
-    
+    let resp
+
     let id_items = document.getElementsByName("id_items")[0].value
     let host = window.location.origin
     let Url
@@ -297,7 +297,7 @@ function parse_termoplastic_elastomer (resp) {
 
 function parse_additive (resp) {
     let massivofplaceholders = ["marka"]
-    let massivofvalue = ["id_type_additives", "notes"]
+    let massivofvalue = ["id_type_additives", "manufacturer", "notes"]
     console.log(massivofplaceholders, massivofvalue)
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
