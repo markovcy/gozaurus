@@ -1,7 +1,7 @@
 "use strict";
 
 async function getEP_write_placeholders (id) {
-   
+    hideblocks()
     let host = window.location.origin
     let Url = `${host}/table/items/get?limit=1&lang=1&id=${id}`
     let local = JSON.parse(localStorage.USER);
