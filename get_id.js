@@ -202,7 +202,7 @@ function hideblocks() {
     //     console.log(name + " placeholder undefined")
     //     // $(`[name=${name}]`).val(placeholder)
     // }
-    for (let i = 1; i < 44; i++) { // выведет 0, затем 1, затем 2
+    for (let i = 2; i < 44; i++) { // выведет 0, затем 1, затем 2
         document.getElementById(`block${i}`).style.display = "none";
         console.log((`block${i}`));
       }
