@@ -280,13 +280,13 @@
                           "name": "hardness_way",
                           "required": true,
                           "type": "select",
-                          "value": "",
+                          "value": "0",
                           "title": "Hardness measurement method",
                           "data": [
                             {
                               "title": "Choose standart",
                               "label": "Choose standart",
-                              "value": "",
+                              "value": "0",
                               "disabled": true
                             },
                             {
@@ -340,13 +340,13 @@
                     "name": "density_iso",
                     
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     "title": "Density test standard",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -377,13 +377,13 @@
                     "name": "mfr_iso",
                     "required": true,
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -423,7 +423,7 @@
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -458,13 +458,13 @@
                     "name": "tensile_strength_break_iso",
                     "required": true,
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     "title": "Tensile Strength at Break, ISO",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -497,13 +497,13 @@
                     "name": "elongation_break_iso",
                     "required": true,
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     "title": "Elongation at break, ISO",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -575,13 +575,13 @@
                     "name": "melting_temperature_iso",
                     "required": true,
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     "title": "Melting temperature test standard",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -682,13 +682,13 @@
                 {
                 "name": "id_type_additives",
                 "required": true,
-                "value": "",
+                "value": "0",
                 "type": "select",
                 "data": [
                   {
                     "title": "Choose standart",
                     "label": "Choose standart",
-                    "value": "",
+                    "value": "0",
                     "disabled": true
                   },
                   {
@@ -762,13 +762,13 @@
                     "name": "tensile_strength_iso",
                     "required": true,
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     "title": "Standard for tensile strength tests",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -802,13 +802,13 @@
                     "name": "elongation_break_iso",
                     "required": true,
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     "title": "Standard for tests of relative elongation at break",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -844,13 +844,13 @@
                     "name": "tensile_modulus100_iso",
                     
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     "title": "The standard for testing the modulus of elasticity at 100% deformation",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -884,13 +884,13 @@
                     "name": "tensile_modulus300_iso",
                     
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     "title": "The standard for testing the modulus of elasticity at 300% deformation",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -924,13 +924,13 @@
                     "name": "tear_resistance_iso",
                     
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     "title": "Standard for tests of tear resistance",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -964,13 +964,13 @@
                     "name": "compression_set23_iso",
                     
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     "title": "Standard for tests of compression set at 23 °C",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -1005,13 +1005,13 @@
                     "name": "compression_set70_iso",
                     
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     "title": "Standard for tests of compression set at 70 °C",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -1046,13 +1046,13 @@
                     "name": "compression_set100_iso",
                     
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     "title": "Standard for tests of compression set at 100 °C",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -1087,13 +1087,13 @@
                     "name": "abrasive_wear_and_tear_iso",
                     
                     "type": "select",
-                    "value": "",
+                    "value": "0",
                     "title": "Standard for tests of relative elongation at break*",
                     "data": [
                       {
                         "title": "Choose standart",
                         "label": "Choose standart",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                       {
@@ -1152,12 +1152,12 @@
                       "name": "id_type_of_filler",
                       "title": "Type of Filler",
                       "required": true,
-                      "value": "",
+                      "value": "0",
                       "type": "select",
                       "data": [{
                         "title": "Choose type of filler",
                         "label": "Choose type of filler",
-                        "value": "",
+                        "value": "0",
                         "disabled": true
                       },
                         {
@@ -1533,7 +1533,7 @@
               },
               {
                 "id": -1,
-                "title": "",
+                "title": "0",
                 "buttons": [
                       {
                         "title": "Submit",
