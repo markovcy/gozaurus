@@ -240,7 +240,7 @@
                   "title": "Content reinforcement/filler tests standard",
                   "required": true,
                   "type": "select",
-                  "value": "ISO 1172",
+                  "value": "",
                   "data": [
                       {
                         "title": "Choose standart",
@@ -308,6 +308,12 @@
                         
                           "title": "Hardness test standard",
                           "data": [
+                            {
+                              "title": "Choose standart",
+                              "label": "Choose standart",
+                              "value": "0",
+                              "disabled": true
+                            },
                             {
                               "title": "DIN 53505",
                               "label": "DIN 53505",
@@ -415,7 +421,7 @@
                     "columns": [
                     {
                     "name": "tensile_modulus_iso",
-                    
+                    "value": "0",
                     "type": "select",
                    
                     "title": "Tensile modulus, ISO",
@@ -1367,7 +1373,7 @@
                   
                   
                   "type": "text",
-                  "value": "DIN 53504"
+                  "placeholder": "DIN 53504"
                 },
                 {
                   "name": "tensile_strength",
@@ -1391,7 +1397,7 @@
                   "title": "Tensile Modulus tests standard",
                   
                   "type": "text",
-                  "value": "ISO 527-2"
+                  "placeholder": "ISO 527-2"
                 },
                 {
                   "name": "tensile_modulus",
@@ -1415,7 +1421,7 @@
                   "title": "Relative Elongation at Break tests standard",
                   
                   "type": "text",
-                  "value": "DIN 53504"
+                  "placeholder": "DIN 53504"
                 },
                 {
                   "name": "elongation_break",
