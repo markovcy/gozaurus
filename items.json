@@ -514,7 +514,7 @@
                       "message": "Value can't be less than 0"
                     },
                     "min":  0,
-                    "type": "number", 
+                    "type": "text", 
                     "title": "Charpy notched impact strength, kJ/m^2 (ISO 179-1)"
                   }]},
                   { 
