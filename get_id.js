@@ -265,7 +265,7 @@ function parse_fibrous_filler (resp) {
 }
 
 function parse_other_filler (resp) {
-    let massivofplaceholders = ["marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso", "moisture_content", "moisture_content_iso", "density", "density_iso", "content_filler_iso", "content_filler"]
+    let massivofplaceholders = ["marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso", "moisture_content", "moisture_content_iso", "density", "density_iso", "content_filler_iso", "content_filler", "filler_configuration_iso", "filler_configuration_iso"]
     let massivofvalue = ["id_type_of_filler", "notes"]
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
