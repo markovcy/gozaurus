@@ -82,6 +82,7 @@ async function getEP_write_placeholders (id) {
 }
 
 async function getEP_in_form_PP () {
+    hideblocks()
     let resp
 
     let id_items = document.getElementsByName("id_items")[0].value
@@ -128,7 +129,7 @@ async function getEP_in_form_PP () {
         }
         case 2: {
             // console.log("Additives")
-            id = [18, 19, -3]
+            let id = [18, 19, -3]
             showHide(id)
             parse_additive(resp);
             break;
