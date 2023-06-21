@@ -203,7 +203,7 @@ function hideblocks() {
     //     console.log(name + " placeholder undefined")
     //     // $(`[name=${name}]`).val(placeholder)
     // }
-    for (let i = 2; i < 44; i++) { // выведет 0, затем 1, затем 2
+    for (let i = 2; i < 45; i++) { // выведет 0, затем 1, затем 2
         document.getElementById(`block${i}`).style.display = "none";
         console.log((`block${i}`));
       }
@@ -260,27 +260,27 @@ function parse_disperse_filler (resp) {
 
 function parse_fibrous_filler (resp) {
     let massivofplaceholders = ["marka", "manufacturer", "density", "density_iso", "linear_density_iso", "linear_density", "length_of_fibres_iso", "length_of_fibres", "filament_diameter", "filament_diameter_iso", "tensile_strength_iso", "tensile_strength", "tensile_modulus", "tensile_modulus_iso", "elongation_break", "elongation_break_iso", "moisture_content", "moisture_content_iso"]
-    let massivofvalue = ["id_type_of_filler", "notes"]
+    let massivofvalue = ["manufacturer","id_type_of_filler", "notes"]
 
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
 
 function parse_other_filler (resp) {
     let massivofplaceholders = ["marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso", "moisture_content", "moisture_content_iso", "density", "density_iso", "content_filler_iso", "content_filler", "filler_configuration_iso", "filler_configuration_iso"]
-    let massivofvalue = ["id_type_of_filler", "notes"]
+    let massivofvalue = ["id_type_of_filler", "manufacturer",  "notes"]
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
 
 function parse_TKM_disperse_filler (resp) {
     console.log("parse_TKM_disperse_filler")
     let massivofplaceholders = ["surface_resistivity", "marka", "chemical_nature",  "content_reinforcement",  "density",  "mfr", "tensile_modulus",  "tensile_strength_break", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "flammability", "melting_temperature"]
-    let massivofvalue = ["id_content_filler", "content_reinforcement_iso", "density_iso","mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso",  "melting_temperature_iso"]
+    let massivofvalue = [ "manufacturer", "id_content_filler", "content_reinforcement_iso", "density_iso","mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso",  "melting_temperature_iso"]
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
 
 function parse_TKM_fibrous_filler (resp) {
     let massivofplaceholders = [ "marka",  "nature_of_filler",  "content_reinforcement", "density",  "mfr", "tensile_modulus", "tensile_strength_break", "filament_diameter_iso", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "melting_temperature", "flammability", "surface_resistivity"]
-    let massivofvalue = ["id_content_filler", "id_reinforcing", "content_reinforcement_iso",  "density_iso", "mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso", "melting_temperature_iso", "notes"] 
+    let massivofvalue = ["manufacturer","id_content_filler", "id_reinforcing", "content_reinforcement_iso",  "density_iso", "mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso", "melting_temperature_iso", "notes"] 
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
 
