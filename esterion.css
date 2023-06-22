@@ -85,10 +85,7 @@ li.top-mnu-item a {
     height: 90%;
 }
 
-#content {
-    overflow: scroll;
-    height: 99%;
-}
+
 .sidebar-section {
     width: 15%;
     display: table-cell;
