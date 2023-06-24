@@ -80,10 +80,10 @@ li.top-mnu-item a {
     padding-right: 5%;
     padding-top: 3%;
 }
-.content-wrap {
+/* .content-wrap {
     width: 100%;
     height: 90%;
-}
+} */
 
 
 .sidebar-section {
@@ -95,10 +95,10 @@ li.top-mnu-item a {
     width: 100%;
     display: flex;
 }
-.content-section {
+/* .content-section {
     width: 85%;
-    display: table-cell;
-}
+    display: table-cell; */
+/* } */
 .left-mnu-list {
     margin-left: 5px;
     display:grid;

@@ -382,7 +382,7 @@
                       "message": "Value can't be less than 0"
                     },
                     "min":  0,
-                    "type": "number", 
+                    "type": "text", 
                     "title": "MFR, g/10 min "
                   }]},
                   { 
@@ -449,7 +449,7 @@
                       "pattern": "only float number more than zero",  "message": "Value can't be less than 0"
                     },
                     "min":  0,
-                    "type": "number", 
+                    "type": "text", 
                     "title": "Tensile Strength at Break, MPa "
                   }]},
                   { 
@@ -489,7 +489,7 @@
                       "message": "Value can't be less than 0"
                     },
                     "min":  0,
-                    "type": "number", 
+                    "type": "text", 
                     "title": "Elongation at break, % "
                   }]},
                   { 
@@ -503,7 +503,7 @@
                       "message": "Value can't be less than 0"
                     },
                     "min":  0,
-                    "type": "number", 
+                    "type": "text", 
                     "title": "Charpy impact strength, kJ/m^2 (ISO 179-1)"
                   },
                   {
@@ -663,7 +663,7 @@
                     "name": "mfr",
                     "required": true,
                     "min":  0,
-                    "type": "number",
+                    "type": "text",
                     "title": "MFR g/10 min (ISO 1133)"
                   }
                 ]
@@ -1286,7 +1286,7 @@
                     "pattern": "only float number more than zero",  
                     "message": "Value can't be less than 0"
                   },
-                  "type": "number",
+                  "type": "text",
                   "min":  0,
                   "max": 1000
                 }

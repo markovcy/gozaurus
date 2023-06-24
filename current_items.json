@@ -800,13 +800,13 @@
                     "name": "tear_resistance_iso",
                     "required": true,
                     "type": "select",
-                    "value": "DIN 53504",
+                    "value": "DIN 53515",
                     "title": "Standard for tests of tear resistance",
                     "data": [
                       {
-                        "title": "DIN 53504",
-                        "label": "DIN 53504",
-                        "value": "DIN 53504"
+                        "title": "DIN 53515",
+                        "label": "DIN 53515",
+                        "value": "DIN 53515"
                       },
                       {
                         "title": "ASTM D-412",
