@@ -65,7 +65,8 @@
                     "title": "_Select the type of polymer...",
                     "label": "_Select the type of polymer...",
                     "value": "0",
-                    "disabled": true
+                    "disabled": true,
+                    "selected": true
                   },
                   {
                     "title": "Thermoplastic polymer",
