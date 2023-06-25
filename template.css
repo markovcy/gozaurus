@@ -1,0 +1,91 @@
+ul li {
+    position: relative;
+    display: block;
+    margin: 24px 0;
+    padding: 20px 24px 24px 16px;
+    color: #0a1c3b;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #eff0f3;
+    border-left-width: 8px;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+    -webkit-animation-name: Results_fadeInUp__33bo7;
+    animation-name: Results_fadeInUp__33bo7;
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    height: 204px;
+    width: 943px;
+}
+
+ul {
+    position: absolute;
+    width: 999px;
+    height: 3459px;
+    left: 221px;
+    top: 361px;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+h4 {
+    position: relative;
+    width: 263px;
+    height: 22px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+/* identical to box height */
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin: 5px;
+}
+
+h4.companyName {
+    margin-top: 8px;
+    color: #0ca76f;
+    position: relative;
+    margin: 5px 5px 15px 5px;
+}
+
+button {
+    box-sizing: border-box;
+
+position: absolute;
+right: 10px;
+bottom: 10px;
+
+border: 1px solid #093B9A;
+border-radius: 8px;
+height: 40px;
+width: 269px;
+background: white;
+border-radius: 8px;
+
+}
+
+h5 {
+    position: relative;
+width: 123px;
+height: 17px;
+
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height, or 121% */
+
+display: flex;
+align-items: center;
+margin: 5px;
+color: #0178FE;
+}

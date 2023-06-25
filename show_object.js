@@ -1,8 +1,22 @@
-function showObject(data, thisForm) {
-    if (!data) {
-        alert('no results!')
-        return false;
+let local = JSON.parse(localStorage.USER);
+let token1 = local["token"]
+let r
+let resp
+
+let Url = "http://164.68.125.44:34351/search/list/?lang=en&value=pm&count=10&html=true"
+
+let response = await fetch(Url, {
+    headers: {
+        Authorization: "Bearer " + token1
     }
+  });
+
+if (response.ok) {
+    resp = await response.text()
+}
+
+let pars = resp.split('</option>')
+
 
     let divContent = $('#content');
     divContent.html('');
@@ -12,7 +26,7 @@ function showObject(data, thisForm) {
         div = divContent.children(':last').attr('id', data[x].id)
         div.append('<div>');
         titleDiv = div.children(':last')
-        titleDiv.append('<h3> Group: <a href="/api/v1/search/?name=' + data[x].title + '" target="search">' + data[x].title + '</a></h3>');
+        titleDiv.append(data[x]);
         if (data[x].abbr > "") {
             titleDiv.append('<h4> Search as ' + data[x].abbr + '</h4>');
         }
@@ -59,4 +73,43 @@ function showObject(data, thisForm) {
             }
         }
     }
+}
+
+
+
+function showResult(data) {
+    for (x in data) {
+        divContent.append(        `<div class="step0-resultsfields${x}">
+                <div class="step0-resultfield1">
+                  <div class="btn0">
+                    <span class="step0-text16">
+                      <span>Show all products</span>
+                    </span>
+                    <div class="step0-expandmore1">
+                    </div>
+                  </div>
+                  <div class="step0-links">
+                    <div class="step0-linkonartcl">
+                      <div class="step0-btnreadartcl">
+                        <div class="step0-icnlink">
+                        </div>
+                        <span class="step0-text18"><span>Read an article</span></span>
+                      </div>
+                    </div>
+                    <div class="step0-additiveslist">
+                      <div class="step0-btnreadartcl1">
+                        <div class="step0-icnlink1">
+                        </div>
+                        <span class="step0-text20">
+                          <span>Open additives list</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="step0-text22"><span>${data[x].company_names}</span></span>
+                  <span class="step0-text24">
+                    <span>${data[x].title}</span>
+                  </span>
+                </div>
+              </div>`)}
 }

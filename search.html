@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="search.css" type="text/css" media="screen">
+</head>
+<body>
+    <div id="id">
+
+    </div>
+    <!-- <div class="content">
+      <div class="resultsection">
+            <div class="btn">
+              <span class="button_text">
+                <span>Show all products</span>
+              </span>
+              <div class="step0-expandmore1">
+              </div>
+            </div>
+            <div class="links">
+              <div class="linkonartcl">
+                <div class="btnreadartcl">
+                  <div class="step0-icnlink">
+                  </div>
+                  <span class="article"><span>Read an article</span></span>
+                </div>
+              </div>
+              <div class="additiveslist">
+                <div class="btnreadartcl1">
+                  <div class="step0-icnlink1">
+                  </div>
+                  <span class="step0-text20">
+                    <span>Open additives list</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <span class="name_polymer"><span>Menzolit</span></span>
+            <span class="name_firm">
+              <span>Unsaturated vinyl compounds</span>
+            </span>
+      </div>  
+    </div> -->
+
+        
+    </body>
+    <script>
+      let divcontent = document.getElementsByClassName("content")
+      divcontent.append("div")
+
+      function create(data) {
+        // let data 
+        let len = data
+        let i = 0
+        let div = document.getElementById("id")
+        let div_add = '<div class="resultsection"><div class="btn"><span class="button_text"><span>Show all products</span></span><div class="step0-expandmore1"></div></div><div class="links"><div class="linkonartcl"><div class="btnreadartcl"><div class="step0-icnlink"></div><span class="article"><span>Read an article</span></span></div></div><div class="additiveslist"><div class="btnreadartcl1"><div class="step0-icnlink1"></div><span class="step0-text20"><span>Open additives list</span></span></div></div></div><span class="name_polymer"><span>Menzolit</span></span><span class="name_firm"><span>Unsaturated vinyl compounds</span></span></div>'
+      
+        while (i < len) {
+          console.log(i)
+          div.insertAdjacentHTML("beforeend", div_add)
+          i++
+        }
+      }
+      
+
+      
+
+    </script>
+    
+</html>
