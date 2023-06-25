@@ -66,21 +66,18 @@
           },
           {
               "name": "manufacturer",
-              "required": true,
               "type": "text",
               "title": "Material brand"
               
             },
           {
             "name": "batch_number",
-            "required": true,
             "min": 0,
             "type": "number",
             "title": "Batch number"
           },
           {
             "name": "batch_volume",
-            "required": true,
             "min": 0,
             "type": "number",
             "title": "Batch volume, kg"
