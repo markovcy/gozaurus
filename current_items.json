@@ -1277,7 +1277,7 @@
                     "name": "notes",
                     "required": true,
                     "type": "text",
-                    "title": "Notes",
+                    "title": "Notes"
                     
                   }]},
                   {
