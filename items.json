@@ -1390,17 +1390,14 @@
                     
                     "type": "file",
                     "title": "Presentation"
-                  },
-                  {
-                    "buttons": [
-                          {
-                            "title": "Submit",
-                            "type": "submit",
-                            "position": true
-                          }
-                    ]
                   }
-                ]
+                ],
+                "buttons": [
+                  {
+                    "title": "Submit",
+                    "type": "submit"
+                  }
+            ]
               }
               
     ]     

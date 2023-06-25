@@ -94,7 +94,7 @@
           }],
           "buttons": [
             {
-              "title": "Get value",
+              "title": "Test value",
               "type": "custom",
               "disabled": "onkey",
               "OnClick": "getEP_in_form_PP (); return false"
