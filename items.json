@@ -1392,12 +1392,11 @@
                 ]
               },
               {
-                "id": -1,
-                "title": "0",
                 "buttons": [
                       {
                         "title": "Submit",
-                        "type": "submit"
+                        "type": "submit",
+                        "position": true
                       }
                 ]
               }
