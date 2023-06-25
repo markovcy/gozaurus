@@ -1225,15 +1225,14 @@
                   {
                     "name": "methods_recycling",
                     "required": true,
-                    "type": "text",
+                    "type": "textarea",
                     "title": "Processing methods"
                   },
                   {
                     "name": "using_sectors",
                     "required": true,
-                    "type": "text",
-                    "title": "Fields of application",
-                    "readOnly": true
+                    "type": "textarea",
+                    "title": "Fields of application"
                   
                   },
                   {

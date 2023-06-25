@@ -312,7 +312,7 @@ function parse_additive (resp) {
     do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
 }
 
-function do_foreach (resp, massivofplaceholders, massivofvalue) {
+function do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea) {
     console.log(massivofplaceholders)
     console.log(massivofvalue)
     console.log(massivotextarea)
