@@ -59,12 +59,11 @@
                 "name": "id_type_material",
                 "title": "Type polymer material",
                 "required": true,
-                "value": "0",
                 "type": "select",
                 "data": [
                   {
-                    "title": "Select the type of polymer...",
-                    "label": "Select the type of polymer...",
+                    "title": "_Select the type of polymer...",
+                    "label": "_Select the type of polymer...",
                     "value": "0",
                     "disabled": true
                   },
