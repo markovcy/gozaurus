@@ -1228,7 +1228,7 @@
                   {
                     "name": "methods_recycling",
                     "required": true,
-                    "type": "textarea",
+                    "type": "text",
                     "title": "Processing methods"
                   },
                   {
@@ -1240,9 +1240,9 @@
                   },
                   {
                     "name": "notes",
+                    "required": true,
                     "type": "text",
-                    "title": "Notes",
-                    "readOnly": true
+                    "title": "Notes"
                   }]},
                   {
                     "id": -2,
