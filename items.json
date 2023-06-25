@@ -1395,7 +1395,8 @@
                 "buttons": [
                   {
                     "title": "Submit",
-                    "type": "submit"
+                    "type": "submit",
+                    "position": true
                   }
             ]
               }

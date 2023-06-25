@@ -1267,17 +1267,14 @@
                     "type": "file",
                     "title": "Presentation"
                   }
-                ]
-              },
-              {
-                "id": -1,
-                "title": "",
+                ],
                 "buttons": [
-                      {
-                        "title": "Submit",
-                        "type": "submit"
-                      }
-                ]
+                  {
+                    "title": "Submit",
+                    "type": "submit",
+                    "position": true
+                  }
+            ]
               }
     ]     
 
