@@ -251,7 +251,7 @@ function put_value_values(name, placeholder) {
     }
 }
 
-put_textarea(name, placeholder) {
+function put_textarea(name, placeholder) {
     console.log(name)
     console.log(placeholder)
     let selector = $(`textarea[name=${name}]:visible`);
