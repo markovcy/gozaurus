@@ -1242,7 +1242,7 @@
                   {
                     "name": "notes",
                     "required": true,
-                    "type": "text",
+                    "type": "textarea",
                     "title": "Notes"
                   }]},
                   {
