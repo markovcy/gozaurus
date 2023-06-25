@@ -547,48 +547,7 @@
                   }]
             
               },
-              {
-                "id": 18,
-                "title": "Basic Information",
-                "description": "Which polymer to use additive with",
-                "columns": [
-                  {
-                    "name": "id_polymers",
-                    "required": true,
-                    "error": {
-                      "message": "Field is required"
-                    },
-                    "suggestions":  "/search/list",
-                    "type": "select",
-                    "title": "Name of the polymer to use additive with"
-                  }, 
-                  {
-                    "name": "manufacturer_company_dealer",
-                    "required": true,
-                    "error": {
-                      "message": "Field is required"
-                    },
-                    "type": "text",
-                    "value": "Esterion",
-                    "title": "Manufacturer company name or dealer name"
-                  },
-                  {
-                    "name": "marka",
-                    
-                    "type": "text",
-                    "title": "Commercial product name"
-                  },
-                  {
-                    "name": "manufacturer",
-                    "required": true,
-                    "error": {
-                      "message": "Field is required"
-                    },
-                    "type": "text",
-                    
-                    "title": "Manufacturer name"
-                  }]
-                },
+              
               { 
                 "id": 19,
                 "title": "Type of additives",
@@ -1269,13 +1228,12 @@
                   {
                     "name": "using_sectors",
                     "required": true,
-                    "type": "textarea",
+                    "type": "text",
                     "title": "Fields of application"
                   
                   },
                   {
                     "name": "notes",
-                    "required": true,
                     "type": "text",
                     "title": "Notes",
                     "readOnly": true
