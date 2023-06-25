@@ -297,8 +297,8 @@ function parse_termoplastic_elastomer (resp) {
 }
 
 function parse_additive (resp) {
-    let massivofplaceholders = ["marka", "manufacturer", "methods_recycling", "using_sectors"]
-    let massivofvalue = ["id_type_additives", "notes"]
+    let massivofplaceholders = ["marka", "manufacturer", "methods_recycling", "using_sectors", "notes"]
+    let massivofvalue = ["id_type_additives"]
     console.log(massivofplaceholders, massivofvalue)
     do_foreach (resp, massivofplaceholders, massivofvalue)
 }
@@ -311,6 +311,8 @@ function do_foreach (resp, massivofplaceholders, massivofvalue) {
     });
     if (massivofvalue !== undefined)
     massivofvalue.forEach(function(item, i) {
+        console.log(item),
+        console.log(resp[item])
         put_value_values(item, resp[item])
     })
 }

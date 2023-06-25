@@ -1235,7 +1235,8 @@
                     "name": "using_sectors",
                     "required": true,
                     "type": "text",
-                    "title": "Fields of application"
+                    "title": "Fields of application",
+                    "readOnly": true
                   
                   },
                   {
