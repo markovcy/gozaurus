@@ -1366,7 +1366,9 @@
                     
                     "type": "textarea",
                     "title": "Notes"
-                  }]},
+                  }
+                ]
+              },
                   {
                     "id": -2,
                     "title": "Files",
@@ -1388,18 +1390,19 @@
                     
                     "type": "file",
                     "title": "Presentation"
+                  },
+                  {
+                    "buttons": [
+                          {
+                            "title": "Submit",
+                            "type": "submit",
+                            "position": true
+                          }
+                    ]
                   }
                 ]
-              },
-              {
-                "buttons": [
-                      {
-                        "title": "Submit",
-                        "type": "submit",
-                        "position": true
-                      }
-                ]
               }
+              
     ]     
 
 }
