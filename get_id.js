@@ -251,6 +251,14 @@ function put_value_values(name, placeholder) {
     }
 }
 
+put_textarea(name, placeholder) {
+    console.log(name)
+    console.log(placeholder)
+    let selector = $(`textarea[name=${name}]:visible`);
+    console.log(selector)
+    console.log(selector[0])
+}
+
 function parse_disperse_filler (resp) {
     let massivofplaceholders = ["marka", "chemical_nature_iso", "chemical_nature",  "purity_of_disperse_filler_iso", "purity_of_disperse_filler",  "dispersity_iso", "dispersity",  "moisture_content_iso", "moisture_content",  "density_iso", "density"]
     let massivofvalue = ["manufacturer", "id_type_of_filler", "notes"]
@@ -297,15 +305,17 @@ function parse_termoplastic_elastomer (resp) {
 }
 
 function parse_additive (resp) {
-    let massivofplaceholders = ["marka", "manufacturer", "methods_recycling", "using_sectors", "notes"]
+    let massivofplaceholders = ["marka", "manufacturer"]
     let massivofvalue = ["id_type_additives"]
-    console.log(massivofplaceholders, massivofvalue)
-    do_foreach (resp, massivofplaceholders, massivofvalue)
+    let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
+    console.log(massivofplaceholders, massivofvalue, massivotextarea)
+    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
 }
 
 function do_foreach (resp, massivofplaceholders, massivofvalue) {
     console.log(massivofplaceholders)
     console.log(massivofvalue)
+    console.log(massivotextarea)
     massivofplaceholders.forEach(function(item, i) {
         put_placeholder_values(item, resp[item])
     });
@@ -314,5 +324,10 @@ function do_foreach (resp, massivofplaceholders, massivofvalue) {
         console.log(item),
         console.log(resp[item])
         put_value_values(item, resp[item])
+    });
+    massivotextarea.forEach(function(item, i) {
+        console.log(item);
+        console.log(resp[item])
+        put_textarea(item, resp[item])
     })
 }
