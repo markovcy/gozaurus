@@ -67,16 +67,9 @@
           {
               "name": "manufacturer",
               "required": true,
-              "type": "select",
-              "title": "Material brand",
-              "data": [
-                {
-                      "title": "ESTPET-A",
-                      "label": "ESTPET-A",
-                      "value": "1"
-                          
-                }
-              ]
+              "type": "text",
+              "title": "Material brand"
+              
             },
           {
             "name": "batch_number",
