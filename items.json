@@ -62,8 +62,8 @@
                 "type": "select",
                 "data": [
                   {
-                    "title": "_Select the type of polymer...",
-                    "label": "_Select the type of polymer...",
+                    "title": "Select the type of polymer...",
+                    "label": "Select the type of polymer...",
                     "value": "0",
                     "disabled": true,
                     "selected": true
