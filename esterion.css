@@ -407,13 +407,23 @@ select.suggestions-constraints.id_polymers-sel.suggestions-select-show {
   top: 25px;
 }
 
-form figcaption {
+/* form figcaption {
     color: black;
     background-color: #fefefe;
     font-style: normal;
     font-family: Inter, sans-serif;
     font-size: 32px;
+} */
+
+form figcaption {
+  color: #697685;
+  background-color: #FAFBFB;
+  font-style: normal;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
+
 figure figcaption {
     color: #0A1C3B;
     background-color: #fefefe;
@@ -2231,4 +2241,11 @@ top: 102px;
 
 .input-label > .suggestions-wrapper {
   width: 102%;
+}
+
+form > h2 {
+  font-size: 32px;
+  font-weight: 500;
+  font: inter, sant-serif;
+  color: #0A1C3B;
 }
