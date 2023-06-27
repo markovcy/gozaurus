@@ -1,9 +1,9 @@
 
 
 {
-    "title": "items",
+    "title": "New Production",
     "action": "/table/items/put",
-    "description": "New Production / Add new products to your company",
+    "description": "Add new products to your company",
     "method": "POST",
     "hideBlock": {
     "data": {
