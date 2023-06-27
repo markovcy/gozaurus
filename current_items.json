@@ -1,5 +1,5 @@
 {
-  "title": "New Production",
+  "title": "Edit Production",
   "action": "/table/items/put",
   "description": "Edit products of your company",
   "method": "POST",

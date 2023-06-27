@@ -2246,6 +2246,7 @@ top: 102px;
 form > h2 {
   font-size: 32px;
   font-weight: 500;
-  font: inter, sant-serif;
+  font-family: inter, sant-serif;
   color: #0A1C3B;
+  text-align: center;
 }
