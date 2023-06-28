@@ -168,7 +168,7 @@ async function getEP_in_form_PP () {
             }
         }
         case 4: {
-            id_content_filler = resp.id_content_filler
+            let id_content_filler = resp.id_content_filler
             switch (id_content_filler) {
                 case 1: {
                     let id = [1, 2, 3, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, -3, -2]
@@ -278,43 +278,43 @@ function parse_disperse_filler (resp) {
 
 function parse_fibrous_filler (resp) {
     let massivofplaceholders = ["marka", "manufacturer", "density", "density_iso", "linear_density_iso", "linear_density", "length_of_fibres_iso", "length_of_fibres", "filament_diameter", "filament_diameter_iso", "tensile_strength_iso", "tensile_strength", "tensile_modulus", "tensile_modulus_iso", "elongation_break", "elongation_break_iso", "moisture_content", "moisture_content_iso"]
-    let massivofvalue = ["manufacturer","id_type_of_filler"]
+    let massivofvalue = ["id_type_of_filler"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
     do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
 }
 
 function parse_other_filler (resp) {
-    let massivofplaceholders = ["marka", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso", "moisture_content", "moisture_content_iso", "density", "density_iso", "content_filler_iso", "content_filler", "filler_configuration_iso", "filler_configuration_iso"]
-    let massivofvalue = ["id_type_of_filler", "manufacturer"]
+    let massivofplaceholders = ["marka", "manufacturer", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso", "moisture_content", "moisture_content_iso", "density", "density_iso", "content_filler_iso", "content_filler", "filler_configuration_iso", "filler_configuration_iso"]
+    let massivofvalue = ["id_type_of_filler"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
     do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
 }
 
 function parse_TKM_disperse_filler (resp) {
     console.log("parse_TKM_disperse_filler")
-    let massivofplaceholders = ["surface_resistivity", "marka", "chemical_nature",  "content_reinforcement",  "density",  "mfr", "tensile_modulus",  "tensile_strength_break", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "flammability", "melting_temperature"]
-    let massivofvalue = [ "manufacturer", "id_content_filler", "content_reinforcement_iso", "density_iso","mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso",  "melting_temperature_iso"]
+    let massivofplaceholders = ["manufacturer", "surface_resistivity", "marka", "chemical_nature",  "content_reinforcement",  "density",  "mfr", "tensile_modulus",  "tensile_strength_break", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "flammability", "melting_temperature"]
+    let massivofvalue = [ "id_content_filler", "content_reinforcement_iso", "density_iso","mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso",  "melting_temperature_iso"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
     do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
 }
 
 function parse_TKM_fibrous_filler (resp) {
-    let massivofplaceholders = [ "marka",  "nature_of_filler",  "content_reinforcement", "density",  "mfr", "tensile_modulus", "tensile_strength_break", "filament_diameter_iso", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "melting_temperature", "flammability", "surface_resistivity"]
-    let massivofvalue = ["manufacturer","id_content_filler", "id_reinforcing", "content_reinforcement_iso",  "density_iso", "mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso", "melting_temperature_iso", "notes"] 
+    let massivofplaceholders = [ "marka", "manufacturer", "nature_of_filler",  "content_reinforcement", "density",  "mfr", "tensile_modulus", "tensile_strength_break", "filament_diameter_iso", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "melting_temperature", "flammability", "surface_resistivity"]
+    let massivofvalue = ["id_content_filler", "id_reinforcing", "content_reinforcement_iso",  "density_iso", "mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso", "melting_temperature_iso", "notes"] 
     let massivotextarea = ["methods_recycling", "using_sectors"]
     do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
 }
 
 function parse_termoplastic_polymer (resp) {
-    let massivofplaceholders = ["marka", "density", "mfr", "tensile_modulus", "tensile_strength_break", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "melting_temperature", "flammability", "surface_resistivity"]
-    let massivofvalue = ["manufacturer", "density_iso", "mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso",  "melting_temperature_iso"]
+    let massivofplaceholders = ["marka", "manufacturer", "density", "mfr", "tensile_modulus", "tensile_strength_break", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "melting_temperature", "flammability", "surface_resistivity"]
+    let massivofvalue = ["density_iso", "mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso",  "melting_temperature_iso"]
     let massivotextarea = ["methods_recycling", "using_sectors"]
     do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
 }
 
 function parse_termoplastic_elastomer (resp) {
-    let massivofplaceholders = ["marka",  "density", "hardness", "mfr", "tensile_strength", "elongation_break", "tensile_modulus100", "tensile_modulus300", "tear_resistance", "compression_set23", "compression_set70", "compression_set100", "abrasive_wear_and_tear", "ozone_resistance", "flammability", "notes"]
-    let massivofvalue = ["manufacturer", "density_iso", "measurement_method", "hardness_way", "hardness_iso", "tensile_strength_iso", "elongation_break_iso", "tensile_modulus100_iso", "tensile_modulus300_iso", "tear_resistance_iso", "compression_set23_iso", "compression_set70_iso", "compression_set100_iso", "abrasive_wear_and_tear_iso"]
+    let massivofplaceholders = ["marka", "manufacturer", "density", "hardness", "mfr", "tensile_strength", "elongation_break", "tensile_modulus100", "tensile_modulus300", "tear_resistance", "compression_set23", "compression_set70", "compression_set100", "abrasive_wear_and_tear", "ozone_resistance", "flammability", "notes"]
+    let massivofvalue = [ "density_iso", "measurement_method", "hardness_way", "hardness_iso", "tensile_strength_iso", "elongation_break_iso", "tensile_modulus100_iso", "tensile_modulus300_iso", "tear_resistance_iso", "compression_set23_iso", "compression_set70_iso", "compression_set100_iso", "abrasive_wear_and_tear_iso"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
     do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
 }
