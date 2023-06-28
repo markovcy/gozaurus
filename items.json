@@ -69,27 +69,27 @@
                     "selected": true
                   },
                   {
-                    "title": "Thermoplastic polymer",
+                    "title": "TP",
                     "label": "Thermoplastic polymer",
                     "value": "1"
                   },
                   {
-                    "title": "Additives",
+                    "title": "MA",
                     "label": "Additives",
                     "value": "8"
                   },
                   {
-                    "title": "Thermoplastic elastomer",
+                    "title": "TPE",
                     "label": "Thermoplastic elastomer",
                     "value": "2"
                   },
                   {
-                    "title": "Fillers",
+                    "title": "F",
                     "label": "Fillers",
                     "value": "7"
                   },
                   {
-                    "title": "Thermoplastic composite materials",
+                    "title": "TPCM",
                     "label": "Thermoplastic composite materials",
                     "value": "4"
                   }
