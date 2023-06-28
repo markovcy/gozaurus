@@ -1320,8 +1320,233 @@ left: 120px;
 top: 102px;
   }
 
-
-line-height: normal;
+.resultsection-modification2 {
+  top: 178px;
+  left: 1px;
+  width: 230px;
+  height: 20px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.resultsection-text58 {
+  top: 1px;
+  color: rgba(0, 55, 132, 1);
+  width: 210px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.resultsection-expandmore2 {
+  top: 20px;
+  left: 230px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.resultsection-bounds2 {
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+.resultsection-shape2 {
+  top: -5.9998779296875px;
+  left: -4px;
+  width: 12px;
+  height: 7px;
+  opacity: 0.54;
+  position: absolute;
+}
+.resultsection-tableau {
+  top: 210px;
+  left: 2px;
+  width: 472px;
+  height: 240px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.resultsection-contentrows {
+  top: 48px;
+  left: 0px;
+  width: 472px;
+  height: 192px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.resultsection-row1 {
+  top: 0px;
+  left: 0px;
+  width: 472px;
+  height: 48px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.resultsection-charecteristicpart {
+  top: 0px;
+  left: 0px;
+  width: 315px;
+  height: 48px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.resultsection-text60 {
+  top: 13px;
+  left: 16px;
+  color: rgba(0, 0, 0, 1);
+  width: 298px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.resultsection-valuepart {
+  top: 0px;
+  left: 315px;
+  width: 157px;
+  height: 48px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.resultsection-text62 {
+  top: 13px;
+  left: 16px;
+  color: rgba(0, 0, 0, 1);
+  width: 125px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.resultsection-row2 {
+  top: 48px;
+  left: 0px;
+  width: 472px;
+  height: 48px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.resultsection-charecteristicpart1 {
+  top: 0px;
+  left: 0px;
+  width: 315px;
+  height: 48px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.resultsection-text64 {
+  top: 13px;
+  left: 16px;
+  color: rgba(0, 0, 0, 1);
+  width: 298px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.resultsection-valuepart1 {
+  top: 0px;
+  left: 315px;
+  width: 157px;
+  height: 48px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.resultsection-text66 {
+  top: 13px;
+  left: 16px;
+  color: rgba(0, 0, 0, 1);
+  width: 125px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.resultsection-row3 {
+  top: 96px;
+  left: 0px;
+  width: 472px;
+  height: 48px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.resultsection-charecteristicpart2 {
+  top: 0px;
+  left: 0px;
+  width: 315px;
+  height: 48px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.resultsection-text68 {
+  top: 13px;
+  left: 16px;
+  color: rgba(0, 0, 0, 1);
+  width: 298px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
   font-stretch: normal;
   text-decoration: none;
 }
