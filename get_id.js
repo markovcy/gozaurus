@@ -33,17 +33,17 @@ async function getEP_write_placeholders (id) {
             parse_termoplastic_polymer(resp);
             break;
         }
-        case 2: {
+        case 8: {
             // console.log("Additives")
             parse_additive(resp);
             break;
         }
-        case 3: {
+        case 2: {
             // console.log("Thermoplastic elastomer")
             parse_termoplastic_elastomer(resp);
             break;
         }
-        case 4:{
+        case 7:{
             id_type_of_filler = resp.id_type_of_filler
             switch (id_type_of_filler) {
                 case 1: {
@@ -63,7 +63,7 @@ async function getEP_write_placeholders (id) {
                 }
             }
         }
-        case 5: {
+        case 4: {
             id_content_filler = resp.id_content_filler
             switch (id_content_filler) {
                 case 1: {
