@@ -127,21 +127,21 @@ async function getEP_in_form_PP () {
             parse_termoplastic_polymer(resp);
             break;
         }
-        case 2: {
+        case 8: {
             // console.log("Additives")
             let id = [18, 19, -3, -2]
             showHide(id)
             parse_additive(resp);
             break;
         }
-        case 3: {
+        case 2: {
             let id = [1, 7, 8, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, -3, -2]
             showHide(id)
             // console.log("Thermoplastic elastomer")
             parse_termoplastic_elastomer(resp);
             break;
         }
-        case 4:{
+        case 7:{
             id_type_of_filler = resp.id_type_of_filler
             switch (id_type_of_filler) {
                 case 1: {
@@ -167,7 +167,7 @@ async function getEP_in_form_PP () {
                 }
             }
         }
-        case 5: {
+        case 4: {
             id_content_filler = resp.id_content_filler
             switch (id_content_filler) {
                 case 1: {
