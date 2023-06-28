@@ -62,35 +62,35 @@
                 "type": "select",
                 "data": [
                   {
-                    "title": "Select the type of polymer...",
-                    "label": "Select the type of polymer...",
+                    "title": " Select the type of polymer...",
+                    "label": " Select the type of polymer...",
                     "value": "0",
                     "disabled": true,
                     "selected": true
                   },
                   {
                     "title": "TP",
-                    "label": "Thermoplastic polymer",
+                    "label": " TP",
                     "value": "1"
                   },
                   {
                     "title": "MA",
-                    "label": "Additives",
+                    "label": "MA",
                     "value": "8"
                   },
                   {
                     "title": "TPE",
-                    "label": "Thermoplastic elastomer",
+                    "label": "TPE",
                     "value": "2"
                   },
                   {
                     "title": "F",
-                    "label": "Fillers",
+                    "label": "F",
                     "value": "7"
                   },
                   {
                     "title": "TPCM",
-                    "label": "Thermoplastic composite materials",
+                    "label": "TPCM",
                     "value": "4"
                   }
                 ]
