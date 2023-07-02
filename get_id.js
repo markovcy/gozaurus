@@ -130,7 +130,7 @@ async function getEP_in_form_PP () {
         }
         case 8: {
             // console.log("Additives")
-            let id = [18, 19, -3, -2]
+            let id = [18, 19, 45, -3, -2]
             showHide(id)
             parse_additive(resp);
             break;
@@ -255,7 +255,7 @@ function put_value_values(name, placeholder) {
 function put_hidden(name, placeholder) {
     console.log(name)
     console.log(placeholder)
-    let selector = $(`select[name=${name}]:hidden`);
+    let selector = $(`select[name=${name}]`);
     console.log(selector)
     console.log(selector[0])
     if (selector !== undefined) {
