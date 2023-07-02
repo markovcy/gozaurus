@@ -1,6 +1,6 @@
 
 /*oleg 10/06/23*/
-/*maryna 08/06/23  4am*/
+/*maryna 02/07/23  4pm*/
 span.label-text {
   position: absolute;
   top: 18px;
@@ -576,8 +576,6 @@ figure button {
   }
   
   .links {
-    top: 86px;
-    left: 24px;
     width: 142px;
     height: 42px;
     display: grid;
@@ -1323,7 +1321,7 @@ top: 102px;
   }
 
 .nav_text{
-color: rgb(9, 59, 154)
+color: rgb(9, 59, 154);
 font-family: Inter, sans-serif;
 font-size: initial;
 }
