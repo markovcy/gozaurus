@@ -255,7 +255,7 @@ function put_value_values(name, placeholder) {
 function put_hidden(name, placeholder) {
     console.log(name)
     console.log(placeholder)
-    let selector = $(`select[name=${name}]`);
+    let selector = $(`input[name=${name}]`);
     console.log(selector)
     console.log(selector.value)
     if (selector !== undefined) {
