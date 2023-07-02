@@ -255,7 +255,7 @@ function put_value_values(name, placeholder) {
 function put_hidden(name, placeholder) {
     console.log(name)
     console.log(placeholder)
-    let selector = $(`select[name=${name}]`);
+    let selector = $(`select[name=${name}]:hidden`);
     console.log(selector)
     console.log(selector[0])
     if (selector !== undefined) {
@@ -346,7 +346,7 @@ function parse_additive (resp) {
     do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea, massivohidden)
 }
 
-function do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea) {
+function do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea, massivohidden) {
     console.log(massivofplaceholders)
     console.log(massivofvalue)
     console.log(massivotextarea)
@@ -367,6 +367,7 @@ function do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
     massivohidden.forEach(function(item, i) {
         console.log(item);
         console.log(resp[item])
+        console.log("hidden")
         put_hidden(item, resp[item])
     })
 }
