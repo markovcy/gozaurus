@@ -504,8 +504,7 @@ figure button {
   }
   
   .btn0 {
-    top: 45px;
-    left: 600px;
+    left: 650px;
     width: 269px;
     height: 40px;
     position: relative;
@@ -518,6 +517,7 @@ figure button {
     width: 269px;
     background: white;
     border-radius: 8px;
+    margin-top: 10px;
   }
 
   .btn0:hover {
@@ -624,7 +624,6 @@ figure button {
     width: 142px;
     height: 17px;
     display: flex;
-    margin-bottom: 5px;
     align-items: flex-start;
     flex-shrink: 1;
   }
