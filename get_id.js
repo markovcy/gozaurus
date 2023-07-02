@@ -119,6 +119,7 @@ async function getEP_in_form_PP () {
     let id_type_of_filler
     console.log(id_type_material)
     console.log(id_type_of_filler)
+  
     switch (id_type_material) {
         case 1: {
             // console.log("Thermoplastic polymer")
@@ -321,7 +322,7 @@ function parse_termoplastic_elastomer (resp) {
 
 function parse_additive (resp) {
     let massivofplaceholders = ["marka", "manufacturer"]
-    let massivofvalue = ["id_type_additives"]
+    let massivofvalue = ["id_type_additives", "id_polymers"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
     do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
 }
