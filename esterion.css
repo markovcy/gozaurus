@@ -456,6 +456,10 @@ figure button {
 
    /* Результаты поиска */
 
+   .main_content{
+    position: relative;
+    background: white;
+   }
    .hidden {
     display: none;
   }
@@ -502,8 +506,7 @@ figure button {
     left: 650px;
     width: 269px;
     height: 40px;
-    display: flex;
-  
+    position: relative;
     align-items: flex-start;
     flex-shrink: 1;
     box-sizing: border-box;
@@ -532,7 +535,7 @@ figure button {
     color: rgba(9, 59, 154, 1);
     width: 221px;
     height: auto;
-  
+    position: relative;
     font-size: 16px;
     font-style: Regular;
     text-align: center;
@@ -565,7 +568,7 @@ figure button {
     width: 32px;
     height: 40px;
     display: flex;
-  
+    position: relative;
     align-items: flex-start;
     flex-shrink: 1;
   }
@@ -575,10 +578,10 @@ figure button {
     left: 24px;
     width: 142px;
     height: 42px;
-    display: flex;
+    display: grid;
   
-    align-items: flex-start;
-    flex-shrink: 1;
+    /*align-items: flex-start;
+    flex-shrink: 1;*/
   }
   .linkonartcl0 {
     top: 0px;
@@ -712,7 +715,7 @@ figure button {
     left: 24px;
     color: rgba(12, 167, 111, 1);
     height: auto;
-  
+    position: relative;
     font-size: 18px;
     font-style: Regular;
     text-align: left;
@@ -727,7 +730,7 @@ figure button {
     left: 24px;
     color: rgba(0, 0, 0, 1);
     height: auto;
-  
+    position: relative;
     font-size: 18px;
     font-style: Semi Bold;
     text-align: left;
@@ -803,13 +806,14 @@ figure button {
     flex-shrink: 1;
   }
   
-  .res_amount {
-    top: 150px;
-    left: 260px;
+.res_amount {
+    /*top: 150px;
+    left: 260px;*/
     color: rgba(0, 0, 0, 1);
     width: 490px;
     height: auto;
-  
+    margin: 5px;
+    position: relative;
     font-size: 24px;
     font-style: Semi Bold;
     text-align: left;
@@ -1311,13 +1315,13 @@ figure button {
   }
 
   .navigation_search{
-    border: 2px solid;
-    color: rgba(9, 59, 154, 1); 
-  
+
 width: 742px;
 height: 24px;
 left: 120px;
 top: 102px;
+font-family: Inter, sans-serif;
+font-size: initial;
   }
 
 .resultsection-modification2 {
