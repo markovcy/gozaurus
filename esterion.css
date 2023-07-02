@@ -2616,6 +2616,13 @@ top: 102px;
     position: relative;
 }
 
+#block-2 div#divField0 label.input-label::before {
+  content: "*";
+  color: red;
+  left: -5px;
+  position: relative;
+}
+
 .suggestions-wrapper {
   position: relative;
   top: 25px;

@@ -1218,6 +1218,36 @@
                 }
               ]
             },
+            {
+              "id": 1,
+              "title": "Basic Information",
+              "description": "To which polymer does the product belong, if it is not in list, contact the site administration",
+              "columns": [
+                {
+                  "name": "id_polymers",
+                  "error": {
+                    "message": "Field is required"
+                  },
+                  "type": "text",
+                  "title": "Name of material"
+                },
+                {
+                  "name": "marka",
+                  
+                  "type": "text",
+                  "title": "Material brand"
+                },
+                {
+                  "name": "manufacturer",
+                  "required": true,
+                  "error": {
+                    "message": "Field is required"
+                  },
+                  "type": "text",
+                  "title": "Producer"
+                }
+                ]
+              },
               {
                 "id": -3,
                 "title": "Additional information",
