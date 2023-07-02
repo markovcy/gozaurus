@@ -1319,9 +1319,14 @@ width: 742px;
 height: 24px;
 left: 120px;
 top: 102px;
+
+  }
+
+.nav_text{
+color: rgb(9, 59, 154)
 font-family: Inter, sans-serif;
 font-size: initial;
-  }
+}
 
 .resultsection-modification2 {
   top: 178px;
