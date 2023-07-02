@@ -343,7 +343,7 @@ function parse_additive (resp) {
     let massivofplaceholders = ["marka", "manufacturer"]
     let massivofvalue = ["id_type_additives"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
-    let massivohidden = ["id_polymers"]
+    let massivohidden = ["id_polymers", "id_type_material", "manufacturer"]
     do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea, massivohidden)
 }
 

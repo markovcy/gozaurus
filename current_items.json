@@ -1232,7 +1232,7 @@
                   "title": "Name of material"
                 },
                 {
-                  "name": "marka",
+                  "name": "id_type_material",
                   
                   "type": "text",
                   "title": "Material brand"
