@@ -252,6 +252,24 @@ function put_value_values(name, placeholder) {
     }
 }
 
+function put_hidden(name, placeholder) {
+    console.log(name)
+    console.log(placeholder)
+    let selector = $(`select[name=${name}]`);
+    console.log(selector)
+    console.log(selector[0])
+    if (selector !== undefined) {
+        if (selector !== undefined) {
+            console.log(name)
+            console.log(placeholder)
+            selector.val(placeholder)
+        }
+    } else {
+        console.log(name + " select undefined")
+        // $(`[name=${name}]`).val(placeholder)
+    }
+}
+
 function put_textarea(name, placeholder) {
     console.log(name)
     console.log(placeholder)
@@ -324,7 +342,8 @@ function parse_additive (resp) {
     let massivofplaceholders = ["marka", "manufacturer"]
     let massivofvalue = ["id_type_additives", "id_polymers"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
-    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
+    let massivohidden = ["id_polymers"]
+    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea, massivohidden)
 }
 
 function do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea) {
@@ -344,6 +363,11 @@ function do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
         console.log(item);
         console.log(resp[item])
         put_textarea(item, resp[item])
+    })
+    massivohidden.forEach(function(item, i) {
+        console.log(item);
+        console.log(resp[item])
+        put_hidden(item, resp[item])
     })
 }
  
