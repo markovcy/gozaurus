@@ -460,6 +460,7 @@ figure button {
     position: relative;
     background: white;
    }
+
    .hidden {
     display: none;
   }
@@ -489,8 +490,8 @@ figure button {
     top: 95px;
     left: 28px;
     width: 943px;
-    height: 204px;
-    display: flex;
+    height: auto;
+    display: grid;
     position: relative;
     align-items: flex-start;
     flex-shrink: 1;
@@ -498,12 +499,13 @@ figure button {
     border: 1px solid #eff0f3;
     border-left-width: 8px;
     box-sizing: border-box;
+    padding: 20px;
     margin-bottom: 20px;
   }
   
   .btn0 {
-    top: 144px;
-    left: 650px;
+    top: 45px;
+    left: 600px;
     width: 269px;
     height: 40px;
     position: relative;
@@ -579,7 +581,7 @@ figure button {
     width: 142px;
     height: 42px;
     display: grid;
-  
+    position: relative;
     /*align-items: flex-start;
     flex-shrink: 1;*/
   }
@@ -619,12 +621,10 @@ figure button {
     text-decoration: none;
   }
   .additiveslist0 {
-    top: 25px;
-    left: 0px;
     width: 142px;
     height: 17px;
     display: flex;
-  
+    margin-bottom: 5px;
     align-items: flex-start;
     flex-shrink: 1;
   }
@@ -711,8 +711,6 @@ figure button {
     text-decoration: none;
   }
   .manufacturer0 {
-    top: 50px;
-    left: 24px;
     color: rgba(12, 167, 111, 1);
     height: auto;
     position: relative;
@@ -724,10 +722,10 @@ figure button {
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
+    position: relative;
+    margin-bottom: 5px;
   }
   .polymer_group0 {
-    top: 20px;
-    left: 24px;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: relative;
@@ -739,6 +737,8 @@ figure button {
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
+    position: relative;
+    margin-bottom: 5px;
   }
  
   .fillerslist0 {
