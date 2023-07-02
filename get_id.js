@@ -257,12 +257,13 @@ function put_hidden(name, placeholder) {
     console.log(placeholder)
     let selector = $(`select[name=${name}]`);
     console.log(selector)
-    console.log(selector[0])
+    console.log(selector.value)
     if (selector !== undefined) {
         if (selector !== undefined) {
             console.log(name)
             console.log(placeholder)
             selector.val(placeholder)
+            console.log(selector.value)
         }
     } else {
         console.log(name + " select undefined")
@@ -340,7 +341,7 @@ function parse_termoplastic_elastomer (resp) {
 
 function parse_additive (resp) {
     let massivofplaceholders = ["marka", "manufacturer"]
-    let massivofvalue = ["id_type_additives", "id_polymers"]
+    let massivofvalue = ["id_type_additives"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
     let massivohidden = ["id_polymers"]
     do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea, massivohidden)
