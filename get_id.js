@@ -123,7 +123,7 @@ async function getEP_in_form_PP () {
     switch (id_type_material) {
         case 1: {
             // console.log("Thermoplastic polymer")
-            let id = [1, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 46, 47]
+            let id = [1, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 45, 46, 47]
             showHide(id)
             parse_termoplastic_polymer(resp);
             break;
@@ -136,7 +136,7 @@ async function getEP_in_form_PP () {
             break;
         }
         case 2: {
-            let id = [1, 7, 8, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 46, 47]
+            let id = [1, 7, 8, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 45, 46, 47]
             showHide(id)
             // console.log("Thermoplastic elastomer")
             parse_termoplastic_elastomer(resp);
@@ -146,21 +146,21 @@ async function getEP_in_form_PP () {
             id_type_of_filler = resp.id_type_of_filler
             switch (id_type_of_filler) {
                 case 1: {
-                    let id = [1, 32, 33, 34, 35, 36, 43, 46, 47]
+                    let id = [1, 32, 33, 34, 35, 36, 43, 45, 46, 47]
                     showHide(id)
                     console.log("Disperse filler")
                     parse_disperse_filler(resp);
                     break;
                 }
                 case 2: {
-                    let id = [1, 32, 36, 37, 38, 39, 40, 41, 42, 43, 46, 47]
+                    let id = [1, 32, 36, 37, 38, 39, 40, 41, 42, 43, 45, 46, 47]
                     showHide(id)
                     console.log("Fibrous filler")
                     parse_fibrous_filler (resp);
                     break;
                 }
                 case 3: {
-                    let id = [1, 32, 33, 34, 35, 36, 43, 44, 46, 47]
+                    let id = [1, 32, 33, 34, 35, 36, 43, 44, 45, 46, 47]
                     showHide(id)
                     console.log("Other filler")
                     parse_other_filler(resp);
@@ -172,14 +172,14 @@ async function getEP_in_form_PP () {
             let id_content_filler = resp.id_content_filler
             switch (id_content_filler) {
                 case 1: {
-                    let id = [1, 2, 3, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 46, 47]
+                    let id = [1, 2, 3, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 45, 46, 47]
                     showHide(id)
                     console.log("Thermoplastic composite materials => Disperse filler")
                     parse_TKM_disperse_filler(resp);
                     break;
                 }
                 case 2: {
-                    let id = [1, 2, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 46, 47]
+                    let id = [1, 2, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 45, 46, 47]
                     showHide(id)
                     console.log("Thermoplastic composite materials => Fibrous filler")
                     parse_TKM_fibrous_filler(resp);
@@ -293,21 +293,24 @@ function parse_disperse_filler (resp) {
     let massivofplaceholders = ["marka", "chemical_nature_iso", "chemical_nature",  "purity_of_disperse_filler_iso", "purity_of_disperse_filler",  "dispersity_iso", "dispersity",  "moisture_content_iso", "moisture_content",  "density_iso", "density"]
     let massivofvalue = ["manufacturer", "id_type_of_filler"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
-    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
+    let massivohidden = ["id_polymers", "id_type_material"]
+    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea, massivohidden)
 }
 
 function parse_fibrous_filler (resp) {
     let massivofplaceholders = ["marka", "manufacturer", "density", "density_iso", "linear_density_iso", "linear_density", "length_of_fibres_iso", "length_of_fibres", "filament_diameter", "filament_diameter_iso", "tensile_strength_iso", "tensile_strength", "tensile_modulus", "tensile_modulus_iso", "elongation_break", "elongation_break_iso", "moisture_content", "moisture_content_iso"]
     let massivofvalue = ["id_type_of_filler"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
-    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
+    let massivohidden = ["id_polymers", "id_type_material"]
+    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea, massivohidden)
 }
 
 function parse_other_filler (resp) {
     let massivofplaceholders = ["marka", "manufacturer", "manufacturer", "chemical_nature", "chemical_nature_iso", "purity_of_disperse_filler", "purity_of_disperse_filler_iso", "dispersity", "dispersity_iso", "moisture_content", "moisture_content_iso", "density", "density_iso", "content_filler_iso", "content_filler", "filler_configuration_iso", "filler_configuration_iso"]
     let massivofvalue = ["id_type_of_filler"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
-    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
+    let massivohidden = ["id_polymers", "id_type_material"]
+    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea, massivohidden)
 }
 
 function parse_TKM_disperse_filler (resp) {
@@ -315,28 +318,32 @@ function parse_TKM_disperse_filler (resp) {
     let massivofplaceholders = ["manufacturer", "surface_resistivity", "marka", "chemical_nature",  "content_reinforcement",  "density",  "mfr", "tensile_modulus",  "tensile_strength_break", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "flammability", "melting_temperature"]
     let massivofvalue = [ "id_content_filler", "content_reinforcement_iso", "density_iso","mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso",  "melting_temperature_iso"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
-    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
+    let massivohidden = ["id_polymers", "id_type_material"]
+    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea, massivohidden)
 }
 
 function parse_TKM_fibrous_filler (resp) {
     let massivofplaceholders = [ "marka", "manufacturer", "nature_of_filler",  "content_reinforcement", "density",  "mfr", "tensile_modulus", "tensile_strength_break", "filament_diameter_iso", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "melting_temperature", "flammability", "surface_resistivity"]
     let massivofvalue = ["id_content_filler", "id_reinforcing", "content_reinforcement_iso",  "density_iso", "mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso", "melting_temperature_iso", "notes"] 
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
-    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
+    let massivohidden = ["id_polymers", "id_type_material"]
+    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea, massivohidden)
 }
 
 function parse_termoplastic_polymer (resp) {
     let massivofplaceholders = ["marka", "manufacturer", "density", "mfr", "tensile_modulus", "tensile_strength_break", "elongation_break", "charpy_notched_impact_strength", "charpy_impact_strength", "vicat", "melting_temperature", "flammability", "surface_resistivity"]
     let massivofvalue = ["density_iso", "mfr_iso", "tensile_modulus_iso", "tensile_strength_break_iso", "elongation_break_iso",  "melting_temperature_iso"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
-    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
+    let massivohidden = ["id_polymers", "id_type_material"]
+    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea, massivohidden)
 }
 
 function parse_termoplastic_elastomer (resp) {
     let massivofplaceholders = ["marka", "manufacturer", "density", "hardness", "mfr", "tensile_strength", "elongation_break", "tensile_modulus100", "tensile_modulus300", "tear_resistance", "compression_set23", "compression_set70", "compression_set100", "abrasive_wear_and_tear", "ozone_resistance", "flammability", "notes"]
     let massivofvalue = [ "density_iso", "measurement_method", "hardness_way", "hardness_iso", "tensile_strength_iso", "elongation_break_iso", "tensile_modulus100_iso", "tensile_modulus300_iso", "tear_resistance_iso", "compression_set23_iso", "compression_set70_iso", "compression_set100_iso", "abrasive_wear_and_tear_iso"]
     let massivotextarea = ["methods_recycling", "using_sectors", "notes"]
-    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea)
+    let massivohidden = ["id_polymers", "id_type_material"]
+    do_foreach (resp, massivofplaceholders, massivofvalue, massivotextarea, massivohidden)
 }
 
 function parse_additive (resp) {
