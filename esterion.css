@@ -103,9 +103,10 @@ li.top-mnu-item a {
     margin-left: 5px;
     display:grid;
     background-color: transparent;
+    color: #768194;
 }
 li.left-mnu-item a {
-    color: white;
+    color: #768194;
 }
 ul {
   list-style-type: none;
