@@ -1237,21 +1237,11 @@
                   "hidden": true,
                   "type": "text",
                   "title": "Material brand"
-                },
-                {
-                  "name": "manufacturer",
-                  "required": true,
-                  "error": {
-                    "message": "Field is required"
-                  },
-                  "type": "text",
-                  "title": "Producer",
-                  "hidden": true
                 }
                 ]
               },
               {
-                "id": -3,
+                "id": 46,
                 "title": "Additional information",
                 "columns": [
                   {
@@ -1274,12 +1264,11 @@
                     "title": "Notes"
                   }]},
                   {
-                    "id": -2,
+                    "id": 47,
                     "title": "Files",
                     "columns": [
                   {
                     "name": "tds",
-                    "required": true,
                     "type": "file",
                     "title": "Technical data sheet (TDS)"
                   },
@@ -1291,7 +1280,6 @@
                   },
                   {
                     "name": "presentation",
-                    "required": true,
                     "type": "file",
                     "title": "Presentation"
                   }
