@@ -93,7 +93,6 @@
           },
           {
             "name": "id_type_material",
-            "hidden": true,
             "type": "text",
             "title": "Type polymer material"
           },
@@ -1242,28 +1241,6 @@
                 }
               ]
             },
-            {
-              "id": 45,
-              "title": "Basic Information",
-              "description": "To which polymer does the product belong, if it is not in list, contact the site administration",
-              "columns": [
-                {
-                  "name": "id_polymers",
-                  "error": {
-                    "message": "Field is required"
-                  },
-                  "type": "text",
-                  "title": "Name of material",
-                  "hidden": true
-                },
-                {
-                  "name": "id_type_material",
-                  "hidden": true,
-                  "type": "text",
-                  "title": "Material brand"
-                }
-                ]
-              },
               {
                 "id": 46,
                 "title": "Additional information",
