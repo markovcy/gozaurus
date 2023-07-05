@@ -85,7 +85,6 @@ async function getEP_in_form_PP () {
     hideblocks()
     let resp
    
-    console.log(marka)
     let id_items = document.getElementsByName("id_items")[0].value
     let host = window.location.origin
     let Url
