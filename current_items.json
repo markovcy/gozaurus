@@ -81,7 +81,31 @@
             "min": 0,
             "type": "number",
             "title": "Batch volume, kg"
-          }],
+          },
+          {
+            "name": "id_polymers",
+            "error": {
+              "message": "Field is required"
+            },
+            "type": "text",
+            "title": "Name of material",
+            "hidden": true
+          },
+          {
+            "name": "id_type_material",
+            "hidden": true,
+            "type": "text",
+            "title": "Type polymer material"
+          },
+          {
+            "name": "marka",
+            "hidden": true,
+            "type": "text",
+            "title": "Material brand",
+            "required": true
+          }
+        
+        ],
           "buttons": [
             {
               "title": "Test value",
@@ -1274,7 +1298,6 @@
                   },
                   {
                     "name": "msds",
-                    "required": true,
                     "type": "file",
                     "title": "Material safety data sheet (MSDS)"
                   },
