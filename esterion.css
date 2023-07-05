@@ -897,14 +897,12 @@ figure button {
     flex-shrink: 1;
   }
   .link_tds_prod {
-    top: 0px;
-    left: 0px;
     width: 142px;
-    height: 24.000024795532227px;
     display: flex;
-  
+    height: 24px;
     align-items: flex-start;
     flex-shrink: 1;
+    margin-bottom: 15px;
   }
   .text_tds_prod {
     top: 2px;
@@ -921,6 +919,7 @@ figure button {
     line-height: normal;
     font-stretch: normal;
     text-decoration: underline;
+	  
   }
   .icndoc_prod {
     top: 0px;
@@ -940,50 +939,25 @@ figure button {
   
   }
   .vector0_prod {
-    top: -4.547473508864641e-13px;
-    left: 2.859375px;
-    width: 18px;
+    width: 25px;
     height: 24px;
   
   }
-  .vector1_prod {
-    top: 12px;
-    left: 7px;
-    width: 10px;
-    height: 1px;
-  
-  }
-  .vector2_prod {
-    top: 15px;
-    left: 7px;
-    width: 10px;
-    height: 1px;
-  
-  }
-  .vector3_prod {
-    top: 18px;
-    left: 7px;
-    width: 10px;
-    height: 1px;
-  
-  }
   .link_msds_prod {
-    top: 36px;
-    left: 0px;
     width: 156px;
-    height: 24.000024795532227px;
     display: flex;
-  
+    height: 24px;
+    position: relative;
     align-items: flex-start;
     flex-shrink: 1;
+    margin-bottom: 15px;
   }
   .text_msds_prod {
-    top: 3px;
-    left: 32px;
+    top: 2px;
     color: rgba(1, 120, 254, 1);
     width: 150px;
     height: auto;
-  
+    position: relative;
     font-size: 16px;
     font-style: Regular;
     text-align: left;
@@ -993,68 +967,26 @@ figure button {
     font-stretch: normal;
     text-decoration: underline;
   }
-  .icndoc01_prod {
-    top: 0px;
-    left: 0px;
-    width: 24px;
-    height: 24.000024795532227px;
-    display: flex;
-  
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .bound01_prod {
-    top: 0.000025466084480285645px;
-    left: 0px;
-    width: 24px;
-    height: 24px;
-  
-  }
+
   .vector00_prod {
-    top: -4.547473508864641e-13px;
-    left: 2.859375px;
-    width: 18px;
+    width: 25px;
     height: 24px;
-  
-  }
-  .vector01_prod {
-    top: 12px;
-    left: 7px;
-    width: 10px;
-    height: 1px;
-  
-  }
-  .vector02_prod {
-    top: 15px;
-    left: 7px;
-    width: 10px;
-    height: 1px;
-  
-  }
-  .vector03_prod {
-    top: 18px;
-    left: 7px;
-    width: 10px;
-    height: 1px;
   
   }
   .link_presentation_prod {
-    top: 72px;
-    left: 0px;
     width: 123px;
     height: 24px;
     display: flex;
-  
+    position: relative;
     align-items: flex-start;
     flex-shrink: 1;
   }
   .text_presentation_prod {
     top: 2px;
-    left: 32px;
     color: rgba(1, 120, 254, 1);
     width: 91px;
     height: auto;
-  
+    position: relative;
     font-size: 16px;
     font-style: Regular;
     text-align: left;
@@ -1064,41 +996,23 @@ figure button {
     font-stretch: normal;
     text-decoration: underline;
   }
-  .icnslides_prod {
-    top: 0px;
-    left: 0px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-  
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
+
   .vector12_prod {
-    top: 0px;
-    left: 2.859375px;
-    width: 18px;
+    width: 25px;
     height: 24px;
   
   }
-  .vector13_prod {
-    top: 10.640625px;
-    left: 7.078125px;
-    width: 10px;
-    height: 8px;
-  
-  }
+ 
   .downloadbtn_prod {
-    top: 0px;
-    left: 718px;
+    margin-top: 174px;
     width: 176px;
     height: 40px;
     display: flex;
-  
     align-items: flex-start;
     flex-shrink: 1;
     background-color: rgba(0, 55, 132, 1);
     border-radius: 7px;
+    margin-bottom: 15px;
   }
   .text_downloadpdf_prod {
     top: 10px;
@@ -1106,7 +1020,7 @@ figure button {
     color: rgba(255, 255, 255, 1);
     width: 106px;
     height: auto;
-  
+    position: relative;
     font-size: 16px;
     font-style: Regular;
     text-align: left;
