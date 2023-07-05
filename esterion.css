@@ -1,6 +1,6 @@
 
 /*oleg 10/06/23*/
-/*maryna 02/07/23  4pm*/
+/*maryna 05/07/23  8pm*/
 span.label-text {
   position: absolute;
   top: 18px;
@@ -855,7 +855,7 @@ figure button {
   }
   .resultfield_prod {
     top: 91px;
-    left: 26px;
+    left: 52px;
     width: 943px;
     height: 290px;
     display: flex;
@@ -866,7 +866,9 @@ figure button {
       border: 1px solid #eff0f3;
       border-left-width: 8px;
       box-sizing: border-box;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+    padding: 24px;
+	  
   }
   
   .content_prod {
@@ -887,12 +889,10 @@ figure button {
   
   }
   .linksondocs_prod {
-    top: 60px;
-    left: 718px;
     width: 156px;
     height: 96px;
     display: flex;
-  
+    margin-bottom: 38px;
     align-items: flex-start;
     flex-shrink: 1;
   }
@@ -906,11 +906,11 @@ figure button {
   }
   .text_tds_prod {
     top: 2px;
-    left: 32px;
+    left: 8px;
     color: rgba(1, 120, 254, 1);
     width: 150px;
     height: auto;
-  
+    position: relative;
     font-size: 16px;
     font-style: Regular;
     text-align: left;
@@ -954,6 +954,7 @@ figure button {
   }
   .text_msds_prod {
     top: 2px;
+    left: 7px;
     color: rgba(1, 120, 254, 1);
     width: 150px;
     height: auto;
@@ -983,6 +984,7 @@ figure button {
   }
   .text_presentation_prod {
     top: 2px;
+    left: 8px;
     color: rgba(1, 120, 254, 1);
     width: 91px;
     height: auto;
@@ -1041,11 +1043,10 @@ figure button {
     flex-shrink: 1;
   }
   .text_mechchar_prod {
-    top: 30px;
     color: rgba(0, 55, 132, 1);
     width: 206px;
     height: auto;
-  
+    margin-bottom: 13px;
     font-size: 16px;
     font-style: Regular;
     text-align: left;
@@ -1074,11 +1075,11 @@ figure button {
   
   }
   .text_prod {
-    top: 0px;
     color: rgba(118, 129, 148, 1);
     width: 669px;
     height: auto;
-  
+    position: relative;
+    margin-bottom: 25px;
     font-size: 18px;
     font-style: Regular;
     text-align: left;
@@ -1089,11 +1090,9 @@ figure button {
     text-decoration: none;
   }
   .text_name_prod {
-    top: 24px;
-    left: 24px;
     color: rgba(0, 0, 0, 1);
     height: auto;
-  
+    margin-bottom: 20px;
     font-size: 18px;
     font-style: Semi Bold;
     text-align: left;
@@ -1118,7 +1117,7 @@ figure button {
     color: rgba(0, 0, 0, 1);
     width: 160px;
     height: auto;
-  
+    
     font-size: 16px;
     font-style: Regular;
     text-align: left;
@@ -1186,12 +1185,11 @@ figure button {
   
   }
   .res_amount_prod {
-    top: 24px;
-    left: 30px;
+    left: 26px;
     color: rgba(0, 0, 0, 1);
     width: auto;
     height: auto;
-  
+    position: relative;
     font-size: 24px;
     font-style: Semi Bold;
     text-align: left;
@@ -1208,12 +1206,11 @@ figure button {
   }
 
   .show-more-less{
-  top: 250px;
-  left: 830px;
+  left: 94px;
   color: rgba(0, 55, 132, 1);
   width: 90px;
   height: auto;
-
+  position: relative;
   font-size: 16px;
   font-style: Regular;
   text-align: left;
@@ -1227,11 +1224,9 @@ figure button {
   }
 
   .navigation_search{
-
+margin-bottom: 24px;
 width: 742px;
 height: 24px;
-left: 120px;
-top: 102px;
 
   }
 
