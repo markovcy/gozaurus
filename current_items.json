@@ -94,11 +94,12 @@
           {
             "name": "id_type_material",
             "type": "text",
+            "hidden": true,
             "title": "Type polymer material"
           },
           {
             "name": "marka",
-            "hidden": true,
+            
             "type": "text",
             "title": "Material brand",
             "required": true
