@@ -84,7 +84,8 @@ async function getEP_write_placeholders (id) {
 async function getEP_in_form_PP () {
     hideblocks()
     let resp
-
+    let marka = id_items.value
+    console.log(marka)
     let id_items = document.getElementsByName("id_items")[0].value
     let host = window.location.origin
     let Url
