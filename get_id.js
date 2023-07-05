@@ -84,7 +84,7 @@ async function getEP_write_placeholders (id) {
 async function getEP_in_form_PP () {
     hideblocks()
     let resp
-    let marka = id_items.value
+   
     console.log(marka)
     let id_items = document.getElementsByName("id_items")[0].value
     let host = window.location.origin
@@ -120,7 +120,7 @@ async function getEP_in_form_PP () {
     let id_type_of_filler
     console.log(id_type_material)
     console.log(id_type_of_filler)
-  
+    let marka = id_items.value
     switch (id_type_material) {
         case 1: {
             // console.log("Thermoplastic polymer")
