@@ -845,16 +845,13 @@ figure button {
   }
   .resultsection_prod {
     width: 999px;
-    height: 3459px;
-    left: 230px; 
-    /*display: flex;*/
-  
+    height: auto;
     align-items: flex-start;
     flex-shrink: 1;
     background-color: rgba(255, 255, 255, 1);
   }
   .resultfield_prod {
-    top: 91px;
+    margin-top: 28px;
     left: 52px;
     width: 943px;
     height: 290px;
@@ -1046,12 +1043,9 @@ display: grid;
     text-decoration: none;
   }
   .mechchardropdown_prod {
-    top: 116px;
-    left: 0px;
     width: 226px;
-    height: 20px;
+    height: auto;
     display: grid;
-  
     align-items: flex-start;
     flex-shrink: 1;
   }
@@ -1193,7 +1187,7 @@ display: grid;
   
   .divider_side_prod {
     top: 66px;
-    left: 30px;
+    margin-left: 28px;
     width: 993px;
     height: 1px;
   
