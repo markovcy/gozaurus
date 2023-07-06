@@ -1056,7 +1056,7 @@ display: grid;
   }
   .text_mechchar_prod {
     color: rgba(0, 55, 132, 1);
-    width: 206px;
+    width: auto;
     height: auto;
     margin-bottom: 13px;
     font-size: 16px;
@@ -1070,12 +1070,12 @@ display: grid;
     display: flex;
   }
   .expandmore_prod {
-    top: 30px;
-    left: 190px;
+    top: 5px;
+    left: 5px;
     width: 20px;
     height: 20px;
     display: flex;
-  
+    position: relative;
     align-items: flex-start;
     flex-shrink: 1;
   }
