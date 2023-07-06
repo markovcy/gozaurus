@@ -854,7 +854,7 @@ figure button {
     margin-top: 28px;
     left: 52px;
     width: 943px;
-    height: 290px;
+    height: auto;
     display: flex;
       position: relative;
       align-items: flex-start;
@@ -872,7 +872,7 @@ figure button {
     top: 70px;
     left: 24px;
     width: 894px;
-    height: 160px;
+    height: auto;
     display: flex;
   
     align-items: flex-start;
