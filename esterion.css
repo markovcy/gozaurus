@@ -881,17 +881,28 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
   }
+
+.first_column_res {
+display: grid;
+}
+
+.second_column_res {
+position: relative;
+left: 49px;
+top: 42px;
+display: grid;
+}
   .divider_top_prod {
-    top: 0px;
+    top: 42px;
     left: 694px;
     width: 3px;
     height: 160px;
-  
+    position: relative;
   }
   .linksondocs_prod {
     width: 156px;
     height: 96px;
-    display: flex;
+    display: grid;
     margin-bottom: 38px;
     align-items: flex-start;
     flex-shrink: 1;
@@ -939,7 +950,7 @@ figure button {
   
   }
   .vector0_prod {
-    width: 25px;
+    width: 28px;
     height: 24px;
   
   }
@@ -954,7 +965,7 @@ figure button {
   }
   .text_msds_prod {
     top: 2px;
-    left: 7px;
+    left: 8px;
     color: rgba(1, 120, 254, 1);
     width: 150px;
     height: auto;
@@ -984,7 +995,7 @@ figure button {
   }
   .text_presentation_prod {
     top: 2px;
-    left: 8px;
+    left: 6px;
     color: rgba(1, 120, 254, 1);
     width: 91px;
     height: auto;
@@ -1006,7 +1017,6 @@ figure button {
   }
  
   .downloadbtn_prod {
-    margin-top: 174px;
     width: 176px;
     height: 40px;
     display: flex;
@@ -1037,7 +1047,7 @@ figure button {
     left: 0px;
     width: 226px;
     height: 20px;
-    display: flex;
+    display: grid;
   
     align-items: flex-start;
     flex-shrink: 1;
@@ -1055,6 +1065,7 @@ figure button {
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
+    display: flex;
   }
   .expandmore_prod {
     top: 30px;
