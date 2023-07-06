@@ -1,6 +1,6 @@
 
 /*oleg 10/06/23*/
-/*maryna 05/07/23  8pm*/
+/*maryna 06/07/23  8pm*/
 span.label-text {
   position: absolute;
   top: 18px;
@@ -1633,6 +1633,7 @@ font-size: initial;
 .tg{
 border-collapse:collapse;
 border-spacing:0;
+width: 330px;
 }
 .tg td{
 border-color:black;
