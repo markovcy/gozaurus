@@ -890,8 +890,8 @@ top: 42px;
 display: grid;
 }
   .divider_top_prod {
-    top: 42px;
-    left: 694px;
+    margin-top: 42px;
+    margin-left: 24px;
     width: 3px;
     height: 160px;
     position: relative;
@@ -900,6 +900,8 @@ display: grid;
   .linksondocs_prod {
     width: 156px;
     height: 96px;
+    position: relative;
+    top: -150px;
     display: grid;
     margin-bottom: 38px;
     align-items: flex-start;
@@ -1214,7 +1216,8 @@ display: grid;
   }
 
   .show-more-less{
-  left: 94px;
+  margin-left: 795px;
+  margin-top: 32px;
   color: rgba(0, 55, 132, 1);
   width: 90px;
   height: auto;
