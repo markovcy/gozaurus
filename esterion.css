@@ -479,7 +479,7 @@ figure button {
     top: 361px;
     left: 221px;
     width: 999px;
-    height: 3459px;
+    height: auto;
     /*display: flex;*/
     /*position: absolute;*/
     align-items: flex-start;
@@ -488,8 +488,8 @@ figure button {
   }
  
   .resultsfields0 {
-    top: 95px;
-    left: 28px;
+    margin-top: 41px;
+    margin-left: 28px;
     width: 943px;
     height: auto;
     display: grid;
@@ -1188,7 +1188,7 @@ display: grid;
   }
   
   .divider_side_prod {
-    top: 66px;
+    margin-top: 12px;
     margin-left: 28px;
     width: 993px;
     height: 1px;
