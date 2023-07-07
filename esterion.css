@@ -867,13 +867,15 @@ figure button {
     padding: 24px;
 	  
   }
-  
+  .top_content{
+	  display: flex;
+  }
   .content_prod {
     top: 70px;
     left: 24px;
     width: 894px;
     height: auto;
-    display: flex;
+    display: grid;
   
     align-items: flex-start;
     flex-shrink: 1;
@@ -885,8 +887,8 @@ display: grid;
 
 .second_column_res {
 position: relative;
-left: 49px;
-top: 42px;
+margin-left: 24px;
+margin-top: 42px;
 display: grid;
 }
   .divider_top_prod {
@@ -901,9 +903,8 @@ display: grid;
     width: 156px;
     height: 96px;
     position: relative;
-    top: -150px;
+    margin-top: -174px;
     display: grid;
-    margin-bottom: 38px;
     align-items: flex-start;
     flex-shrink: 1;
   }
@@ -1026,7 +1027,7 @@ display: grid;
     flex-shrink: 1;
     background-color: rgba(0, 55, 132, 1);
     border-radius: 7px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   .text_downloadpdf_prod {
     top: 10px;
