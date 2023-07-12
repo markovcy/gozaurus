@@ -1,7 +1,7 @@
 
 
 {
-    "title": "New Production",
+    "title": "Main product",
     "action": "/table/items/put",
     "description": "Add new products to your company",
     "method": "POST",

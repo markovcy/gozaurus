@@ -1,5 +1,5 @@
 {
-  "title": "Add current Production",
+  "title": "Current product",
   "action": "/table/items/put",
   "description": "Edit products of your company",
   "method": "POST",
