@@ -1,6 +1,6 @@
 
 /*oleg 10/06/23*/
-/*maryna 06/07/23  8pm*/
+/*maryna 16/07/23  1am*/
 span.label-text {
   position: absolute;
   top: 18px;
@@ -903,7 +903,6 @@ display: grid;
     width: 156px;
     height: 96px;
     position: relative;
-    margin-top: -174px;
     display: grid;
     align-items: flex-start;
     flex-shrink: 1;
@@ -914,7 +913,7 @@ display: grid;
     height: 24px;
     align-items: flex-start;
     flex-shrink: 1;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
   .text_tds_prod {
     top: 2px;
@@ -962,7 +961,7 @@ display: grid;
     position: relative;
     align-items: flex-start;
     flex-shrink: 1;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
   .text_msds_prod {
     top: 2px;
@@ -1066,6 +1065,8 @@ display: grid;
     font-stretch: normal;
     text-decoration: none;
     display: flex;
+    background: transparent;
+    border: none;
   }
   .expandmore_prod {
     top: 5px;
@@ -1078,11 +1079,11 @@ display: grid;
     flex-shrink: 1;
   }
   .shape_prod {
-    top: 5.9998779296875px;
-    left: 4px;
-    width: 12px;
-    height: 7px;
-    opacity: 0.54;
+    margin-top: -4.5px;
+    
+    width: 20px;
+    height: 15px;
+    opacity: 0.8;
   
   }
   .text_prod {
@@ -1658,16 +1659,18 @@ padding:10px 5px;
 word-break:normal;
 }
 .tg .t_name{
-background-color:rgba(222, 227, 237, 1);
-border-color:rgba(222, 227, 237, 1);
+background-color:#F6F7F8;
+border-color:#F6F7F8;
 font-weight:bold;
 text-align:left;
-vertical-align:top
+vertical-align:top;
+border-radius: 4px 4px 0px 0px; 
 }
 .tg .t_row{
-border-color:rgba(222, 227, 237, 1);
+border-color:#F6F7F8;
 text-align:left;
-vertical-align:top
+vertical-align:top;
+border-radius: 4px 4px 0px 0px; 
 }
 
 /*---------------*/  
