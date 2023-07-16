@@ -1,6 +1,6 @@
 
 /*oleg 10/06/23*/
-/*maryna 16/07/23  1am*/
+/*maryna 17/07/23  1am*/
 span.label-text {
   position: absolute;
   top: 18px;
@@ -534,7 +534,7 @@ figure button {
 
   .all_prod0 {
     top: 11px;
-    left: 12px;
+    left: 55px;
     color: rgba(9, 59, 154, 1);
     width: 221px;
     height: auto;
@@ -547,7 +547,14 @@ figure button {
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
+    display: 55px;
   }
+
+.show_arrow {
+  height: 35px;
+  width: 35px;
+  margin-top: -10px;
+}
 
   .button_all_prod {
     width: 221px;
