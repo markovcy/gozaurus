@@ -547,7 +547,7 @@ figure button {
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
-    display: 55px;
+    display: flex;
   }
 
 .show_arrow {
