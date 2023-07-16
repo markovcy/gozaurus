@@ -669,12 +669,14 @@ figure button {
     align-items: flex-start;
     flex-shrink: 1;
   }
-
+  .a_link{
+   display: flex;
+  }
   .icnlink2 {
     width: 16px;
     height: 16px;
     display: flex;
-  
+    margin-left: 5px;
     align-items: flex-start;
     flex-shrink: 1;
 background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADaSURBVHgBxVLBDYJAEJw9iOGpHViCHagd0AEt8DL80I8hfsRKxE4oATvQn4lw64nBHHrgPTTO53J7M7O7lwH+DbJiRTwGZNyqST5g42busxDyEF45MRp4yHHB8dGRAnWMWdR3zcCTKcEJTHo+YYTUWSKqYuUwBKNo3twWEbxCoojGNaqYiEKmcg52t01ZwAa6eD3IVeWs2hVvE1iJF6WPRPh2E7yKo+uMhNjrlF4D9TjSxjaidwWZOCE+wO4Tf2nQWuGeMo7ktJPNKkTUZUCcsZYwI6gO2w7fxA06rU0KpiVA8AAAAABJRU5ErkJggg==');
