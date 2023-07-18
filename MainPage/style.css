@@ -34,7 +34,7 @@ body {
   background-color: #333;
 }
 .wpapper {
-  padding: 30px;
+  padding: 50px;
   min-height: 100%;
 }
 .title {
@@ -43,7 +43,18 @@ body {
   color: #fff;
   max-width: 0 0 30px 0;
 }
-swiper-container {
+
+.slick-list {
+  overflow: hidden
+}
+
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+
+/* swiper-container {
   padding: 30px 0 70px 0;
 }
 
@@ -53,4 +64,4 @@ swiper-container {
 
 .image-slider__image img {
   max-width: 100%;
-}
+} */
