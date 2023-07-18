@@ -488,7 +488,7 @@ figure button {
   }
  
   .resultsfields0 {
-    margin-top: 41px;
+    top: 41px;
     margin-left: 28px;
     width: 943px;
     height: auto;
@@ -501,7 +501,7 @@ figure button {
     border-left-width: 8px;
     box-sizing: border-box;
     padding: 20px 24px 24px 16px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
   
   .btn0 {
