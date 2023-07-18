@@ -1,6 +1,6 @@
 
 /*oleg 10/06/23*/
-/*maryna 17/07/23  1am*/
+/*maryna 18/07/23  2am*/
 span.label-text {
   position: absolute;
   top: 18px;
@@ -500,12 +500,12 @@ figure button {
     border: 1px solid #eff0f3;
     border-left-width: 8px;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 20px 24px 24px 16px;
     margin-bottom: 20px;
   }
   
   .btn0 {
-    left: 625px;
+    left: 626px;
     width: 269px;
     height: 40px;
     position: relative;
@@ -632,6 +632,7 @@ figure button {
     display: flex;
     align-items: flex-start;
     flex-shrink: 1;
+    margin-bottom: 8px;
   }
 
   .btn_read_artcl_00 {
@@ -729,7 +730,7 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAY
     font-stretch: normal;
     text-decoration: none;
     position: relative;
-    margin-bottom: 5px;
+    margin-bottom: 16px;
   }
   .polymer_group0 {
     color: rgba(0, 0, 0, 1);
