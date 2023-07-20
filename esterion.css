@@ -1,6 +1,6 @@
 
 /*oleg 10/06/23*/
-/*maryna 18/07/23  2am*/
+/*maryna 20/07/23  12am*/
 span.label-text {
   position: absolute;
   top: 18px;
@@ -476,8 +476,8 @@ figure button {
   }
 
   .resultsection {
-    top: 361px;
-    left: 221px;
+    margin-top: 41px;
+    margin-left: 28px;
     width: 999px;
     height: auto;
     /*display: flex;*/
@@ -488,8 +488,7 @@ figure button {
   }
  
   .resultsfields0 {
-    top: 41px;
-    margin-left: 28px;
+    
     width: 943px;
     height: auto;
     display: grid;
@@ -1679,6 +1678,25 @@ text-align:left;
 vertical-align:top;
 border-radius: 4px 4px 0px 0px; 
 }
+
+table {
+border:1px solid #c0c0c0;
+border-collapse:collapse;
+padding:5px;
+}
+table th {
+border:1px solid #F6F7F8;
+padding:5px;
+background: #F6F7F8;
+color: #000000;
+}
+table td {
+border:1px solid #c0c0c0;
+text-align:center;
+padding:5px;
+background: #ffffff;
+color: #000000;
+		}
 
 /*---------------*/  
 
