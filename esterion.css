@@ -686,7 +686,7 @@ figure button {
     margin-left: 5px;
     align-items: flex-start;
     flex-shrink: 1;
-background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADaSURBVHgBxVLBDYJAEJw9iOGpHViCHagd0AEt8DL80I8hfsRKxE4oATvQn4lw64nBHHrgPTTO53J7M7O7lwH+DbJiRTwGZNyqST5g42busxDyEF45MRp4yHHB8dGRAnWMWdR3zcCTKcEJTHo+YYTUWSKqYuUwBKNo3twWEbxCoojGNaqYiEKmcg52t01ZwAa6eD3IVeWs2hVvE1iJF6WPRPh2E7yKo+uMhNjrlF4D9TjSxjaidwWZOCE+wO4Tf2nQWuGeMo7ktJPNKkTUZUCcsZYwI6gO2w7fxA06rU0KpiVA8AAAAABJRU5ErkJggg==');
+background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9Imljbl9saW5rIj4KPHBhdGggaWQ9IlVuaW9uIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEwLjMyMDYgMi4zMzIwM0M5Ljk4OTI3IDIuMzMyMDMgOS43MjA2NCAyLjYwMDY2IDkuNzIwNjQgMi45MzIwM0M5LjcyMDY0IDMuMjYzNCA5Ljk4OTI3IDMuNTMyMDMgMTAuMzIwNiAzLjUzMjAzSDEyLjQxODlMMTAuMTkxOSA1Ljc1ODk5TDcuMjM2MjggOC43MTQ2NUM3LjAwMTk3IDguOTQ4OTcgNy4wMDE5NyA5LjMyODg3IDcuMjM2MjggOS41NjMxOEM3LjQ3MDYgOS43OTc1IDcuODUwNSA5Ljc5NzUgOC4wODQ4MSA5LjU2MzE4TDExLjA0MDUgNi42MDc1MkwxMy4yNjc0IDQuMzgwNTZWNi40Nzg4MkMxMy4yNjc0IDYuODEwMTkgMTMuNTM2MSA3LjA3ODgyIDEzLjg2NzQgNy4wNzg4MkMxNC4xOTg4IDcuMDc4ODIgMTQuNDY3NCA2LjgxMDE5IDE0LjQ2NzQgNi40Nzg4MlYyLjkzMjAzVjIuMzMyMDNIMTMuODY3NEgxMC4zMjA2Wk0yLjkzMjAzIDMuODA5ODhDMi42MDA2NiAzLjgwOTg4IDIuMzMyMDMgNC4wNzg1MSAyLjMzMjAzIDQuNDA5ODhWOC41NDc4VjkuNzMwMDdWMTMuODY4QzIuMzMyMDMgMTQuMTk5NCAyLjYwMDY2IDE0LjQ2OCAyLjkzMjAzIDE0LjQ2OEg3LjY2MTA5SDEyLjM5MDJDMTIuNzIxNSAxNC40NjggMTIuOTkwMiAxNC4xOTk0IDEyLjk5MDIgMTMuODY4VjguMjUyMjRDMTIuOTkwMiA3LjkyMDg3IDEyLjcyMTUgNy42NTIyNCAxMi4zOTAyIDcuNjUyMjRDMTIuMDU4OCA3LjY1MjI0IDExLjc5MDIgNy45MjA4NyAxMS43OTAyIDguMjUyMjRWMTMuMjY4SDcuNjYxMDlIMy41MzIwM1Y5LjczMDA3VjguNTQ3OFY1LjAwOTg4SDguNTQ3NzlDOC44NzkxNiA1LjAwOTg4IDkuMTQ3NzkgNC43NDEyNSA5LjE0Nzc5IDQuNDA5ODhDOS4xNDc3OSA0LjA3ODUxIDguODc5MTYgMy44MDk4OCA4LjU0Nzc5IDMuODA5ODhIMi45MzIwM1oiIGZpbGw9IiMwMTc4RkUiLz4KPC9nPgo8L3N2Zz4K');
   }
   
   .open_add_list0 {
@@ -1097,8 +1097,7 @@ display: grid;
   .text_prod {
     color: rgba(118, 129, 148, 1);
     width: 669px;
-    height: auto;
-    position: relative;
+    max-height: 90px;
     margin-bottom: 25px;
     font-size: 18px;
     font-style: Regular;
@@ -1108,6 +1107,14 @@ display: grid;
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
+    line-height: 1.25;
+    display: -webkit-box;
+    margin-top: 2px;
+    color: #7e899c;
+    overflow: hidden;
+    word-break: break-word;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
   }
   .text_name_prod {
     color: rgba(0, 0, 0, 1);
