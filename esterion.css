@@ -907,7 +907,7 @@ display: grid;
     width: 3px;
     height: 160px;
     position: relative;
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0nMicgaGVpZ2h0PScxNjAnIHZpZXdCb3g9JzAgMCAyIDE2MCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4KPHBhdGggZD0nTTEgMFYxNjAnIHN0cm9rZT0nI0UwRTBFMCcvPgo8L3N2Zz4K');
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMiIgaGVpZ2h0PSIxNjAiIHZpZXdCb3g9IjAgMCAyIDE2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggaWQ9ImRpdmlkZXIiIGQ9Ik0xIDBWMTYwIiBzdHJva2U9IiNFMEUwRTAiLz4KPC9zdmc+Cg==');
   }
   .linksondocs_prod {
     width: 156px;
