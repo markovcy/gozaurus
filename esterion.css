@@ -1272,7 +1272,7 @@ display: flex;
   background-color: white;
 }
 .nav_box:hover .nav_text {
-  color: #f2f2f2; /* Slightly darker text color on hover */
+  color: #0a1c3b; /* Slightly darker text color on hover */
 }
 
 .nav_box {
