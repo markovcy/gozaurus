@@ -504,8 +504,8 @@ figure button {
   }
   
   .btn0 {
-    left: 626px;
-    width: 269px;
+    left: 719px;
+    width: 176px;
     height: 40px;
     position: relative;
     align-items: flex-start;
@@ -513,8 +513,6 @@ figure button {
     box-sizing: border-box;
     border: 1px solid #093B9A;
     border-radius: 8px;
-    height: 40px;
-    width: 269px;
     background: white;
     border-radius: 8px;
     margin-top: 10px;
@@ -530,10 +528,20 @@ figure button {
     box-shadow: 0 0 8px 2px #76BDF6; /* Change to desired shadow color and properties */
   }
 
+.downloadbtn_prod:hover {
+    /* Styles for when the cursor is on the button */
+    background-color: #15132c; /* Change to desired hover background color */
+    text-decoration: none;
+  }
+  
+  .downloadbtn_prod:active {
+    /* Styles for when the button is clicked */
+    box-shadow: 0 0 8px 2px #76BDF6; /* Change to desired shadow color and properties */
+  }
 
   .all_prod0 {
-    top: 11px;
-    left: 55px;
+    margin-top: 11px;
+    margin-left: 5px;
     color: rgba(9, 59, 154, 1);
     width: 221px;
     height: auto;
@@ -904,7 +912,7 @@ display: grid;
   .divider_top_prod {
     margin-top: 42px;
     margin-left: 24px;
-    width: 3px;
+    width: 2px;
     height: 160px;
     position: relative;
     background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMiIgaGVpZ2h0PSIxNjAiIHZpZXdCb3g9IjAgMCAyIDE2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggaWQ9ImRpdmlkZXIiIGQ9Ik0xIDBWMTYwIiBzdHJva2U9IiNFMEUwRTAiLz4KPC9zdmc+Cg==');
@@ -1037,6 +1045,8 @@ display: grid;
     background-color: rgba(0, 55, 132, 1);
     border-radius: 7px;
     margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #093B9A;
   }
   .text_downloadpdf_prod {
     top: 10px;
