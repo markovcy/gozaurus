@@ -1268,6 +1268,16 @@ width: 742px;
 height: 24px;
 display: flex;
   }
+.nav_box:hover {
+  background-color: white;
+}
+.nav_box:hover .nav_text {
+  color: #f2f2f2; /* Slightly darker text color on hover */
+}
+
+.nav_box {
+  background-color: white; /* Original blue background color */
+}
 .nav_arrow{
 height: 20px;
 width: 20px;
@@ -1278,7 +1288,9 @@ color: rgb(9, 59, 154);
 font-family: Inter, sans-serif;
 font-size: initial;
 }
-
+.nav_text:hover{
+background: white;
+}
 .resultsection-modification2 {
   top: 178px;
   left: 1px;
