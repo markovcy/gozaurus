@@ -476,7 +476,7 @@ figure button {
   }
 
   .resultsection {
-    margin-top: 41px;
+    margin-top: 28px;
     margin-left: 28px;
     width: 999px;
     height: auto;
@@ -852,6 +852,7 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAY
     flex-direction: column;
   }
   .resultsection_prod {
+    margin-top: 28px;
     width: 999px;
     height: auto;
     align-items: flex-start;
@@ -1197,7 +1198,7 @@ display: grid;
   }
   
   .divider_side_prod {
-    margin-bottom: 28px;
+    margin-top: 12px;
     width: 993px;
     height: 1px;
   
