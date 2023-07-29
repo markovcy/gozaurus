@@ -1,6 +1,6 @@
 
 /*oleg 10/06/23*/
-/*maryna 21/07/23  1am*/
+/*maryna 29/07/23 4pm*/
 span.label-text {
   position: absolute;
   top: 18px;
@@ -2709,5 +2709,243 @@ body {
 .slick-track {
   display: flex;
   align-items: flex-start;
+}
+
+/*Tile search result*/
+
+.card-apple-watch-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.card-apple-watch-card-apple-watch {
+  width: 371px;
+  height: 486px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.card-apple-watch-wishlist-button {
+  top: 441px;
+  left: 0px;
+  width: 186px;
+  height: 45px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.card-apple-watch-wishlist-button1 {
+  top: 0px;
+  left: 0px;
+  width: 186px;
+  height: 45px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(237, 237, 237, 1);
+}
+.card-apple-watch-heart {
+  top: 17px;
+  left: 45px;
+  width: 14px;
+  height: 13px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.card-apple-watch-path {
+  top: 0px;
+  left: 0px;
+  width: 14px;
+  height: 13px;
+  position: absolute;
+}
+.card-apple-watch-text {
+  top: 14px;
+  left: 67px;
+  color: rgba(44, 44, 44, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Montserrat;
+  font-weight: 600;
+  line-height: 18px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.card-apple-watch-add-to-cart-button {
+  top: 441px;
+  left: 186px;
+  width: 185px;
+  height: 45px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.card-apple-watch-add-to-cart-button1 {
+  top: 0px;
+  left: 0px;
+  width: 185px;
+  height: 45px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(100, 71, 175, 1);
+}
+.card-apple-watch-text02 {
+  top: 14px;
+  left: 54px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Montserrat;
+  font-weight: 600;
+  line-height: 18px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.card-apple-watch-shoppingbag {
+  top: 13px;
+  left: 27px;
+  width: 16px;
+  height: 18px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.card-apple-watch-path1 {
+  top: 0px;
+  left: 0px;
+  width: 16px;
+  height: 18px;
+  opacity: 0.74;
+  position: absolute;
+}
+.card-apple-watch-path2 {
+  top: 4px;
+  left: 0px;
+  width: 16px;
+  height: 1px;
+  opacity: 0.74;
+  position: absolute;
+}
+.card-apple-watch-path3 {
+  top: 8px;
+  left: 5px;
+  width: 7px;
+  height: 3px;
+  opacity: 0.74;
+  position: absolute;
+}
+.card-apple-watch-text04 {
+  top: 383px;
+  left: 22px;
+  color: rgba(44, 44, 44, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 19px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.card-apple-watch-text06 {
+  top: 405px;
+  left: 22px;
+  color: rgba(44, 44, 44, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Light;
+  text-align: left;
+  font-family: Montserrat;
+  font-weight: 300;
+  line-height: 14px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.card-apple-watch-applewatch {
+  top: 31px;
+  left: 76px;
+  width: 220px;
+  height: 272px;
+  position: absolute;
+}
+.card-apple-watch-text08 {
+  top: 337px;
+  left: 308px;
+  color: rgba(44, 44, 44, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 21px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.card-apple-watch-rating {
+  top: 337px;
+  left: 23px;
+  width: 60px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(100, 71, 175, 1);
+}
+.card-apple-watch-text10 {
+  top: 6px;
+  left: 10px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 17px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.card-apple-watch-star {
+  top: 9px;
+  left: 37.5px;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.card-apple-watch-path4 {
+  top: 0px;
+  left: 0px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
 }
 
