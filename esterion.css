@@ -2949,3 +2949,16 @@ body {
   position: absolute;
 }
 
+
+.search_tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  grid-gap: 10px; /* Adjust this value to set the spacing between tiles */
+}
+
+.s_tile {
+ 
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
