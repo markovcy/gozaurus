@@ -2957,8 +2957,6 @@ body {
 }
 
 .s_tile {
- 
-  padding: 20px;
-  border: 1px solid #ccc;
+  padding-top: 28px;
   text-align: center;
 }
