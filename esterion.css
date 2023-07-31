@@ -1,5 +1,5 @@
 
-/*oleg 10/06/23*/
+/*oleg 31/07/23*/
 /*maryna 29/07/23 4pm*/
 span.label-text {
   position: absolute;
@@ -2960,3 +2960,39 @@ body {
   padding-top: 28px;
   text-align: center;
 }
+
+
+/* Карусель */
+
+.slick-list {
+  overflow: hidden
+}
+
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slider {
+  /* max-width: 1200px; */
+  margin: auto;
+}
+
+.slide_inner {
+  /* min-height: 80vh; */
+  /* background: url(foto1.png) center/cover no-repeat; */
+  position: relative;
+}
+
+ .slide_holder {
+  padding: 15px;
+ }
+
+.slide_content {
+  max-width: 700px;
+  width: 393px;
+  background: rgb(255 255 255 / 70%);
+  /* position: absolute; */
+  right: 0;
+  bottom: 0;
+} 
