@@ -2741,7 +2741,6 @@ body {
   width: 186px;
   height: 45px;
   display: flex;
-  position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
 }
@@ -2751,7 +2750,7 @@ body {
   width: 186px;
   height: 45px;
   display: flex;
-  position: absolute;
+  
   align-items: flex-start;
   flex-shrink: 1;
   background-color: rgba(237, 237, 237, 1);
@@ -2762,23 +2761,23 @@ body {
   width: 14px;
   height: 13px;
   display: flex;
-  position: absolute;
+  
   align-items: flex-start;
   flex-shrink: 1;
 }
 .card-apple-watch-path {
   top: 0px;
   left: 0px;
-  width: 14px;
-  height: 13px;
-  position: absolute;
+  width: 16px;
+  height: 15px;
+  
 }
 .card-apple-watch-text {
   top: 14px;
   left: 67px;
   color: rgba(44, 44, 44, 1);
   height: auto;
-  position: absolute;
+  
   font-size: 14px;
   font-style: SemiBold;
   text-align: left;
@@ -2794,7 +2793,7 @@ body {
   width: 185px;
   height: 45px;
   display: flex;
-  position: absolute;
+  
   align-items: flex-start;
   flex-shrink: 0;
 }
@@ -2804,7 +2803,7 @@ body {
   width: 185px;
   height: 45px;
   display: flex;
-  position: absolute;
+  
   align-items: flex-start;
   flex-shrink: 1;
   background-color: rgba(100, 71, 175, 1);
@@ -2814,7 +2813,7 @@ body {
   left: 54px;
   color: rgba(255, 255, 255, 1);
   height: auto;
-  position: absolute;
+  
   font-size: 14px;
   font-style: SemiBold;
   text-align: left;
@@ -2830,7 +2829,7 @@ body {
   width: 16px;
   height: 18px;
   display: flex;
-  position: absolute;
+  
   align-items: flex-start;
   flex-shrink: 1;
 }
@@ -2840,7 +2839,7 @@ body {
   width: 16px;
   height: 18px;
   opacity: 0.74;
-  position: absolute;
+  
 }
 .card-apple-watch-path2 {
   top: 4px;
@@ -2848,7 +2847,7 @@ body {
   width: 16px;
   height: 1px;
   opacity: 0.74;
-  position: absolute;
+  
 }
 .card-apple-watch-path3 {
   top: 8px;
@@ -2856,14 +2855,14 @@ body {
   width: 7px;
   height: 3px;
   opacity: 0.74;
-  position: absolute;
+  
 }
 .card-apple-watch-text04 {
   top: 383px;
   left: 22px;
   color: rgba(44, 44, 44, 1);
   height: auto;
-  position: absolute;
+  
   font-size: 16px;
   font-style: Regular;
   text-align: left;
@@ -2878,7 +2877,7 @@ body {
   left: 22px;
   color: rgba(44, 44, 44, 1);
   height: auto;
-  position: absolute;
+  
   font-size: 12px;
   font-style: Light;
   text-align: left;
@@ -2893,14 +2892,14 @@ body {
   left: 76px;
   width: 220px;
   height: 272px;
-  position: absolute;
+  
 }
 .card-apple-watch-text08 {
   top: 337px;
   left: 308px;
   color: rgba(44, 44, 44, 1);
   height: auto;
-  position: absolute;
+  
   font-size: 18px;
   font-style: Regular;
   text-align: left;
@@ -2916,7 +2915,7 @@ body {
   width: 60px;
   height: 30px;
   display: flex;
-  position: absolute;
+  
   align-items: flex-start;
   flex-shrink: 1;
   background-color: rgba(100, 71, 175, 1);
@@ -2926,7 +2925,7 @@ body {
   left: 10px;
   color: rgba(255, 255, 255, 1);
   height: auto;
-  position: absolute;
+  
   font-size: 14px;
   font-style: Regular;
   text-align: left;
@@ -2942,7 +2941,7 @@ body {
   width: 12px;
   height: 12px;
   display: flex;
-  position: absolute;
+  
   align-items: flex-start;
   flex-shrink: 1;
 }
@@ -2951,7 +2950,7 @@ body {
   left: 0px;
   width: 12px;
   height: 12px;
-  position: absolute;
+  
 }
 
 
