@@ -2999,7 +2999,5 @@ body {
 } 
 
 ul li.top-mnu-item:nth-child(n+2) {
-  position: relative;
-  top: 15px;
-  font-size: 16px;
+  margin: 16px 0 0 0;
 }
