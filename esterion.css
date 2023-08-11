@@ -3013,6 +3013,13 @@ h1 {
     height: 69px;
     font-weight: 700;
     line-height: 55px;
+    color:#0A1C3B;
+
+    ;
+}
+
+.h1 {
+  padding: 20px 0 0 0;
 }
 
 .opis {
