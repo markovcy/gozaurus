@@ -3001,3 +3001,14 @@ body {
 ul li.top-mnu-item:nth-child(n+2) {
   margin: 16px 0 0 0;
 }
+
+/* Заголовок */
+h1 {
+  font-size: 48px;
+    margin: 0px auto;
+    width: 521px;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    line-height: 1;
+    height: 69px;
+}
