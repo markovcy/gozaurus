@@ -2992,10 +2992,11 @@ body {
 .slide_content {
   max-width: 700px;
   width: 393px;
-  background: rgb(255 255 255 / 70%);
+  background: #0A1C3B;
   /* position: absolute; */
   right: 0;
   bottom: 0;
+  color: #FFFFFF;
 } 
 
 ul li.top-mnu-item:nth-child(n+2) {
