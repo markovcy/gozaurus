@@ -1,18 +1,3 @@
-$(document).ready(function() {
-  $('.slider').slick({
-    adaptiveHeight: true,
-    slidesToShow:3,
-    autoplay:true
-  });
-})
-
-$(document).ready(function() {
-  $('.slider_inner').slick({
-    adaptiveHeight: true,
-    slidesToShow:3,
-    autoplay:true
-  });
-})
 
 async function get_news_for_carousel () {
   
@@ -40,4 +25,37 @@ async function get_news_for_carousel () {
       resp = await response.json()
   }
   console.log(resp)
+  let html
+  for (x in resp) {
+    console.log(resp[x])
+    let host = window.location.origin
+    html += `<div class="slider__item">
+    <img src="${host}/table/photos/blob?lang=en&id=1" alt="">
+    <div class="slide_content">
+      <h2>${resp.name}</h2>
+      <p>${resp.description}</p>
+    </div>
+  </div>`
   }
+  console.log(html)
+  let div = document.createElement("div")
+  div.classList.add("slider__item")
+  div.append(html)
+  }
+
+  $(document).ready(function() {
+    $('.slider').slick({
+      adaptiveHeight: true,
+      slidesToShow:3,
+      autoplay:true
+    });
+  })
+  
+  $(document).ready(function() {
+    $('.slider_inner').slick({
+      adaptiveHeight: true,
+      slidesToShow:3,
+      autoplay:true
+    });
+  })
+  
