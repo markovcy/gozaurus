@@ -1,3 +1,4 @@
+const { doc } = require("prettier")
 
 async function get_news_for_carousel () {
   
@@ -25,22 +26,31 @@ async function get_news_for_carousel () {
       resp = await response.json()
   }
   console.log(resp)
-  let html
+  let html = ''
   for (x in resp) {
     console.log(resp[x])
+    console.log(resp[x].name)
+    console.log(resp[x].description)
     let host = window.location.origin
     html += `<div class="slider__item">
     <img src="${host}/table/photos/blob?lang=en&id=1" alt="">
     <div class="slide_content">
-      <h2>${resp.name}</h2>
-      <p>${resp.description}</p>
+      <h2>${resp[x].name}</h2>
+      <p>${resp[x].description}</p>
     </div>
   </div>`
   }
   console.log(html)
   let div = document.createElement("div")
+  console.log(div)
   div.classList.add("slider__item")
-  div.append(html)
+  console.log(div)
+  div.innerHTML = html
+  console.log(div)
+  console.log(div)
+  let d = document.querySelector(".slider")
+  d.append(div)
+  console.log(d)
   }
 
   $(document).ready(function() {
