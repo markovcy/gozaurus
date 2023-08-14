@@ -36,13 +36,7 @@
     </div>
 </div>
 <script>
-    $(document).ready(function() {
-    $('.slider').slick({
-      adaptiveHeight: true,
-      slidesToShow:3,
-      autoplay:true
-    });
-  })
+    
   async function get_news_for_carousel () {
   
   let resp
@@ -93,9 +87,16 @@
   let d = document.querySelector(".slider")
   d.append(div)
   console.log(d)
+    }
+  $(document).ready(function() {
+    $('.slider').slick({
+      adaptiveHeight: true,
+      slidesToShow:3,
+      autoplay:true
+    });
+  })
   }
-  
-  }
+  get_news_for_carousel ()
 </script>
   
 
