@@ -33,7 +33,7 @@ async function get_news_for_carousel () {
     console.log(resp[x].description)
     let host = window.location.origin
     html = `<div class="slider__item">
-    <img src="${host}/table/photos/blob?lang=en&id=1" alt="">
+    <img src="${host}/photos?id=1" alt="">
     <div class="slide_content">
       <h2>${resp[x].name}</h2>
       <p>${resp[x].description}</p>
