@@ -39,7 +39,6 @@ async function get_news_for_carousel () {
       <p>${resp[x].description}</p>
     </div>
   </div>`
-  }
   console.log(html)
   let div = document.createElement("div")
   console.log(div)
@@ -51,6 +50,8 @@ async function get_news_for_carousel () {
   let d = document.querySelector(".slider")
   d.append(div)
   console.log(d)
+  }
+  
   }
 
   $(document).ready(function() {
