@@ -308,7 +308,6 @@ figure label > input {
     background-color: #fefefe;
 }
 .input-label input {
-    position: absolute;
     outline: none;
     height: 20px;
     padding: 0;
