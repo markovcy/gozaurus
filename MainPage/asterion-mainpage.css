@@ -1,0 +1,663 @@
+.asterion-mainpage-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.asterion-mainpage-asterion-mainpage {
+  width: 100%;
+  height: 1123px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+.asterion-mainpage-body {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 1124px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.asterion-mainpage-bodybound {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 1124px;
+  position: absolute;
+}
+.asterion-mainpage-header {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 1124px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.asterion-mainpage-rectangle1 {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 70px;
+  position: absolute;
+}
+.asterion-mainpage-rectangle2 {
+  top: 950px;
+  left: 0px;
+  width: 1440px;
+  height: 174px;
+  position: absolute;
+}
+.asterion-mainpage-text {
+  top: 24px;
+  left: 315px;
+  color: rgba(255, 255, 255, 1);
+  width: 78px;
+  height: auto;
+  position: absolute;
+  text-align: center;
+  line-height: 24px;
+}
+.asterion-mainpage-button2 {
+  top: 26px;
+  left: 423px;
+  width: 74px;
+  height: 16px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.asterion-mainpage-text02 {
+  top: -2px;
+  color: rgba(255, 255, 255, 1);
+  right: 3px;
+  width: 64px;
+  height: auto;
+  position: absolute;
+  text-align: left;
+  line-height: 24px;
+}
+.asterion-mainpage-button6 {
+  top: 27px;
+  left: 212px;
+  width: 63px;
+  height: 16px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.asterion-mainpage-text04 {
+  top: -5px;
+  left: -1px;
+  color: rgba(255, 255, 255, 1);
+  width: 64px;
+  height: auto;
+  position: absolute;
+  text-align: center;
+  line-height: 24px;
+}
+.asterion-mainpage-logo {
+  top: 11px;
+  left: 120px;
+  width: 52.465118408203125px;
+  height: 48px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.asterion-mainpage-logo-esterionremovebgpreview1 {
+  left: 0px;
+  width: 62px;
+  bottom: 0px;
+  height: 59px;
+  position: absolute;
+}
+.asterion-mainpage-user {
+  top: 22px;
+  left: 1272px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.asterion-mainpage-user11 {
+  top: 0px;
+  left: 0px;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+}
+.asterion-mainpage-text06 {
+  top: 119px;
+  left: 453px;
+  color: rgba(10, 28, 59, 1);
+  width: 521px;
+  height: auto;
+  position: absolute;
+  font-size: 48px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 55px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-text08 {
+  top: 269px;
+  left: 276px;
+  color: rgba(0, 0, 0, 0.7400000095367432);
+  width: 888px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 31.5px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-news1 {
+  top: 407px;
+  left: 108px;
+  width: 392px;
+  height: 447px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.asterion-mainpage-rectangle3 {
+  right: 0px;
+  width: 392px;
+  bottom: 0px;
+  height: 447px;
+  position: absolute;
+}
+.asterion-mainpage-mariateneva-fm-syq3z7fgunsplash1 {
+  top: 0px;
+  left: 0px;
+  width: 392px;
+  height: 280px;
+  position: absolute;
+}
+.asterion-mainpage-text10 {
+  top: 290px;
+  left: 10px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-text12 {
+  top: 314px;
+  left: 10px;
+  color: rgba(255, 255, 255, 1);
+  width: 362px;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-group97 {
+  top: 403px;
+  left: 345px;
+  width: 16.153846740722656px;
+  height: 9.999999046325684px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.asterion-mainpage-line14 {
+  top: 0px;
+  left: -5.6843418860808015e-14px;
+  width: 13px;
+  height: 1px;
+  position: absolute;
+}
+.asterion-mainpage-line15 {
+  top: 16.153846740722656px;
+  left: -5.6843418860808015e-14px;
+  width: 13px;
+  height: 1px;
+  position: absolute;
+}
+.asterion-mainpage-line16 {
+  top: 419px;
+  left: 260px;
+  width: 73px;
+  height: 1px;
+  position: absolute;
+}
+.asterion-mainpage-text14 {
+  top: 403px;
+  left: 260px;
+  color: rgba(21, 140, 249, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-news2 {
+  top: 407px;
+  left: 523px;
+  width: 393px;
+  height: 447px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.asterion-mainpage-rectangle31 {
+  top: 0px;
+  left: 0px;
+  width: 392px;
+  height: 447px;
+  position: absolute;
+}
+.asterion-mainpage-text16 {
+  top: 290px;
+  left: 9px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-text18 {
+  top: 314px;
+  left: 10px;
+  color: rgba(255, 255, 255, 1);
+  width: 362px;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-group971 {
+  top: 403px;
+  left: 345px;
+  width: 16.153846740722656px;
+  height: 9.999999046325684px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.asterion-mainpage-line141 {
+  top: 0px;
+  left: 0px;
+  width: 13px;
+  height: 1px;
+  position: absolute;
+}
+.asterion-mainpage-line151 {
+  top: 16.153846740722656px;
+  left: 0px;
+  width: 13px;
+  height: 1px;
+  position: absolute;
+}
+.asterion-mainpage-line161 {
+  top: 419px;
+  left: 260px;
+  width: 73px;
+  height: 1px;
+  position: absolute;
+}
+.asterion-mainpage-text20 {
+  top: 403px;
+  left: 261px;
+  color: rgba(21, 140, 249, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-flyd-fy-n-srqr-tz-qunsplash1 {
+  top: 0px;
+  left: 0px;
+  width: 393px;
+  height: 280px;
+  position: absolute;
+}
+.asterion-mainpage-news3 {
+  top: 407px;
+  left: 939px;
+  width: 393px;
+  height: 447px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.asterion-mainpage-rectangle32 {
+  top: 0px;
+  right: 0px;
+  width: 392px;
+  height: 447px;
+  position: absolute;
+}
+.asterion-mainpage-text22 {
+  top: 290px;
+  left: 9px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-text24 {
+  top: 314px;
+  left: 11px;
+  color: rgba(255, 255, 255, 1);
+  width: 362px;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-group972 {
+  top: 403px;
+  left: 346px;
+  width: 16.153846740722656px;
+  height: 9.999999046325684px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.asterion-mainpage-line142 {
+  top: 0px;
+  left: 0px;
+  width: 13px;
+  height: 1px;
+  position: absolute;
+}
+.asterion-mainpage-line152 {
+  top: 16.153846740722656px;
+  left: 0px;
+  width: 13px;
+  height: 1px;
+  position: absolute;
+}
+.asterion-mainpage-line162 {
+  top: 419px;
+  left: 261px;
+  width: 73px;
+  height: 1px;
+  position: absolute;
+}
+.asterion-mainpage-text26 {
+  top: 403px;
+  left: 262px;
+  color: rgba(21, 140, 249, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-emotiontech-d971bo-koa-c8unsplash1 {
+  top: 0px;
+  left: 0px;
+  width: 393px;
+  height: 280px;
+  position: absolute;
+}
+.asterion-mainpage-footer {
+  top: 988px;
+  left: 120px;
+  width: 1199px;
+  height: 107px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.asterion-mainpage-group1 {
+  top: 0px;
+  left: 0px;
+  width: 138.6127166748047px;
+  height: 39px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.asterion-mainpage-text28 {
+  color: rgba(255, 255, 255, 1);
+  width: 139px;
+  height: auto;
+  position: absolute;
+  text-align: center;
+  line-height: 24px;
+}
+.asterion-mainpage-text30 {
+  top: 23px;
+  color: rgba(164, 161, 161, 1);
+  width: 139px;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-group2 {
+  top: 0px;
+  left: 338.2149963378906px;
+  width: 153.86012268066406px;
+  height: 39px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.asterion-mainpage-text32 {
+  color: rgba(255, 255, 255, 1);
+  width: 154px;
+  height: auto;
+  position: absolute;
+  text-align: center;
+  line-height: 24px;
+}
+.asterion-mainpage-text34 {
+  top: 23px;
+  left: 6.93064022064209px;
+  color: rgba(164, 161, 161, 1);
+  width: 139px;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-group3 {
+  top: 0px;
+  left: 691.677490234375px;
+  width: 153.86012268066406px;
+  height: 47px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.asterion-mainpage-text36 {
+  top: -8px;
+  color: rgba(255, 255, 255, 1);
+  right: -1px;
+  width: 154px;
+  height: auto;
+  position: absolute;
+  text-align: center;
+  line-height: 24px;
+}
+.asterion-mainpage-maskgroup {
+  top: 22px;
+  left: 48.425445556640625px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(165, 162, 162, 1);
+}
+.asterion-mainpage-telegram1 {
+  top: 0px;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+}
+.asterion-mainpage-maskgroup1 {
+  top: 20px;
+  left: 83.16763305664062px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(165, 162, 162, 1);
+}
+.asterion-mainpage-facebook1 {
+  top: 0px;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+}
+.asterion-mainpage-group4 {
+  top: 0px;
+  left: 1045.139892578125px;
+  width: 153.86012268066406px;
+  height: 39px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.asterion-mainpage-text38 {
+  color: rgba(255, 255, 255, 1);
+  width: 154px;
+  height: auto;
+  position: absolute;
+  text-align: center;
+  line-height: 24px;
+}
+.asterion-mainpage-text40 {
+  top: 23px;
+  left: 8.316761016845703px;
+  color: rgba(164, 161, 161, 1);
+  width: 139px;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.asterion-mainpage-text42 {
+  top: 83px;
+  left: 488px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}

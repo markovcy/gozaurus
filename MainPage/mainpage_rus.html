@@ -1,0 +1,108 @@
+<!-- 15.08.23 -->
+<div>
+    <div class="asterion-mainpage-container">
+      <div class="asterion-mainpage-asterion-mainpage">
+        <div class="h1">
+            <h1>Esterion Materials Database</h1>
+        </div>
+        <div class="opis">
+          
+           
+              Database of polymer and related materials, with properties
+              standardized descriptions and the possibility of its accounting,
+              implementation, and transportation to the consumers.
+        
+        </div>
+        <div class="opis">
+          
+            Науково-виробниче підприємство ТОВ "НВП" Естеріон" - Українська компанія, метою якої є якісне забезпечення сталого розвитку усіх галузей народного господарства. Підприємством розроблено та впроваджено у виробництво цілий ряд матеріалів загального та спеціального призначення, а саме - полімерних та композиційних матеріалів, на основі поліестерамідів, які отримано шляхом реакційної екструзії; промислових лубриканітів загального та спеціального призначення (для консервації та ефективній експлуатації вузлів та агрегатів при різних умовах); промоутерів адгезії у системі "армуючий наповнювач - полімерна матриця".
+  
+  На теперішній час, компанія має сучасне устаткування та тривалі договори про співпрацю з Украінською академією наук, власну випробувальну лабораторію, та штат підготовлених спеціалістів, які можуть вирішити будь які питання у сфері діяльності компанії.
+        </div>
+       
+
+        <div class="slider">
+          <!-- <div class="slider__item">
+            <img src="http://164.68.125.44:42684/table/photos/blob?lang=en&id=1" alt="">
+            <div class="slide_content">
+              <h2>NEWS1</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quidem impedit, excepturi, vitae eum sunt porro magnam, earum quasi eius distinctio fugit consequatur odio tempora suscipit libero voluptas error culpa.</p>
+            </div>
+          </div>
+      -->
+    
+        </div>
+      </div>
+    </div>
+</div>
+<script>
+    
+  async function get_news_for_carousel () {
+  
+  let resp
+  let host = window.location.origin
+  let Url
+
+  Url = `${host}/table/events/get?is_get_form_actions=true&limit=10&lang=en`
+  console.log(Url)
+ 
+  let local = JSON.parse(localStorage.USER);
+  let token1 = local["token"]
+  let response = await fetch(Url, {
+      headers: {
+          Authorization: "Bearer " + token1
+      }
+  });
+  if (response.status >= 400) {
+      console.log(" bad params");
+      return;
+  } else if (response.status === 204) {
+      console.log("id not found");
+      return;
+  } else if (response.status === 200) {
+      resp = await response.json()
+  }
+  console.log(resp)
+  let html = ''
+  for (x in resp) {
+    console.log(resp[x])
+    console.log(resp[x].name)
+    console.log(resp[x].description)
+    let host = window.location.origin
+    html = `<div class="slider__item">
+    <img src="${host}/photos?id=1" alt="">
+    <div class="slide_content">
+      <h2>${resp[x].name}</h2>
+      <p>${resp[x].description}</p>
+    </div>
+  </div>`
+  console.log(html)
+  let div = document.createElement("div")
+  console.log(div)
+  div.classList.add("slider__item")
+  console.log(div)
+  div.innerHTML = html
+  console.log(div)
+  console.log(div)
+  let d = document.querySelector(".slider")
+  d.append(div)
+  console.log(d)
+    }
+  $(document).ready(function() {
+    $('.slider').slick({
+      adaptiveHeight: true,
+      slidesToShow:3,
+      autoplay:true
+    });
+  })
+  }
+  get_news_for_carousel ()
+</script>
+  
+
+
+ 
+  
+  
+
+
