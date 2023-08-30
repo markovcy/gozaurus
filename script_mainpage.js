@@ -6,7 +6,7 @@ async function get_news_for_carousel () {
   let host = window.location.origin
   let Url
 
-  Url = `${host}/table/events/get?is_get_form_actions=true&limit=10&lang=en`
+  Url = `${host}/events?lang=en`
   console.log(Url)
  
   let local = JSON.parse(localStorage.USER);
@@ -33,7 +33,7 @@ async function get_news_for_carousel () {
     console.log(resp[x].description)
     let host = window.location.origin
     html = `<div class="slider__item">
-    <img src="${host}/photos?id=1" alt="">
+    <img src="${host}/photos?id=${resp[x].id_photos}" alt="">
     <div class="slide_content">
       <h2>${resp[x].name}</h2>
       <p>${resp[x].description}</p>
