@@ -1,4 +1,4 @@
-const { doc } = require("prettier")
+// const { doc } = require("prettier")
 
 async function get_news_for_carousel () {
   
