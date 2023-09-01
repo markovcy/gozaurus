@@ -11,11 +11,11 @@ async function get_news_for_carousel () {
  
   let local = JSON.parse(localStorage.USER);
   // let token1 = local["token"]
-  // let response = await fetch(Url, {
+  let response = await fetch(Url, {
   //     headers: {
   //         Authorization: "Bearer " + token1
   //     }
-  // });
+  });
   if (response.status >= 400) {
       console.log(" bad params");
       return;
