@@ -3053,4 +3053,10 @@ footer.main-footer {
   width: 100%;
   border: 1px solid;
   bottom: 0px;
+  background: #0a1c3b;
+  height: 63px;
+  color: white;
+}
+li.foot-mnu-item {
+  margin-top: 16px;
 }
