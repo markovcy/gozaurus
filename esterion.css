@@ -3060,3 +3060,9 @@ footer.main-footer {
 li.foot-mnu-item {
   margin-top: 16px;
 }
+.slide_content {
+  width: auto;
+}
+.slider__item {
+  margin: 0px 10px 0px 0px;
+}
