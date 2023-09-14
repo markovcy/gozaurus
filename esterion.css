@@ -15,6 +15,7 @@ body {
     font-family:  Inter;
     overflow-x: hidden;
     background-color: #f6f7f8;
+    position: relative;
 }
  
 form {
@@ -74,7 +75,7 @@ li.top-mnu-item a {
 }
 
 #catalog_pane {
-    height: 97%;
+    height: 0%;
     vertical-align: top;
     padding-left: 1px;
     padding-right: 5%;
@@ -1842,7 +1843,7 @@ border-radius: 4px 4px 0px 0px;
   }
   .asterion-mainpage-asterion-mainpage {
     width: 100%;
-    height: 1123px;
+    /* height: 1123px; */
     /* display: flex; */
     position: relative;
     align-items: flex-start;
@@ -2684,7 +2685,7 @@ h6 {
 }
 html,
 body {
-  height: 100%;
+  /* height: 100%; */
   line-height: 1;
   font-size: 14px;
   /* background-color: #333; */
@@ -3032,7 +3033,24 @@ h1 {
     text-align: center;
     margin: 0 auto;
 }
-/* 
+
 #content {
+  overflow: visible;
+}
+
+.wrapper {
+  min-height: 100%;
   overflow: hidden;
-} */
+  display: flex;
+  flex-direction: column;
+}
+
+.well {
+  border: 0px;
+}
+footer.main-footer {
+  position: sticky;
+  width: 100%;
+  border: 1px solid;
+  bottom: 0px;
+}
