@@ -396,33 +396,41 @@ $(document).ready(function() {
       autoplay:true
     });
   })
+
+  function checking_left_menu() {
+    if (document.querySelector(".left-mnu-item") === null ) {
+      document.querySelector(".sidebar-section").style.display = "none"
+    } else {
+      document.querySelector(".sidebar-section").style.display = "block"
+    }
+  }
   
-  async function get_news_for_carousel () {
+//   async function get_news_for_carousel () {
     
-    let resp
-    let host = window.location.origin
-    let Url
+//     let resp
+//     let host = window.location.origin
+//     let Url
   
-    Url = `${host}/table/events/get?is_get_form_actions=true&limit=10&lang=en`
-    console.log(Url)
+//     Url = `${host}/table/events/get?is_get_form_actions=true&limit=10&lang=en`
+//     console.log(Url)
    
-    let local = JSON.parse(localStorage.USER);
-    let token1 = local["token"]
-    let response = await fetch(Url, {
-        headers: {
-            Authorization: "Bearer " + token1
-        }
-    });
-    if (response.status >= 400) {
-        console.log(" bad params");
-        return;
-    } else if (response.status === 204) {
-        console.log("id not found");
-        return;
-    } else if (response.status === 200) {
-        resp = await response.json()
-    }
-    console.log(resp)
-    }
+//     let local = JSON.parse(localStorage.USER);
+//     let token1 = local["token"]
+//     let response = await fetch(Url, {
+//         headers: {
+//             Authorization: "Bearer " + token1
+//         }
+//     });
+//     if (response.status >= 400) {
+//         console.log(" bad params");
+//         return;
+//     } else if (response.status === 204) {
+//         console.log("id not found");
+//         return;
+//     } else if (response.status === 200) {
+//         resp = await response.json()
+//     }
+//     console.log(resp)
+//     }
   
  
