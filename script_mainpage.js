@@ -1,7 +1,7 @@
 // const { doc } = require("prettier")
 
 async function get_news_for_carousel () {
-  
+  checking_left_menu()
   let resp
   let host = window.location.origin
   let Url
@@ -66,7 +66,7 @@ async function get_news_for_carousel () {
   //   $('.slider_inner').slick({
   //     adaptiveHeight: true,
   //     slidesToShow:3,
-  //     autoplay:true
+  //     autoplay:true 
   //   });
   // })
   
