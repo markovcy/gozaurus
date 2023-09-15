@@ -2993,9 +2993,8 @@ body {
   max-width: 700px;
   width: 393px;
   background: #0A1C3B;
-  /* position: absolute; */
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  top: 280px;
   color: #FFFFFF;
 } 
 .slider__item h2 {
@@ -3015,7 +3014,7 @@ body {
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
-
+  padding: 10px 0px 0px 10px;
 }
 
 .slider__item a{
