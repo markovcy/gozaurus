@@ -2998,6 +2998,40 @@ body {
   bottom: 0;
   color: #FFFFFF;
 } 
+.slider__item h2 {
+  font-size: 18px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+    /* text-align: center; */
+  padding: 10px 0px 0px 10px;
+}
+.slider__item p {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.slider__item a{
+  position: absolute;
+    top: 403px;
+    left: 260px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    color: #168CFA;
+    text-align: left;
+    text-decoration: underline;
+
+}
 
 ul li.top-mnu-item:nth-child(n+2) {
   margin: 16px 0 0 0;
