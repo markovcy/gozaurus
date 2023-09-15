@@ -56,17 +56,17 @@ async function get_news_for_carousel () {
 
   $(document).ready(function() {
     $('.slider').slick({
-      adaptiveHeight: true,
+      adaptiveHeight: false,
       slidesToShow:3,
-      autoplay:true
+      autoplay: false
     });
   })
   
-  $(document).ready(function() {
-    $('.slider_inner').slick({
-      adaptiveHeight: true,
-      slidesToShow:3,
-      autoplay:true
-    });
-  })
+  // $(document).ready(function() {
+  //   $('.slider_inner').slick({
+  //     adaptiveHeight: true,
+  //     slidesToShow:3,
+  //     autoplay:true
+  //   });
+  // })
   
