@@ -3048,12 +3048,13 @@ h1 {
     font-weight: 700;
     line-height: 55px;
     color:#0A1C3B;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .h1 {
   padding: 20px 0 0 0;
-  display: flex;
-  flex-wrap: wrap;
+ 
 }
 
 .opis {
