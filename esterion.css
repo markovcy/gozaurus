@@ -3019,6 +3019,8 @@ h1 {
 
 .h1 {
   padding: 20px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .opis {
@@ -3032,6 +3034,8 @@ h1 {
     max-width: 888px;
     text-align: center;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #content {
@@ -3054,7 +3058,7 @@ footer.main-footer {
   border: 1px solid;
   bottom: 0px;
   background: #0a1c3b;
-  height: 63px;
+  height: 174px;
   color: white;
 }
 li.foot-mnu-item {
