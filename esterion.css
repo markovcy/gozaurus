@@ -3087,12 +3087,12 @@ h1 {
   border: 0px;
 }
 footer.main-footer {
-  position: sticky;
+  position: fixed;
   width: 100%;
   border: 1px solid;
   bottom: 0px;
   background: #0a1c3b;
-  height: 174px;
+  height: 74px;
   color: white;
 }
 li.foot-mnu-item {
