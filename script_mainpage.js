@@ -54,6 +54,14 @@ async function get_news_for_carousel () {
   
   }
 
+  function checking_left_menu() {
+    if (document.querySelector(".left-mnu-item") === null ) {
+      document.querySelector(".sidebar-section").style.display = "none"
+    } else {
+      document.querySelector(".sidebar-section").style.display = "block"
+    }
+  }
+
   $(document).ready(function() {
     $('.slider').slick({
       adaptiveHeight: false,
