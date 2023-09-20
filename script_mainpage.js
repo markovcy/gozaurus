@@ -78,6 +78,13 @@ async function get_news_for_carousel () {
   //   });
   // })
   
-  window.addEventListener('load', () => {
-    checking_left_menu()  
+window.addEventListener('DOMSubtreeModified', function checking_left_menu() {
+    console.log("wimdow")
+    if (document.querySelector(".left-mnu-item") === null ) {
+      document.querySelector(".sidebar-section").style.display = "none"
+      console.log("none")
+    } else {
+      document.querySelector(".sidebar-section").style.display = "block"
+      console.log("block")
+    }
   });
