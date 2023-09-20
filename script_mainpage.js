@@ -78,3 +78,6 @@ async function get_news_for_carousel () {
   //   });
   // })
   
+  window.addEventListener('load', () => {
+    checking_left_menu()  
+  });
